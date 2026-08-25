@@ -1,0 +1,1339 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 7258,
+            "item_type_id": 7,
+            "game_item_id": 229,
+            "name": "Arua Earring",
+            "icon": "accessory/arua_earring.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "160",
+                "Effect": [
+                    "Attack Power 45",
+                    "Critical 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 21",
+                    "(3) Critical 34"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7248,
+            "item_type_id": 7,
+            "game_item_id": 219,
+            "name": "Arua Necklace",
+            "icon": "accessory/arua_necklace.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "160",
+                "Effect": [
+                    "Attack Power 45",
+                    "Critical 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 21",
+                    "(3) Critical 34"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7238,
+            "item_type_id": 7,
+            "game_item_id": 209,
+            "name": "Arua Ring",
+            "icon": "accessory/arua_ring.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "160",
+                "Effect": [
+                    "Attack Power 45",
+                    "Critical 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 21",
+                    "(3) Critical 34"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7256,
+            "item_type_id": 7,
+            "game_item_id": 227,
+            "name": "Earring of Cliff",
+            "icon": "accessory/earring_of_cliff.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Defense 156",
+                    "Max HP 500"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Defense 297",
+                    "(3) Max HP 225"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7253,
+            "item_type_id": 7,
+            "game_item_id": 224,
+            "name": "Earring of Flame",
+            "icon": "accessory/earring_of_flame.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Attack Power 30",
+                    "Accuracy 36"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 14",
+                    "(3) Accuracy 17"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7251,
+            "item_type_id": 7,
+            "game_item_id": 222,
+            "name": "Earring of Gale",
+            "icon": "accessory/earring_of_gale.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Attack Speed 5%",
+                    "Movement Speed 33"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Speed 2.5%",
+                    "(3) Movement Speed 15"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7341,
+            "item_type_id": 7,
+            "game_item_id": 376,
+            "name": "Earring of Hurricane",
+            "icon": "accessory/earring_of_hurricane.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7257,
+            "item_type_id": 7,
+            "game_item_id": 228,
+            "name": "Earring of Lava",
+            "icon": "accessory/earring_of_lava.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Attack Power 45",
+                    "Accuracy 64"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 21",
+                    "(3) Accuracy 29"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7343,
+            "item_type_id": 7,
+            "game_item_id": 378,
+            "name": "Earring of Magma",
+            "icon": "accessory/earring_of_magma.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7342,
+            "item_type_id": 7,
+            "game_item_id": 377,
+            "name": "Earring of Mountain",
+            "icon": "accessory/earring_of_mountain.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7250,
+            "item_type_id": 7,
+            "game_item_id": 221,
+            "name": "Earring of River",
+            "icon": "accessory/earring_of_river.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Dodge Rate 36",
+                    "Max MP 40"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Dodge Rate 17",
+                    "(3) Max MP 18"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7252,
+            "item_type_id": 7,
+            "game_item_id": 223,
+            "name": "Earring of Stone",
+            "icon": "accessory/earring_of_stone.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Defense 122",
+                    "Max HP 312"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Defense 216",
+                    "(3) Max HP 141"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7340,
+            "item_type_id": 7,
+            "game_item_id": 375,
+            "name": "Earring of the Ocean",
+            "icon": "accessory/earring_of_the_ocean.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7254,
+            "item_type_id": 7,
+            "game_item_id": 225,
+            "name": "Earring of the Sea",
+            "icon": "accessory/earring_of_the_sea.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Dodge Rate 64",
+                    "Max MP 130"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Dodge Rate 29",
+                    "(3) Max MP 59"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7255,
+            "item_type_id": 7,
+            "game_item_id": 226,
+            "name": "Earring of Typhoon",
+            "icon": "accessory/earring_of_typhoon.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Attack Speed 5%",
+                    "Movement Speed 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Speed 2.5%",
+                    "(3) Movement Speed 23"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7259,
+            "item_type_id": 7,
+            "game_item_id": 230,
+            "name": "Hebarn Earring",
+            "icon": "accessory/hebarn_earring.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "160",
+                "Effect": [
+                    "Attack Power 45",
+                    "Critical 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 21",
+                    "(3) Critical 34"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7249,
+            "item_type_id": 7,
+            "game_item_id": 220,
+            "name": "Hebarn Necklace",
+            "icon": "accessory/hebarn_necklace.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "160",
+                "Effect": [
+                    "Attack Power 45",
+                    "Critical 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 21",
+                    "(3) Critical 34"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7239,
+            "item_type_id": 7,
+            "game_item_id": 210,
+            "name": "Hebarn Ring",
+            "icon": "accessory/hebarn_ring.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "160",
+                "Effect": [
+                    "Attack Power 45",
+                    "Critical 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 21",
+                    "(3) Critical 34"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7246,
+            "item_type_id": 7,
+            "game_item_id": 217,
+            "name": "Necklace of Cliff",
+            "icon": "accessory/necklace_of_cliff.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Defense 156",
+                    "Max HP 500"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Defense 297",
+                    "(3) Max HP 225"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7243,
+            "item_type_id": 7,
+            "game_item_id": 214,
+            "name": "Necklace of Flame",
+            "icon": "accessory/necklace_of_flame.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Attack Power 30",
+                    "Accuracy 36"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 14",
+                    "(3) Accuracy 17"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7241,
+            "item_type_id": 7,
+            "game_item_id": 212,
+            "name": "Necklace of Gale",
+            "icon": "accessory/necklace_of_gale.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Attack Speed 5%",
+                    "Movement Speed 33"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Speed 2.5%",
+                    "(3) Movement Speed 15"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7334,
+            "item_type_id": 7,
+            "game_item_id": 366,
+            "name": "Necklace of Hurricane",
+            "icon": "accessory/necklace_of_hurricane.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7247,
+            "item_type_id": 7,
+            "game_item_id": 218,
+            "name": "Necklace of Lava",
+            "icon": "accessory/necklace_of_lava.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Attack Power 45",
+                    "Accuracy 64"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 21",
+                    "(3) Accuracy 29"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7336,
+            "item_type_id": 7,
+            "game_item_id": 368,
+            "name": "Necklace of Magma",
+            "icon": "accessory/necklace_of_magma.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7335,
+            "item_type_id": 7,
+            "game_item_id": 367,
+            "name": "Necklace of Mountain",
+            "icon": "accessory/necklace_of_mountain.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7240,
+            "item_type_id": 7,
+            "game_item_id": 211,
+            "name": "Necklace of River",
+            "icon": "accessory/necklace_of_river.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Dodge Rate 36",
+                    "Max MP 40"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Dodge Rate 17",
+                    "(3) Max MP 18"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7242,
+            "item_type_id": 7,
+            "game_item_id": 213,
+            "name": "Necklace of Stone",
+            "icon": "accessory/necklace_of_stone.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Defense 122",
+                    "Max HP 312"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Defense 216",
+                    "(3) Max HP 141"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7333,
+            "item_type_id": 7,
+            "game_item_id": 365,
+            "name": "Necklace of the Ocean",
+            "icon": "accessory/necklace_of_the_ocean.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7244,
+            "item_type_id": 7,
+            "game_item_id": 215,
+            "name": "Necklace of the Sea",
+            "icon": "accessory/necklace_of_the_sea.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Dodge Rate 64",
+                    "Max MP 130"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Dodge Rate 29",
+                    "(3) Max MP 59"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7245,
+            "item_type_id": 7,
+            "game_item_id": 216,
+            "name": "Necklace of Typhoon",
+            "icon": "accessory/necklace_of_typhoon.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Attack Speed 5%",
+                    "Movement Speed 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Speed 2.5%",
+                    "(3) Movement Speed 23"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7262,
+            "item_type_id": 7,
+            "game_item_id": 233,
+            "name": "Oro's Earring",
+            "icon": "equipments/6_35_879.png",
+            "craft_item_type": "Earrings",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "180",
+                "Effect": [
+                    "Defense 192",
+                    "Magic Defense 108"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7261,
+            "item_type_id": 7,
+            "game_item_id": 232,
+            "name": "Oro's Necklace",
+            "icon": "equipments/6_61_905.png",
+            "craft_item_type": "Necklace",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "180",
+                "Effect": [
+                    "Defense 192",
+                    "Magic Defense 108"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Defense 337",
+                    "(3) Magic Defense 382"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7260,
+            "item_type_id": 7,
+            "game_item_id": 231,
+            "name": "Oro's Ring",
+            "icon": "equipments/6_12_856.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "180",
+                "Effect": [
+                    "Defense 192",
+                    "Magic Defense 108"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Defense 337",
+                    "(3) Magic Defense 382"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7236,
+            "item_type_id": 7,
+            "game_item_id": 207,
+            "name": "Ring of Cliff",
+            "icon": "accessory/ring_of_cliff.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Defense 156",
+                    "Max HP 500"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Defense 297",
+                    "(3) Max HP 225"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7233,
+            "item_type_id": 7,
+            "game_item_id": 204,
+            "name": "Ring of Flame",
+            "icon": "accessory/ring_of_flame.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Attack Power 30",
+                    "Accuracy 36"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 14",
+                    "(3) Accuracy 17"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7231,
+            "item_type_id": 7,
+            "game_item_id": 202,
+            "name": "Ring of Gale",
+            "icon": "accessory/ring_of_gale.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Attack Speed 5%",
+                    "Movement Speed 33"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Speed 2.5%",
+                    "(3) Movement Speed 15"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7237,
+            "item_type_id": 7,
+            "game_item_id": 208,
+            "name": "Ring of Lava",
+            "icon": "accessory/ring_of_lava.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Attack Power 45",
+                    "Accuracy 64"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Power 21",
+                    "(3) Accuracy 29"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7329,
+            "item_type_id": 7,
+            "game_item_id": 358,
+            "name": "Ring of Magma",
+            "icon": "accessory/ring_of_magma.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7230,
+            "item_type_id": 7,
+            "game_item_id": 201,
+            "name": "Ring of River",
+            "icon": "accessory/ring_of_river.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Dodge Rate 36",
+                    "Max MP 40"
+                ],
+                "Set Stats": [
+                    "(3) Dodge Rate 17",
+                    "(3) Max MP 18"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7232,
+            "item_type_id": 7,
+            "game_item_id": 203,
+            "name": "Ring of Stone",
+            "icon": "accessory/ring_of_stone.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Defense 122",
+                    "Max HP 312"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Defense 216",
+                    "(3) Max HP 141"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7327,
+            "item_type_id": 7,
+            "game_item_id": 356,
+            "name": "Ring of the Hurricane",
+            "icon": "accessory/ring_of_the_hurricane.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7328,
+            "item_type_id": 7,
+            "game_item_id": 357,
+            "name": "Ring of the Mountain",
+            "icon": "accessory/ring_of_the_mountain.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7326,
+            "item_type_id": 7,
+            "game_item_id": 355,
+            "name": "Ring of the Ocean",
+            "icon": "accessory/ring_of_the_ocean.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7234,
+            "item_type_id": 7,
+            "game_item_id": 205,
+            "name": "Ring of the Sea",
+            "icon": "accessory/ring_of_the_sea.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Dodge Rate 64",
+                    "Max MP 130"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Dodge Rate 29",
+                    "(3) Max MP 59"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        },
+        {
+            "id": 7235,
+            "item_type_id": 7,
+            "game_item_id": 206,
+            "name": "Ring of Typhoon",
+            "icon": "accessory/ring_of_typhoon.png",
+            "craft_item_type": "Ring",
+            "craft_skill_type": "Accessory Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "140",
+                "Effect": [
+                    "Attack Speed 5%",
+                    "Movement Speed 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(3) Attack Speed 2.5%",
+                    "(3) Movement Speed 23"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 7,
+                "name": "Accessory",
+                "slug": "accessory"
+            }
+        }
+    ],
+    "first_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "page": null,
+            "active": false
+        },
+        {
+            "url": "https://roseutils.com/api/game-items/equipment?page=1",
+            "label": "1",
+            "page": 1,
+            "active": true
+        },
+        {
+            "url": null,
+            "label": "Next &raquo;",
+            "page": null,
+            "active": false
+        }
+    ],
+    "next_page_url": null,
+    "path": "https://roseutils.com/api/game-items/equipment",
+    "per_page": 200,
+    "prev_page_url": null,
+    "to": 45,
+    "total": 45
+}

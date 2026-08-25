@@ -1,0 +1,67 @@
+<!doctype html>
+<!-- Over-the-game toast layer: its own transparent, click-through window glued to
+     the top-center of the ROSE window (main.js `toastWin`). Separate window
+     because the panel docks *outside* the game, so a toast drawn in the panel
+     can never appear over it.
+     ponytail: colors hardcoded from the Twilight skin — no theme/accent sync,
+     no click targets (the window is click-through so a toast can never eat a
+     game click). Wire both up if a feature needs them. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  /* Its own document, so the panel's @font-face rules never reached it: this file
+     asked for "JetBrains Mono", resolved it against *installed system* fonts, found
+     nothing on a normal player's machine and silently fell through to Consolas —
+     naming the bundled font without ever loading it. And a toast is prose ("Ankh
+     Beast spawned nearby"), which wants the body face, not a monospace. */
+  @font-face { font-family: 'Manrope'; src: url(assets/fonts/manrope-latin.woff2) format('woff2'); font-weight: 400 800; font-style: normal; font-display: swap; unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'Manrope'; src: url(assets/fonts/manrope-latin-ext.woff2) format('woff2'); font-weight: 400 800; font-style: normal; font-display: swap; unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: transparent; overflow: hidden;
+    font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.45; -webkit-font-smoothing: antialiased; }
+  #toasts { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px; }
+  .toast { width: 100%; min-width: 0; background: #0d0920; border: 1px solid rgba(255,255,255,.16);
+    border-radius: 9px; padding: 8px 10px; overflow-wrap: anywhere; box-shadow: 0 4px 18px rgba(0,0,0,.55);
+    animation: toast-in 180ms cubic-bezier(0.22, 1, 0.36, 1); }
+  /* 14/12 mirrors the panel's --text-body / --text-sm; the title-vs-body step was
+     14/13, which is under the threshold where a size difference reads at all. */
+  .toast-title, .toast-body { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+  .toast-title { -webkit-line-clamp: 2; font-weight: 600; color: #ececf4; font-size: 14px; }
+  .toast--gold .toast-title { color: #f6a53a; }
+  .toast--bad  .toast-title { color: #ff6f8f; }
+  .toast-body { -webkit-line-clamp: 3; color: #9b96b4; font-size: 12px; margin-top: 2px; }
+  .toast--out { opacity: 0; transform: translateY(-6px);
+    transition: opacity 200ms ease, transform 200ms ease; }
+  @keyframes toast-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+  /* This window has its own CSS, so the panel's reduced-motion block never reached
+     it — and it's the one surface that animates *over* the game. Crossfade instead
+     of sliding; keep both durations under the JS remove timers (180 / 200ms). */
+  @media (prefers-reduced-motion: reduce) {
+    .toast { animation: toast-fade 120ms ease; }
+    .toast--out { transform: none; transition: opacity 150ms ease; }
+    @keyframes toast-fade { from { opacity: 0; } }
+  }
+</style>
+</head>
+<body>
+  <div id="toasts"></div>
+  <script>
+    const { ipcRenderer } = require('electron');
+    const root = document.getElementById('toasts');
+    ipcRenderer.on('toast', (_e, { title = '', body = '', tone = '', timeout = 6000 } = {}) => {
+      tone = tone === 'gold' || tone === 'bad' ? tone : '';
+      timeout = Number.isFinite(+timeout) ? Math.max(1000, +timeout) : 6000;
+      const el = document.createElement('div');
+      el.className = `toast${tone ? ' toast--' + tone : ''}`;
+      const t = document.createElement('div'); t.className = 'toast-title'; t.dir = 'auto'; t.textContent = String(title || '');
+      el.appendChild(t);
+      if (body) { const b = document.createElement('div'); b.className = 'toast-body'; b.dir = 'auto'; b.textContent = String(body); el.appendChild(b); }
+      while (root.children.length >= 3) root.firstElementChild.remove();
+      root.appendChild(el);
+      setTimeout(() => { el.classList.add('toast--out'); setTimeout(() => el.remove(), 200); }, timeout);
+    });
+  </script>
+</body>
+</html>

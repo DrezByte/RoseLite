@@ -1,0 +1,50 @@
+node_modules/
+dist/
+.env
+.env.*
+.map
+*.log
+*.tsbuildinfo
+scripts/
+native/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# AI assistant state + generated notes
+.claude/
+.agents/
+.impeccable/
+.cursor/
+.aider*
+.windsurf/
+.continue/
+.codeium/
+.gemini/
+.opencode/
+.roo/
+.specstory/
+.taskmaster/
+repomix-output.*
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+GEMINI.md
+QWEN.md
+DESIGN.md
+PRODUCT.md
+TROUBLESHOOTING.md
+
+# Python
+__pycache__/
+*.pyc
+
+# local-only data source (not part of the public repo)
+src/livesource.js
+overlay/quest.test.js

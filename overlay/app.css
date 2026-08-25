@@ -1,0 +1,1310 @@
+  /* ── RoseLite v3 — game-native overlay, one skin: Lunar (DESIGN.md). Every
+     component reads the shared semantic tokens in :root, so recoloring is a
+     token swap with no layout reflow. Users recolor Lunar from the Settings
+     accent/background pickers (inline token overrides, see overlay.js).
+     The opt-in Guild HUD skin was retired — one token set, no [data-theme].
+     Fonts bundled locally (no CDN in Electron). ── */
+  /* Every face is bundled and loaded off file://. `swap` keeps the interface readable
+     if a font asset is ever missing or slow to decode, then replaces the fallback. */
+  /* Serif faces — kept for the Settings font picker (Garamond/Cinzel pairing). */
+  @font-face { font-family: 'Cinzel'; src: url(assets/fonts/cinzel.woff2) format('woff2'); font-weight: 600 700; font-style: normal; font-display: swap; }
+  /* 400 700, not 400 600: every bold in the panel asks for 700, and a request
+     outside the declared range clamps — the old descriptor silently rendered
+     Garamond's bolds one step lighter than the default stack's. */
+  @font-face { font-family: 'EB Garamond'; src: url(assets/fonts/ebgaramond.woff2) format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'EB Garamond'; src: url(assets/fonts/ebgaramond-italic.woff2) format('woff2'); font-weight: 400 700; font-style: italic; font-display: swap; }
+  /* Website brand fonts (Twilight skin) — bundled variable woff2, latin + latin-ext
+     subsets (no CDN in Electron). TH/JA/FIL fall back to system fonts as before. */
+  @font-face { font-family: 'Manrope'; src: url(assets/fonts/manrope-latin.woff2) format('woff2'); font-weight: 400 800; font-style: normal; font-display: swap; unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'Manrope'; src: url(assets/fonts/manrope-latin-ext.woff2) format('woff2'); font-weight: 400 800; font-style: normal; font-display: swap; unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'Fredoka'; src: url(assets/fonts/fredoka-latin.woff2) format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'Fredoka'; src: url(assets/fonts/fredoka-latin-ext.woff2) format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: 'JetBrains Mono'; src: url(assets/fonts/jetbrainsmono-latin.woff2) format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'JetBrains Mono'; src: url(assets/fonts/jetbrainsmono-latin-ext.woff2) format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+
+  :root {
+    /* The website brand stack. The Settings font picker overrides these inline. */
+    --font-body:    'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-display: 'Fredoka', 'Manrope', system-ui, 'Segoe UI', sans-serif;
+    --font-mono:    'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+    /* ── Type ramp (DESIGN §3). Five steps, ~1.2 apart. The panel had fourteen
+       sizes with 108 of 127 rules inside 10-11-12-13-14 — five consecutive integer
+       steps are ~8% apart, under the threshold where a size difference registers at
+       all, so 11px and 12px read as one size and bought nothing but drift (the same
+       row name landed on 13/400 in one list and 14/600 in the next). Five steps that
+       are actually distinguishable, each with one job:
+         micro — tracked uppercase chrome + axis ticks
+         sm    — secondary text, dense data, badges
+         body  — row names, prose, inputs, controls   ← the default
+         lg    — headings, item/card names
+         xl    — the one number a card exists to show
+       px, not rem, on purpose: the UI-scale slider drives webFrame.setZoomFactor
+       (overlay.js), which already scales px; rem would only pin the ramp to a root
+       font-size nobody can set in a frameless window. Sizes that are a *glyph* in a
+       button (× ‹ › ⟳ +) are icon dimensions, not type, and stay off this ramp. */
+    --text-micro: 10px;
+    --text-sm:    12px;
+    --text-body:  14px;
+    --text-lg:    16px;
+    --text-xl:    20px;
+    /* Two display steps ABOVE the five-step ramp, spent only inside the
+       Collection module (docs/tcg/DESIGN.md §7). The square and the stall are
+       hero surfaces — a sign you read from across the room is not body copy.
+         2xl — room and panel titles, mid-distance sign names
+         3xl — the hero sign, a marquee, a gilt name, a takeover numeral
+       There was a third (--text-4xl: 36px). 34 and 36 are 6% apart — the same
+       sub-threshold step this ramp exists to delete — so the two display steps
+       merged and every 36/38px in the market moved onto 3xl. */
+    --text-2xl:   25px;
+    --text-3xl:   34px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-fall: cubic-bezier(0.32, 0.02, 0.26, 1);   /* gravity: eases in, settles soft (no bounce) — Reels tumble */
+    /* Collection rarities are semantic — spent only on cards and reveal feedback,
+       never on shell chrome. */
+    --card-common: oklch(78% .025 285);
+    --card-uncommon: oklch(76% .15 150);
+    --card-rare: oklch(74% .14 235);
+    --card-very-rare: oklch(74% .17 300);
+    --card-epic: oklch(80% .15 78);
+    --card-legendary: oklch(70% .2 32);
+
+    /* ── Lunar — the roseonline.link website palette: flat deep-purple surfaces,
+       orange/teal/gold accents, sans + rounded fonts. The product's only skin. ── */
+    /* Three surfaces, not one. Chrome (header/footer/backbar) sits BELOW the panel
+       field, content sits ABOVE it, so the stack reads chrome < field < card and the
+       thing you came to read is the brightest layer. The old set ran the whole panel
+       on a 2.9 ΔL* step (#141026 field / #1a1436 card) — below the threshold where a
+       card reads as a card at all, which is why every list looked like one flat
+       field. Now 6.9 ΔL*. Lunar is flat-by-design — no bevels anywhere (DESIGN §6). */
+    --rosewood: #100c24; --rosewood-deep: #0b0819;
+    --parchment: #ececf4; --faded: #9b96b4; --bright: #ffffff;
+    --ember: #f0801c; --questgold: #f6a53a; --questgold-ink: #241206;
+    --jade: #5bd6a0; --amber: #f6a53a; --danger: #ff6f8f;
+    --widget: #1e1745; --widget-hover: #272052;
+    --hairline: rgba(255,255,255,.13); --hairline-strong: rgba(255,255,255,.26);
+    --stat-label: rgba(255,255,255,.58); --stat-value: #ffffff; --stat-req: #5bd6a0; --stat-bonus: #b06cf0;
+    --r-sm: 9px; --r-md: 11px; --r-panel: 14px; --badge-radius: 999px;
+    /* The panel's edge against unpredictable game art — the one line that says
+       "this is the overlay, not the scene" (PRODUCT: solid fill over busy scenes). */
+    --frame-ring: rgba(240,128,28,.5);
+    --header-art: url(assets/rose_online_legend_art_73.jpg); --header-pos: 50% 50%;
+    /* Keep the art as atmosphere, not as the controls' contrast surface. A nearly
+       flat scrim protects every glyph as the image shifts beneath the fixed row. */
+    --header-scrim: linear-gradient(180deg, rgba(11,8,25,.68), rgba(11,8,25,.76));
+    --header-grad: linear-gradient(180deg, #0f0b22, #0a0718);
+    --footer-grad: linear-gradient(180deg, #0f0b22, #0a0718);
+    --tile-off: #1e1745; --tile-off-border: rgba(255,255,255,.11); --tile-off-shadow: none;
+    /* One hue, decisively. The old orange→teal blend at .16/.12 alpha put the panel's
+       only selection signal at 1.26:1 against an unselected tile — a two-colour
+       whisper. Ember alone, at a weight you can find mid-combat. */
+    --tile-sel: linear-gradient(135deg, rgba(240,128,28,.30), rgba(240,128,28,.14)); --tile-sel-border: rgba(240,128,28,.85);
+    --row-bg: #1e1745; --row-border: rgba(255,255,255,.11); --row-shadow: none;
+    --badge-bg: rgba(246,165,58,.18); --badge-border: transparent; --badge-text: #f6a53a; --badge-shadow: none;
+    /* Neutral, because chrome is inactive by definition. The header buttons and
+       account chip used to take --badge-bg — the amber *count-badge* tint — so
+       every idle control wore a full-saturation accent, read warm-brown against
+       the purple panel, and carried the same weight as the badges that encode
+       real numbers. Spend the accent on the thing that changed, not on the
+       furniture. */
+    --chrome-bg: rgba(255,255,255,.06); --chrome-border: var(--hairline); --chrome-shadow: none;
+    /* Inputs read as a well cut into the card, not another card. */
+    --search-bg: #0d0a1f; --search-border: rgba(255,255,255,.13); --search-shadow: none;
+    --chart: #3ecfce;   /* price-history sparkline accent */
+
+  }
+
+
+  /* Selected-tile breathing glow (DESIGN §7). */
+  @keyframes rlglow { 0%,100% { box-shadow: 0 0 0 1px rgba(240,128,28,.55), 0 0 16px rgba(240,128,28,.30); } 50% { box-shadow: 0 0 0 1px rgba(240,128,28,.95), 0 0 26px rgba(240,128,28,.55); } }
+
+  html, body {
+    margin: 0; height: 100%;
+    background: transparent; overflow: hidden;
+    font-family: var(--font-body); font-size: var(--text-body);
+    /* Declared, not left to `normal`: the UA default is a font metric, and the two
+       skins disagree about it (Manrope ~1.37, EB Garamond ~1.15) — so every block
+       that didn't set its own re-rhythmed on a theme swap, which is exactly what
+       "reskin via tokens only" is supposed to prevent (DESIGN §9). */
+    line-height: 1.45;
+    color: var(--parchment); user-select: none; -webkit-font-smoothing: antialiased;
+    font-kerning: normal; font-optical-sizing: auto;
+  }
+  /* Any explicit `display:` outranks the UA [hidden] rule, so every flex/grid
+     component had to re-hide itself. One rule instead — .hidden = hidden, always. */
+  [hidden] { display: none !important; }
+  .sr-only { position: fixed; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+  /* ── Panel shell: header · [back] · views · footer ─────────────────── */
+  #panel {
+    position: fixed; inset: 0;
+    display: flex; flex-direction: column;
+    background: var(--rosewood);
+    border-left: 1px solid var(--hairline-strong);
+    box-shadow: inset 2px 0 0 -1px var(--frame-ring);
+    box-sizing: border-box;
+  }
+  .row-fixed { flex: 0 0 auto; }
+
+  /* Fullscreen mode (main.js placement 'full'): a centred, standalone, opaque app
+     window instead of the docked side panel. Caps the panel width so wide screens
+     read as an app rather than a stretched sidebar. */
+  body.fullscreen { background: var(--rosewood-deep); }
+  body.fullscreen #panel { left: 0; right: 0; transform: none;
+    width: 100%; border-right: 1px solid var(--hairline-strong); }
+
+  /* Fullscreen chrome mirrors a modern app shell: the section menu renders as a
+     collapsible left sidebar instead of the docked panel's tile grid. The header
+     itself is NOT forked — see the shared .panel-header rules below. */
+  body.fullscreen .panel-header { -webkit-app-region: drag; }
+  /* Drag the frameless fullscreen window by its top bar; keep the controls clickable. */
+  body.fullscreen .panel-header .hdr-btn, body.fullscreen .panel-header .hdr-wordmark,
+  body.fullscreen .panel-header .hdr-left { -webkit-app-region: no-drag; }
+  /* Sidebar burger: only meaningful where there is a sidebar to collapse. Same
+     .panel-header scoping trick as --min below (a bare selector loses on order). */
+  .panel-header .hdr-btn--nav { display: none; }
+  body.fullscreen .panel-header .hdr-btn--nav { display: inline-flex; }
+  /* Minimize-to-taskbar button is only meaningful in the fullscreen standalone
+     window. Scoped under .panel-header so it out-ranks the .panel-header .hdr-btn
+     display below (a bare .hdr-btn--min ties on specificity and loses on source
+     order, which is why this button used to show in the docked panel too). */
+  .panel-header .hdr-btn--min { display: none; }
+  body.fullscreen .panel-header .hdr-btn--min { display: inline-flex; }
+  /* Window resize grips: shown only for the launcher / fullscreen window (both
+     resizable); invisible, sit above everything at the window edges.
+     110/111 continues the panel's scale (hdr 3 · rail-tip 20 · toasts 50 ·
+     acct-menu 60 · launcher 100) instead of the old 10000/10001 — the grips must
+     out-rank the launcher, which is the real requirement, and 10000 only ever
+     said "I gave up guessing". Corners sit one step above the edges so they win
+     where they overlap. */
+  .wgrip { position: fixed; z-index: 110; display: none; -webkit-app-region: no-drag; }
+  body.win-resizable .wgrip { display: block; }
+  .wg-t { top: 0; left: 8px; right: 8px; height: 6px; cursor: ns-resize; }
+  .wg-b { bottom: 0; left: 8px; right: 8px; height: 6px; cursor: ns-resize; }
+  .wg-l { left: 0; top: 8px; bottom: 8px; width: 6px; cursor: ew-resize; }
+  .wg-r { right: 0; top: 8px; bottom: 8px; width: 6px; cursor: ew-resize; }
+  .wg-tl, .wg-tr, .wg-bl, .wg-br { width: 12px; height: 12px; z-index: 111; }
+  .wg-tl { top: 0; left: 0; cursor: nwse-resize; }
+  .wg-br { bottom: 0; right: 0; cursor: nwse-resize; }
+  .wg-tr { top: 0; right: 0; cursor: nesw-resize; }
+  .wg-bl { bottom: 0; left: 0; cursor: nesw-resize; }
+  /* Breadcrumb hidden — the active tab shows location; clicking a tab resets its detail. */
+  /* Fullscreen keeps the persistent tab strip, so no section-level backbar — but
+     drill details (item pages…) still need a way back to their list. */
+  body.fullscreen .backbar { display: none; }
+  body.fullscreen .content:has(.view:not([hidden]) > .view-detail:not([hidden])) .backbar { display: flex; }
+
+  /* ── Section menu → collapsible left sidebar ─────────────────────────────
+     The docked panel gets the 15-tile grid; fullscreen has the room for a
+     persistent vertical nav, so the three group labels come back as the real
+     hierarchy the old horizontal tab strip had to flatten away (it dissolved
+     the group wrappers with `display: contents` to make one flat row).
+     #nav-btn in the header toggles body.nav-collapsed → a 56px icon rail. */
+  body.fullscreen .split { flex-direction: row; }
+  body.fullscreen .content { min-width: 0; }
+  body.fullscreen .menu { flex: 0 0 auto; width: 210px; height: auto; padding: 12px 10px;
+    overflow-x: hidden; scrollbar-width: none; scrollbar-gutter: auto;
+    border-bottom: none; border-right: 1px solid var(--hairline);
+    transition: width 200ms var(--ease), padding 200ms var(--ease); }
+  body.fullscreen .menu::-webkit-scrollbar { width: 0; }
+  body.fullscreen.nav-collapsed .menu { width: 56px; padding: 12px 8px; }
+  body.fullscreen .menu .home-groups { display: flex; flex-direction: column; gap: 16px; }
+  body.fullscreen .menu .home-grid { display: flex; flex-direction: column; gap: 2px; }
+  /* The gap owns the group rhythm here; the docked margin would double it. */
+  body.fullscreen .menu .home-group + .home-group { margin-top: 0; }
+  /* Sentence case, --text-sm/600 — the docked treatment, unchanged. Three
+     tracked-uppercase eyebrows would read as scaffolding (DESIGN §9); the pad
+     only aligns the label with the row text below it. */
+  body.fullscreen .menu .home-group-title { padding: 0 10px; white-space: nowrap; overflow: hidden; }
+  body.fullscreen .menu .tile { flex-direction: row; justify-content: flex-start; gap: 10px;
+    height: 34px; padding: 0 10px; background: none; border: 1px solid transparent;
+    border-radius: var(--r-sm); box-shadow: none; color: var(--faded); }
+  body.fullscreen .menu .tile:hover { background: var(--widget-hover); border-color: transparent; color: var(--bright); }
+  body.fullscreen .menu .tile svg { width: 17px; height: 17px; flex: 0 0 auto; }
+  body.fullscreen .menu .tile-label { font-size: var(--text-sm); font-weight: 600; letter-spacing: .01em;
+    text-transform: none; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* Selection reuses the docked --tile-sel vocabulary (One-Hue Rule: ember
+     alone) rather than inventing a sidebar-only signal — and a tint + ember
+     glyph, never a colored side stripe. The breathing glow stays off: it reads
+     as a beacon on a 70px tile, as a flicker on a 34px row. */
+  body.fullscreen .menu .tile--active { background: var(--tile-sel); border-color: var(--tile-sel-border);
+    color: var(--bright); animation: none; }
+  body.fullscreen .menu .tile--active svg { color: var(--ember); }
+  /* Collapsed: icons only. Labels and group titles leave the a11y tree with
+     display:none, so the tiles' title attribute becomes their accessible name
+     (renderHome sets it on every tile). */
+  body.fullscreen.nav-collapsed .menu .tile { justify-content: center; padding: 0; }
+  body.fullscreen.nav-collapsed .menu .tile-label,
+  body.fullscreen.nav-collapsed .menu .home-group-title { display: none; }
+  body.fullscreen.nav-collapsed .menu .home-groups { gap: 9px; }
+  body.fullscreen.nav-collapsed .menu .home-group + .home-group { border-top: 1px solid var(--hairline); padding-top: 9px; }
+
+  /* In-view section picker (Guides categories) → big hoverable cards that fill
+     the screen, so picking the next section is a lean-back, hover-to-choose grid
+     rather than a cramped tile strip. Only the fullscreen, in-view grid. */
+  body.fullscreen .view .view-body:has(> .home-grid) { height: 100%; }
+  body.fullscreen .view .home-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(140px, 1fr); gap: 14px; height: 100%; }
+  body.fullscreen .view .tile { height: auto; gap: 14px; padding: 16px;
+    transition: transform 150ms var(--ease), border-color 150ms var(--ease), color 150ms var(--ease); }
+  body.fullscreen .view .tile:hover { transform: translateY(-3px); border-color: var(--hairline-strong); }
+  body.fullscreen .view .tile svg { width: 34px; height: 34px; }
+  body.fullscreen .view .tile-label { font-size: var(--text-body); }
+
+  /* ── Collapsed icon rail (on-top mode) — a thin column of section glyphs on the
+     game's right edge; clicking one expands to the full panel. ── */
+  #rail {
+    position: fixed; top: 0; right: 0; bottom: 0; width: 52px;
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+    padding: 8px 0; overflow-y: auto; box-sizing: border-box;
+    background: var(--rosewood);
+    border: 1px solid var(--hairline-strong); border-right: none;
+    border-radius: var(--r-panel) 0 0 var(--r-panel);
+    box-shadow: inset 2px 0 0 -1px var(--frame-ring), -4px 0 16px rgba(0,0,0,.45);
+    scrollbar-width: none;
+    /* Idle: slide the icon column off the right edge, leaving only a thin tab
+       (the rounded left border + shadow) so the collapsed rail is barely there.
+       Hovering the tab slides the icons back in. Hover works even while the
+       window is click-through (main.js forwards mouse-move). */
+    transition: transform 180ms var(--ease);
+    transform: translateX(calc(100% - 7px));
+  }
+  #rail:hover { transform: translateX(0); }
+  #rail::-webkit-scrollbar { width: 0; }
+  /* Placement switches (rail ↔ panel ↔ fullscreen): main.js snaps the window
+     bounds in one move and the incoming surface animates in here — GPU-composited
+     opacity/transform, no per-frame window resize (see main.js setBoundsSnapped).
+     The rail keeps its own resting translateX and the fullscreen panel is centred
+     via transform, so those two only fade; the docked panel also slides. */
+  .pop { animation: surface-in 180ms var(--ease); }
+  @keyframes surface-in { from { opacity: 0; } }
+  body:not(.fullscreen) #panel.pop { animation: panel-in 180ms var(--ease); }
+  @keyframes panel-in { from { opacity: 0; transform: translateX(14px); } }
+  .rail-icon {
+    flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; padding: 0;
+    background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-md);
+    color: var(--faded); cursor: pointer; transition: color 150ms var(--ease), border-color 150ms var(--ease);
+  }
+  .rail-icon svg { width: 19px; height: 19px; }
+  .rail-icon:hover { color: var(--bright); border-color: var(--hairline-strong); }
+  .rail-icon:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  .rail-sep { flex: 0 0 auto; width: 22px; height: 1px; background: var(--hairline); margin: 2px 0; }
+  /* Expand toggle: accented so it reads as the layout switch, not a section. */
+  .rail-toggle { color: var(--ember); border-color: var(--hairline-strong); }
+  .rail-toggle:hover { color: var(--bright); }
+  /* Custom hover label for the collapsed rail: drawn into the transparent gutter
+     left of the icon column (main.js RAIL_TIP_W). JS-positioned to the hovered
+     icon so it escapes #rail's overflow clip; pointer-events:none keeps the
+     gutter click-through. Replaces the native title tooltip. */
+  #rail-tip {
+    position: fixed; right: 62px; pointer-events: none; z-index: 20;
+    transform: translateY(-50%);
+    padding: 6px 10px; max-width: 138px;
+    background: var(--rosewood); color: var(--bright);
+    border: 1px solid var(--hairline-strong); border-radius: var(--r-md);
+    box-shadow: -4px 0 16px rgba(0,0,0,.45);
+    font-size: var(--text-sm); line-height: 1; white-space: nowrap;
+    opacity: 0; transition: opacity 120ms var(--ease);
+  }
+  #rail-tip.show { opacity: 1; }
+  #rail-tip::after {   /* little pointer toward the icon */
+    content: ''; position: absolute; left: 100%; top: 50%; transform: translateY(-50%);
+    border: 5px solid transparent; border-left-color: var(--hairline-strong);
+  }
+
+  /* ── Header: one row, both layouts — wordmark left, account chip + controls right ──
+     Docked and fullscreen share this; only -webkit-app-region and the tab strip
+     differ (see the body.fullscreen block above). The docked panel used to fork:
+     two absolutely-positioned clusters pinned to bottom:8px inside a 56px box,
+     which bottom-aligned the 28px account chip against 24px buttons (centres 2px
+     apart) and left ~20px of dead space above the row. Width is handled by the
+     container query below, not by a second layout — the panel is user-resizable
+     120–800px, so fullscreen is just the wide end of the same header. */
+  .panel-header {
+    position: relative; height: 50px; overflow: hidden; container-type: inline-size;
+    display: flex; align-items: center; gap: 12px; padding: 0 10px;
+    background: var(--header-grad), var(--rosewood-deep);
+    border-bottom: 1px solid var(--hairline-strong);
+  }
+  /* Skin art sits behind the row in both layouts; each theme controls the image,
+     position and protective scrim through tokens. */
+  .panel-header::before {
+    content: ''; position: absolute; inset: 0;
+    background: var(--header-art) center / cover no-repeat; background-position: var(--header-pos);
+    opacity: .62;
+  }
+  .hdr-scrim { position: absolute; inset: 0; background: var(--header-scrim); pointer-events: none; }
+  /* The scrim is positioned, so the row must be too, or it paints underneath. */
+  .hdr-wordmark, .hdr-left, .hdr-actions, .hdr-btn--nav { position: relative; z-index: 3; }
+  .hdr-wordmark { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; flex: 0 0 auto; }
+  .hdr-wordmark img { height: 22px; width: auto; display: block; }
+  .hdr-wordmark .lite { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; color: var(--bright); }
+  .hdr-wordmark .ver { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); }
+  .hdr-actions { display: flex; gap: 6px; flex: 0 0 auto; }
+  /* Narrow panel: the wordmark's text goes first, then the mark. The chip and the
+     controls are the header's job; the wordmark is the part that can wait. */
+  @container (max-width: 460px) {
+    .hdr-wordmark .lite, .hdr-wordmark .ver { display: none; }
+  }
+  /* Boxless window-control buttons. Scoped to .panel-header: the launcher's
+     .lch-header reuses .hdr-btn and keeps the boxed 24px variant below. */
+  .panel-header .hdr-btn { width: 30px; height: 30px; background: none; border-color: transparent; }
+  .panel-header .hdr-btn svg { width: 15px; height: 15px; }
+  .panel-header .hdr-btn:hover { background: var(--widget-hover); border-color: transparent; }
+  .panel-header .hdr-btn--close:hover { background: color-mix(in oklab, var(--danger) 22%, transparent); border-color: transparent; }
+  /* Under ~320px the controls alone outgrow the header, so they tighten to the
+     compact size — well below the 400px default, so a normally-sized panel and
+     fullscreen still render the identical row. Narrower still (the slider bottoms
+     out at 120px) the header clips rather than spilling controls over the game.
+     Must sit after the rules above: same specificity, so source order decides. */
+  @container (max-width: 320px) {
+    .hdr-wordmark { display: none; }
+    .panel-header .hdr-btn { width: 24px; height: 24px; }
+    .panel-header .hdr-btn svg { width: 13px; height: 13px; }
+    .hdr-left, .hdr-actions { gap: 4px; }
+  }
+  .hdr-btn { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; padding: 0;
+    background: var(--chrome-bg); border: 1px solid var(--chrome-border); border-radius: var(--r-sm);
+    color: var(--faded); cursor: pointer; transition: color 150ms var(--ease), background 150ms var(--ease), border-color 150ms var(--ease); }
+  .hdr-btn svg { width: 13px; height: 13px; }
+  .hdr-btn:hover { color: var(--bright); border-color: var(--hairline-strong); }
+  .hdr-btn:focus-visible { outline: none; box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 45%, transparent); }
+  .hdr-btn--close:hover { color: var(--danger); border-color: color-mix(in oklab, var(--danger) 55%, var(--hairline)); }
+
+
+  /* ── Header chip group (right of the wordmark) ───────────────────────── */
+  .hdr-left { display: flex; align-items: center; gap: 6px; min-width: 0; margin-left: auto; }
+  /* Fixed (not absolute) so it escapes the header's overflow:hidden and can drop
+     BELOW the button; top/left are set in JS from the button rect on open.
+     Still used by the alert-history bell (#notif-menu) below. */
+  .acct-menu { position: fixed; z-index: 60;
+    min-width: min(190px, calc(100vw - 12px)); max-width: min(260px, calc(100vw - 12px)); max-height: min(50vh, 320px);
+    margin: 0; padding: 5px; overflow-y: auto; list-style: none;
+    background: var(--rosewood-deep); border: 1px solid var(--hairline-strong); border-radius: var(--r-md);
+    box-shadow: 0 8px 24px rgba(0,0,0,.45); display: flex; flex-direction: column; gap: 3px; }
+  /* Alert-history entries (header bell, same dropdown shell as .acct-menu) */
+  .notif-item { display: flex; gap: 6px; min-width: 0; padding: 6px 8px; font-size: var(--text-sm); color: var(--parchment); line-height: 1.35; }
+  .notif-item > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+  .notif-time { color: var(--faded); font-family: var(--font-mono); font-variant-numeric: tabular-nums; flex: 0 0 auto; }
+  .notif-body { color: var(--faded); }
+  .notif-clear-row { display: flex; justify-content: flex-end; padding: 4px 4px 2px; border-top: 1px solid var(--hairline); margin-top: 2px; }
+  /* One rule for the three faces, after they had drifted into doing each other's
+     jobs (a small tracked uppercase label was display here, mono there, identical
+     otherwise): --font-mono = digits, paths, code · --font-display = section labels
+     (sm) and headings (lg+), where the face's character actually reads · --font-body
+     = controls, micro-labels, everything else. Mono is for aligning digits, not a
+     small-caps habit. */
+  .notif-clear { background: none; border: 1px solid var(--chrome-border); border-radius: var(--r-sm); color: var(--faded);
+    font-family: var(--font-body); font-size: var(--text-micro); font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    padding: 3px 8px; cursor: pointer; transition: color 150ms var(--ease), border-color 150ms var(--ease); }
+  .notif-clear:hover { color: var(--bright); border-color: var(--hairline-strong); }
+
+  /* ── Breadcrumb (back to dest · current section) ───────────────────── */
+  .backbar { display: flex; align-items: center; gap: 8px; padding: 9px 14px;
+    background: var(--header-grad); border-bottom: 1px solid var(--hairline); }
+  .back-btn { display: inline-flex; align-items: center; gap: 6px;
+    background: none; border: none; color: var(--faded);
+    font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600; letter-spacing: .06em; cursor: pointer;
+    padding: 2px 4px; border-radius: 4px; flex: 0 0 auto; text-transform: uppercase; }
+  .back-btn:hover { color: var(--parchment); }
+  .back-btn svg { width: 13px; height: 13px; }
+  .back-title { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--bright); margin-left: auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* ── Split: menu (top) · content (bottom) ──────────────────────────── */
+  .split { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+  .menu { flex: 0 0 30%; overflow-y: auto; scrollbar-gutter: stable; padding: 13px;
+    border-bottom: 1px solid var(--hairline-strong); box-sizing: border-box; }
+  /* Docked panel: opening a section hides the menu strip so the section fills the
+     whole panel (fullscreen mode keeps its persistent tab strip — see above). */
+  body.section-open:not(.fullscreen) .menu { display: none; }
+  /* Panel home: just the tile grid — hide the news feed pane (fullscreen keeps it). */
+  body:not(.fullscreen):not(.section-open) .content { display: none; }
+  body:not(.fullscreen):not(.section-open) .menu { flex: 1 1 auto; border-bottom: none; }
+  .content { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+
+  /* ── Views ─────────────────────────────────────────────────────────── */
+  .views { flex: 1 1 auto; min-height: 0; }
+  .view { height: 100%; box-sizing: border-box; overflow-y: auto; scrollbar-gutter: stable; padding: 12px 13px; }
+  .view:not([hidden]) { animation: fade 160ms var(--ease); }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  /* Drill (detail in) slides from the right, Back (body in) from the left — matches Back's direction. */
+  .view-body:not([hidden])   { animation: drill-back 120ms var(--ease); }
+  .view-detail:not([hidden]) { animation: drill-fwd 120ms var(--ease); }
+  @keyframes drill-fwd  { from { opacity: 0; transform: translateX(8px);  } to { opacity: 1; transform: translateX(0); } }
+  @keyframes drill-back { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
+  /* Global thin scrollbars — Windows default chrome is ugly; opt-outs (#rail, .menu backbar) set width:0 themselves */
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: var(--hairline-strong); border-radius: 4px; background-clip: padding-box; border: 2px solid transparent; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--text-dim, var(--hairline-strong)); background-clip: padding-box; border: 2px solid transparent; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  /* ── Home menu grid (15 feature tiles in 3 groups; open section is selected) ── */
+  /* Three labelled groups (SECTION_GROUPS in overlay.js), Tracking first. The
+     label is deliberately NOT the 10px tracked-uppercase treatment the rest of
+     the panel's chrome uses: three sentence-case headings read as structure,
+     the same three as eyebrows read as scaffolding. */
+  .home-group + .home-group { margin-top: 14px; }
+  .home-group-title { margin: 0 0 7px; font-family: var(--font-body); font-size: var(--text-sm);
+    font-weight: 600; color: var(--faded); }
+  /* minmax(0, 1fr), not 1fr: `1fr` is minmax(auto, 1fr), so every column floored
+     at its longest label's min-content width and the grid refused to shrink —
+     below ~320px in FR that sliced column 3 mid-word (RECE / MAR / JOUR DE DO)
+     and grew a horizontal scrollbar, at widths the settings slider reaches in
+     one drag. minmax(0,·) lets columns actually shrink; the label wraps instead. */
+  .home-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  /* Below ~300px three columns can't hold a wrapped label legibly — drop to two
+     rather than shrink further. The panel width IS the viewport here (frameless
+     window), so a plain width query is the right hook. */
+  @media (max-width: 300px) {
+    .home-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    /* micro is the ramp's tracked-uppercase-chrome step, which is exactly what a
+       tile label is. At body size the longest FR labels (PERSONNAGE, ÉVÉNEMENTS)
+       land ~2px over a 2-column tile and break to a one-letter orphan
+       (PERSONNAG/E) — one step down they fit on one line, so the narrow panel
+       reads better at the smaller size than at the larger one.
+       `.home-grid .tile-label`, not `.tile-label`: the base rule is declared
+       further down this sheet, so at equal specificity it would win on order. */
+    .home-grid .tile-label { font-size: var(--text-micro); letter-spacing: .03em; }
+  }
+  /* The slider floor is 120px (main.js clamps 120–800). Two columns there is ~45px
+     of tile, which shreds every label into a letter stack (Personnage/5L). One
+     column keeps them on one line and turns the grid into a legible narrow list,
+     which is the only thing that width can honestly be. */
+  @media (max-width: 200px) {
+    .home-grid { grid-template-columns: 1fr; }
+  }
+  .tile {
+    position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px;
+    height: 70px; padding: 6px; background: var(--tile-off);
+    border: 1px solid var(--tile-off-border); border-radius: var(--r-md); box-shadow: var(--tile-off-shadow);
+    color: var(--faded); font-family: var(--font-display); cursor: pointer;
+    transition: border-color 150ms var(--ease), color 150ms var(--ease);
+  }
+  .tile:hover { border-color: var(--hairline-strong); color: var(--bright); }
+  .tile:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  .tile svg { width: 21px; height: 21px; color: currentColor; }
+  /* Body face, not display: Fredoka is a rounded display cut whose whole character
+     lives in its counters and terminals, and at 10px uppercase every one of them was
+     gone — paying a display face's legibility cost and collecting none of its
+     personality, on the panel's primary nav, for someone glancing mid-combat.
+     Manrope at 12/700 is both more legible and more on-brand. The character Fredoka
+     is actually for stays on the wordmark, the eyebrows and the empty states. */
+  /* `anywhere` so a single long word (PERSONNAGE, ÉVÉNEMENTS) can break rather
+     than set the column's min-content floor — the other half of the fix above. */
+  .tile-label { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; text-align: center; line-height: 1.15; text-wrap: balance; overflow-wrap: anywhere; }
+  .tile--active { background: var(--tile-sel); border-color: var(--tile-sel-border); color: var(--bright);
+    animation: rlglow 2.7s ease-in-out infinite; }
+  .tile--active svg { color: var(--bright); }
+  /* Guide-section tiles carry a section image faded into the tile, like the hero
+     header art: a cover image on a pseudo behind the icon/label, dimmed over the
+     dark tile so text stays legible. Drop assets/guides/<id>.png (or .jpg/.webp)
+     to give a section its art; JS sets --tile-art + .tile--art (see renderGuides). */
+  .tile--art { color: var(--bright); }
+  .tile--art::before {
+    content: ''; position: absolute; inset: 0; z-index: 0; border-radius: inherit;
+    background: var(--tile-art) center / cover no-repeat; opacity: .4;
+    transition: opacity 150ms var(--ease); }
+  .tile--art:hover::before { opacity: .56; }
+  .tile--art > svg, .tile--art > .tile-label { position: relative; z-index: 1; }
+  .tile--art .tile-label { text-shadow: 0 1px 3px rgba(0,0,0,.75); }
+  .tile--art > svg { filter: drop-shadow(0 1px 2px rgba(0,0,0,.7)); }
+  /* Live-fed sections in a build without a data source: dimmed but still openable
+     (the section explains why it's unavailable).
+     The state is carried by the dashed border + a faded icon, never by dissolving
+     the label: `opacity: .34` on the whole tile composited the 10px label down to
+     ~1.8:1, and these are precisely the tiles a shipped (!LIVE) install shows on
+     first launch — not gutted, illegible. The label keeps --faded (5.9:1) and the
+     shape does the talking, which also survives colorblindness (DESIGN §9). */
+  .tile--off, .rail-icon--off { border-style: dashed; }
+  .tile--off > svg, .rail-icon--off > svg { opacity: .45; }
+  .tile--off:hover, .rail-icon--off:hover { color: inherit; border-color: var(--hairline); }
+
+  /* ── Summary + progress (Quests) ───────────────────────────────────── */
+  .summary { display: flex; align-items: baseline; justify-content: space-between; padding: 0 2px; }
+  .summary-title { font-size: var(--text-body); font-weight: 600; }
+  .summary-count { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); font-variant-numeric: tabular-nums; }
+  .progress { height: 4px; border-radius: 2px; background: var(--hairline); overflow: hidden; margin: 7px 2px 4px; }
+  /* Not transitioned: renderQuests() rebuilds this node on every toggle, so a
+     fresh element has no prior value to interpolate from and the tween can't fire. */
+  .progress-fill { height: 100%; background: var(--jade); border-radius: 2px; }
+  .acc-play:disabled { opacity: .45; cursor: default; pointer-events: none; }
+  .sample-note { font-size: var(--text-sm); color: var(--faded); padding: 0 2px 10px; opacity: 0.85; }
+
+  /* ── Rows (lists) ──────────────────────────────────────────────────── */
+  .rows { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+  .pinned-strip { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--hairline); }
+  .row {
+    /* border-box: a button.row gets it from the UA sheet, a div.row (gem list) doesn't,
+       and width:100% + padding then overflows its grid cell. */
+    width: 100%; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 9px 12px; text-align: left;
+    background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-sm); box-shadow: var(--row-shadow);
+    color: var(--parchment); font-family: var(--font-body); cursor: pointer;
+    transition: border-color 150ms var(--ease); }
+  .row:hover { border-color: var(--hairline-strong); }
+  .row:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  .row--static { cursor: default; }
+  .row--static:hover { border-color: var(--row-border); }
+  .row-name { font-size: var(--text-body); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .qrow { justify-content: flex-start; gap: 9px; }
+  .qicon { width: 16px; height: 16px; flex: 0 0 auto; display: inline-flex; }
+  .qicon svg { width: 16px; height: 16px; }
+  .row-meta { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+  /* Count badge — beveled seal (Guild/Frost) or soft pill (Rose Bloom).
+     Mono, not display: these are live numbers, and `tabular-nums` is a *request* for
+     an OpenType tnum feature — neither Fredoka nor Cinzel is a safe bet to ship one,
+     so the declaration was likely a silent no-op and the digits proportional anyway.
+     Mono is tabular by construction; no feature bet, and it obeys the Tabular rule. */
+  .row-count, .qty { font-family: var(--font-mono); font-size: var(--text-sm); font-weight: 600; letter-spacing: .01em;
+    color: var(--badge-text); background: var(--badge-bg); border: 1px solid var(--badge-border);
+    padding: 3px 9px; border-radius: var(--badge-radius); box-shadow: var(--badge-shadow); font-variant-numeric: tabular-nums; }
+  .chev { width: 14px; height: 14px; color: var(--faded); flex: 0 0 auto; }
+
+  /* ── Tags / pills ──────────────────────────────────────────────────── */
+  .tag { font-size: var(--text-sm); font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap; background: color-mix(in oklab, var(--questgold) 18%, transparent); color: var(--questgold); }
+  .pill { flex: 0 0 auto; font-size: var(--text-sm); font-weight: 600; letter-spacing: 0.02em; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .pill--idle  { background: color-mix(in oklab, var(--parchment) 10%, transparent); color: var(--faded); }
+  .pill--armed { background: color-mix(in oklab, var(--ember) 26%, transparent); color: var(--parchment); }
+  .pill--ready { background: var(--questgold); color: var(--questgold-ink); }
+
+  /* ── Detail content (recipes, dungeons, guides) ────────────────────── */
+  .detail-label { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--bright); margin: 15px 2px 7px; }
+  .detail-label:first-child { margin-top: 2px; }
+  .detail-label:has(.gem-copy) { display: flex; align-items: center; gap: 8px; }
+  /* Collapsible list block (item page: Used in · Dropped by) — the summary IS the
+     label, so the closed state reads as a normal section heading with a count. */
+  .fold > summary { list-style: none; cursor: pointer; }
+  .fold > summary::-webkit-details-marker { display: none; }
+  .fold > summary::before { content: '\25b8'; margin-right: 6px; font-size: var(--text-micro); }
+  .fold[open] > summary::before { content: '\25be'; }
+  .fold > summary:hover { color: var(--ember); }
+  .fold-n { font-family: var(--font-body); font-weight: 600; color: var(--faded); letter-spacing: 0; }
+  .gem-copy { margin-left: auto; width: 26px; height: 26px; padding: 0; font-size: 13px; line-height: 24px;
+    text-align: center; cursor: pointer; border-radius: var(--r-sm); border: 1px solid var(--hairline);
+    background: var(--widget); color: var(--parchment); }
+  .gem-copy:hover { background: var(--widget-hover); }
+  .meta-line { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); padding: 0 2px; margin: 0 0 4px; }
+  /* 68ch: the only long-form prose in the app, and the only place a 1120px
+     fullscreen window would run it to ~150ch. Docked (400px) never reaches the cap. */
+  .prose { font-size: var(--text-body); line-height: 1.6; max-width: 68ch; text-wrap: pretty; color: var(--parchment); padding: 0 2px; margin: 0; }
+  /* Same category art as the Guides menu tile, faded low behind the content so it stays readable. */
+  .art-bg { position: relative; }
+  .view-detail.art-bg { min-height: 100%; }   /* fill the panel, not just the content */
+  .art-bg::before {
+    content: ''; position: absolute; inset: -12px -6px 0; z-index: -1;
+    background: var(--tile-art) center top / cover no-repeat; opacity: .5;
+    -webkit-mask-image: linear-gradient(to bottom, #000, transparent 95%); mask-image: linear-gradient(to bottom, #000, transparent 95%);
+  }
+  .steps { margin: 0; padding-left: 20px; }
+  .steps li { font-size: var(--text-body); line-height: 1.5; color: var(--parchment); margin-bottom: 7px; }
+  .steps li::marker { color: var(--faded); }
+
+  /* ── Quest chain ───────────────────────────────────────────────────── */
+  .chain { display: flex; flex-direction: column; padding: 2px; }
+  .step { display: flex; gap: 11px; padding-bottom: 15px; position: relative; }
+  .step:last-child { padding-bottom: 0; }
+  .step:not(:last-child)::before { content: ''; position: absolute; left: 6px; top: 16px; bottom: 0; width: 2px; background: var(--hairline); }
+  .step-node { width: 13px; height: 13px; border-radius: 50%; margin-top: 2px; flex: 0 0 auto; border: 2px solid var(--hairline-strong); background: transparent; z-index: 1; }
+  .step--done .step-node { background: var(--jade); border-color: var(--jade); }
+  .step--current .step-node { background: var(--ember); border-color: var(--ember); box-shadow: 0 0 0 3px color-mix(in oklab, var(--ember) 30%, transparent); }
+  .step-name { font-size: var(--text-body); color: var(--parchment); }
+  .step--todo .step-name { color: var(--faded); }
+  .step--current .step-name { font-weight: 700; }
+  .step[data-q] { cursor: pointer; }
+  .step[data-q]:hover .step-name { color: var(--questgold); }
+
+  /* ── Search / large lists ──────────────────────────────────────────── */
+  .search { margin-bottom: 10px; }
+
+  /* ── Filters (search lists: quests / items / guides) ───────────────── */
+  .filters { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; padding: 9px 11px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-md); }
+  .filters-fold { margin-bottom: 10px; }
+  .filters-fold > .filters { margin-bottom: 0; margin-top: 8px; }
+  .filters-fold > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-body); font-size: var(--text-micro); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faded); }
+  .filters-fold > summary::-webkit-details-marker { display: none; }
+  .filters-fold > summary::before { content: '▸'; font-size: var(--text-micro); transition: transform 150ms var(--ease); }
+  .filters-fold[open] > summary::before { transform: rotate(90deg); }
+  .filters-fold > summary:hover { color: var(--bright); }
+  .filt { display: flex; flex-direction: column; gap: 6px; }
+  .filt-fold > summary { list-style: none; cursor: pointer; }
+  .filt-fold > summary::-webkit-details-marker { display: none; }
+  .filt-fold > summary .filt-lbl::before { content: '▸ '; font-size: var(--text-micro); }
+  .filt-fold[open] > summary .filt-lbl::before { content: '▾ '; }
+  .filt-fold > summary:hover .filt-lbl { color: var(--bright); }
+  .filt-lbl { font-family: var(--font-body); font-size: var(--text-micro); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faded); }
+  .filt-val { font-weight: 600; color: var(--parchment); text-transform: none; letter-spacing: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .chip { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600; padding: 3px 10px; border-radius: 999px; cursor: pointer; background: color-mix(in oklab, var(--parchment) 7%, transparent); border: 1px solid var(--hairline); color: var(--faded); transition: color 150ms var(--ease), border-color 150ms var(--ease); }
+  .chip:hover { color: var(--parchment); border-color: var(--hairline-strong); }
+  .chip--on { background: color-mix(in oklab, var(--ember) 24%, transparent); border-color: color-mix(in oklab, var(--ember) 50%, var(--hairline)); color: var(--parchment); }
+  .range { position: relative; height: 16px; }
+  .range input[type="range"] { position: absolute; left: 0; right: 0; width: 100%; margin: 0; -webkit-appearance: none; appearance: none; background: none; pointer-events: none; }
+  .range input[type="range"]::-webkit-slider-runnable-track { height: 3px; border-radius: 2px; background: var(--hairline-strong); }
+  .range input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; pointer-events: auto; width: 13px; height: 13px; margin-top: -5px; border-radius: 50%; background: var(--ember); border: 2px solid var(--rosewood-deep); cursor: pointer; }
+  .filt--tgl { flex-direction: row; align-items: center; gap: 7px; cursor: pointer; font-size: var(--text-sm); color: var(--parchment); }
+  .filt--tgl input { accent-color: var(--ember); cursor: pointer; margin: 0; }
+  .mod-row { display: flex; align-items: center; gap: 8px; }
+  .mod-row .row { flex: 1; min-width: 0; }
+  .mod-caret { flex: 0 0 auto; display: flex; align-items: center; background: none; border: none; padding: 6px; cursor: pointer; color: var(--faded); }
+  .mod-caret .chev { transition: transform 150ms var(--ease); }
+  .mod-caret.open .chev { transform: rotate(90deg); }
+  .switch { -webkit-appearance: none; appearance: none; flex: 0 0 auto; width: 32px; height: 18px; border-radius: 999px; background: var(--hairline-strong); position: relative; cursor: pointer; margin: 0; transition: background 150ms var(--ease); }
+  .switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--parchment); transition: left 150ms var(--ease); }
+  .switch:checked { background: var(--jade); }
+  .switch:checked::after { left: 16px; }
+
+  /* ── Toasts (api.notify) — the *fallback* surface. A notification normally
+        drops down over the game window (overlay/toast.html); it only lands in
+        the panel when that layer is down (launcher, or game not foreground). ── */
+  #toasts { position: absolute; top: 8px; left: 8px; right: 8px; z-index: 50;
+    display: flex; flex-direction: column; align-items: center; gap: 6px; pointer-events: none; }
+  .toast { pointer-events: auto; width: 100%; min-width: 0; box-sizing: border-box; background: var(--rosewood-deep); border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-sm); padding: 8px 10px; overflow-wrap: anywhere;
+    box-shadow: 0 4px 14px rgba(0,0,0,.4); animation: toast-in 180ms var(--ease); }
+  .toast--link { cursor: pointer; }
+  .toast--link:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 45%, transparent); }
+  .toast-title, .toast-body { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+  .toast-title { -webkit-line-clamp: 2; line-clamp: 2; font-weight: 600; color: var(--parchment); font-size: var(--text-body); }
+  .toast--gold .toast-title { color: var(--questgold); }
+  .toast--bad .toast-title { color: var(--danger); }
+  .toast-body { -webkit-line-clamp: 3; line-clamp: 3; color: var(--faded); font-size: var(--text-sm); margin-top: 2px; }
+  .toast--out { opacity: 0; transform: translateY(-6px);
+    transition: opacity 200ms var(--ease), transform 200ms var(--ease); }
+  @keyframes toast-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .quest-toggle { margin-top: 16px; }
+
+  /* ── Item rows + item page (the linking hub) ───────────────────────── */
+  .item-row { justify-content: flex-start; gap: 9px; }
+  .item-row .row-name { flex: 1; }
+  .row-icon { width: 22px; height: 22px; flex: 0 0 auto; border-radius: 4px; object-fit: contain; background: color-mix(in oklab, var(--parchment) 5%, transparent); }
+  .item-hero { display: flex; align-items: center; gap: 12px; margin: 2px 0 4px; }
+  .item-hero-icon { width: 48px; height: 48px; flex: 0 0 auto; border-radius: var(--r-sm); object-fit: contain; background: color-mix(in oklab, var(--parchment) 6%, transparent); }
+  .item-hero-meta { min-width: 0; }
+  .item-hero-name { font-size: var(--text-lg); font-weight: 700; margin-bottom: 5px; overflow-wrap: anywhere; }
+  .item-hero-actions { margin-left: auto; align-self: flex-start; display: flex; flex-direction: column; gap: 4px; }
+  .item-hero-copy { flex: 0 0 auto; width: 26px; height: 26px; padding: 0; font-size: 13px; line-height: 24px;
+    text-align: center; cursor: pointer; border-radius: var(--r-sm); border: 1px solid var(--hairline);
+    background: var(--widget); color: var(--parchment); }
+  .item-hero-copy:hover { background: var(--widget-hover); }
+  /* Item page: single flow docked. Fullscreen floats the price chart aside to
+     the right of the stats so the wide window reads as two panes, not a
+     stretched sparkline under a cramped stat column. */
+  body.fullscreen .item-page { display: grid; grid-template-columns: minmax(0,1fr) 320px; gap: 24px; align-items: start; }
+  body.fullscreen .item-top { grid-column: 1; grid-row: 1; }
+  body.fullscreen .item-aside { grid-column: 2; grid-row: 1 / span 2; }
+  body.fullscreen .item-bottom { grid-column: 1; grid-row: 2; }
+  body.fullscreen .item-aside .pchart-svg { height: 240px; }
+
+  /* ── Fullscreen browse pages (Items · Quests · Recipes): an app, not a stretched
+     sidebar. Lists become a card grid, and any searchListInto page puts its filters
+     in a sticky left rail beside the results. Only the list containers are targeted
+     (#sl = the searchListInto list, plus Items' own category/search/pinned lists),
+     so drill pages — the item profile, a quest's chain — keep their own layout. ── */
+  body.fullscreen :is(#view-objets, #view-quetes, #view-recettes) #sl,
+  body.fullscreen #view-objets :is(.view-body > .rows, .pinned-strip > .rows) {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 7px; }
+  /* Grid cards: bigger icon, no drill chevron. */
+  body.fullscreen :is(#view-objets, #view-recettes) :is(#sl, .view-body > .rows, .pinned-strip > .rows) .row-icon {
+    width: 26px; height: 26px; }
+  body.fullscreen :is(#view-objets, #view-recettes) :is(#sl, .view-body > .rows, .pinned-strip > .rows) .chev {
+    display: none; }
+  body.fullscreen #view-objets .view-body > .search { max-width: 380px; }
+
+  /* Filters → sticky left rail. Placed first (definite row/column), so the search,
+     list, note — and Quests' summary + progress head — auto-flow down column 2. */
+  body.fullscreen :is(#view-objets, #view-quetes, #view-recettes) :is(.view-body, .view-detail):has(> .filters) {
+    display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 0 20px; align-items: start; }
+  body.fullscreen :is(#view-objets, #view-quetes, #view-recettes) :is(.view-body, .view-detail):has(> .filters) > * {
+    grid-column: 2; }
+  /* Spans every row (99 = "all of them", the rest collapse to 0) so the rail's
+     height never inflates the row the search or Quests' head sits in. */
+  body.fullscreen :is(#view-objets, #view-quetes, #view-recettes) :is(.view-body, .view-detail) > .filters {
+    grid-column: 1; grid-row: 1 / span 99; position: sticky; top: 0; margin: 0;
+    /* ponytail: viewport-height guess (header + tabs + footer). Only matters for a
+       rail taller than the screen — today only Recipes' 23 craft skills come close. */
+    max-height: calc(100vh - 140px); overflow-y: auto; }
+
+  /* ── Fullscreen: the remaining sections. Two shapes — a dense list becomes a card
+     grid, a form-ish page gets a readable centred column instead of 1120px-wide
+     inputs. Docked and rail layouts never see any of this. ── */
+  /* Settings, mod manager, monster watch — toggle lists, not card grids. A centred
+     column; padding (not max-width) keeps the scrollbar on the window edge. */
+  body.fullscreen :is(#view-parametres, #view-extensions, #view-monstres) {
+    padding-inline: max(13px, calc((100% - 780px) / 2)); }
+
+  /* Plugin widgets (Character, Loot, DPS): a dashboard of cards, not stacked bars. */
+  body.fullscreen :is(#char-widgets, #loot-widgets, #dps-widgets) {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; align-items: start; }
+
+  /* Kings, all 68 of them: a zone reads at a glance instead of scrolling. */
+  body.fullscreen #view-rois .king-rows {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 6px; }
+  body.fullscreen #view-rois .king-search { max-width: 380px; }
+
+  /* Gems: targets side by side, shopping list as a grid. Its rows centre their name
+     (three flex children, space-between) — pin it left now the card is narrow. */
+  body.fullscreen #view-gems .gem-search { max-width: 380px; }
+  body.fullscreen #view-gems .gem-cards {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 8px; align-items: start; }
+  body.fullscreen #view-gems .gem-card { margin-bottom: 0; }
+  body.fullscreen #view-gems .gem-output .rows {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 6px; }
+  body.fullscreen #view-gems .gem-output .row-name { flex: 1; }
+
+  /* Shouts: the composer is a form, not a banner — dock it left of the saved list. */
+  body.fullscreen #view-cris { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 0 20px; align-items: start; }
+  body.fullscreen #view-cris .shout-add { position: sticky; top: 0; margin: 0; }
+  body.fullscreen #view-cris #shout-list {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 7px; align-content: start; }
+
+  /* Dungeon logs: the empty state is a grid item — let it span the whole grid. */
+  body.fullscreen #view-journaux .dl-grid > .empty { grid-column: 1 / -1; }
+
+  .stat-grid { display: grid; grid-template-columns: max-content 1fr; gap: 3px 10px; margin: 8px 0; font-family: var(--font-mono); font-size: var(--text-sm); }
+  .stat-k { color: var(--stat-label); }
+  .stat-v { color: var(--stat-value); font-variant-numeric: tabular-nums; }
+  .stat-k--req, .stat-v--req { color: var(--stat-req); }
+  .stat-list { margin: 4px 0 0; padding-left: 18px; }
+  .stat-list li { font-size: var(--text-body); line-height: 1.5; margin-bottom: 3px; }
+  .stat-list li::marker { color: var(--faded); }
+  .stat-bonus { list-style: none; margin: 4px 0 0; padding: 0; font-family: var(--font-mono); }
+  .stat-bonus li { font-size: var(--text-sm); line-height: 1.5; color: var(--stat-bonus); }
+  .stat-bonus li::before { content: '['; } .stat-bonus li::after { content: ']'; }
+
+  .item-link { color: var(--questgold); cursor: pointer; text-decoration: none; border-bottom: 1px dotted color-mix(in oklab, var(--questgold) 55%, transparent); }
+  .item-link:hover { border-bottom-style: solid; }
+
+  /* Fades in when it un-hides; JS keeps it un-hidden while the cursor stays on
+     one link, so following the cursor never re-triggers the animation. */
+  #item-preview:not([hidden]) { animation: fade 110ms var(--ease); }
+  #item-preview {
+    position: fixed; z-index: 50; pointer-events: none;
+    width: 232px; max-width: calc(100vw - 12px);
+    padding: 10px 12px;
+    background: var(--rosewood);
+    border: 1px solid var(--hairline-strong); border-radius: var(--r-md);
+    box-shadow: 0 8px 26px rgba(0,0,0,.55);
+  }
+
+  /* ── Prose media ───────────────────────────────────────────────────── */
+  .prose img { max-width: 100%; height: auto; display: block; margin: 8px 0; border-radius: var(--r-sm); }
+  .prose a { color: var(--questgold); text-decoration: none; }
+  .prose a:hover { text-decoration: underline; }
+  /* Guides are the one place in the panel with real editorial content — and the one
+     place the display face is unambiguously earned. h2/h3/h4 were all 14px (= body),
+     separated by nothing but --bright: three heading levels signalled by a color.
+     Size + family + weight now carry it, so the outline survives at a glance. */
+  .prose h2 { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; line-height: 1.2; margin: 18px 0 6px; color: var(--bright); }
+  .prose h3 { font-family: var(--font-display); font-size: var(--text-body); font-weight: 700; line-height: 1.25; margin: 16px 0 5px; color: var(--bright); }
+  .prose h4 { font-size: var(--text-body); font-weight: 700; margin: 14px 0 4px; color: var(--parchment); }
+  .prose ul { padding-left: 18px; margin: 6px 0; }
+  .prose li { margin-bottom: 4px; }
+  .prose blockquote { margin: 8px 0; padding-left: 10px; border-left: 2px solid var(--hairline-strong); color: var(--faded); }
+  .prose hr { border: none; border-top: 1px solid var(--hairline); margin: 14px 0; }
+  .prose code { font-family: var(--font-mono); background: var(--widget); padding: 1px 4px; border-radius: 4px; font-size: var(--text-sm); }
+  details.spoiler { margin: 8px 0; border: 1px solid var(--hairline); border-radius: var(--r-sm); padding: 6px 10px; background: var(--widget); }
+  details.spoiler summary { cursor: pointer; font-size: var(--text-sm); font-weight: 700; color: var(--faded); }
+  details.spoiler[open] summary { margin-bottom: 6px; color: var(--parchment); }
+  .pchart { position: relative; margin: 8px 0 4px; padding: 4px 8px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-sm); }
+  .pchart-svg { display: block; width: 100%; height: 56px; }
+  .pchart-area { fill: color-mix(in oklab, var(--chart) 16%, transparent); }
+  .pchart-line { fill: none; stroke: var(--chart); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-linecap: round; }
+  .pchart-dot { fill: var(--chart); }
+  .pchart-scale { position: absolute; top: 4px; right: 6px; bottom: 4px; display: flex; flex-direction: column; justify-content: space-between; font-family: var(--font-mono); font-size: var(--text-micro); color: var(--faded); text-align: right; pointer-events: none; font-variant-numeric: tabular-nums; }
+
+  /* ── Market section: two-pane in fullscreen (browse + featured chart · watchlist
+     + trending), single column when docked. Prices/change come from one snapshot;
+     the featured chart reuses the .pchart component, enlarged. ── */
+  .mk { display: block; }
+  body.fullscreen #view-marche .mk { display: grid; grid-template-columns: minmax(0,1fr) 300px; gap: 20px; align-items: start; }
+  .mk-main { min-width: 0; }
+  .mk-side { min-width: 0; }
+  .mk-side .detail-label:first-child { margin-top: 2px; }
+  .mk-watch, .mk-trend { display: flex; flex-direction: column; gap: 5px; }
+  /* Compact clickable price row (watchlist + trending + board) */
+  .mk-mini { display: grid; grid-template-columns: 20px 1fr auto; align-items: center; gap: 8px; width: 100%; text-align: left;
+    padding: 7px 9px; background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-sm);
+    color: var(--parchment); font-family: var(--font-body); cursor: pointer; transition: border-color 150ms var(--ease); }
+  .mk-mini:hover { border-color: var(--hairline-strong); }
+  .mk-mini:focus-visible, .mk-lrow:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  .mk-mini .row-icon { width: 20px; height: 20px; }
+  .mk-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: var(--text-body); }
+  .mk-r { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: var(--text-sm); }
+  .mk-z { color: var(--stat-value); }
+  .mk-chg { font-size: var(--text-sm); color: var(--faded); }
+  .mk-chg--up { color: var(--jade); }
+  .mk-chg--down { color: var(--danger); }
+  /* First-load animation: the app logo breathing over a soft ember glow */
+  .mk-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 48px 0; }
+  .mk-loading img { width: 84px; height: auto; animation: mk-breathe 1.8s ease-in-out infinite; filter: drop-shadow(0 0 10px color-mix(in oklab, var(--ember) 55%, transparent)); }
+  .mk-loading span { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600; letter-spacing: .06em; color: var(--faded); animation: mk-fade 1.8s ease-in-out infinite; }
+  .mk-error { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 2px; }
+  .mk-error .section-note { margin: 0; padding: 0; overflow-wrap: anywhere; }
+  .mk-error .lang-btn { flex: 0 0 auto; width: auto; }
+  @keyframes mk-breathe { 0%,100% { transform: scale(.94); opacity: .7; } 50% { transform: scale(1.06); opacity: 1; } }
+  @keyframes mk-fade { 0%,100% { opacity: .4; } 50% { opacity: .9; } }
+  .mk-sort { margin: 9px 0 10px; }
+  .mk-lrow { justify-content: flex-start; gap: 9px; }
+  .mk-lrow .row-name { flex: 1; font-size: var(--text-body); }
+  /* Featured item + big chart */
+  .mk-featured { padding: 12px 14px; margin-bottom: 14px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-md); }
+  /* While a search query is active the results take the chart's spot; clicking a result brings it back */
+  .mk--searching .mk-featured { display: none; }
+  .mk-feat-head { display: flex; align-items: center; gap: 11px; margin-bottom: 8px; }
+  .mk-feat-head .row-icon { width: 34px; height: 34px; }
+  .mk-feat-meta { min-width: 0; flex: 1; }
+  .mk-feat-name { display: block; font-size: var(--text-lg); font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mk-feat-sub { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); margin-top: 3px; }
+  .mk-feat-price { flex: 0 0 auto; font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: var(--text-xl); color: var(--stat-value); }
+  .pchart--big .pchart-svg { height: 180px; }
+  body.fullscreen #view-marche .pchart--big .pchart-svg { height: 300px; }
+  .pchart--big .pchart-scale { bottom: 22px; }   /* clear the x-axis date row below the svg */
+  .pchart-line--max { stroke: var(--faded); opacity: .5; stroke-width: 1; }
+  .pchart-bar { fill: var(--chart); opacity: .85; }
+  .pchart-xaxis { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: var(--text-micro); color: var(--faded); margin-top: 3px; font-variant-numeric: tabular-nums; }
+  /* Chart controls (range 7/30/90 · line/bar) above the featured chart */
+  .mk-chart-ctl { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin: 2px 0 4px; }
+  .mk-chart-ctl .chips { margin: 0; }
+  /* Hover crosshair + price tooltip over the featured chart */
+  .pchart-hover { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 90ms var(--ease); }
+  .pchart-hover.on { opacity: 1; }
+  .pchart-cross { position: absolute; width: 1px; background: var(--hairline-strong); }
+  .pchart-tip { position: absolute; top: 2px; transform: translateX(-50%); padding: 3px 7px; background: var(--widget-hover); border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-sm); font-family: var(--font-mono); font-size: var(--text-micro); white-space: nowrap; color: var(--parchment); font-variant-numeric: tabular-nums; box-shadow: 0 2px 8px rgba(0,0,0,.35); }
+  .mk-upd { color: var(--faded); font-size: var(--text-micro); margin-left: 7px; font-weight: 400; font-variant-numeric: tabular-nums; }
+
+  /* ── Dungeon Logs: a card per dungeon type (best time · your DPS · run count),
+     clicking a card drills to every logged run with its full party leaderboard.
+     Grid in fullscreen, single column when docked. Logo falls back to the SVG. ── */
+  .dl-log { margin-bottom: 14px; }
+  .dl-log summary { list-style: none; cursor: pointer; font-family: var(--font-display); font-size: var(--text-sm); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--bright); padding: 9px 11px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-md); }
+  .dl-log summary::-webkit-details-marker { display: none; }
+  .dl-log[open] summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+  .dl-form { display: flex; flex-direction: column; gap: 8px; padding: 11px; background: var(--widget); border: 1px solid var(--hairline); border-top: none; border-radius: 0 0 var(--r-md) var(--r-md); }
+  .dl-dur { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); }
+  .dl-dur .inp { width: 60px; text-align: center; }
+  .dl-form textarea.inp { font-family: var(--font-mono); font-size: var(--text-sm); }
+  .dl-me { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); }
+  .dl-me b { color: var(--stat-value); }
+  .dl-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  body.fullscreen #view-journaux .dl-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .dl-card { display: flex; flex-direction: column; gap: 8px; padding: 14px; text-align: left; cursor: pointer;
+    background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-md); box-shadow: var(--row-shadow);
+    color: var(--parchment); font-family: var(--font-body); transition: border-color 150ms var(--ease), transform 150ms var(--ease); }
+  .dl-card:hover { border-color: var(--hairline-strong); transform: translateY(-2px); }
+  .dl-card:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  .dl-logo { width: 40px; height: 40px; border-radius: var(--r-sm); object-fit: contain; color: var(--ember); background: color-mix(in oklab, var(--ember) 8%, transparent); padding: 5px; }
+  .dl-logo svg { width: 100%; height: 100%; }
+  .dl-card-name { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; color: var(--bright); }
+  .dl-card-stats { display: flex; flex-wrap: wrap; gap: 3px 14px; font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); font-variant-numeric: tabular-nums; }
+  .dl-card-stats b { color: var(--stat-value); font-weight: 400; }
+  /* Run detail: one block per run with a party table, your row highlighted */
+  .dl-run { margin-bottom: 12px; padding: 11px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-md); }
+  .dl-run-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px; font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); font-variant-numeric: tabular-nums; }
+  .dl-run-dps { font-family: var(--font-mono); font-size: var(--text-body); font-weight: 700; color: var(--bright); font-variant-numeric: tabular-nums; }
+  .dl-tbl { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
+  .dl-tbl th { color: var(--faded); font-weight: 400; text-align: right; padding: 3px 6px; white-space: nowrap; }
+  .dl-tbl th:first-child, .dl-tbl td:first-child { text-align: left; }
+  .dl-tbl td { color: var(--parchment); text-align: right; padding: 3px 6px; white-space: nowrap; }
+  .dl-tbl tbody tr { cursor: pointer; }
+  .dl-tbl tbody tr:hover td { background: color-mix(in oklab, var(--ember) 8%, transparent); }
+  .dl-tbl tr.dl-you td { color: var(--bright); background: color-mix(in oklab, var(--ember) 14%, transparent); }
+  .dl-del { background: none; border: none; color: var(--faded); cursor: pointer; font-size: 13px; padding: 0 4px; }
+  .dl-del:hover { color: var(--danger); }
+
+  /* ── Settings ──────────────────────────────────────────────────────── */
+  .settings-page { display: flex; flex-direction: column; gap: 18px; padding-bottom: 8px; }
+  .settings-intro { margin: 0; color: var(--faded); font-size: var(--text-sm); text-wrap: pretty; }
+  .settings-groups { display: flex; flex-direction: column; gap: 8px; }
+  .settings-group { min-width: 0; overflow: hidden; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-md); }
+  .settings-group[open] { border-color: var(--hairline-strong); }
+  .settings-group-head { display: flex; align-items: center; gap: 10px; padding: 11px 12px; list-style: none; cursor: pointer; transition: background 150ms var(--ease), border-color 150ms var(--ease); }
+  .settings-group-head::-webkit-details-marker { display: none; }
+  .settings-group-head:hover { background: var(--widget-hover); }
+  .settings-group-head:focus-visible { outline: none; box-shadow: inset 0 0 0 2px color-mix(in oklab, var(--ember) 45%, transparent); }
+  .settings-group-head::after { content: ''; width: 7px; height: 7px; flex: 0 0 auto; margin-left: auto; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; color: var(--faded); transform: rotate(45deg) translate(-2px, 2px); transition: transform 150ms var(--ease), color 150ms var(--ease); }
+  .settings-group[open] > .settings-group-head::after { color: var(--ember); transform: rotate(225deg) translate(-1px, 1px); }
+  .settings-group-heading { min-width: 0; }
+  .settings-group-title { display: block; margin: 0; color: var(--bright); font-family: var(--font-body); font-size: var(--text-lg); font-weight: 700; text-wrap: balance; }
+  .settings-group-note { display: block; margin: 2px 0 0; color: var(--faded); font-size: var(--text-sm); line-height: 1.4; text-wrap: pretty; }
+  .settings-group-body { padding: 12px; border-top: 1px solid var(--hairline); }
+  .settings-field { margin-bottom: 14px; }
+  .settings-field:last-child { margin-bottom: 0; }
+  .settings-field .detail-label { margin-top: 0; }
+  .settings-control-note { margin: -5px 0 8px; color: var(--faded); font-size: var(--text-sm); line-height: 1.4; }
+  .set-val { min-width: 58px; flex: 0 0 auto; color: var(--bright); font-family: var(--font-mono); font-size: var(--text-sm); font-variant-numeric: tabular-nums; text-align: right; }
+  .lang-toggle { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0; }
+  .path-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+  .path-cur { flex: 1 1 auto; min-width: 0; font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; direction: rtl; text-align: left; }
+  .path-btn { flex: 0 0 auto; min-width: 0; }
+  .lang-btn { flex: 1 1 auto; min-width: 48px; padding: 8px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-sm); color: var(--faded); font-family: var(--font-body); font-size: var(--text-body); font-weight: 600; cursor: pointer; transition: color 150ms var(--ease), border-color 150ms var(--ease), background 150ms var(--ease); }
+  .lang-btn:disabled { opacity: .45; cursor: not-allowed; }
+  .set-slider-row { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .set-range-ends { display: flex; justify-content: space-between; padding-right: 68px; color: var(--faded); font-family: var(--font-mono); font-size: var(--text-micro); }
+  .settings-color-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .set-color-field { min-width: 0; }
+  /* Custom color pickers (accent / background) — native input, themed chrome. */
+  .set-color-row { display: flex; align-items: center; gap: 7px; }
+  .set-color { -webkit-appearance: none; appearance: none; width: 44px; height: 34px; padding: 3px; box-sizing: border-box;
+    background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-sm); cursor: pointer; }
+  .set-color::-webkit-color-swatch-wrapper { padding: 0; }
+  .set-color::-webkit-color-swatch { border: none; border-radius: calc(var(--r-sm) - 2px); }
+  .set-color-row .lang-btn { flex: 1 1 auto; min-width: 0; padding: 7px 8px; }
+  .set-slider { flex: 1; width: 100%; box-sizing: border-box; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hairline-strong); cursor: pointer; }
+  .set-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 17px; height: 17px; border-radius: 50%; background: var(--ember); border: 2px solid var(--rosewood-deep); cursor: pointer; }
+  .set-slider:focus-visible { outline: none; box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 45%, transparent); }
+  .lang-btn:hover:not(:disabled) { color: var(--parchment); border-color: var(--hairline-strong); }
+  .lang-btn.active { background: color-mix(in oklab, var(--ember) 24%, transparent); border-color: color-mix(in oklab, var(--ember) 50%, var(--hairline)); color: var(--bright); }
+  .lang-btn:focus-visible { outline: none; box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 45%, transparent); }
+  /* Theme picker — swatch dot + name, one per skin. */
+  .settings-toggle-list { margin: 0; }
+  .settings-toggle-list .mod-row { min-height: 38px; }
+  .settings-toggle-copy { min-width: 0; display: flex; flex-direction: column; gap: 1px; padding-left: 2px; }
+  .settings-toggle-copy .row-name { padding: 0; }
+  .settings-toggle-note { color: var(--faded); font-size: var(--text-sm); }
+  .backup-box { margin: 0; padding: 11px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-md); }
+  .backup-row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 5px; }
+  .backup-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .backup-actions .lang-btn { min-width: 0; }
+  .settings-version { margin: 0; padding-top: 2px; color: var(--faded); font-family: var(--font-mono); font-size: var(--text-micro); text-align: center; }
+  body.fullscreen #view-parametres .settings-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; align-items: start; }
+  @media (max-width: 620px) { body.fullscreen #view-parametres .settings-groups { display: flex; } }
+
+  /* ── Events ────────────────────────────────────────────────────────── */
+  .erow { flex-direction: column; align-items: stretch; gap: 5px; }
+  .erow-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .erow-date { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); font-variant-numeric: tabular-nums; }
+  .erow--active { border-color: color-mix(in oklab, var(--jade) 45%, var(--hairline)); }
+  .erow--next { border-color: color-mix(in oklab, var(--amber) 45%, var(--hairline)); }
+  .pill--live { background: var(--jade); color: var(--rosewood); }
+  .pill--next { background: var(--amber); color: var(--rosewood); }
+  .pill--rec { background: var(--ember); color: var(--rosewood); }
+
+  /* ── Boss timers ───────────────────────────────────────────────────── */
+  .boss-timers { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 10px; }
+  .boss-timer { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; min-width: 0;
+    background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-sm); }
+  .boss-name { font-family: var(--font-display); font-size: var(--text-sm); color: var(--bright); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .boss-cd { font-family: var(--font-mono); font-size: var(--text-lg); color: var(--ember); font-variant-numeric: tabular-nums; }
+  .boss-when { font-family: var(--font-mono); font-size: var(--text-micro); color: var(--faded); text-transform: capitalize; }
+
+  /* ── Events calendar ───────────────────────────────────────────────── */
+  .cal-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .cal-title { font-family: var(--font-display); font-size: var(--text-body); color: var(--bright); text-transform: capitalize; }
+  .cal-nav { width: 30px; height: 30px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;
+    background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-sm); color: var(--parchment);
+    font-size: 18px; line-height: 1; cursor: pointer; transition: border-color 150ms var(--ease); }
+  .cal-nav:hover { border-color: var(--hairline-strong); }
+  .cal-nav:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+  .cal-wd { margin-bottom: 3px; }
+  .cal-wd-cell { text-align: center; font-family: var(--font-mono); font-size: var(--text-micro); color: var(--faded); text-transform: uppercase; }
+  .cal-cell { min-height: 40px; min-width: 0; display: flex; flex-direction: column; align-items: stretch; gap: 2px;
+    padding: 2px; background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-sm);
+    color: var(--parchment); font-family: var(--font-mono); text-align: left; cursor: pointer; transition: border-color 150ms var(--ease); }
+  .cal-cell:hover { border-color: var(--hairline-strong); }
+  .cal-cell:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  .cal-cell--pad { background: none; border-color: transparent; cursor: default; pointer-events: none; }
+  .cal-cell--today { border-color: var(--ember); }
+  .cal-num { position: relative; font-size: var(--text-sm); font-variant-numeric: tabular-nums; padding: 0 2px; }
+  .cal-ev { font-size: var(--text-micro); line-height: 1.3; padding: 1px 3px; border-radius: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cal-ev--rec { background: color-mix(in oklab, var(--ember) 26%, transparent); color: var(--bright); }
+  .cal-ev--season { background: color-mix(in oklab, var(--jade) 26%, transparent); color: var(--parchment); }
+  .cal-dot { width: 4px; height: 4px; border-radius: 50%; }
+  .cal-dot--note { position: absolute; top: 1px; right: 1px; background: var(--amber); }
+
+  /* ── Home news feed ────────────────────────────────────────────────── */
+  .feed-home { display: flex; flex-direction: column; min-height: 100%; }   /* lets the social bar pin to the bottom when the feed is short */
+  .feed { display: flex; flex-direction: column; gap: 6px; }
+  /* Official site/socials, footed under the feed. margin-top:auto pins it to
+     the bottom on a short feed; it flows after the last card on a long one. */
+  .feed-socials { margin-top: auto; padding-top: 16px; display: flex; justify-content: center; gap: 8px; }
+  .social-btn { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; flex: 0 0 auto;
+    border-radius: var(--r-sm); background: var(--row-bg); border: 1px solid var(--row-border); box-shadow: var(--row-shadow);
+    color: var(--faded); transition: color 150ms var(--ease), border-color 150ms var(--ease); }
+  .social-btn:hover { color: var(--parchment); border-color: var(--hairline-strong); }
+  .social-btn:focus-visible { outline: none; color: var(--parchment); border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  .social-btn svg { width: 18px; height: 18px; }
+  .feed-card { display: flex; align-items: stretch; gap: 9px; width: 100%; box-sizing: border-box; padding: 8px 10px; text-align: left; text-decoration: none;
+    background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-md); box-shadow: var(--row-shadow);
+    color: var(--parchment); font-family: var(--font-body); cursor: pointer; transition: border-color 150ms var(--ease); }
+  .feed-card:hover { border-color: var(--hairline-strong); }
+  .feed-card:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  .feed-card--live { border-color: color-mix(in oklab, var(--jade) 45%, var(--hairline)); }
+  .feed-card--next { border-color: color-mix(in oklab, var(--amber) 45%, var(--hairline)); }
+  .feed-thumb { width: 116px; height: 65px; flex: 0 0 auto; align-self: center; object-fit: cover; border-radius: 4px;
+    background: color-mix(in oklab, var(--parchment) 5%, transparent); }   /* offline: token-tinted box instead of a broken image */
+  .feed-main { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 4px; justify-content: center; }
+  .feed-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .feed-date { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); font-variant-numeric: tabular-nums; }
+  .feed-title { font-size: var(--text-body); line-height: 1.35; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; }
+
+  /* Fullscreen home: the docked single column would just stretch to the 1120px
+     panel, reading as a widened sidebar. Center a narrower home column, flow the
+     feed into a responsive grid, and let the first card (live event / latest
+     patch note) span the row as a hero. */
+  body.fullscreen #view-empty .feed-home { max-width: 980px; margin: 0 auto; width: 100%; }
+  body.fullscreen #view-empty .feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+  body.fullscreen #view-empty .feed > .feed-card:first-child { grid-column: 1 / -1; }
+
+  /* ── Elements ──────────────────────────────────────────────────────── */
+  .rel { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 11px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-md); margin-bottom: 8px; }
+  .rel-label { font-size: var(--text-body); color: var(--faded); }
+  .tag--good { background: color-mix(in oklab, var(--jade) 22%, transparent); color: var(--parchment); }
+  .tag--bad  { background: color-mix(in oklab, var(--danger) 28%, transparent); color: var(--parchment); }
+
+  /* ── Cris (saved shouts) ───────────────────────────────────────────── */
+  .shout-add { display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px; }
+  .inp { width: 100%; box-sizing: border-box; background: var(--search-bg); border: 1px solid var(--search-border); border-radius: var(--r-sm); box-shadow: var(--search-shadow); color: var(--parchment); font-family: var(--font-body); font-size: var(--text-body); padding: 8px 10px; }
+  /* Numeric inputs (gem qty, owned counts, run duration) — same Tabular rule: the
+     value changes under the cursor, so the digits must not re-flow while typing. */
+  .inp[type="number"], .gem-qty, .owned-cell .inp, .dl-dur .inp { font-variant-numeric: tabular-nums; }
+  .inp::placeholder { color: var(--faded); }
+  .inp:focus { outline: none; border-color: var(--ember); }
+  textarea.inp { resize: vertical; min-height: 40px; line-height: 1.4; }
+  /* ── Gem calculator ────────────────────────────────────────────────── */
+  .gem-matches { margin: 6px 0 12px; }
+  .gem-matches .row-icon { margin-right: 8px; }
+  .gem-card { background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-md); padding: 10px 11px; margin-bottom: 8px; }
+  .gem-top { display: flex; align-items: center; gap: 8px; }
+  .gem-top .row-name { flex: 1; }
+  .gem-qty { width: 54px; flex: 0 0 auto; text-align: center; padding: 6px 4px; }
+  .gem-rm { flex: 0 0 auto; width: 26px; height: 26px; border-radius: var(--r-sm); background: none; border: 1px solid var(--hairline); color: var(--faded); cursor: pointer; font-size: 16px; line-height: 1; }
+  .gem-rm:hover { color: var(--danger); border-color: var(--danger); }
+  .owned-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 6px; margin-top: 6px; }
+  .owned-cell { display: flex; flex-direction: column; gap: 3px; align-items: center; }
+  .owned-cell span { font-family: var(--font-mono); font-size: var(--text-micro); color: var(--faded); }
+  .owned-cell .inp { padding: 5px 2px; text-align: center; font-size: var(--text-sm); }
+  .btn { width: 100%; background: var(--ember); color: var(--rosewood); border: none; border-radius: var(--r-sm); padding: 9px 12px; font-family: var(--font-body); font-size: var(--text-body); font-weight: 700; letter-spacing: .02em; cursor: pointer; transition: filter 150ms var(--ease); }
+  .btn:hover { filter: brightness(1.08); }
+  .btn:focus-visible { outline: none; box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 45%, transparent); }
+  .shout { display: flex; gap: 6px; }
+  .shout-copy { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; text-align: left; background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-md); padding: 8px 10px; color: var(--parchment); font-family: var(--font-body); cursor: pointer; transition: border-color 150ms var(--ease); }
+  .shout-copy:hover { border-color: var(--hairline-strong); }
+  .shout-preview { font-size: var(--text-sm); color: var(--faded); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .shout-preview.copied { color: var(--jade); }
+  .shout-del { flex: 0 0 auto; width: 34px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-md); color: var(--faded); font-family: var(--font-body); font-size: 16px; cursor: pointer; transition: color 150ms var(--ease), border-color 150ms var(--ease); }
+  .shout-del:hover { color: var(--danger); border-color: color-mix(in oklab, var(--danger) 50%, var(--hairline)); }
+
+  /* ── Empty / placeholder ───────────────────────────────────────────── */
+  .empty { display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center; color: var(--faded); font-size: var(--text-body); line-height: 1.55; padding: 0 14px; overflow-wrap: anywhere; }
+  .empty strong { display: block; color: var(--parchment); font-family: var(--font-display); font-weight: 700; letter-spacing: .03em; margin-bottom: 6px; }
+  .empty code { font-family: var(--font-mono); color: var(--questgold); background: color-mix(in oklab, var(--questgold) 12%, transparent); padding: 1px 5px; border-radius: 4px; }
+  .section-note { font-size: var(--text-sm); color: var(--faded); padding: 10px 2px 2px; line-height: 1.5; }
+
+  /* ── Widgets (plugin timers, in Kings) ─────────────────────────────── */
+  #widgets { display: flex; flex-direction: column; gap: 8px; }
+  .widget { background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-md); padding: 10px 12px; transition: border-color 180ms var(--ease); }
+  .widget--clickable { cursor: pointer; }
+  .widget--clickable:hover { border-color: var(--hairline-strong); }
+  .widget--clickable:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 45%, transparent); }
+  .widget-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; row-gap: 5px; }
+  .widget-title { font-size: var(--text-body); font-weight: 600; color: var(--parchment); }
+  .widget-value { margin-top: 6px; font-family: var(--font-mono); font-size: var(--text-xl); font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums; letter-spacing: 0.01em; }
+  .widget-value.dim { color: var(--faded); }
+  .widget-value.ready { color: var(--questgold); }
+  .widget.flash { animation: pulse-gold 620ms var(--ease); }
+  @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--questgold) 55%, transparent); } 100% { box-shadow: 0 0 0 9px transparent; } }
+  .widget--error { border-color: color-mix(in oklab, var(--danger) 55%, var(--hairline)); }
+  .widget--error .widget-title { color: color-mix(in oklab, var(--danger) 65%, var(--parchment)); }
+  .widget--error .widget-msg { margin-top: 5px; font-size: var(--text-sm); color: var(--faded); word-break: break-word; }
+
+  /* ── Kings (rois) — compact respawn rows ───────────────────────────── */
+  .king-search { width: 100%; box-sizing: border-box; margin-bottom: 8px; padding: 7px 10px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-sm); color: var(--parchment); font-family: var(--font-body); font-size: var(--text-body); }
+  .king-search::placeholder { color: var(--faded); }
+  .king-rows { gap: 4px; }
+  .king-row { display: flex; align-items: center; gap: 8px; padding: 7px 10px; background: var(--widget); border: 1px solid var(--hairline); border-radius: var(--r-sm); transition: border-color 150ms var(--ease); }
+  .king-row:has(.king-arm:hover) { border-color: var(--hairline-strong); background: var(--widget-hover); }
+  .king-row:has(.king-arm:focus-visible) { border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 45%, transparent); }
+  .king-arm { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 8px; padding: 0;
+    background: none; border: 0; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+  .king-arm:focus-visible { outline: none; }
+  .king-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  /* 400, matching .row-name / .mk-name / .feed-title: one weight means "the name of a
+     row", 600 means "the title of a card" (.widget-title, .summary-title, .acc-name).
+     It was 600 here and 400 three lists over, for the same thing. */
+  .king-name { font-size: var(--text-body); font-weight: 400; color: var(--parchment); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .king-loc { font-size: var(--text-micro); color: var(--faded); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .king-when { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+  .king-time { font-family: var(--font-mono); font-size: var(--text-body); font-variant-numeric: tabular-nums; color: var(--faded); }
+  .king-due { font-family: var(--font-mono); font-size: var(--text-micro); font-variant-numeric: tabular-nums; color: var(--faded); white-space: nowrap; }
+  .king-due:empty { display: none; }
+  .king-row--running .king-time { color: var(--parchment); }
+  .king-row--up { border-color: color-mix(in oklab, var(--questgold) 45%, var(--hairline)); }
+  .king-row--up .king-time { color: var(--questgold); font-weight: 700; }
+  .king-row--idle .king-time { color: var(--faded); }
+  .king-clear { flex: 0 0 auto; width: 22px; height: 22px; padding: 0; background: transparent; border: none; border-radius: var(--r-sm); color: var(--faded); font-size: 16px; line-height: 1; cursor: pointer; transition: color 150ms var(--ease), background 150ms var(--ease); }
+  .king-clear:hover { color: var(--parchment); background: color-mix(in oklab, var(--parchment) 10%, transparent); }
+  .king-row.flash { animation: pulse-gold 620ms var(--ease); }
+  .king-views { margin-bottom: 8px; }
+  .king-group { margin: 0; }
+  .king-group--planet { margin-bottom: 6px; }
+  .king-group--planet > .king-grp-sum { padding: 6px 2px; border-bottom: 1px solid var(--hairline); }
+  .king-group--map { margin: 4px 0 4px 8px; }
+  .king-group--map > .king-grp-sum { padding: 4px 2px; }
+  .king-group--map > .king-rows { margin: 4px 0 6px; }
+  .king-grp-sum { display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; }
+  .king-grp-sum::-webkit-details-marker { display: none; }
+  .king-grp-sum::before { content: '▸'; flex: 0 0 auto; color: var(--faded); font-size: var(--text-micro); transition: transform 120ms var(--ease); }
+  .king-group[open] > .king-grp-sum::before { transform: rotate(90deg); }
+  .king-grp-name { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .king-group--planet > .king-grp-sum .king-grp-name { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--parchment); }
+  .king-group--map > .king-grp-sum .king-grp-name { font-size: var(--text-sm); font-weight: 600; color: var(--faded); }
+  .king-group--map[open] > .king-grp-sum .king-grp-name { color: var(--parchment); }
+  .king-grp-n { flex: 0 0 auto; font-family: var(--font-mono); font-size: var(--text-sm); color: var(--faded); font-variant-numeric: tabular-nums; }
+  .king-grp-up { flex: 0 0 auto; font-family: var(--font-mono); font-size: var(--text-sm); font-weight: 700; color: var(--questgold); font-variant-numeric: tabular-nums; }
+
+  /* ── Footer ────────────────────────────────────────────────────────── */
+  .panel-footer { display: flex; align-items: center; gap: 8px; padding: 9px 16px; background: var(--footer-grad), var(--rosewood-deep); border-top: 2px solid var(--hairline-strong); }
+  .footer-clock { width: 14px; height: 14px; color: var(--bright); flex: 0 0 auto; }
+  #footer-label { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--faded); }
+  /* The play clock: a live number, so mono for real tabular digits (see .row-count). */
+  .footer-val { margin-left: auto; font-family: var(--font-mono); font-size: var(--text-body); font-weight: 600; letter-spacing: .04em; color: var(--bright); font-variant-numeric: tabular-nums; }
+
+  /* ── Home launcher (no game running: pick an account, launch ROSE) ─── */
+  #launcher { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column;
+    background: var(--rosewood); border: 1px solid var(--hairline-strong);
+    border-radius: var(--r-panel); box-sizing: border-box; overflow: hidden; }
+  .lch-header { -webkit-app-region: drag; display: flex; align-items: center; gap: 8px;
+    padding: 11px 12px; background: var(--header-grad), var(--rosewood-deep); border-bottom: 1px solid var(--hairline); }
+  .wordmark { font-family: var(--font-display); font-size: var(--text-body); font-weight: 700; letter-spacing: 0.03em; background: none; border: none; color: var(--parchment); padding: 0; }
+  .wordmark .lite { color: var(--faded); font-weight: 600; }
+  .lch-header .wordmark, .lch-header .hdr-btn { -webkit-app-region: no-drag; }
+  .lch-header .hdr-btn { -webkit-app-region: no-drag; }
+  .lch-header #lch-gear { margin-left: auto; }
+  .lch-body { flex: 1 1 auto; display: flex; overflow: hidden; position: relative; }
+  /* Left: accounts column (each row is a one-click Play). */
+  .lch-accounts { flex: 0 0 306px; display: flex; flex-direction: column; gap: 12px; padding: 24px 22px;
+    background: var(--header-grad), var(--rosewood-deep); border-right: 1px solid var(--hairline); overflow: hidden; }
+  /* Center: news feed (same cards as the in-game home). */
+  .lch-feed-col { flex: 1 1 auto; display: flex; flex-direction: column; padding: 24px 26px; overflow-y: auto; }
+  .lch-feed-col .home-feed { flex: 1 1 auto; }
+  /* First run lives in the real launcher surface: two concrete setup actions,
+     then it disappears into the normal news feed as soon as an account exists. */
+  .lch-onboard { max-width: 620px; margin: auto; padding: 12px 0 28px; }
+  .lch-onboard-mark { width: 52px; height: 52px; display: grid; place-items: center; margin-bottom: 18px;
+    border-radius: var(--r-md); background: color-mix(in oklab, var(--ember) 16%, var(--widget));
+    border: 1px solid color-mix(in oklab, var(--ember) 45%, var(--hairline)); color: var(--questgold); }
+  .lch-onboard-mark svg { width: 27px; height: 27px; }
+  .lch-onboard h1 { margin: 0; max-width: 18ch; font-family: var(--font-display); font-size: var(--text-2xl);
+    line-height: 1.12; letter-spacing: -.02em; color: var(--bright); text-wrap: balance; }
+  .lch-onboard-intro { max-width: 58ch; margin: 10px 0 6px; color: var(--parchment); line-height: 1.55; text-wrap: pretty; }
+  .lch-onboard-time { display: inline-flex; margin: 0 0 24px; padding: 4px 8px; border-radius: var(--badge-radius);
+    background: color-mix(in oklab, var(--ember) 10%, transparent); color: var(--questgold); font-size: var(--text-sm); }
+  .lch-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .lch-step { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: center; gap: 12px;
+    min-height: 62px; padding: 0 12px; border: 1px solid color-mix(in oklab, var(--ember) 34%, var(--hairline));
+    border-radius: var(--r-md); background: color-mix(in oklab, var(--ember) 7%, var(--widget)); }
+  .lch-step-num { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%;
+    background: color-mix(in oklab, var(--ember) 16%, var(--widget)); border: 1px solid var(--ember); color: var(--questgold);
+    font-family: var(--font-mono); font-size: var(--text-sm); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .lch-step.done { border-color: color-mix(in oklab, var(--jade) 42%, var(--hairline)); background: color-mix(in oklab, var(--jade) 7%, var(--widget)); }
+  .lch-step.done .lch-step-num { background: color-mix(in oklab, var(--jade) 18%, var(--widget)); border-color: var(--jade); color: var(--jade); }
+  .lch-step-copy { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .lch-step-copy strong { color: var(--bright); font-size: var(--text-body); }
+  .lch-step-copy span { color: var(--faded); font-size: var(--text-sm); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .lch-step .lang-btn { width: auto; white-space: nowrap; border-color: color-mix(in oklab, var(--ember) 55%, var(--hairline)); color: var(--bright); }
+  .lch-step .acc-modal-save { background: var(--questgold); border-color: transparent; color: var(--questgold-ink); }
+  .lch-privacy { display: flex; align-items: flex-start; gap: 8px; margin: 18px 0 0; padding: 9px 11px;
+    border-radius: var(--r-sm); background: color-mix(in oklab, var(--jade) 7%, transparent); color: var(--parchment); font-size: var(--text-sm); }
+  .lch-privacy svg { flex: 0 0 auto; width: 15px; height: 15px; margin-top: 2px; color: var(--jade); }
+  .lch-eyebrow { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--faded); margin: 0 0 2px; }
+  .lch-logo { display: block; height: 22px; width: auto; margin: 0;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,.35)); }
+  /* Only the account rows scroll — a dedicated, contained region, not the whole
+     column (which on a transparent Windows window scrolled janky with a tiny
+     snap-back range). flex:0 1 auto keeps Add pinned under a short list. */
+  .acc-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px;
+    flex: 0 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+  .acc { display: flex; align-items: center; gap: 10px; padding: 9px 10px 9px 12px;
+    background: var(--row-bg); border: 1px solid var(--row-border); border-radius: var(--r-md); cursor: grab; }
+  .acc.dragging { opacity: 0.5; cursor: grabbing; }
+  /* Class avatar (user-picked icon) — square, or an empty placeholder ring. */
+  .acc-av { flex: 0 0 auto; width: 34px; height: 34px; border-radius: var(--r-sm); object-fit: cover;
+    background: var(--search-bg); border: 1px solid var(--row-border); }
+  .acc-id { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  .acc-name { font-size: var(--text-body); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .acc-sub { font-size: var(--text-sm); color: var(--faded); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* The yellow one-click Play — selects the account and launches ROSE. */
+  .acc-play { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 5px;
+    background: var(--questgold); color: var(--questgold-ink); border: none; border-radius: var(--r-sm);
+    padding: 8px 14px; font-family: var(--font-display); font-size: var(--text-sm); font-weight: 700; letter-spacing: .03em;
+    cursor: pointer; transition: filter 150ms var(--ease); }
+  .acc-play:hover { filter: brightness(1.08); }
+  .acc-play:focus-visible { outline: none; box-shadow: 0 0 0 2px color-mix(in oklab, var(--questgold) 45%, transparent); }
+  /* Cogwheel: opens the edit modal (change email/password, or delete). */
+  .acc-cog { flex: 0 0 auto; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;
+    background: transparent; border: none; color: var(--faded); cursor: pointer; transition: color 150ms var(--ease); }
+  .acc-cog:hover { color: var(--parchment); }
+  .acc-cog svg { width: 17px; height: 17px; }
+  .acc-add { display: flex; gap: 6px; }
+  .acc-add .inp { flex: 1; min-width: 0; }
+  .acc-add .lang-btn { flex: 0 0 auto; width: auto; padding: 8px 14px; }
+  /* Account add/edit modal — native <dialog>, so the backdrop + focus trap are free. */
+  .acc-modal { width: min(380px, 90vw); border: 1px solid var(--row-border); border-radius: var(--r-md);
+    background: var(--surface, var(--row-bg)); color: var(--parchment); padding: 20px; box-shadow: 0 12px 40px rgba(0,0,0,.5); }
+  .acc-modal::backdrop { background: rgba(0,0,0,.5); }
+  .acc-modal h3 { margin: 0 0 14px; font-family: var(--font-display); font-size: var(--text-lg); }
+  .acc-modal label { display: block; font-size: var(--text-micro); font-weight: 700; color: var(--faded); margin: 10px 0 4px; letter-spacing: .1em; text-transform: uppercase; }
+  .acc-modal .inp { width: 100%; box-sizing: border-box; }
+  .acc-modal-err { color: var(--danger); font-size: var(--text-sm); min-height: 16px; margin: 8px 0 0; }
+  .acc-modal-btns { display: flex; gap: 8px; margin-top: 16px; }
+  .acc-modal-btns .lang-btn { width: auto; padding: 8px 14px; }
+  .acc-modal-save { background: var(--questgold); color: var(--questgold-ink); border: none; }
+  .acc-modal-del { margin-right: auto; color: var(--danger); border-color: color-mix(in oklab, var(--danger) 40%, transparent); }
+  /* Class-icon picker: a wrap of square buttons, the chosen one ringed. */
+  .acc-icons { display: flex; flex-wrap: wrap; gap: 6px; }
+  .acc-icons--scroll { max-height: 176px; overflow-y: auto; margin-top: 8px; }
+  #acc-modal-icon-search { margin-top: 8px; }
+  .acc-icon--more { font-size: 18px; line-height: 1; }
+  .acc-icon { width: 40px; height: 40px; padding: 0; border-radius: var(--r-sm); border: 1px solid var(--row-border);
+    background: var(--search-bg); color: var(--faded); cursor: pointer; overflow: hidden; display: inline-flex;
+    align-items: center; justify-content: center; font-size: var(--text-micro); transition: border-color 150ms var(--ease); }
+  .acc-icon img { width: 100%; height: 100%; object-fit: cover; }
+  .acc-icon.active { border-color: var(--questgold); box-shadow: 0 0 0 1px var(--questgold); }
+  /* Right: settings drawer, slid off-screen until the header gear opens it. It
+     mounts the same settings component as the overlay, not a reduced duplicate. */
+  .lch-settings { position: absolute; top: 0; right: 0; bottom: 0; width: min(380px, calc(100% - 40px)); z-index: 2;
+    display: flex; flex-direction: column; gap: 10px; padding: 18px 20px 24px; overflow-y: auto;
+    background: var(--rosewood-deep); border-left: 1px solid var(--hairline-strong);
+    box-shadow: -12px 0 28px rgba(0,0,0,.32); transform: translateX(100%);
+    transition: transform 200ms var(--ease); visibility: hidden; }
+  .lch-settings.open { transform: translateX(0); visibility: visible; }
+  .lch-set-head { display: flex; align-items: center; justify-content: space-between; }
+
+  /* ── Press feedback ──────────────────────────────────────────────────
+     The panel had hover + focus-visible on everything and nothing on :active, so
+     a click read as landed only once the re-render arrived. These two rules cover
+     the whole clickable vocabulary at once: the first also unifies the transition
+     list the components had drifted apart on (border-color here, color there,
+     filter elsewhere) — `transform` is the part that was missing everywhere, and
+     the release needs it declared on the base, not just on :active. Placed after
+     the components so it wins; keep it last. ── */
+  :is(.tile, .row, .btn, .acc-play, .chip, .lang-btn, .hdr-btn, .rail-icon,
+      .mk-mini, .dl-card, .king-arm, .king-clear, .cal-nav, .cal-cell, .feed-card, .social-btn,
+      .acc-icon, .shout-copy, .gem-copy, .item-hero-copy):not(.row--static) {
+    transition: border-color 150ms var(--ease), color 150ms var(--ease),
+                background 150ms var(--ease), filter 150ms var(--ease),
+                transform 110ms var(--ease);
+  }
+  :is(.tile, .row, .btn, .acc-play, .chip, .lang-btn, .hdr-btn, .rail-icon,
+      .mk-mini, .dl-card, .king-arm, .king-clear, .cal-nav, .cal-cell, .feed-card, .social-btn,
+      .acc-icon, .shout-copy, .gem-copy, .item-hero-copy):not(.row--static):active {
+    transform: scale(.975);
+  }
+  /* One keyboard-focus treatment for the smaller controls that previously fell
+     back to Chromium's theme-dependent ring. Keep it outside the skin tokens: the
+     ember role already guarantees the right identity and contrast in both skins. */
+  :is(.chip, .back-btn, .gem-copy, .item-hero-copy, .shout-copy, .shout-del,
+      .gem-rm, .king-clear, .notif-clear, .mod-caret,
+      .filters-fold > summary, .king-grp-sum, .switch, .inp):focus-visible {
+    outline: none; border-color: var(--ember);
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 45%, transparent);
+  }
+  :is(button, input, textarea, select):disabled { cursor: not-allowed; opacity: .55; filter: saturate(.6); }

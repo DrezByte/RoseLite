@@ -1,0 +1,250 @@
+{
+  "options": [
+    {
+      "label": "Ammo & bombs \u00b7 Arrow (15 items)",
+      "paths": [
+        "item/di28/di29.zms"
+      ]
+    },
+    {
+      "label": "Ammo & bombs \u00b7 Bullet (13 items)",
+      "paths": [
+        "item/di29/di29.zms"
+      ]
+    },
+    {
+      "label": "Ammo & bombs \u00b7 Bomb \u2014 shells (8 items)",
+      "paths": [
+        "item/di27/di27.zms"
+      ]
+    },
+    {
+      "label": "Boxes, chests & bags \u00b7 Interface box (246 items)",
+      "paths": [
+        "item/di52/di52.zms"
+      ]
+    },
+    {
+      "label": "Boxes, chests & bags \u00b7 Wooden treasure chest (80 items)",
+      "paths": [
+        "item/di61/di61.zms"
+      ]
+    },
+    {
+      "label": "Boxes, chests & bags \u00b7 Wooden box (76 items)",
+      "paths": [
+        "item/di19/di19.zms"
+      ]
+    },
+    {
+      "label": "Boxes, chests & bags \u00b7 Stuff pocket (61 items)",
+      "paths": [
+        "item/di25/di25.zms"
+      ]
+    },
+    {
+      "label": "Boxes, chests & bags \u00b7 Gold treasure box (28 items)",
+      "paths": [
+        "item/di63/di61.zms"
+      ]
+    },
+    {
+      "label": "Boxes, chests & bags \u00b7 Gift box (25 items)",
+      "paths": [
+        "item/di56/di56.zms"
+      ]
+    },
+    {
+      "label": "Boxes, chests & bags \u00b7 Silver treasure chest (13 items)",
+      "paths": [
+        "item/di62/di61.zms"
+      ]
+    },
+    {
+      "label": "Boxes, chests & bags \u00b7 Common box (1 items)",
+      "paths": [
+        "item/common/box01.zms"
+      ]
+    },
+    {
+      "label": "Event drops \u00b7 Easter egg (1 items)",
+      "paths": [
+        "item/common/eggy.zms"
+      ]
+    },
+    {
+      "label": "Event drops \u00b7 Heart candy (1 items)",
+      "paths": [
+        "item/event/heart01.zms"
+      ]
+    },
+    {
+      "label": "Gems & crystals \u00b7 Stone (157 items)",
+      "paths": [
+        "item/di13/di13.zms"
+      ]
+    },
+    {
+      "label": "Gems & crystals \u00b7 Green gem \u2014 elemental stones (35 items)",
+      "paths": [
+        "item/di22/d22.zms"
+      ]
+    },
+    {
+      "label": "Gems & crystals \u00b7 White gem (2 items)",
+      "paths": [
+        "item/di23/di23.zms"
+      ]
+    },
+    {
+      "label": "Gems & crystals \u00b7 Blue gem (2 items)",
+      "paths": [
+        "item/di21/di21.zms"
+      ]
+    },
+    {
+      "label": "Gems & crystals \u00b7 Red gem (1 items)",
+      "paths": [
+        "item/di20/di20.zms"
+      ]
+    },
+    {
+      "label": "Potions & food \u00b7 Blue capsule (64 items)",
+      "paths": [
+        "item/di4/di4.zms"
+      ]
+    },
+    {
+      "label": "Potions & food \u00b7 Orb \u2014 HP/MP points, elixirs (53 items)",
+      "paths": [
+        "item/di43/di43.zms"
+      ]
+    },
+    {
+      "label": "Potions & food \u00b7 Bread, juice, grilled meat (41 items)",
+      "paths": [
+        "item/di9/di9.zms"
+      ]
+    },
+    {
+      "label": "Potions & food \u00b7 Red capsule (40 items)",
+      "paths": [
+        "item/di3/di3.zms"
+      ]
+    },
+    {
+      "label": "Potions & food \u00b7 Fruit basket (27 items)",
+      "paths": [
+        "item/di8/di8.zms"
+      ]
+    },
+    {
+      "label": "Potions & food \u00b7 Small red potion \u2014 Health Vials (5 items)",
+      "paths": [
+        "item/di1/di1.zms"
+      ]
+    },
+    {
+      "label": "Potions & food \u00b7 Small blue potion \u2014 Mana Vials (4 items)",
+      "paths": [
+        "item/di2/di2.zms"
+      ]
+    },
+    {
+      "label": "Potions & food \u00b7 Medicine (1 items)",
+      "paths": [
+        "item/di5/di5.zms"
+      ]
+    },
+    {
+      "label": "Refine & craft mats \u00b7 Metal \u2014 Adamantium, Aurum, Bronze (21 items)",
+      "paths": [
+        "item/di12/di12.zms"
+      ]
+    },
+    {
+      "label": "Refine & craft mats \u00b7 Flour bag \u2014 chemicals (18 items)",
+      "paths": [
+        "item/di18/di18.zms"
+      ]
+    },
+    {
+      "label": "Refine & craft mats \u00b7 Leather (12 items)",
+      "paths": [
+        "item/di15/di15.zms"
+      ]
+    },
+    {
+      "label": "Refine & craft mats \u00b7 Cloth (12 items)",
+      "paths": [
+        "item/di16/di16.zms"
+      ]
+    },
+    {
+      "label": "Refine & craft mats \u00b7 Flask \u2014 Elixir, Essence, Ether (12 items)",
+      "paths": [
+        "item/di17/di17.zms"
+      ]
+    },
+    {
+      "label": "Refine & craft mats \u00b7 Wood (11 items)",
+      "paths": [
+        "item/di14/di14.zms"
+      ]
+    },
+    {
+      "label": "Refine & craft mats \u00b7 Syringe \u2014 repair hammers (7 items)",
+      "paths": [
+        "item/di6/di6.zms"
+      ]
+    },
+    {
+      "label": "Refine & craft mats \u00b7 Rock \u2014 Dirty Ore, Dirty Stone (6 items)",
+      "paths": [
+        "item/di55/snow.zms"
+      ]
+    },
+    {
+      "label": "Scrolls & tickets \u00b7 Magic scroll \u2014 services, tickets (249 items)",
+      "paths": [
+        "item/di50/di50.zms"
+      ]
+    },
+    {
+      "label": "Scrolls & tickets \u00b7 Festival ticket, Rose (4 items)",
+      "paths": [
+        "item/di37/di37.zms"
+      ]
+    },
+    {
+      "label": "Valuables & currency \u00b7 Totem \u2014 King Effigies (144 items)",
+      "paths": [
+        "item/common/totem.zms"
+      ]
+    },
+    {
+      "label": "Valuables & currency \u00b7 Treasure chest \u2014 Aetil, ancient coins (112 items)",
+      "paths": [
+        "item/di11/di11.zms"
+      ]
+    },
+    {
+      "label": "Valuables & currency \u00b7 Slabs \u2014 Lisent, Bindrune, Apotrope (87 items)",
+      "paths": [
+        "item/di68/di68.zms"
+      ]
+    },
+    {
+      "label": "Valuables & currency \u00b7 Gemstones \u2014 Dirty Prismatics (45 items)",
+      "paths": [
+        "item/di10/di10.zms"
+      ]
+    },
+    {
+      "label": "Valuables & currency \u00b7 Clan Points (14 items)",
+      "paths": [
+        "item/di46/di46.zms"
+      ]
+    }
+  ]
+}

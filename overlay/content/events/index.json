@@ -1,0 +1,17 @@
+[
+  { "name": "Winter Festival",            "file": "Winter.html",       "start": [1, 7],   "end": [1, 28] },
+  { "name": "Valentine Event",            "file": "Valentine.html",    "start": [2, 10],  "end": [2, 25] },
+  { "name": "St. Patrick's Day",          "file": "Patrick.html",      "start": [3, 6],   "end": [3, 28] },
+  { "name": "Easter Event",               "file": "Easter.html",       "start": [3, 29],  "end": [4, 21] },
+  { "name": "Ballroom Event",             "file": "Ballroom.html",     "start": [4, 24],  "end": [5, 15] },
+  { "name": "Graduation",                 "file": "Graduation.html",   "start": [5, 17],  "end": [5, 31] },
+  { "name": "Summer Festival",            "file": "Summer.html",       "start": [6, 1],   "end": [6, 30] },
+  { "name": "Luau Event",                 "file": "Luau.html",         "start": [7, 9],   "end": [7, 30] },
+  { "name": "Magic is Everywhere",        "file": "Magic.html",        "start": [8, 1],   "end": [8, 31] },
+  { "name": "Back To School",             "file": "School.html",       "start": [8, 20],  "end": [9, 8] },
+  { "name": "Speak Like a Scurvy Pirate", "file": "Pirate.html",       "start": [9, 15],  "end": [9, 30] },
+  { "name": "Halloween Event",            "file": "Halloween.html",    "start": [10, 13], "end": [11, 1] },
+  { "name": "Thanksgiving Event",         "file": "Thanksgiving.html", "start": [11, 13], "end": [12, 1] },
+  { "name": "Anniversary Event",          "file": "Anniversary.html",  "start": [12, 13], "end": [1, 3] },
+  { "name": "Christmas Event",            "file": "Christmas.html",    "start": [12, 13], "end": [1, 3] }
+]

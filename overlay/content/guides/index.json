@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Castle Gear Guide",
+    "file": "Castlegear.html",
+    "tags": ["pvp", "gear"]
+  },
+  {
+    "title": "Newbie Encyclopedia",
+    "file": "Encyclopedia.html",
+    "tags": ["faq", "newbie"]
+  },
+  {
+    "title": "Cart Quest",
+    "file": "cart_quest.html",
+    "tags": ["quest", "cart", "dealer"]
+  },
+  {
+    "title": "Drop Tables",
+    "file": "drop_table.html",
+    "tags": ["pvm", "faq", "drops"]
+  },
+  {
+    "title": "Hero Quest — Part 1",
+    "file": "hero_quest_1.html",
+    "tags": ["quest", "hero"]
+  },
+  {
+    "title": "Hero Quest — Part 2",
+    "file": "hero_quest_2.html",
+    "tags": ["quest", "hero"]
+  },
+  {
+    "title": "Hero Quest — Part 3",
+    "file": "hero_quest_3.html",
+    "tags": ["quest", "hero"]
+  },
+  {
+    "title": "Hero Quest — Part 4",
+    "file": "hero_quest_4.html",
+    "tags": ["quest", "hero"]
+  },
+  {
+    "title": "How to Get the Beam Blade",
+    "file": "how_to_get_beam_blade.html",
+    "tags": ["quest", "weapon"]
+  },
+  {
+    "title": "How to Refine",
+    "file": "how_to_refine.html",
+    "tags": ["crafting", "refine"]
+  },
+  {
+    "title": "How to Reinforce",
+    "file": "how_to_reinforce.html",
+    "tags": ["crafting", "reinforce"]
+  },
+  {
+    "title": "List of Quests",
+    "file": "list_of_quests.html",
+    "tags": ["quest"]
+  },
+  {
+    "title": "Mounts",
+    "file": "mounts.html",
+    "tags": ["faq", "mount"]
+  },
+  {
+    "title": "Muse Leveling Guide",
+    "file": "muselvlguide.html",
+    "tags": ["leveling", "classes", "muse"]
+  },
+  {
+    "title": "Keyboard Shortcuts — Part 1",
+    "file": "shortcuts_1.html",
+    "tags": ["faq", "shortcuts"]
+  },
+  {
+    "title": "Keyboard Shortcuts — Part 2",
+    "file": "shortcuts_2.html",
+    "tags": ["faq", "shortcuts"]
+  },
+  {
+    "title": "Sub-stats & Movement",
+    "file": "substats_move.html",
+    "tags": ["classes", "stats"]
+  },
+  {
+    "title": "Unique Skills",
+    "file": "unique_skills.html",
+    "tags": ["classes", "skills"]
+  }
+]

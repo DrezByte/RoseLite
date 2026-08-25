@@ -1,0 +1,47 @@
+# NOTICE
+
+RoseLite is an unofficial, fan-made companion for ROSE Online. It is **not
+affiliated with** Rednim Games or the ROSE Online team. "ROSE Online" and all related names, art, and assets are the property of
+their respective owners.
+
+The MIT license in [LICENSE](LICENSE) covers **RoseLite's own source code**:
+`src/`, `overlay/` (excluding the bundled fonts below), `plugins/`, `site/`,
+and the project's build configuration. It does not — and cannot — grant rights
+to the third-party material listed here, which is redistributed for
+interoperability and player convenience only.
+
+## Game data — `RoseData/`, `overlay/content/`
+
+Item, NPC, quest, recipe, drop, and zone tables extracted from the ROSE Online
+client's own data files, plus icon art from the same source, plus guide and
+event text adapted from community and official ROSE Online guides. Copyright
+remains with Rednim Games and the respective authors. It is included so a fresh
+clone or install has a working catalog offline; it is not licensed for reuse
+elsewhere.
+
+If you own this content and want it removed, open an issue and it will be
+taken out.
+
+## Community mods — `mods/`
+
+Client-file mods the mod manager can install. They stay the property of their
+authors:
+
+- **Visual Damage Effect (PVM)** and **Visual Damage Effect (PVP)** — by
+  **@Luckystriike** (ROSE Online forums). PVM embeds the font *Lovely Bubbles*
+  by hawtpixel; PVP embeds *Road Rage* by Youssef Habchi. Credits in each mod's
+  `README.html`.
+- **Larger Drops - Big** — by RoseLite. The meshes are generated from stock game
+  assets by scaling vertex positions only; the underlying assets remain Rednim
+  Games'.
+
+## Bundled fonts — `overlay/assets/fonts/`
+
+Self-hosted subsets of *Barlow*, *Cinzel*, *EB Garamond*, *Fredoka*,
+*JetBrains Mono*, and *Manrope*, each under the SIL Open Font License 1.1.
+The OFL applies to the font files, not to the rest of the project.
+
+## Runtime dependencies
+
+Electron, electron-updater, and koffi are used under their own licenses; see
+`node_modules/<package>/LICENSE` in an installed tree.

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <!-- Edge/corner grips: drag to resize the launcher / fullscreen window (a
+       transparent frameless window can't be resized by its native border). -->
+  <div class="wgrip wg-t" data-edges="top"></div>
+  <div class="wgrip wg-b" data-edges="bottom"></div>
+  <div class="wgrip wg-l" data-edges="left"></div>
+  <div class="wgrip wg-r" data-edges="right"></div>
+  <div class="wgrip wg-tl" data-edges="top,left"></div>
+  <div class="wgrip wg-tr" data-edges="top,right"></div>
+  <div class="wgrip wg-bl" data-edges="bottom,left"></div>
+  <div class="wgrip wg-br" data-edges="bottom,right"></div>
+  <div id="panel">
+    <header class="panel-header row-fixed">
+      <div class="hdr-scrim"></div>
+      <!-- Fullscreen only (CSS): collapses the left sidebar to an icon rail. -->
+      <button class="hdr-btn hdr-btn--nav" id="nav-btn" type="button" aria-expanded="true" aria-controls="view-home">
+        <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M3.5 6h13M3.5 10h13M3.5 14h13"/></svg>
+      </button>
+      <span class="hdr-wordmark"><img src="assets/roselite-logo-ui.png" alt="RoseLite"><span class="lite">Lite</span><span class="ver" id="hdr-ver"></span></span>
+      <div class="hdr-left">
+        <button class="hdr-btn" id="settings-btn" title="Paramètres">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </button>
+        <button class="hdr-btn" id="notif-btn" type="button" title="Alerts" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif-menu">
+          <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3.2a4.4 4.4 0 0 0-4.4 4.4c0 3.3-1.3 4.5-1.3 4.5h11.4s-1.3-1.2-1.3-4.5A4.4 4.4 0 0 0 10 3.2z"/><path d="M8.6 15.1a1.5 1.5 0 0 0 2.8 0"/></svg>
+        </button>
+        <div class="acct-menu" id="notif-menu" role="dialog" aria-labelledby="notif-btn" hidden></div>
+      </div>
+      <div class="hdr-actions">
+        <button class="hdr-btn hdr-btn--min" id="min-btn" title="Réduire dans la barre des tâches">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 14h10"/></svg>
+        </button>
+        <button class="hdr-btn" id="full-btn" title="Plein écran">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V4h4M16 8V4h-4M4 12v4h4M16 12v4h-4"/></svg>
+        </button>
+        <button class="hdr-btn" id="collapse-btn" title="Réduire">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5l5 5-5 5"/></svg>
+        </button>
+        <button class="hdr-btn hdr-btn--close" id="quit-btn" title="Quitter RoseLite">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="split">
+    <nav class="menu row-fixed" id="view-home"></nav>
+
+    <div class="content">
+    <div class="backbar row-fixed" id="backbar" hidden>
+      <button class="back-btn" id="back-btn">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4L6 8l4 4"/></svg>
+        <span id="back-dest">Accueil</span>
+      </button>
+      <span class="back-title" id="back-title"></span>
+    </div>
+
+    <main class="views">
+      <section class="view" id="view-empty"></section>
+      <section class="view" id="view-personnage" hidden><div id="char-widgets"></div></section>
+      <section class="view" id="view-quetes" hidden><div class="view-body"></div><div class="view-detail" hidden></div></section>
+      <section class="view" id="view-recettes" hidden><div class="view-body"></div><div class="view-detail" hidden></div></section>
+      <section class="view" id="view-gems" hidden><div class="view-body"></div></section>
+      <section class="view" id="view-objets" hidden><div class="view-body"></div><div class="view-detail" hidden></div></section>
+      <section class="view" id="view-marche" hidden><div class="view-body"></div><div class="view-detail" hidden></div></section>
+      <section class="view" id="view-evenements" hidden><div class="view-body"></div><div class="view-detail" hidden></div></section>
+      <section class="view" id="view-guides" hidden><div class="view-body"></div><div class="view-detail" hidden></div></section>
+      <section class="view" id="view-cris" hidden>
+        <div class="shout-add">
+          <input class="inp" id="shout-name" placeholder="Nom (ex : Vente DG)" maxlength="40">
+          <!-- Chip row, not a <select>: opening a native select popup fires
+               mouseleave on the panel, which flips the overlay click-through
+               and kills the popup. -->
+          <div class="chips" id="shout-channel">
+            <button class="chip chip--on" data-v="">—</button>
+            <button class="chip" data-v="/s ">/s</button>
+            <button class="chip" data-v="/t ">/t</button>
+            <button class="chip" data-v="/p ">/p</button>
+            <button class="chip" data-v="/nc ">/nc</button>
+            <button class="chip" data-v="/nz ">/nz</button>
+            <button class="chip" data-v="!">!</button>
+          </div>
+          <textarea class="inp" id="shout-text" rows="2" placeholder="Message à coller plus tard…"></textarea>
+          <button class="btn" id="shout-save">Enregistrer le cri</button>
+        </div>
+        <ul class="rows" id="shout-list"></ul>
+      </section>
+      <section class="view" id="view-butin" hidden><div id="loot-widgets"></div></section>
+      <section class="view" id="view-dps" hidden><div id="dps-widgets"></div></section>
+      <section class="view" id="view-journaux" hidden><div class="view-body"></div><div class="view-detail" hidden></div></section>
+      <section class="view" id="view-monstres" hidden><div class="view-body"></div><div class="view-detail" hidden></div></section>
+      <section class="view" id="view-tracker" hidden><div class="view-body"></div></section>
+      <section class="view" id="view-rois" hidden>
+        <div id="widgets"></div>
+      </section>
+      <section class="view" id="view-extensions" hidden><div class="view-body"></div><div class="view-detail" hidden></div></section>
+      <section class="view" id="view-parametres" hidden></section>
+    </main>
+    </div>
+    </div>
+
+    <footer class="panel-footer row-fixed">
+      <svg class="footer-clock" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 1.5"/></svg>
+      <span id="footer-label">Play time</span>
+      <span class="footer-val" id="play-time">0h 00m</span>
+    </footer>
+    <div id="toasts"></div>
+    <div class="sr-only" id="status-live" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="sr-only" id="alert-live" role="alert" aria-live="assertive" aria-atomic="true"></div>
+  </div>
+
+  <!-- Collapsed icon rail: shown on-top when the game leaves no room to dock the
+       panel (main.js 'placement' = 'rail'). Clicking an icon expands to the full
+       panel. Populated by renderRail(). -->
+  <nav id="rail" hidden></nav>
+  <div id="rail-tip" hidden></div>
+
+  <!-- Home launcher: shown when no game is running (main.js 'mode'). Pick a saved
+       account and launch ROSE; each account has its own per-account save. -->
+  <div id="launcher" hidden>
+    <header class="lch-header">
+      <img class="lch-logo" src="assets/roselite-logo-ui.png" alt="RoseLite">
+      <span class="wordmark">Rose<span class="lite">Lite</span></span>
+      <button class="hdr-btn" id="lch-gear" title="Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </button>
+      <button class="hdr-btn" id="lch-min" title="Réduire dans la barre des tâches">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 14h10"/></svg>
+      </button>
+      <button class="hdr-btn hdr-btn--close" id="lch-quit" title="Quit">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      </button>
+    </header>
+    <div class="lch-body">
+      <aside class="lch-accounts">
+        <p class="lch-eyebrow" id="lch-acc-eyebrow"></p>
+        <ul class="acc-list" id="acc-list"></ul>
+        <div class="acc-add">
+          <button class="lang-btn" id="acc-add-btn"></button>
+        </div>
+        <div id="lch-update" hidden>
+          <p class="section-note" id="upd-status"></p>
+          <div class="progress"><div class="progress-fill" id="upd-fill" style="width:0%"></div></div>
+          <button class="lang-btn" id="upd-action" hidden></button>
+        </div>
+        <p class="section-note" id="launch-hint"></p>
+      </aside>
+      <main class="lch-feed-col">
+        <p class="lch-eyebrow" id="lch-news-eyebrow"></p>
+        <div id="lch-feed" class="home-feed"></div>
+      </main>
+      <section class="lch-settings" id="lch-settings">
+        <div class="lch-set-head">
+          <span class="lch-eyebrow" id="lch-set-eyebrow"></span>
+          <button class="hdr-btn hdr-btn--close" id="lch-set-close" title="Close">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg>
+          </button>
+        </div>
+        <div class="lch-settings-content" id="lch-settings-content"></div>
+      </section>
+    </div>
+  </div>
+  <dialog class="acc-modal" id="acc-modal" aria-labelledby="acc-modal-title" aria-describedby="acc-modal-err">
+    <h3 id="acc-modal-title"></h3>
+    <label id="acc-modal-nick-lbl" for="acc-modal-nick"></label>
+    <input class="inp" id="acc-modal-nick" maxlength="40" autocomplete="off">
+    <label id="acc-modal-email-lbl" for="acc-modal-email"></label>
+    <input class="inp" id="acc-modal-email" type="email" maxlength="120" autocomplete="username" required aria-describedby="acc-modal-err">
+    <label id="acc-modal-pw-lbl" for="acc-modal-pw"></label>
+    <input class="inp" id="acc-modal-pw" type="password" maxlength="120" autocomplete="current-password" aria-describedby="acc-modal-err">
+    <label id="acc-modal-icon-lbl"></label>
+    <div class="acc-icons" id="acc-modal-icons"></div>
+    <input class="inp" id="acc-modal-icon-search" hidden autocomplete="off">
+    <div class="acc-icons acc-icons--scroll" id="acc-modal-icon-results" hidden></div>
+    <p class="acc-modal-err" id="acc-modal-err" role="status" aria-live="polite"></p>
+    <div class="acc-modal-btns">
+      <button class="lang-btn acc-modal-del" id="acc-modal-del" type="button" hidden></button>
+      <button class="lang-btn" id="acc-modal-cancel" type="button"></button>
+      <button class="lang-btn acc-modal-save" id="acc-modal-save" type="button"></button>
+    </div>
+  </dialog>
+  <div id="item-preview" hidden></div>
+  <script src="overlay.js"></script>
+</body>
+</html>

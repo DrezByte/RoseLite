@@ -1,0 +1,685 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 11,
+            "item_type_id": 1,
+            "game_item_id": 11,
+            "name": "Ashura Mask",
+            "icon": "face/ashura_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Strength 15",
+                    "Concentration 15"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 2,
+            "item_type_id": 1,
+            "game_item_id": 2,
+            "name": "Black Mask",
+            "icon": "face/black_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Dexterity 15",
+                    "Dodge Rate 5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 3,
+            "item_type_id": 1,
+            "game_item_id": 3,
+            "name": "ButterFly Mask",
+            "icon": "face/butterfly_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Movement Speed 30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 31,
+            "item_type_id": 1,
+            "game_item_id": 38,
+            "name": "Cart Goggles",
+            "icon": "face/cart_goggles.png",
+            "craft_item_type": "Glasses",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Sense 15"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 28,
+            "item_type_id": 1,
+            "game_item_id": 35,
+            "name": "Charming Sunglasses",
+            "icon": "face/charming_sunglasses.png",
+            "craft_item_type": "Glasses",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Charm 40"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 25,
+            "item_type_id": 1,
+            "game_item_id": 32,
+            "name": "Dork Glasses",
+            "icon": "face/dork_glasses.png",
+            "craft_item_type": "Glasses",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Intelligence 15"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 46,
+            "item_type_id": 1,
+            "game_item_id": 121,
+            "name": "Ego Mask",
+            "icon": "face/ego_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": "21",
+                "Stats": [
+                    "Magic Defense 25",
+                    "Defense 40"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 1,
+            "item_type_id": 1,
+            "game_item_id": 1,
+            "name": "Flu Mask",
+            "icon": "face/flu_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max HP 15"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 24,
+            "item_type_id": 1,
+            "game_item_id": 31,
+            "name": "Glasses Frame",
+            "icon": "face/glasses_frame.png",
+            "craft_item_type": "Glasses",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Strength 15"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 8,
+            "item_type_id": 1,
+            "game_item_id": 8,
+            "name": "Iron Mask",
+            "icon": "face/iron_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Defense 30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 7,
+            "item_type_id": 1,
+            "game_item_id": 7,
+            "name": "Jolly Front Mask",
+            "icon": "face/jolly_front_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Accuracy 11"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 13,
+            "item_type_id": 1,
+            "game_item_id": 13,
+            "name": "Mask of Lies",
+            "icon": "face/mask_of_lies.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": "70",
+                "Stats": [
+                    "Movement Speed 40",
+                    "Dodge Rate 17"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 44,
+            "item_type_id": 1,
+            "game_item_id": 73,
+            "name": "Nomadic Beard",
+            "icon": "face/nomadic_beard.png",
+            "craft_item_type": "Etc.",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Power 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 5,
+            "item_type_id": 1,
+            "game_item_id": 5,
+            "name": "Persian Mask",
+            "icon": "face/persian_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed 3.5%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 42,
+            "item_type_id": 1,
+            "game_item_id": 62,
+            "name": "Pierrot Nose",
+            "icon": "face/pierrot_nose.png",
+            "craft_item_type": "Etc.",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Charm 10",
+                    "Attack Power 5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 43,
+            "item_type_id": 1,
+            "game_item_id": 64,
+            "name": "Pinocchio Nose",
+            "icon": "face/pinocchio_nose.png",
+            "craft_item_type": "Etc.",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Dodge Rate 6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 30,
+            "item_type_id": 1,
+            "game_item_id": 37,
+            "name": "Style Sunglasses",
+            "icon": "face/style_sunglasses.png",
+            "craft_item_type": "Glasses",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Charm 50",
+                    "Accuracy 25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 27,
+            "item_type_id": 1,
+            "game_item_id": 34,
+            "name": "Sunglasses",
+            "icon": "face/sunglasses.png",
+            "craft_item_type": "Glasses",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Dexterity 17"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 26,
+            "item_type_id": 1,
+            "game_item_id": 33,
+            "name": "Thick Framed Glasses",
+            "icon": "face/thick_framed_glasses.png",
+            "craft_item_type": "Glasses",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Concentration 15"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 9,
+            "item_type_id": 1,
+            "game_item_id": 9,
+            "name": "Totem Mask",
+            "icon": "face/totem_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Magic Defense 20"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 45,
+            "item_type_id": 1,
+            "game_item_id": 76,
+            "name": "Whiskers",
+            "icon": "face/whiskers.png",
+            "craft_item_type": "Etc.",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Dexterity 20"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 6,
+            "item_type_id": 1,
+            "game_item_id": 6,
+            "name": "Wicked Mask",
+            "icon": "face/wicked_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Critical 16"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        },
+        {
+            "id": 4,
+            "item_type_id": 1,
+            "game_item_id": 4,
+            "name": "Zorro Mask",
+            "icon": "face/zorro_mask.png",
+            "craft_item_type": "Mask",
+            "craft_skill_type": "Face Item Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed 3.5%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 1,
+                "name": "Face Item",
+                "slug": "face"
+            }
+        }
+    ],
+    "first_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "page": null,
+            "active": false
+        },
+        {
+            "url": "https://roseutils.com/api/game-items/equipment?page=1",
+            "label": "1",
+            "page": 1,
+            "active": true
+        },
+        {
+            "url": null,
+            "label": "Next &raquo;",
+            "page": null,
+            "active": false
+        }
+    ],
+    "next_page_url": null,
+    "path": "https://roseutils.com/api/game-items/equipment",
+    "per_page": 200,
+    "prev_page_url": null,
+    "to": 23,
+    "total": 23
+}

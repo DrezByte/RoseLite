@@ -1,0 +1,3909 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 11357,
+            "item_type_id": 10,
+            "game_item_id": 88,
+            "name": "Accuracy Potion",
+            "icon": "useitem/accuracy_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Accuracy +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11481,
+            "item_type_id": 10,
+            "game_item_id": 217,
+            "name": "Acid Bomb",
+            "icon": "useitem/bomb_craft_lv_7.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Job": "Dealer",
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11485,
+            "item_type_id": 10,
+            "game_item_id": 221,
+            "name": "Acid Explosive",
+            "icon": "useitem/advanced_bomb_craft_lv_3.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "DoT - Artisan Required"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11476,
+            "item_type_id": 10,
+            "game_item_id": 212,
+            "name": "Acid Grenade",
+            "icon": "useitem/bomb_craft_lv_3.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Job": "Dealer",
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11490,
+            "item_type_id": 10,
+            "game_item_id": 226,
+            "name": "Acid High Explosive",
+            "icon": "useitem/advanced_bomb_craft_lv_7.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "DoT - Artisan Required"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11355,
+            "item_type_id": 10,
+            "game_item_id": 86,
+            "name": "Attack Potion",
+            "icon": "useitem/attack_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Attack Power +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11359,
+            "item_type_id": 10,
+            "game_item_id": 90,
+            "name": "Attack Speed Potion",
+            "icon": "useitem/attack_speed_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Attack Speed +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11315,
+            "item_type_id": 10,
+            "game_item_id": 33,
+            "name": "Blue Potion",
+            "icon": "useitem/blue_potion.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "200",
+                "Effect": [
+                    "Restore MP 1075"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11487,
+            "item_type_id": 10,
+            "game_item_id": 223,
+            "name": "Concussion Explosive",
+            "icon": "useitem/advanced_bomb_craft_lv_9.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Stun - Artisan Required"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11478,
+            "item_type_id": 10,
+            "game_item_id": 214,
+            "name": "Concussion Grenade",
+            "icon": "useitem/bomb_craft_lv_9.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Job": "Dealer",
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11989,
+            "item_type_id": 10,
+            "game_item_id": 1156,
+            "name": "Crate of Blaze Shells",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "100 Blaze Shells"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12009,
+            "item_type_id": 10,
+            "game_item_id": 1179,
+            "name": "Crate of Blue Potion",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Blue Potion"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11986,
+            "item_type_id": 10,
+            "game_item_id": 1153,
+            "name": "Crate of Bomber Shells",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "100 Bomber Shells"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11959,
+            "item_type_id": 10,
+            "game_item_id": 1111,
+            "name": "Crate of Bone Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11979,
+            "item_type_id": 10,
+            "game_item_id": 1137,
+            "name": "Crate of Chromium Bullets",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11981,
+            "item_type_id": 10,
+            "game_item_id": 1139,
+            "name": "Crate of Cold Bullets",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "100 Cold Bullets"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11967,
+            "item_type_id": 10,
+            "game_item_id": 1119,
+            "name": "Crate of Demon Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11969,
+            "item_type_id": 10,
+            "game_item_id": 1121,
+            "name": "Crate of Elven Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11980,
+            "item_type_id": 10,
+            "game_item_id": 1138,
+            "name": "Crate of Fire Bullets",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "100 Fire Bullets"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11987,
+            "item_type_id": 10,
+            "game_item_id": 1154,
+            "name": "Crate of Fire Shells",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "100 Fire Shells"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11995,
+            "item_type_id": 10,
+            "game_item_id": 1165,
+            "name": "Crate of Health Bottle (L)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Health Bottle (L)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11994,
+            "item_type_id": 10,
+            "game_item_id": 1164,
+            "name": "Crate of Health Bottle (M)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Health Bottle (M)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11993,
+            "item_type_id": 10,
+            "game_item_id": 1163,
+            "name": "Crate of Health Bottle (S)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Health Bottle (S)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11992,
+            "item_type_id": 10,
+            "game_item_id": 1162,
+            "name": "Crate of Health Vial (L)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Health Vial (L)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11991,
+            "item_type_id": 10,
+            "game_item_id": 1161,
+            "name": "Crate of Health Vial (M)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Health Vial (M)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11990,
+            "item_type_id": 10,
+            "game_item_id": 1160,
+            "name": "Crate of Health Vial (S)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Health Vial (S)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11974,
+            "item_type_id": 10,
+            "game_item_id": 1132,
+            "name": "Crate of Iron Bullets",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11970,
+            "item_type_id": 10,
+            "game_item_id": 1122,
+            "name": "Crate of Lightning Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12005,
+            "item_type_id": 10,
+            "game_item_id": 1175,
+            "name": "Crate of Mana Bottle (L)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Mana Bottle (L)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12004,
+            "item_type_id": 10,
+            "game_item_id": 1174,
+            "name": "Crate of Mana Bottle (M)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Mana Bottle (M)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12003,
+            "item_type_id": 10,
+            "game_item_id": 1173,
+            "name": "Crate of Mana Bottle (S)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Mana Bottle (S)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12002,
+            "item_type_id": 10,
+            "game_item_id": 1172,
+            "name": "Crate of Mana Vial (L)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Mana Vial (L)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12001,
+            "item_type_id": 10,
+            "game_item_id": 1171,
+            "name": "Crate of Mana Vial (M)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Mana Vial (M)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12000,
+            "item_type_id": 10,
+            "game_item_id": 1170,
+            "name": "Crate of Mana Vial (S)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Mana Vial (S)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11963,
+            "item_type_id": 10,
+            "game_item_id": 1115,
+            "name": "Crate of Metal Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11968,
+            "item_type_id": 10,
+            "game_item_id": 1120,
+            "name": "Crate of Nymph Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11965,
+            "item_type_id": 10,
+            "game_item_id": 1117,
+            "name": "Crate of Platinum Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11978,
+            "item_type_id": 10,
+            "game_item_id": 1136,
+            "name": "Crate of Platinum Bullets",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11982,
+            "item_type_id": 10,
+            "game_item_id": 1140,
+            "name": "Crate of Poison Bullets",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "100 Poison Bullets"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11988,
+            "item_type_id": 10,
+            "game_item_id": 1155,
+            "name": "Crate of Poison Shells",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "100 Poison Shells"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11999,
+            "item_type_id": 10,
+            "game_item_id": 1169,
+            "name": "Crate of Red Potion",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Red Potion"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11976,
+            "item_type_id": 10,
+            "game_item_id": 1134,
+            "name": "Crate of Silver-Plated Bullets",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12008,
+            "item_type_id": 10,
+            "game_item_id": 1178,
+            "name": "Crate of Spiritual Water (L)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Spiritual Water (L)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12007,
+            "item_type_id": 10,
+            "game_item_id": 1177,
+            "name": "Crate of Spiritual Water (M)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Spiritual Water (M)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 12006,
+            "item_type_id": 10,
+            "game_item_id": 1176,
+            "name": "Crate of Spiritual Water (S)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Spiritual Water (S)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11961,
+            "item_type_id": 10,
+            "game_item_id": 1113,
+            "name": "Crate of Stone Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11971,
+            "item_type_id": 10,
+            "game_item_id": 1123,
+            "name": "Crate of Storm Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11998,
+            "item_type_id": 10,
+            "game_item_id": 1168,
+            "name": "Crate of Vital Water (L)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Vital Water (L)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11997,
+            "item_type_id": 10,
+            "game_item_id": 1167,
+            "name": "Crate of Vital Water (M)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Vital Water (M)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11996,
+            "item_type_id": 10,
+            "game_item_id": 1166,
+            "name": "Crate of Vital Water (S)",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Crate of Storm Arrows",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "10 Vital Water (S)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11966,
+            "item_type_id": 10,
+            "game_item_id": 1118,
+            "name": "Crate of White Night Arrows",
+            "icon": "useitem/alchemy_crafting.png",
+            "craft_item_type": "Gift Box",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11360,
+            "item_type_id": 10,
+            "game_item_id": 91,
+            "name": "Critical Potion",
+            "icon": "useitem/critical_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Critical +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11354,
+            "item_type_id": 10,
+            "game_item_id": 85,
+            "name": "Defense Potion",
+            "icon": "useitem/defense_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Defense +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11358,
+            "item_type_id": 10,
+            "game_item_id": 89,
+            "name": "Dodge Potion",
+            "icon": "useitem/dodge_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Dodge Rate +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11483,
+            "item_type_id": 10,
+            "game_item_id": 219,
+            "name": "Explosive",
+            "icon": "useitem/advanced_bomb_craft_lv_1.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Damage - Artisan Required"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11480,
+            "item_type_id": 10,
+            "game_item_id": 216,
+            "name": "Flash Bomb",
+            "icon": "useitem/bomb_craft_lv_6.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Job": "Dealer",
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11484,
+            "item_type_id": 10,
+            "game_item_id": 220,
+            "name": "Flash Explosive",
+            "icon": "useitem/advanced_bomb_craft_lv_2.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Blind - Artisan Required"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11475,
+            "item_type_id": 10,
+            "game_item_id": 211,
+            "name": "Flash Grenade",
+            "icon": "useitem/bomb_craft_lv_2.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Job": "Dealer",
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11489,
+            "item_type_id": 10,
+            "game_item_id": 225,
+            "name": "Flash High Explosive",
+            "icon": "useitem/advanced_bomb_craft_lv_6.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Blind - Artisan Required"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11479,
+            "item_type_id": 10,
+            "game_item_id": 215,
+            "name": "Hand Bomb",
+            "icon": "useitem/bomb_craft_lv_5.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Job": "Dealer",
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11474,
+            "item_type_id": 10,
+            "game_item_id": 210,
+            "name": "Hand Grenade",
+            "icon": "useitem/bomb_craft_lv_1.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Job": "Dealer",
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11293,
+            "item_type_id": 10,
+            "game_item_id": 6,
+            "name": "Health Bottle (L)",
+            "icon": "useitem/health_bottle_l.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Heal 2475"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11292,
+            "item_type_id": 10,
+            "game_item_id": 5,
+            "name": "Health Bottle (M)",
+            "icon": "useitem/health_bottle_m.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "79",
+                "Effect": [
+                    "Heal 1750"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11291,
+            "item_type_id": 10,
+            "game_item_id": 4,
+            "name": "Health Bottle (S)",
+            "icon": "useitem/health_bottle_s.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "57",
+                "Effect": [
+                    "Heal 1125"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11290,
+            "item_type_id": 10,
+            "game_item_id": 3,
+            "name": "Health Vial (L)",
+            "icon": "useitem/health_vial_l.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "36",
+                "Effect": [
+                    "Heal 575"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11289,
+            "item_type_id": 10,
+            "game_item_id": 2,
+            "name": "Health Vial (M)",
+            "icon": "useitem/health_vial_m.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "21",
+                "Effect": [
+                    "Heal 300"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11288,
+            "item_type_id": 10,
+            "game_item_id": 1,
+            "name": "Health Vial (S)",
+            "icon": "useitem/health_vial_s.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "7",
+                "Effect": [
+                    "Heal 75"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11488,
+            "item_type_id": 10,
+            "game_item_id": 224,
+            "name": "High Explosive",
+            "icon": "useitem/advanced_bomb_craft_lv_5.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Damage - Artisan Required"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19694,
+            "item_type_id": 10,
+            "game_item_id": 3001,
+            "name": "Imbued Aplysia King Effigy",
+            "icon": "useitem/imbued_aplysia_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19695,
+            "item_type_id": 10,
+            "game_item_id": 3002,
+            "name": "Imbued Aqua King Effigy",
+            "icon": "useitem/imbued_aqua_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19696,
+            "item_type_id": 10,
+            "game_item_id": 3003,
+            "name": "Imbued Arcane King Khaldun Effigy",
+            "icon": "useitem/imbued_arcane_king_khaldun_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19697,
+            "item_type_id": 10,
+            "game_item_id": 3004,
+            "name": "Imbued Arcane Rift Guardian Effigy",
+            "icon": "useitem/imbued_arcane_rift_guardian_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19698,
+            "item_type_id": 10,
+            "game_item_id": 3005,
+            "name": "Imbued Asper Guardian Effigy",
+            "icon": "useitem/imbued_asper_guardian_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19760,
+            "item_type_id": 10,
+            "game_item_id": 3071,
+            "name": "Imbued Astarot King Effigy",
+            "icon": "useitem/imbued_astarot_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19699,
+            "item_type_id": 10,
+            "game_item_id": 3006,
+            "name": "Imbued Behemoth King Effigy",
+            "icon": "useitem/imbued_behemoth_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19700,
+            "item_type_id": 10,
+            "game_item_id": 3007,
+            "name": "Imbued Bone Spider King Effigy",
+            "icon": "useitem/imbued_bone_spider_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19701,
+            "item_type_id": 10,
+            "game_item_id": 3008,
+            "name": "Imbued Camouflaged Armastyx King Effigy",
+            "icon": "useitem/imbued_camouflaged_armastyx_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19702,
+            "item_type_id": 10,
+            "game_item_id": 3009,
+            "name": "Imbued Crown Asper King Effigy",
+            "icon": "useitem/imbued_crown_asper_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19753,
+            "item_type_id": 10,
+            "game_item_id": 3064,
+            "name": "Imbued Curse Ent Vagabon Effigy",
+            "icon": "useitem/imbued_curse_ent_vagabon_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19703,
+            "item_type_id": 10,
+            "game_item_id": 3010,
+            "name": "Imbued Desert Scavenger Guardian Effigy",
+            "icon": "useitem/imbued_desert_scavenger_guardian_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19704,
+            "item_type_id": 10,
+            "game_item_id": 3011,
+            "name": "Imbued Desert Scavenger King Effigy",
+            "icon": "useitem/imbued_desert_scavenger_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19705,
+            "item_type_id": 10,
+            "game_item_id": 3012,
+            "name": "Imbued Devourer Guardian Effigy",
+            "icon": "useitem/imbued_devourer_guardian_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19706,
+            "item_type_id": 10,
+            "game_item_id": 3013,
+            "name": "Imbued Doonga King Effigy",
+            "icon": "useitem/imbued_doonga_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19707,
+            "item_type_id": 10,
+            "game_item_id": 3014,
+            "name": "Imbued Drake King Effigy",
+            "icon": "useitem/imbued_drake_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19708,
+            "item_type_id": 10,
+            "game_item_id": 3015,
+            "name": "Imbued Dreadnaught King Effigy",
+            "icon": "useitem/imbued_dreadnaught_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19709,
+            "item_type_id": 10,
+            "game_item_id": 3016,
+            "name": "Imbued Executor Kera Effigy",
+            "icon": "useitem/imbued_executor_kera_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19710,
+            "item_type_id": 10,
+            "game_item_id": 3017,
+            "name": "Imbued Fearsome Terrasaurus King Effigy",
+            "icon": "useitem/imbued_fearsome_terrasaurus_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19711,
+            "item_type_id": 10,
+            "game_item_id": 3018,
+            "name": "Imbued Frozen Tooth Effigy",
+            "icon": "useitem/imbued_frozen_tooth_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19712,
+            "item_type_id": 10,
+            "game_item_id": 3019,
+            "name": "Imbued Giant Fiery Snapper Effigy",
+            "icon": "useitem/imbued_giant_fiery_snapper_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19713,
+            "item_type_id": 10,
+            "game_item_id": 3020,
+            "name": "Imbued Giant Kaiman Ranger Effigy",
+            "icon": "useitem/imbued_giant_kaiman_ranger_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19714,
+            "item_type_id": 10,
+            "game_item_id": 3021,
+            "name": "Imbued Giant Worm Dragon Effigy",
+            "icon": "useitem/imbued_giant_worm_dragon_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19715,
+            "item_type_id": 10,
+            "game_item_id": 3022,
+            "name": "Imbued Golden Scarab Guardian Effigy",
+            "icon": "useitem/imbued_golden_scarab_guardian_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19716,
+            "item_type_id": 10,
+            "game_item_id": 3023,
+            "name": "Imbued Golden Scarab King Effigy",
+            "icon": "useitem/imbued_golden_scarab_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19717,
+            "item_type_id": 10,
+            "game_item_id": 3024,
+            "name": "Imbued Grand Goblin King Effigy",
+            "icon": "useitem/imbued_grand_goblin_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19718,
+            "item_type_id": 10,
+            "game_item_id": 3025,
+            "name": "Imbued Grand Goblin Wizard Effigy",
+            "icon": "useitem/imbued_grand_goblin_wizard_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19719,
+            "item_type_id": 10,
+            "game_item_id": 3026,
+            "name": "Imbued Grand Master Devourer Effigy",
+            "icon": "useitem/imbued_grand_master_devourer_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19720,
+            "item_type_id": 10,
+            "game_item_id": 3027,
+            "name": "Imbued Grand Master Golem Effigy",
+            "icon": "useitem/imbued_grand_master_golem_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19721,
+            "item_type_id": 10,
+            "game_item_id": 3028,
+            "name": "Imbued Grunter King Effigy",
+            "icon": "useitem/imbued_grunter_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19722,
+            "item_type_id": 10,
+            "game_item_id": 3029,
+            "name": "Imbued Guardian Tree Effigy",
+            "icon": "useitem/imbued_guardian_tree_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19723,
+            "item_type_id": 10,
+            "game_item_id": 3030,
+            "name": "Imbued Ikaness Heavygear Effigy",
+            "icon": "useitem/imbued_ikaness_heavygear_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19725,
+            "item_type_id": 10,
+            "game_item_id": 3032,
+            "name": "Imbued Ikaness Mecha Effigy",
+            "icon": "useitem/imbued_ikaness_mecha_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19724,
+            "item_type_id": 10,
+            "game_item_id": 3031,
+            "name": "Imbued Ikaness Mecha Guardian Effigy",
+            "icon": "useitem/imbued_ikaness_mecha_guardian_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19726,
+            "item_type_id": 10,
+            "game_item_id": 3033,
+            "name": "Imbued Jelly King Effigy",
+            "icon": "useitem/imbued_jelly_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19754,
+            "item_type_id": 10,
+            "game_item_id": 3065,
+            "name": "Imbued King Turak Effigy",
+            "icon": "useitem/imbued_king_turak_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19727,
+            "item_type_id": 10,
+            "game_item_id": 3034,
+            "name": "Imbued Krawfy King Effigy",
+            "icon": "useitem/imbued_krawfy_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19728,
+            "item_type_id": 10,
+            "game_item_id": 3035,
+            "name": "Imbued Little Goblin Double Mace Effigy",
+            "icon": "useitem/imbued_little_goblin_double_mace_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19729,
+            "item_type_id": 10,
+            "game_item_id": 3036,
+            "name": "Imbued Lord Storm Effigy",
+            "icon": "useitem/imbued_lord_storm_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19730,
+            "item_type_id": 10,
+            "game_item_id": 3037,
+            "name": "Imbued Mammy Queen Effigy",
+            "icon": "useitem/imbued_mammy_queen_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19731,
+            "item_type_id": 10,
+            "game_item_id": 3038,
+            "name": "Imbued Moldie Manager Effigy",
+            "icon": "useitem/imbued_moldie_manager_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19829,
+            "item_type_id": 10,
+            "game_item_id": 3039,
+            "name": "Imbued Moon Brother Dagaz",
+            "icon": "useitem/imbued_moon_brother_dagaz.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:26:47.000000Z",
+            "updated_at": "2026-04-29T21:26:47.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19831,
+            "item_type_id": 10,
+            "game_item_id": 3040,
+            "name": "Imbued Moon Pastor Laguz",
+            "icon": "useitem/imbued_moon_pastor_laguz.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:26:47.000000Z",
+            "updated_at": "2026-04-29T21:26:47.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19732,
+            "item_type_id": 10,
+            "game_item_id": 3041,
+            "name": "Imbued Moon Sister Inguz Effigy",
+            "icon": "useitem/imbued_moon_sister_inguz_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19733,
+            "item_type_id": 10,
+            "game_item_id": 3042,
+            "name": "Imbued Moss Golem Effigy",
+            "icon": "useitem/imbued_moss_golem_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19734,
+            "item_type_id": 10,
+            "game_item_id": 3043,
+            "name": "Imbued Mountain Bebeg King Effigy",
+            "icon": "useitem/imbued_mountain_bebeg_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19735,
+            "item_type_id": 10,
+            "game_item_id": 3044,
+            "name": "Imbued Mummy King Effigy",
+            "icon": "useitem/imbued_mummy_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19736,
+            "item_type_id": 10,
+            "game_item_id": 3045,
+            "name": "Imbued Pantharis King Effigy",
+            "icon": "useitem/imbued_pantharis_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19737,
+            "item_type_id": 10,
+            "game_item_id": 3046,
+            "name": "Imbued Penguin King Effigy",
+            "icon": "useitem/imbued_penguin_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19738,
+            "item_type_id": 10,
+            "game_item_id": 3047,
+            "name": "Imbued Poisontail Scorpio Guardian Effigy",
+            "icon": "useitem/imbued_poisontail_scorpio_guardian_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19739,
+            "item_type_id": 10,
+            "game_item_id": 3048,
+            "name": "Imbued Pomic King Effigy",
+            "icon": "useitem/imbued_pomic_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19740,
+            "item_type_id": 10,
+            "game_item_id": 3049,
+            "name": "Imbued Prehistoric Mastyx King Effigy",
+            "icon": "useitem/imbued_prehistoric_mastyx_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19741,
+            "item_type_id": 10,
+            "game_item_id": 3050,
+            "name": "Imbued Queen Bibi Effigy",
+            "icon": "useitem/imbued_queen_bibi_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19755,
+            "item_type_id": 10,
+            "game_item_id": 3066,
+            "name": "Imbued Sikuku Elite Fighter Effigy",
+            "icon": "useitem/imbued_sikuku_elite_fighter_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19756,
+            "item_type_id": 10,
+            "game_item_id": 3067,
+            "name": "Imbued Sikuku Elite King Effigy",
+            "icon": "useitem/imbued_sikuku_elite_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19742,
+            "item_type_id": 10,
+            "game_item_id": 3051,
+            "name": "Imbued Sikuku Grand Master Effigy",
+            "icon": "useitem/imbued_sikuku_grand_master_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19833,
+            "item_type_id": 10,
+            "game_item_id": 3052,
+            "name": "Imbued Sword Master Emil",
+            "icon": "useitem/imbued_sword_master_emil.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:26:47.000000Z",
+            "updated_at": "2026-04-29T21:26:47.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19743,
+            "item_type_id": 10,
+            "game_item_id": 3053,
+            "name": "Imbued Tyrant King Effigy",
+            "icon": "useitem/imbued_tyrant_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19744,
+            "item_type_id": 10,
+            "game_item_id": 3054,
+            "name": "Imbued Varus Effigy",
+            "icon": "useitem/imbued_varus_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19745,
+            "item_type_id": 10,
+            "game_item_id": 3055,
+            "name": "Imbued Vulcan King Effigy",
+            "icon": "useitem/imbued_vulcan_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19757,
+            "item_type_id": 10,
+            "game_item_id": 3068,
+            "name": "Imbued Wandering Asper Effigy",
+            "icon": "useitem/imbued_wandering_asper_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19758,
+            "item_type_id": 10,
+            "game_item_id": 3069,
+            "name": "Imbued Wandering Devourer Effigy",
+            "icon": "useitem/imbued_wandering_devourer_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19748,
+            "item_type_id": 10,
+            "game_item_id": 3059,
+            "name": "Imbued Wandering Mastyx Effigy",
+            "icon": "useitem/imbued_wandering_mastyx_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19759,
+            "item_type_id": 10,
+            "game_item_id": 3070,
+            "name": "Imbued Wandering Scarab Effigy",
+            "icon": "useitem/imbued_wandering_scarab_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19747,
+            "item_type_id": 10,
+            "game_item_id": 3058,
+            "name": "Imbued Wandering Snapper Effigy",
+            "icon": "useitem/imbued_wandering_snapper_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19746,
+            "item_type_id": 10,
+            "game_item_id": 3057,
+            "name": "Imbued Wandering Terrasaurus Effigy",
+            "icon": "useitem/imbued_wandering_terrasaurus_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:48.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19749,
+            "item_type_id": 10,
+            "game_item_id": 3060,
+            "name": "Imbued Wise Clown Effigy",
+            "icon": "useitem/imbued_wise_clown_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19750,
+            "item_type_id": 10,
+            "game_item_id": 3061,
+            "name": "Imbued Wolf King Effigy",
+            "icon": "useitem/imbued_wolf_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:49.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19751,
+            "item_type_id": 10,
+            "game_item_id": 3062,
+            "name": "Imbued Wooly Mammoth Effigy",
+            "icon": "useitem/imbued_wooly_mammoth_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 19752,
+            "item_type_id": 10,
+            "game_item_id": 3063,
+            "name": "Imbued Woopie King Effigy",
+            "icon": "useitem/imbued_woopie_king_effigy.png",
+            "craft_item_type": null,
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": null,
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-04-29T21:24:49.000000Z",
+            "updated_at": "2026-04-29T21:24:50.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11356,
+            "item_type_id": 10,
+            "game_item_id": 87,
+            "name": "Magic Resistance Potion",
+            "icon": "useitem/magic_resistance_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Magic Defense +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11482,
+            "item_type_id": 10,
+            "game_item_id": 218,
+            "name": "Mana Bomb",
+            "icon": "useitem/bomb_craft_lv_8.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Job": "Dealer",
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11306,
+            "item_type_id": 10,
+            "game_item_id": 24,
+            "name": "Mana Bottle (S)",
+            "icon": "useitem/mp_s.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "100",
+                "Effect": [
+                    "Restore MP 550"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11486,
+            "item_type_id": 10,
+            "game_item_id": 222,
+            "name": "Mana Explosive",
+            "icon": "useitem/advanced_bomb_craft_lv_4.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Mana Drain - Artisan Required"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11477,
+            "item_type_id": 10,
+            "game_item_id": 213,
+            "name": "Mana Grenade",
+            "icon": "useitem/bomb_craft_lv_4.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Job": "Dealer",
+                "Level": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11491,
+            "item_type_id": 10,
+            "game_item_id": 227,
+            "name": "Mana High Explosive",
+            "icon": "useitem/advanced_bomb_craft_lv_8.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Mana Drain - Artisan Required"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11305,
+            "item_type_id": 10,
+            "game_item_id": 23,
+            "name": "Mana Vial (L)",
+            "icon": "useitem/mp_l.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "36",
+                "Effect": [
+                    "Restore MP 225"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11304,
+            "item_type_id": 10,
+            "game_item_id": 22,
+            "name": "Mana Vial (M)",
+            "icon": "useitem/mp_m.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "21",
+                "Effect": [
+                    "Restore MP 150"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11303,
+            "item_type_id": 10,
+            "game_item_id": 21,
+            "name": "Mana Vial (S)",
+            "icon": "useitem/mp_s.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "7",
+                "Effect": [
+                    "Restore MP 75"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11349,
+            "item_type_id": 10,
+            "game_item_id": 80,
+            "name": "Max HP Potion",
+            "icon": "useitem/max_hp_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Max HP +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11350,
+            "item_type_id": 10,
+            "game_item_id": 81,
+            "name": "Max MP Potion",
+            "icon": "useitem/max_mp_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Max MP +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11353,
+            "item_type_id": 10,
+            "game_item_id": 84,
+            "name": "Movement Potion",
+            "icon": "useitem/movement_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Move Speed +12% for 10min"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11351,
+            "item_type_id": 10,
+            "game_item_id": 82,
+            "name": "Purify Potion",
+            "icon": "useitem/purify_potion.png",
+            "craft_item_type": "Magic Item",
+            "craft_skill_type": "Advanced Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Effect": [
+                    "Purify Curse (Remove Debuff?)"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11301,
+            "item_type_id": 10,
+            "game_item_id": 14,
+            "name": "Red Potion",
+            "icon": "useitem/red_potion.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "200",
+                "Effect": [
+                    "Heal 6750"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11313,
+            "item_type_id": 10,
+            "game_item_id": 31,
+            "name": "Spiritual Water (L)",
+            "icon": "useitem/mp_l.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "186",
+                "Effect": [
+                    "Restore MP 1000"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11312,
+            "item_type_id": 10,
+            "game_item_id": 30,
+            "name": "Spiritual Water (M)",
+            "icon": "useitem/mp_m.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "157",
+                "Effect": [
+                    "Restore MP 850"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11311,
+            "item_type_id": 10,
+            "game_item_id": 29,
+            "name": "Spiritual Water (S)",
+            "icon": "useitem/mp_s.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "129",
+                "Effect": [
+                    "Restore MP 700"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11299,
+            "item_type_id": 10,
+            "game_item_id": 12,
+            "name": "Vital Water (L)",
+            "icon": "useitem/vital_water_l.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "186",
+                "Effect": [
+                    "Heal 6075"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11298,
+            "item_type_id": 10,
+            "game_item_id": 11,
+            "name": "Vital Water (M)",
+            "icon": "useitem/vital_water_m.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "157",
+                "Effect": [
+                    "Heal 4750"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        },
+        {
+            "id": 11297,
+            "item_type_id": 10,
+            "game_item_id": 10,
+            "name": "Vital Water (S)",
+            "icon": "useitem/vital_water_s.png",
+            "craft_item_type": "Potion",
+            "craft_skill_type": "Alchemy Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "129",
+                "Effect": [
+                    "Heal 3550"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 10,
+                "name": "Consumable",
+                "slug": "consumable"
+            }
+        }
+    ],
+    "first_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "page": null,
+            "active": false
+        },
+        {
+            "url": "https://roseutils.com/api/game-items/equipment?page=1",
+            "label": "1",
+            "page": 1,
+            "active": true
+        },
+        {
+            "url": null,
+            "label": "Next &raquo;",
+            "page": null,
+            "active": false
+        }
+    ],
+    "next_page_url": null,
+    "path": "https://roseutils.com/api/game-items/equipment",
+    "per_page": 200,
+    "prev_page_url": null,
+    "to": 158,
+    "total": 158
+}

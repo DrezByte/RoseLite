@@ -1,0 +1,768 @@
+[
+{
+"id": "017b90de",
+"planet": "Eldeon",
+"map": "Sikuku Ruins",
+"name": "Grandmaster Ruins",
+"secs": 900,
+"lvl": 225
+},
+{
+"id": "01e77fd7",
+"planet": "Junon",
+"map": "Kenji Beach",
+"name": "Doonga King (E)",
+"secs": 2700,
+"lvl": 83
+},
+{
+"id": "05e9abbe",
+"planet": "Eldeon",
+"map": "Sikuku Ruins",
+"name": "Pantharis King 1ST",
+"secs": 1800,
+"lvl": 219
+},
+{
+"id": "099dabe5",
+"planet": "Orlo",
+"map": "Golden Ring",
+"name": "Asper King Sud",
+"secs": 2110
+},
+{
+"id": "09f6d871",
+"planet": "Luna",
+"map": "Mana Snowfields",
+"name": "Pinguin Top (tp6)",
+"secs": 1800,
+"lvl": 128
+},
+{
+"id": "0ba7ff7e",
+"planet": "Orlo",
+"map": "Fossil",
+"name": "Mastyx du lac",
+"secs": 1920
+},
+{
+"id": "0c964945",
+"planet": "Junon",
+"map": "El Verloon Desert",
+"name": "Queen Bibi (E)",
+"secs": 1800,
+"lvl": 41
+},
+{
+"id": "0d3ae0d9",
+"planet": "Luna",
+"map": "Freezing Plateau",
+"name": "Wolf est (tp5)",
+"secs": 1800,
+"lvl": 88
+},
+{
+"id": "0ea3ae17",
+"planet": "Junon",
+"map": "Oblivion Temple B2",
+"name": "Mummy King (N)",
+"secs": 3600,
+"lvl": 160
+},
+{
+"id": "13ef314d",
+"planet": "Eldeon",
+"map": "Sikuku Ruins",
+"name": "Pantharis King 2ND",
+"secs": 1800,
+"lvl": 219
+},
+{
+"id": "1590daff",
+"planet": "Junon",
+"map": "Canyon City of Zant",
+"name": "Woopie King (N)",
+"secs": 1800,
+"lvl": 29
+},
+{
+"id": "1689eb12",
+"planet": "Luna",
+"map": "Mana Snowfields",
+"name": "Pinguin Sud x2 (tp6)",
+"secs": 1800,
+"lvl": 128
+},
+{
+"id": "1934c2b4",
+"planet": "Orlo",
+"map": "Fossil",
+"name": "Snapper Bottom",
+"secs": 1800
+},
+{
+"id": "19a91faa",
+"planet": "Orlo",
+"map": "Fossil",
+"name": "Snapper Top",
+"secs": 2000
+},
+{
+"id": "1d33f84f",
+"planet": "Junon",
+"map": "Anima Lake",
+"name": "Grunter King (WR)",
+"secs": 2400,
+"lvl": 55
+},
+{
+"id": "21cc64f3",
+"planet": "Eldeon",
+"map": "Xita",
+"name": "Sikuku King TOP",
+"secs": 1800,
+"lvl": 180
+},
+{
+"id": "2204c7ff",
+"planet": "Luna",
+"map": "Forgotten Temple",
+"name": "Moon Sister",
+"secs": 1800,
+"lvl": 147
+},
+{
+"id": "229873d7",
+"planet": "Junon",
+"map": "Anima Lake",
+"name": "Aqua King (S)",
+"secs": 3600,
+"lvl": 47
+},
+{
+"id": "27740231",
+"planet": "Junon",
+"map": "Anima Lake",
+"name": "Grunter King (E)",
+"secs": 2400,
+"lvl": 55
+},
+{
+"id": "2f032faf",
+"planet": "Eldeon",
+"map": "Shady Jungle",
+"name": "Turak Est",
+"secs": 2700,
+"lvl": 205
+},
+{
+"id": "2f5e4760",
+"planet": "Luna",
+"map": "Mana Snowfields",
+"name": "Drake x3 (tp6)",
+"secs": 1800,
+"lvl": 133
+},
+{
+"id": "35130f7f",
+"planet": "Junon",
+"map": "Kenji Beach",
+"name": "Doonga King (SR)",
+"secs": 2700,
+"lvl": 83
+},
+{
+"id": "3810d2c5",
+"planet": "Orlo",
+"map": "Golden Ring",
+"name": "Scorpion Sud",
+"secs": 2320
+},
+{
+"id": "381791bb",
+"planet": "Orlo",
+"map": "Wasteland west",
+"name": "Devo sud ouest",
+"secs": 1810
+},
+{
+"id": "3f1e693a",
+"planet": "Eldeon",
+"map": "Marsh Of Ghosts",
+"name": "Ikaness Heavygear",
+"secs": 1200,
+"lvl": 196
+},
+{
+"id": "43e77536",
+"planet": "Orlo",
+"map": "Wasteland west",
+"name": "Devo Nord West",
+"secs": 1810
+},
+{
+"id": "461173fb",
+"planet": "Orlo",
+"map": "wasteland Ruins Path",
+"name": "Ika Ruins",
+"secs": 3020
+},
+{
+"id": "4d7de05d",
+"planet": "Eldeon",
+"map": "Sikuku Ruins",
+"name": "Aplysia Du fond",
+"secs": 1800,
+"lvl": 220
+},
+{
+"id": "4f03b56c",
+"planet": "Eldeon",
+"map": "Xita",
+"name": "Sikuku King Nord",
+"secs": 1800,
+"lvl": 180
+},
+{
+"id": "514cf24f",
+"planet": "Orlo",
+"map": "Golden Ring",
+"name": "Asper King Nord",
+"secs": 2110
+},
+{
+"id": "57460aa3",
+"planet": "Orlo",
+"map": "Fossil",
+"name": "Terra Sud",
+"secs": 3000
+},
+{
+"id": "575ab5b7",
+"planet": "Orlo",
+"map": "Golden Ring",
+"name": "Scorpion Nord",
+"secs": 2320
+},
+{
+"id": "5b2835c1",
+"planet": "Junon",
+"map": "Canyon City of Zant",
+"name": "Woopie King (S)",
+"secs": 1800,
+"lvl": 29
+},
+{
+"id": "5ceec62c",
+"planet": "Orlo",
+"map": "Wasteland west",
+"name": "Scavenger Est",
+"secs": 1655
+},
+{
+"id": "63d4dd65",
+"planet": "Luna",
+"map": "Crystal Snowfields",
+"name": "Vulcan x6 (tp4)",
+"secs": 3600,
+"lvl": 88
+},
+{
+"id": "6b8e8acd",
+"planet": "Eldeon",
+"map": "Shady Jungle",
+"name": "Turak West",
+"secs": 2700,
+"lvl": 205
+},
+{
+"id": "6e5f5510",
+"planet": "Orlo",
+"map": "Golden Ring",
+"name": "Scarab Nord",
+"secs": 1825
+},
+{
+"id": "7481d3c2",
+"planet": "Orlo",
+"map": "Fossil",
+"name": "Mastyx Du Fond",
+"secs": 1800
+},
+{
+"id": "82ee6b34",
+"planet": "Junon",
+"map": "Breezy Hills",
+"name": "Pomic King (W)",
+"secs": 1800,
+"lvl": 29
+},
+{
+"id": "83bfaf26",
+"planet": "Orlo",
+"map": "Wasteland Sud",
+"name": "Scavenger Sud",
+"secs": 1800
+},
+{
+"id": "84893255",
+"planet": "Orlo",
+"map": "Fossil",
+"name": "Terra Nord",
+"secs": 1800
+},
+{
+"id": "855be9ef",
+"planet": "Luna",
+"map": "Freezing Plateau",
+"name": "Wolf ouest (tp5)",
+"secs": 1800,
+"lvl": 88
+},
+{
+"id": "888fd4bd",
+"planet": "Luna",
+"map": "Crystal Snowfields",
+"name": "Wooly Mamouth (tp2)",
+"secs": 2700,
+"lvl": 91
+},
+{
+"id": "89e896fd",
+"planet": "Luna",
+"map": "Arumic Valley",
+"name": "tyrant Nord (tp2)",
+"secs": 1800,
+"lvl": 117
+},
+{
+"id": "8a73e99c",
+"planet": "Orlo",
+"map": "Golden Ring",
+"name": "Scarab Sud",
+"secs": 2060
+},
+{
+"id": "8ac4d038",
+"planet": "Junon",
+"map": "Goblin Cave (B3)",
+"name": "Grand Goblin King (M)",
+"secs": 3000,
+"lvl": 99
+},
+{
+"id": "8b5a503b",
+"planet": "Luna",
+"map": "Mana Snowfields",
+"name": "Behemot Nord (tp7)",
+"secs": 2700,
+"lvl": 135
+},
+{
+"id": "8c27b49d",
+"planet": "Luna",
+"map": "Arumic Valley",
+"name": "Tyrant Sud (tp2)",
+"secs": 1800,
+"lvl": 117
+},
+{
+"id": "90602390",
+"planet": "Luna",
+"map": "Forgotten Temple",
+"name": "Moon Brother Dagaz",
+"secs": 2700,
+"lvl": 148
+},
+{
+"id": "9298e18f",
+"planet": "Orlo",
+"map": "Wasteland west",
+"name": "Devo entrance",
+"secs": 3270
+},
+{
+"id": "9492e16d",
+"planet": "Orlo",
+"map": "Golden Ring",
+"name": "Scorpion Sud Est",
+"secs": 2320
+},
+{
+"id": "9608c4c9",
+"planet": "Orlo",
+"map": "Golden Ring",
+"name": "Scarab Pyramid",
+"secs": 3995
+},
+{
+"id": "99cba50d",
+"planet": "Eldeon",
+"map": "Sikuku Ruins",
+"name": "Bones Spider Entrance",
+"secs": 1800,
+"lvl": 222
+},
+{
+"id": "99eb8fb4",
+"planet": "Orlo",
+"map": "Wasteland Sud",
+"name": "Devo Sud",
+"secs": 1800
+},
+{
+"id": "9be47450",
+"planet": "Junon",
+"map": "Oblivion Temple B2",
+"name": "Mummy King (WL)",
+"secs": 3600,
+"lvl": 160
+},
+{
+"id": "9bef2711",
+"planet": "Junon",
+"map": "Anima Lake",
+"name": "Grunter King (WL)",
+"secs": 2400,
+"lvl": 55
+},
+{
+"id": "9bfbc812",
+"planet": "Eldeon",
+"map": "Xita",
+"name": "Sikuku King West",
+"secs": 1800,
+"lvl": 180
+},
+{
+"id": "a5c21bb0",
+"planet": "Orlo",
+"map": "Wasteland west",
+"name": "Scav Nord West",
+"secs": 1655
+},
+{
+"id": "a6828838",
+"planet": "Junon",
+"map": "Kenji Beach",
+"name": "Krawfy King (NL)",
+"secs": 3600,
+"lvl": 82
+},
+{
+"id": "a9b9ab9f",
+"planet": "Junon",
+"map": "Kenji Beach",
+"name": "Doonga King (SL)",
+"secs": 2700,
+"lvl": 83
+},
+{
+"id": "acd6ab50",
+"planet": "Luna",
+"map": "Mana Snowfields",
+"name": "Behemot Middle (tp6)",
+"secs": 2700,
+"lvl": 135
+},
+{
+"id": "af991449",
+"planet": "Junon",
+"map": "El Verloon Desert",
+"name": "Queen Bibi (W)",
+"secs": 1800,
+"lvl": 41
+},
+{
+"id": "b4eb5fc1",
+"planet": "Eldeon",
+"map": "Sikuku Prison",
+"name": "GrandMaster Prison",
+"secs": 900
+},
+{
+"id": "b73d0dc7",
+"planet": "Luna",
+"map": "Mount Eruca",
+"name": "Mountain Bebeg",
+"secs": 1800
+},
+{
+"id": "bc3d7117",
+"planet": "Eldeon",
+"map": "Sikuku Ruins",
+"name": "Bones spider Du Fond",
+"secs": 1800,
+"lvl": 222
+},
+{
+"id": "bd4054d3",
+"planet": "Luna",
+"map": "Arumic Valley",
+"name": "Varus x2 (tp2)",
+"secs": 2700
+},
+{
+"id": "bdb8fad7",
+"planet": "Junon",
+"map": "El Verloon Desert",
+"name": "Queen Bibi (N)",
+"secs": 1800,
+"lvl": 41
+},
+{
+"id": "be82dc82",
+"planet": "Eldeon",
+"map": "Sikuku Prison",
+"name": "Executor Kera",
+"secs": 1705,
+"lvl": 220
+},
+{
+"id": "c4a9c735",
+"planet": "Eldeon",
+"map": "Sikuku Ruins",
+"name": "Pantharis King Lac",
+"secs": 1800,
+"lvl": 219
+},
+{
+"id": "c53e7919",
+"planet": "Orlo",
+"map": "Fossil",
+"name": "Armastyx Cave",
+"secs": 2000
+},
+{
+"id": "c60eaec5",
+"planet": "Junon",
+"map": "Oblivion Temple B2",
+"name": "Mummy King (S)",
+"secs": 3600,
+"lvl": 160
+},
+{
+"id": "c897a2e9",
+"planet": "Junon",
+"map": "Breezy Hills",
+"name": "Pomic King (E)",
+"secs": 1800,
+"lvl": 29
+},
+{
+"id": "c9e1b845",
+"planet": "Junon",
+"map": "Goblin Cave (B3)",
+"name": "Grand Goblin King (S)",
+"secs": 1800,
+"lvl": 99
+},
+{
+"id": "cb79063f",
+"planet": "Junon",
+"map": "Kenji Beach",
+"name": "Doonga King (N)",
+"secs": 2700,
+"lvl": 83
+},
+{
+"id": "cbe8bb03",
+"planet": "Junon",
+"map": "Oblivion Temple B2",
+"name": "Mummy King (E)",
+"secs": 3600,
+"lvl": 160
+},
+{
+"id": "ccf95928",
+"planet": "Luna",
+"map": "Mount Eruca",
+"name": "Frozen Tooth",
+"secs": 480,
+"lvl": 125
+},
+{
+"id": "ce4cf4a0",
+"planet": "Junon",
+"map": "Forest of Wisdom",
+"name": "Guardian Tree (N)",
+"secs": 480,
+"lvl": 65
+},
+{
+"id": "ce500694",
+"planet": "Luna",
+"map": "Forgotten Temple",
+"name": "Moon Pastor Laguz",
+"secs": 1800,
+"lvl": 152
+},
+{
+"id": "cf10448d",
+"planet": "Orlo",
+"map": "Wasteland Sud",
+"name": "Devo Sud West",
+"secs": 1800
+},
+{
+"id": "d1c3d3f5",
+"planet": "Orlo",
+"map": "Wasteland west",
+"name": "Ika West",
+"secs": 1765
+},
+{
+"id": "d1fca2d5",
+"planet": "Orlo",
+"map": "Fossil",
+"name": "Armastyx Sud",
+"secs": 1800
+},
+{
+"id": "d88e7e31",
+"planet": "Junon",
+"map": "Anima Lake",
+"name": "Aqua King (W)",
+"secs": 3600,
+"lvl": 47
+},
+{
+"id": "db006b41",
+"planet": "Junon",
+"map": "City of Junon Polis",
+"name": "Grunter King (W)",
+"secs": 2400,
+"lvl": 55
+},
+{
+"id": "dbe859e9",
+"planet": "Luna",
+"map": "Mana Snowfields",
+"name": "Pinguin West (tp6)",
+"secs": 1800,
+"lvl": 128
+},
+{
+"id": "dd3f2bb8",
+"planet": "Orlo",
+"map": "Wasteland Sud",
+"name": "Scav Entrance",
+"secs": 1800
+},
+{
+"id": "df6b4352",
+"planet": "Luna",
+"map": "Crystal Snowfields",
+"name": "Dreadnaught x2 (tp4)",
+"secs": 2700,
+"lvl": 91
+},
+{
+"id": "e0f33938",
+"planet": "Luna",
+"map": "Forgotten Temple",
+"name": "Sword Master Emil",
+"secs": 1800,
+"lvl": 150
+},
+{
+"id": "e3d9feae",
+"planet": "Junon",
+"map": "Kenji Beach",
+"name": "Krawfy King (W)",
+"secs": 3600,
+"lvl": 82
+},
+{
+"id": "e7b84652",
+"planet": "Junon",
+"map": "Oblivion Temple B2",
+"name": "Mummy King (WR)",
+"secs": 3600,
+"lvl": 160
+},
+{
+"id": "ecbd2976",
+"planet": "Orlo",
+"map": "Wasteland Sud",
+"name": "Ika Sud",
+"secs": 1840
+},
+{
+"id": "eced8bd7",
+"planet": "Junon",
+"map": "Goblin Cave (B3)",
+"name": "Grand Goblin King (N)",
+"secs": 3000,
+"lvl": 99
+},
+{
+"id": "ed2675c4",
+"planet": "Eldeon",
+"map": "Xita",
+"name": "Sikuku Elite Fighter Nord",
+"secs": 2700
+},
+{
+"id": "edbd3ea5",
+"planet": "Junon",
+"map": "Forest of Wisdom",
+"name": "Guardian Tree (S)",
+"secs": 480,
+"lvl": 65
+},
+{
+"id": "f4da4d78",
+"planet": "Eldeon",
+"map": "Xita",
+"name": "Sikuku Elite Fighter TOP",
+"secs": 2700
+},
+{
+"id": "f66ced3c",
+"planet": "Eldeon",
+"map": "Marsh Of Ghosts",
+"name": "Moss Golem",
+"secs": 1200,
+"lvl": 210
+},
+{
+"id": "f9fbc01f",
+"planet": "Junon",
+"map": "Anima Lake",
+"name": "Aqua King (M)",
+"secs": 3600,
+"lvl": 47
+},
+{
+"id": "fa75d0d1",
+"planet": "Orlo",
+"map": "Fossil",
+"name": "Terra West",
+"secs": 2000
+},
+{
+"id": "fd204597",
+"planet": "Eldeon",
+"map": "Sikuku Ruins",
+"name": "Aplysia Bordure",
+"secs": 1800,
+"lvl": 220
+},
+{
+"id": "fdee17eb",
+"planet": "Junon",
+"map": "Kenji Beach",
+"name": "Krawfy King (NR)",
+"secs": 3600,
+"lvl": 82
+},
+{
+"id": "fe1c36f3",
+"planet": "Junon",
+"map": "Breezy Hills",
+"name": "Pomic King (S)",
+"secs": 1800,
+"lvl": 29
+}
+]

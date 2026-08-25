@@ -1,0 +1,1030 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 18252,
+            "item_type_id": 14,
+            "game_item_id": 523,
+            "name": "Cannon Arms",
+            "icon": "pat/cannon_arms.png",
+            "craft_item_type": "Castle Gear Cannon Arms",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "130",
+                "Specs": "Acc:72 AP: 3100 AS 0.3 Range: 33m",
+                "Stats": [
+                    "Accuracy 1200",
+                    "Attack Speed -10%"
+                ],
+                "Fuel Cost": "5",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Part Version": "35"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18216,
+            "item_type_id": 14,
+            "game_item_id": 202,
+            "name": "Carbon Wheels",
+            "icon": "pat/carbon_wheels.png",
+            "craft_item_type": "Cart Wheels",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": null,
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "120%",
+                "Part Version": "32"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18202,
+            "item_type_id": 14,
+            "game_item_id": 122,
+            "name": "Clover Engine",
+            "icon": "pat/clover_engine.png",
+            "craft_item_type": "Cart Engine",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Inventory Capacity 1500"
+                ],
+                "Fuel Cost": "2",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "105%",
+                "Part Version": "38"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18220,
+            "item_type_id": 14,
+            "game_item_id": 222,
+            "name": "Clover Wheels",
+            "icon": "pat/clover_wheels.png",
+            "craft_item_type": "Cart Wheels",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": null,
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "120%",
+                "Part Version": "38"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18160,
+            "item_type_id": 14,
+            "game_item_id": 3,
+            "name": "Colmandy Frame",
+            "icon": "pat/colmandy_frame.png",
+            "craft_item_type": "Cart Body",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "4",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "3000",
+                "Part Version": "34"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18161,
+            "item_type_id": 14,
+            "game_item_id": 4,
+            "name": "Colmanju Frame",
+            "icon": "pat/colmanju_frame.png",
+            "craft_item_type": "Cart Body",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "6",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "4000",
+                "Part Version": "36"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18296,
+            "item_type_id": 14,
+            "game_item_id": 701,
+            "name": "Doom Hammer",
+            "icon": "pat/doom_hammer.png",
+            "craft_item_type": "One-Hand Weapon",
+            "craft_skill_type": "Advanced Weapon Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Grade": "6",
+                "Level": "145",
+                "Range": "2m",
+                "Damage": "115 - 195 - 0.65",
+                "Stat Req": "Strength 263",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18250,
+            "item_type_id": 14,
+            "game_item_id": 521,
+            "name": "Drill Arms",
+            "icon": "pat/drill_arms.png",
+            "craft_item_type": "Castle Gear Drill Arms",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "130",
+                "Specs": "Acc:68 AP: 3625 AS 0.35 Range: 4m",
+                "Stats": [
+                    "Accuracy 1000"
+                ],
+                "Fuel Cost": "3",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Part Version": "35"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18196,
+            "item_type_id": 14,
+            "game_item_id": 103,
+            "name": "Dural Engine",
+            "icon": "pat/dural_engine.png",
+            "craft_item_type": "Cart Engine",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Inventory Capacity 1500"
+                ],
+                "Fuel Cost": "4",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "120%",
+                "Part Version": "38"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18194,
+            "item_type_id": 14,
+            "game_item_id": 101,
+            "name": "First Engine",
+            "icon": "pat/first_engine.png",
+            "craft_item_type": "Cart Engine",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Inventory Capacity 500"
+                ],
+                "Fuel Cost": "2",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "100%",
+                "Part Version": "30"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18204,
+            "item_type_id": 14,
+            "game_item_id": 131,
+            "name": "Fornef Engine",
+            "icon": "pat/fornef_engine.png",
+            "craft_item_type": "Castle Gear Fornef Engine",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "110",
+                "Stats": null,
+                "Fuel Cost": "3",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "100%",
+                "Part Version": "30"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18164,
+            "item_type_id": 14,
+            "game_item_id": 7,
+            "name": "Gray Racing Frame",
+            "icon": "pat/gray_racing_frame.png",
+            "craft_item_type": "Cart Body",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "10",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "4000",
+                "Part Version": "48"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18167,
+            "item_type_id": 14,
+            "game_item_id": 440,
+            "name": "Meister Frame",
+            "icon": "pat/meister_frame.png",
+            "craft_item_type": "Crafted Meister Cart Frame",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "12",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "6000",
+                "Part Version": "50"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18165,
+            "item_type_id": 14,
+            "game_item_id": 8,
+            "name": "Orange Racing Frame",
+            "icon": "pat/orange_racing_frame.png",
+            "craft_item_type": "Cart Body",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "10",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "4000",
+                "Part Version": "48"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18249,
+            "item_type_id": 14,
+            "game_item_id": 520,
+            "name": "Punch Arms",
+            "icon": "pat/punch_arms.png",
+            "craft_item_type": "Castle Gear Punch Arms",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "110",
+                "Specs": "Acc:65 AP: 2350 AS 0.33 Range: 3m",
+                "Stats": [
+                    "Accuracy 800"
+                ],
+                "Fuel Cost": "1",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Part Version": "35"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18217,
+            "item_type_id": 14,
+            "game_item_id": 203,
+            "name": "Rapid Wheels",
+            "icon": "pat/rapid_wheels.png",
+            "craft_item_type": "Cart Wheels",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": null,
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "130%",
+                "Part Version": "38"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18166,
+            "item_type_id": 14,
+            "game_item_id": 9,
+            "name": "Red Racing Frame",
+            "icon": "pat/red_racing_frame.png",
+            "craft_item_type": "Cart Body",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "10",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "4000",
+                "Part Version": "48"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18174,
+            "item_type_id": 14,
+            "game_item_id": 501,
+            "name": "Reinforced Stock Core",
+            "icon": "pat/reinforced_stock_core.png",
+            "craft_item_type": "Castle Gear Reinforced Core",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "130",
+                "Stats": [
+                    "Defense 4375",
+                    "Magic Defense 4035"
+                ],
+                "Fuel Cost": "15",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "5000",
+                "Part Version": "40"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18223,
+            "item_type_id": 14,
+            "game_item_id": 511,
+            "name": "Runihol Legs",
+            "icon": "pat/runihol_legs.png",
+            "craft_item_type": "Castle Gear Runihol Leg",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "130",
+                "Stats": [
+                    "Defense 245",
+                    "Magic Defense 180"
+                ],
+                "Fuel Cost": null,
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "40%",
+                "Part Version": "34"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18195,
+            "item_type_id": 14,
+            "game_item_id": 102,
+            "name": "Second Engine",
+            "icon": "pat/second_engine.png",
+            "craft_item_type": "Cart Engine",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Inventory Capacity 1000"
+                ],
+                "Fuel Cost": "3",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "110%",
+                "Part Version": "34"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18205,
+            "item_type_id": 14,
+            "game_item_id": 132,
+            "name": "Sheft Engine",
+            "icon": "pat/sheft_engine.png",
+            "craft_item_type": "Castle Gear Sheft Engine",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "130",
+                "Stats": [
+                    "Attack Speed 2.5%",
+                    "Accuracy 30"
+                ],
+                "Fuel Cost": "5",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "110%",
+                "Part Version": "32"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18253,
+            "item_type_id": 14,
+            "game_item_id": 524,
+            "name": "Spear Arms",
+            "icon": "pat/spear_arms.png",
+            "craft_item_type": "Castle Gear Spear Arms",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "130",
+                "Specs": "Acc:76 AP: 2725 AS 0.32 Range: 6m",
+                "Stats": [
+                    "Accuracy 400",
+                    "Defense 2000"
+                ],
+                "Fuel Cost": "4",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Part Version": "35"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18162,
+            "item_type_id": 14,
+            "game_item_id": 5,
+            "name": "Sporty Frame",
+            "icon": "pat/sporty_frame.png",
+            "craft_item_type": "Cart Body",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "8",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "5000",
+                "Part Version": "46"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18170,
+            "item_type_id": 14,
+            "game_item_id": 22,
+            "name": "Sporty Green Frame",
+            "icon": "pat/sporty_green_frame.png",
+            "craft_item_type": "Cart Body",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "7",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "5000",
+                "Part Version": "46"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18163,
+            "item_type_id": 14,
+            "game_item_id": 6,
+            "name": "Sporty Red Frame",
+            "icon": "pat/sporty_red_frame.png",
+            "craft_item_type": "Cart Body",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "8",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "5000",
+                "Part Version": "46"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18222,
+            "item_type_id": 14,
+            "game_item_id": 510,
+            "name": "Standard Legs",
+            "icon": "pat/standard_legs.png",
+            "craft_item_type": "Castle Gear Basic Legs",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "110",
+                "Stats": [
+                    "Defense 205",
+                    "Magic Defense 150"
+                ],
+                "Fuel Cost": null,
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "30%",
+                "Part Version": "30"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18294,
+            "item_type_id": 14,
+            "game_item_id": 601,
+            "name": "Steel Backseat",
+            "icon": "pat/steel_backseat.png",
+            "craft_item_type": "Cart Accessory",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Specs": null,
+                "Stats": [
+                    "Move Speed 100"
+                ],
+                "Fuel Cost": null,
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Part Version": "28"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18295,
+            "item_type_id": 14,
+            "game_item_id": 700,
+            "name": "Stone Hammer",
+            "icon": "pat/stone_hammer.png",
+            "craft_item_type": "One-Hand Weapon",
+            "craft_skill_type": "Weapon Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "57",
+                "Range": "2m",
+                "Damage": "26 - 76 - 0.65",
+                "Stat Req": "Strength 115",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18251,
+            "item_type_id": 14,
+            "game_item_id": 522,
+            "name": "Sword Wheel Arms",
+            "icon": "pat/sword_wheel_arms.png",
+            "craft_item_type": "Castle Gear Sword Wheel Arms",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "130",
+                "Specs": "Acc:79 AP: 3775 AS 0.31 Range: 3m",
+                "Stats": [
+                    "Accuracy 800"
+                ],
+                "Fuel Cost": "2",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Part Version": "35"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18293,
+            "item_type_id": 14,
+            "game_item_id": 600,
+            "name": "Wooden Backseat",
+            "icon": "pat/wooden_backseat.png",
+            "craft_item_type": "Cart Accessory",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Specs": null,
+                "Stats": [
+                    "Move Speed 20"
+                ],
+                "Fuel Cost": null,
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Part Version": "28"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18159,
+            "item_type_id": 14,
+            "game_item_id": 2,
+            "name": "Wooden Carbon Frame",
+            "icon": "pat/wooden_carbon_frame.png",
+            "craft_item_type": "Cart Body",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": "2",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "2000",
+                "Part Version": "32"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18173,
+            "item_type_id": 14,
+            "game_item_id": 500,
+            "name": "Wooden Stock Core",
+            "icon": "pat/wooden_stock_core.png",
+            "craft_item_type": "Castle Gear Wooden Core",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "110",
+                "Stats": [
+                    "Defense 2350",
+                    "Magic Defense 2065"
+                ],
+                "Fuel Cost": "9",
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Cart Gauge": "5000",
+                "Part Version": "35"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        },
+        {
+            "id": 18215,
+            "item_type_id": 14,
+            "game_item_id": 201,
+            "name": "Wooden Wheels",
+            "icon": "pat/wooden_wheels.png",
+            "craft_item_type": "Cart Wheels",
+            "craft_skill_type": "PAT Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": null,
+                "Stats": null,
+                "Fuel Cost": null,
+                "Set Bonus": [],
+                "Set Stats": [],
+                "Move Speed": "110%",
+                "Part Version": "30"
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 14,
+                "name": "Cart",
+                "slug": "cart"
+            }
+        }
+    ],
+    "first_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "page": null,
+            "active": false
+        },
+        {
+            "url": "https://roseutils.com/api/game-items/equipment?page=1",
+            "label": "1",
+            "page": 1,
+            "active": true
+        },
+        {
+            "url": null,
+            "label": "Next &raquo;",
+            "page": null,
+            "active": false
+        }
+    ],
+    "next_page_url": null,
+    "path": "https://roseutils.com/api/game-items/equipment",
+    "per_page": 200,
+    "prev_page_url": null,
+    "to": 33,
+    "total": 33
+}

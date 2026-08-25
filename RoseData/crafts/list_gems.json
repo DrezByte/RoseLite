@@ -1,0 +1,5665 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 13006,
+            "item_type_id": 11,
+            "game_item_id": 381,
+            "name": "Amethyst [1]",
+            "icon": "gem/amethyst_1.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 20"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13015,
+            "item_type_id": 11,
+            "game_item_id": 390,
+            "name": "Amethyst [10]",
+            "icon": "gem/amethyst_10.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 9% +120"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13007,
+            "item_type_id": 11,
+            "game_item_id": 382,
+            "name": "Amethyst [2]",
+            "icon": "gem/amethyst_2.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 40"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13008,
+            "item_type_id": 11,
+            "game_item_id": 383,
+            "name": "Amethyst [3]",
+            "icon": "gem/amethyst_3.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 60"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13009,
+            "item_type_id": 11,
+            "game_item_id": 384,
+            "name": "Amethyst [4]",
+            "icon": "gem/amethyst_4.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 80"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13010,
+            "item_type_id": 11,
+            "game_item_id": 385,
+            "name": "Amethyst [5]",
+            "icon": "gem/amethyst_5.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 100"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13011,
+            "item_type_id": 11,
+            "game_item_id": 386,
+            "name": "Amethyst [6]",
+            "icon": "gem/amethyst_6.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 3% +100"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13012,
+            "item_type_id": 11,
+            "game_item_id": 387,
+            "name": "Amethyst [7]",
+            "icon": "gem/amethyst_7.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 5% +100"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13013,
+            "item_type_id": 11,
+            "game_item_id": 388,
+            "name": "Amethyst [8]",
+            "icon": "gem/amethyst_8.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 6% +120"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13014,
+            "item_type_id": 11,
+            "game_item_id": 389,
+            "name": "Amethyst [9]",
+            "icon": "gem/amethyst_9.png",
+            "craft_item_type": "Amethyst",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max HP 7% +120"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13086,
+            "item_type_id": 11,
+            "game_item_id": 461,
+            "name": "Beryl [1]",
+            "icon": "gem/beryl_1.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13095,
+            "item_type_id": 11,
+            "game_item_id": 470,
+            "name": "Beryl [10]",
+            "icon": "gem/beryl_10.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 9% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13087,
+            "item_type_id": 11,
+            "game_item_id": 462,
+            "name": "Beryl [2]",
+            "icon": "gem/beryl_2.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 3"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13088,
+            "item_type_id": 11,
+            "game_item_id": 463,
+            "name": "Beryl [3]",
+            "icon": "gem/beryl_3.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13089,
+            "item_type_id": 11,
+            "game_item_id": 464,
+            "name": "Beryl [4]",
+            "icon": "gem/beryl_4.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13090,
+            "item_type_id": 11,
+            "game_item_id": 465,
+            "name": "Beryl [5]",
+            "icon": "gem/beryl_5.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13091,
+            "item_type_id": 11,
+            "game_item_id": 466,
+            "name": "Beryl [6]",
+            "icon": "gem/beryl_6.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 3% +8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13092,
+            "item_type_id": 11,
+            "game_item_id": 467,
+            "name": "Beryl [7]",
+            "icon": "gem/beryl_7.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 5% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13093,
+            "item_type_id": 11,
+            "game_item_id": 468,
+            "name": "Beryl [8]",
+            "icon": "gem/beryl_8.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 6% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13094,
+            "item_type_id": 11,
+            "game_item_id": 469,
+            "name": "Beryl [9]",
+            "icon": "gem/beryl_9.png",
+            "craft_item_type": "Beryl",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Charm 7% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12986,
+            "item_type_id": 11,
+            "game_item_id": 361,
+            "name": "Diamond [1]",
+            "icon": "gem/diamond_1.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12995,
+            "item_type_id": 11,
+            "game_item_id": 370,
+            "name": "Diamond [10]",
+            "icon": "gem/diamond_10.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 9% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12987,
+            "item_type_id": 11,
+            "game_item_id": 362,
+            "name": "Diamond [2]",
+            "icon": "gem/diamond_2.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12988,
+            "item_type_id": 11,
+            "game_item_id": 363,
+            "name": "Diamond [3]",
+            "icon": "gem/diamond_3.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12989,
+            "item_type_id": 11,
+            "game_item_id": 364,
+            "name": "Diamond [4]",
+            "icon": "gem/diamond_4.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12990,
+            "item_type_id": 11,
+            "game_item_id": 365,
+            "name": "Diamond [5]",
+            "icon": "gem/diamond_5.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12991,
+            "item_type_id": 11,
+            "game_item_id": 366,
+            "name": "Diamond [6]",
+            "icon": "gem/diamond_6.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 3% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12992,
+            "item_type_id": 11,
+            "game_item_id": 367,
+            "name": "Diamond [7]",
+            "icon": "gem/diamond_7.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 5% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12993,
+            "item_type_id": 11,
+            "game_item_id": 368,
+            "name": "Diamond [8]",
+            "icon": "gem/diamond_8.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 6% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12994,
+            "item_type_id": 11,
+            "game_item_id": 369,
+            "name": "Diamond [9]",
+            "icon": "gem/diamond_9.png",
+            "craft_item_type": "Diamond",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Power 7% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12966,
+            "item_type_id": 11,
+            "game_item_id": 341,
+            "name": "Emerald [1]",
+            "icon": "gem/emerald_1.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12975,
+            "item_type_id": 11,
+            "game_item_id": 350,
+            "name": "Emerald [10]",
+            "icon": "gem/emerald_10.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 8% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12967,
+            "item_type_id": 11,
+            "game_item_id": 342,
+            "name": "Emerald [2]",
+            "icon": "gem/emerald_2.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12968,
+            "item_type_id": 11,
+            "game_item_id": 343,
+            "name": "Emerald [3]",
+            "icon": "gem/emerald_3.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12969,
+            "item_type_id": 11,
+            "game_item_id": 344,
+            "name": "Emerald [4]",
+            "icon": "gem/emerald_4.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12970,
+            "item_type_id": 11,
+            "game_item_id": 345,
+            "name": "Emerald [5]",
+            "icon": "gem/emerald_5.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12971,
+            "item_type_id": 11,
+            "game_item_id": 346,
+            "name": "Emerald [6]",
+            "icon": "gem/emerald_6.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 3% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12972,
+            "item_type_id": 11,
+            "game_item_id": 347,
+            "name": "Emerald [7]",
+            "icon": "gem/emerald_7.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 5% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12973,
+            "item_type_id": 11,
+            "game_item_id": 348,
+            "name": "Emerald [8]",
+            "icon": "gem/emerald_8.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 6% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12974,
+            "item_type_id": 11,
+            "game_item_id": 349,
+            "name": "Emerald [9]",
+            "icon": "gem/emerald_9.png",
+            "craft_item_type": "Emerald",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Sense 7% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12926,
+            "item_type_id": 11,
+            "game_item_id": 301,
+            "name": "Garnet [1]",
+            "icon": "gem/garnet_1.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12935,
+            "item_type_id": 11,
+            "game_item_id": 310,
+            "name": "Garnet [10]",
+            "icon": "gem/garnet_10.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 8% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12927,
+            "item_type_id": 11,
+            "game_item_id": 302,
+            "name": "Garnet [2]",
+            "icon": "gem/garnet_2.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12928,
+            "item_type_id": 11,
+            "game_item_id": 303,
+            "name": "Garnet [3]",
+            "icon": "gem/garnet_3.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12929,
+            "item_type_id": 11,
+            "game_item_id": 304,
+            "name": "Garnet [4]",
+            "icon": "gem/garnet_4.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12930,
+            "item_type_id": 11,
+            "game_item_id": 305,
+            "name": "Garnet [5]",
+            "icon": "gem/garnet_5.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12931,
+            "item_type_id": 11,
+            "game_item_id": 306,
+            "name": "Garnet [6]",
+            "icon": "gem/garnet_6.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 3% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12932,
+            "item_type_id": 11,
+            "game_item_id": 307,
+            "name": "Garnet [7]",
+            "icon": "gem/garnet_7.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 5% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12933,
+            "item_type_id": 11,
+            "game_item_id": 308,
+            "name": "Garnet [8]",
+            "icon": "gem/garnet_8.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 6% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12934,
+            "item_type_id": 11,
+            "game_item_id": 309,
+            "name": "Garnet [9]",
+            "icon": "gem/garnet_9.png",
+            "craft_item_type": "Garnet",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dexterity 7% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13076,
+            "item_type_id": 11,
+            "game_item_id": 451,
+            "name": "Jade [1]",
+            "icon": "gem/jade_1.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13085,
+            "item_type_id": 11,
+            "game_item_id": 460,
+            "name": "Jade [10]",
+            "icon": "gem/jade_10.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 9% +30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13077,
+            "item_type_id": 11,
+            "game_item_id": 452,
+            "name": "Jade [2]",
+            "icon": "gem/jade_2.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13078,
+            "item_type_id": 11,
+            "game_item_id": 453,
+            "name": "Jade [3]",
+            "icon": "gem/jade_3.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 15"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13079,
+            "item_type_id": 11,
+            "game_item_id": 454,
+            "name": "Jade [4]",
+            "icon": "gem/jade_4.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 20"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13080,
+            "item_type_id": 11,
+            "game_item_id": 455,
+            "name": "Jade [5]",
+            "icon": "gem/jade_5.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13081,
+            "item_type_id": 11,
+            "game_item_id": 456,
+            "name": "Jade [6]",
+            "icon": "gem/jade_6.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 3% +25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13082,
+            "item_type_id": 11,
+            "game_item_id": 457,
+            "name": "Jade [7]",
+            "icon": "gem/jade_7.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 5% +25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13083,
+            "item_type_id": 11,
+            "game_item_id": 458,
+            "name": "Jade [8]",
+            "icon": "gem/jade_8.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 6% +30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13084,
+            "item_type_id": 11,
+            "game_item_id": 459,
+            "name": "Jade [9]",
+            "icon": "gem/jade_9.png",
+            "craft_item_type": "Jade",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Dodge Rate 7% +30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13066,
+            "item_type_id": 11,
+            "game_item_id": 441,
+            "name": "Moonstone [1]",
+            "icon": "gem/moonstone_1.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13075,
+            "item_type_id": 11,
+            "game_item_id": 450,
+            "name": "Moonstone [10]",
+            "icon": "gem/moonstone_10.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 9% +30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13067,
+            "item_type_id": 11,
+            "game_item_id": 442,
+            "name": "Moonstone [2]",
+            "icon": "gem/moonstone_2.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13068,
+            "item_type_id": 11,
+            "game_item_id": 443,
+            "name": "Moonstone [3]",
+            "icon": "gem/moonstone_3.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 15"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13069,
+            "item_type_id": 11,
+            "game_item_id": 444,
+            "name": "Moonstone [4]",
+            "icon": "gem/moonstone_4.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 20"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13070,
+            "item_type_id": 11,
+            "game_item_id": 445,
+            "name": "Moonstone [5]",
+            "icon": "gem/moonstone_5.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13071,
+            "item_type_id": 11,
+            "game_item_id": 446,
+            "name": "Moonstone [6]",
+            "icon": "gem/moonstone_6.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 3% +25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13072,
+            "item_type_id": 11,
+            "game_item_id": 447,
+            "name": "Moonstone [7]",
+            "icon": "gem/moonstone_7.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 5% +25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13073,
+            "item_type_id": 11,
+            "game_item_id": 448,
+            "name": "Moonstone [8]",
+            "icon": "gem/moonstone_8.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 6% +30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13074,
+            "item_type_id": 11,
+            "game_item_id": 449,
+            "name": "Moonstone [9]",
+            "icon": "gem/moonstone_9.png",
+            "craft_item_type": "Moonstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 7% +30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13036,
+            "item_type_id": 11,
+            "game_item_id": 411,
+            "name": "Opal [1]",
+            "icon": "gem/opal_1.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 20"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13045,
+            "item_type_id": 11,
+            "game_item_id": 420,
+            "name": "Opal [10]",
+            "icon": "gem/opal_10.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 9% +120"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13037,
+            "item_type_id": 11,
+            "game_item_id": 412,
+            "name": "Opal [2]",
+            "icon": "gem/opal_2.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 40"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13038,
+            "item_type_id": 11,
+            "game_item_id": 413,
+            "name": "Opal [3]",
+            "icon": "gem/opal_3.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 60"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13039,
+            "item_type_id": 11,
+            "game_item_id": 414,
+            "name": "Opal [4]",
+            "icon": "gem/opal_4.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 80"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13040,
+            "item_type_id": 11,
+            "game_item_id": 415,
+            "name": "Opal [5]",
+            "icon": "gem/opal_5.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 100"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13041,
+            "item_type_id": 11,
+            "game_item_id": 416,
+            "name": "Opal [6]",
+            "icon": "gem/opal_6.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 3% +100"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13042,
+            "item_type_id": 11,
+            "game_item_id": 417,
+            "name": "Opal [7]",
+            "icon": "gem/opal_7.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 5% +100"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13043,
+            "item_type_id": 11,
+            "game_item_id": 418,
+            "name": "Opal [8]",
+            "icon": "gem/opal_8.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 6% +120"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13044,
+            "item_type_id": 11,
+            "game_item_id": 419,
+            "name": "Opal [9]",
+            "icon": "gem/opal_9.png",
+            "craft_item_type": "Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Magic Defense 7% +120"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12976,
+            "item_type_id": 11,
+            "game_item_id": 351,
+            "name": "Peridot [1]",
+            "icon": "gem/peridot_1.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 2%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12985,
+            "item_type_id": 11,
+            "game_item_id": 360,
+            "name": "Peridot [10]",
+            "icon": "gem/peridot_10.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 15%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12977,
+            "item_type_id": 11,
+            "game_item_id": 352,
+            "name": "Peridot [2]",
+            "icon": "gem/peridot_2.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 3%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12978,
+            "item_type_id": 11,
+            "game_item_id": 353,
+            "name": "Peridot [3]",
+            "icon": "gem/peridot_3.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 4%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12979,
+            "item_type_id": 11,
+            "game_item_id": 354,
+            "name": "Peridot [4]",
+            "icon": "gem/peridot_4.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 5%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12980,
+            "item_type_id": 11,
+            "game_item_id": 355,
+            "name": "Peridot [5]",
+            "icon": "gem/peridot_5.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 6%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12981,
+            "item_type_id": 11,
+            "game_item_id": 356,
+            "name": "Peridot [6]",
+            "icon": "gem/peridot_6.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 8%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12982,
+            "item_type_id": 11,
+            "game_item_id": 357,
+            "name": "Peridot [7]",
+            "icon": "gem/peridot_7.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 10%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12983,
+            "item_type_id": 11,
+            "game_item_id": 358,
+            "name": "Peridot [8]",
+            "icon": "gem/peridot_8.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 11.5%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12984,
+            "item_type_id": 11,
+            "game_item_id": 359,
+            "name": "Peridot [9]",
+            "icon": "gem/peridot_9.png",
+            "craft_item_type": "Peridot",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Attack Speed 13%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12996,
+            "item_type_id": 11,
+            "game_item_id": 371,
+            "name": "Pink Opal [1]",
+            "icon": "gem/pink_opal_1.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13005,
+            "item_type_id": 11,
+            "game_item_id": 380,
+            "name": "Pink Opal [10]",
+            "icon": "gem/pink_opal_10.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 9% +60"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12997,
+            "item_type_id": 11,
+            "game_item_id": 372,
+            "name": "Pink Opal [2]",
+            "icon": "gem/pink_opal_2.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 20"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12998,
+            "item_type_id": 11,
+            "game_item_id": 373,
+            "name": "Pink Opal [3]",
+            "icon": "gem/pink_opal_3.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12999,
+            "item_type_id": 11,
+            "game_item_id": 374,
+            "name": "Pink Opal [4]",
+            "icon": "gem/pink_opal_4.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 40"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13000,
+            "item_type_id": 11,
+            "game_item_id": 375,
+            "name": "Pink Opal [5]",
+            "icon": "gem/pink_opal_5.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13001,
+            "item_type_id": 11,
+            "game_item_id": 376,
+            "name": "Pink Opal [6]",
+            "icon": "gem/pink_opal_6.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 3% +50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13002,
+            "item_type_id": 11,
+            "game_item_id": 377,
+            "name": "Pink Opal [7]",
+            "icon": "gem/pink_opal_7.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 5% +50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13003,
+            "item_type_id": 11,
+            "game_item_id": 378,
+            "name": "Pink Opal [8]",
+            "icon": "gem/pink_opal_8.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 6% +50"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13004,
+            "item_type_id": 11,
+            "game_item_id": 379,
+            "name": "Pink Opal [9]",
+            "icon": "gem/pink_opal_9.png",
+            "craft_item_type": "Pink Opal",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Defense 7% +60"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13056,
+            "item_type_id": 11,
+            "game_item_id": 431,
+            "name": "Rose Quartz [1]",
+            "icon": "gem/rose_quartz_1.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 1"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13065,
+            "item_type_id": 11,
+            "game_item_id": 440,
+            "name": "Rose Quartz [10]",
+            "icon": "gem/rose_quartz_10.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 17"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13057,
+            "item_type_id": 11,
+            "game_item_id": 432,
+            "name": "Rose Quartz [2]",
+            "icon": "gem/rose_quartz_2.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13058,
+            "item_type_id": 11,
+            "game_item_id": 433,
+            "name": "Rose Quartz [3]",
+            "icon": "gem/rose_quartz_3.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 3"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13059,
+            "item_type_id": 11,
+            "game_item_id": 434,
+            "name": "Rose Quartz [4]",
+            "icon": "gem/rose_quartz_4.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13060,
+            "item_type_id": 11,
+            "game_item_id": 435,
+            "name": "Rose Quartz [5]",
+            "icon": "gem/rose_quartz_5.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13061,
+            "item_type_id": 11,
+            "game_item_id": 436,
+            "name": "Rose Quartz [6]",
+            "icon": "gem/rose_quartz_6.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13062,
+            "item_type_id": 11,
+            "game_item_id": 437,
+            "name": "Rose Quartz [7]",
+            "icon": "gem/rose_quartz_7.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13063,
+            "item_type_id": 11,
+            "game_item_id": 438,
+            "name": "Rose Quartz [8]",
+            "icon": "gem/rose_quartz_8.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13064,
+            "item_type_id": 11,
+            "game_item_id": 439,
+            "name": "Rose Quartz [9]",
+            "icon": "gem/rose_quartz_9.png",
+            "craft_item_type": "Rose Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "MP Recovery Rate 14"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12936,
+            "item_type_id": 11,
+            "game_item_id": 311,
+            "name": "Ruby [1]",
+            "icon": "gem/ruby_1.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12945,
+            "item_type_id": 11,
+            "game_item_id": 320,
+            "name": "Ruby [10]",
+            "icon": "gem/ruby_10.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 8% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12937,
+            "item_type_id": 11,
+            "game_item_id": 312,
+            "name": "Ruby [2]",
+            "icon": "gem/ruby_2.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12938,
+            "item_type_id": 11,
+            "game_item_id": 313,
+            "name": "Ruby [3]",
+            "icon": "gem/ruby_3.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12939,
+            "item_type_id": 11,
+            "game_item_id": 314,
+            "name": "Ruby [4]",
+            "icon": "gem/ruby_4.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12940,
+            "item_type_id": 11,
+            "game_item_id": 315,
+            "name": "Ruby [5]",
+            "icon": "gem/ruby_5.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12941,
+            "item_type_id": 11,
+            "game_item_id": 316,
+            "name": "Ruby [6]",
+            "icon": "gem/ruby_6.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 3% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12942,
+            "item_type_id": 11,
+            "game_item_id": 317,
+            "name": "Ruby [7]",
+            "icon": "gem/ruby_7.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 5% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12943,
+            "item_type_id": 11,
+            "game_item_id": 318,
+            "name": "Ruby [8]",
+            "icon": "gem/ruby_8.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 6% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12944,
+            "item_type_id": 11,
+            "game_item_id": 319,
+            "name": "Ruby [9]",
+            "icon": "gem/ruby_9.png",
+            "craft_item_type": "Ruby",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Strength 7% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12946,
+            "item_type_id": 11,
+            "game_item_id": 321,
+            "name": "Sapphire [1]",
+            "icon": "gem/sapphire_1.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12955,
+            "item_type_id": 11,
+            "game_item_id": 330,
+            "name": "Sapphire [10]",
+            "icon": "gem/sapphire_10.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 8% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12947,
+            "item_type_id": 11,
+            "game_item_id": 322,
+            "name": "Sapphire [2]",
+            "icon": "gem/sapphire_2.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12948,
+            "item_type_id": 11,
+            "game_item_id": 323,
+            "name": "Sapphire [3]",
+            "icon": "gem/sapphire_3.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12949,
+            "item_type_id": 11,
+            "game_item_id": 324,
+            "name": "Sapphire [4]",
+            "icon": "gem/sapphire_4.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12950,
+            "item_type_id": 11,
+            "game_item_id": 325,
+            "name": "Sapphire [5]",
+            "icon": "gem/sapphire_5.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12951,
+            "item_type_id": 11,
+            "game_item_id": 326,
+            "name": "Sapphire [6]",
+            "icon": "gem/sapphire_6.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 3% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12952,
+            "item_type_id": 11,
+            "game_item_id": 327,
+            "name": "Sapphire [7]",
+            "icon": "gem/sapphire_7.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 5% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12953,
+            "item_type_id": 11,
+            "game_item_id": 328,
+            "name": "Sapphire [8]",
+            "icon": "gem/sapphire_8.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 6% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12954,
+            "item_type_id": 11,
+            "game_item_id": 329,
+            "name": "Sapphire [9]",
+            "icon": "gem/sapphire_9.png",
+            "craft_item_type": "Sapphire",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Concentration 7% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13106,
+            "item_type_id": 11,
+            "game_item_id": 481,
+            "name": "Star Agate [1]",
+            "icon": "gem/star_agate_1.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 3",
+                    "Attack Power 1"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13115,
+            "item_type_id": 11,
+            "game_item_id": 490,
+            "name": "Star Agate [10]",
+            "icon": "gem/star_agate_10.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 5% +19",
+                    "Attack Power 5% +7"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13107,
+            "item_type_id": 11,
+            "game_item_id": 482,
+            "name": "Star Agate [2]",
+            "icon": "gem/star_agate_2.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 1% +6",
+                    "Attack Power 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13108,
+            "item_type_id": 11,
+            "game_item_id": 483,
+            "name": "Star Agate [3]",
+            "icon": "gem/star_agate_3.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 1% +9",
+                    "Attack Power 1% +3"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13109,
+            "item_type_id": 11,
+            "game_item_id": 484,
+            "name": "Star Agate [4]",
+            "icon": "gem/star_agate_4.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 2% +13",
+                    "Attack Power 1% +5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13110,
+            "item_type_id": 11,
+            "game_item_id": 485,
+            "name": "Star Agate [5]",
+            "icon": "gem/star_agate_5.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 2% +16",
+                    "Attack Power 2% +6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13111,
+            "item_type_id": 11,
+            "game_item_id": 486,
+            "name": "Star Agate [6]",
+            "icon": "gem/star_agate_6.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 3% +16",
+                    "Attack Power 2% +6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13112,
+            "item_type_id": 11,
+            "game_item_id": 487,
+            "name": "Star Agate [7]",
+            "icon": "gem/star_agate_7.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 3% +16",
+                    "Attack Power 3% +6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13113,
+            "item_type_id": 11,
+            "game_item_id": 488,
+            "name": "Star Agate [8]",
+            "icon": "gem/star_agate_8.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 4% +19",
+                    "Attack Power 3% +7"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13114,
+            "item_type_id": 11,
+            "game_item_id": 489,
+            "name": "Star Agate [9]",
+            "icon": "gem/star_agate_9.png",
+            "craft_item_type": "Star Agate",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 4% +19",
+                    "Attack Power 4% +7"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13116,
+            "item_type_id": 11,
+            "game_item_id": 491,
+            "name": "Star Quartz [1]",
+            "icon": "gem/star_quartz_1.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 2",
+                    "Dodge Rate 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13137,
+            "item_type_id": 11,
+            "game_item_id": 513,
+            "name": "Star Quartz [10]",
+            "icon": "gem/star_quartz_10.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 5% +12",
+                    "Dodge Rate 5% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13117,
+            "item_type_id": 11,
+            "game_item_id": 492,
+            "name": "Star Quartz [2]",
+            "icon": "gem/star_quartz_2.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 1% +3",
+                    "Dodge Rate 3"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13118,
+            "item_type_id": 11,
+            "game_item_id": 493,
+            "name": "Star Quartz [3]",
+            "icon": "gem/star_quartz_3.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 1% +4",
+                    "Dodge Rate 1% +4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13119,
+            "item_type_id": 11,
+            "game_item_id": 494,
+            "name": "Star Quartz [4]",
+            "icon": "gem/star_quartz_4.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 2% +5",
+                    "Dodge Rate 1% +5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13120,
+            "item_type_id": 11,
+            "game_item_id": 495,
+            "name": "Star Quartz [5]",
+            "icon": "gem/star_quartz_5.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 2% +6",
+                    "Dodge Rate 2% +6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13121,
+            "item_type_id": 11,
+            "game_item_id": 496,
+            "name": "Star Quartz [6]",
+            "icon": "gem/star_quartz_6.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 3% +8",
+                    "Dodge Rate 2% +8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13122,
+            "item_type_id": 11,
+            "game_item_id": 497,
+            "name": "Star Quartz [7]",
+            "icon": "gem/star_quartz_7.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 3% +10",
+                    "Dodge Rate 3% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13123,
+            "item_type_id": 11,
+            "game_item_id": 498,
+            "name": "Star Quartz [8]",
+            "icon": "gem/star_quartz_8.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 4% +12",
+                    "Dodge Rate 3% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13124,
+            "item_type_id": 11,
+            "game_item_id": 499,
+            "name": "Star Quartz [9]",
+            "icon": "gem/star_quartz_9.png",
+            "craft_item_type": "Star Quartz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Back, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 4% +12",
+                    "Dodge Rate 4% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13096,
+            "item_type_id": 11,
+            "game_item_id": 471,
+            "name": "Sunstone [1]",
+            "icon": "gem/sunstone_1.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 3",
+                    "Attack Speed 1.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13105,
+            "item_type_id": 11,
+            "game_item_id": 480,
+            "name": "Sunstone [10]",
+            "icon": "gem/sunstone_10.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 7% +19",
+                    "Attack Speed 9.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13097,
+            "item_type_id": 11,
+            "game_item_id": 472,
+            "name": "Sunstone [2]",
+            "icon": "gem/sunstone_2.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 1% +6",
+                    "Attack Speed 1.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13098,
+            "item_type_id": 11,
+            "game_item_id": 473,
+            "name": "Sunstone [3]",
+            "icon": "gem/sunstone_3.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 1% +3",
+                    "Attack Speed 2.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13099,
+            "item_type_id": 11,
+            "game_item_id": 474,
+            "name": "Sunstone [4]",
+            "icon": "gem/sunstone_4.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 2% +13",
+                    "Attack Speed 3.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13100,
+            "item_type_id": 11,
+            "game_item_id": 475,
+            "name": "Sunstone [5]",
+            "icon": "gem/sunstone_5.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 2% +16",
+                    "Attack Speed 4.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13101,
+            "item_type_id": 11,
+            "game_item_id": 476,
+            "name": "Sunstone [6]",
+            "icon": "gem/sunstone_6.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 3% +16",
+                    "Attack Speed 5.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13102,
+            "item_type_id": 11,
+            "game_item_id": 477,
+            "name": "Sunstone [7]",
+            "icon": "gem/sunstone_7.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 3% +16",
+                    "Attack Speed 6.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13103,
+            "item_type_id": 11,
+            "game_item_id": 478,
+            "name": "Sunstone [8]",
+            "icon": "gem/sunstone_8.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 4% +19",
+                    "Attack Speed 7.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13104,
+            "item_type_id": 11,
+            "game_item_id": 479,
+            "name": "Sunstone [9]",
+            "icon": "gem/sunstone_9.png",
+            "craft_item_type": "Sunstone",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Arms, Weapon, Jewelery",
+                "Stats": [
+                    "Accuracy 5% +19",
+                    "Attack Speed 8.0%"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13026,
+            "item_type_id": 11,
+            "game_item_id": 401,
+            "name": "Tanzanite [1]",
+            "icon": "gem/tanzanite_1.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13035,
+            "item_type_id": 11,
+            "game_item_id": 410,
+            "name": "Tanzanite [10]",
+            "icon": "gem/tanzanite_10.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 6% +30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13027,
+            "item_type_id": 11,
+            "game_item_id": 402,
+            "name": "Tanzanite [2]",
+            "icon": "gem/tanzanite_2.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13028,
+            "item_type_id": 11,
+            "game_item_id": 403,
+            "name": "Tanzanite [3]",
+            "icon": "gem/tanzanite_3.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 15"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13029,
+            "item_type_id": 11,
+            "game_item_id": 404,
+            "name": "Tanzanite [4]",
+            "icon": "gem/tanzanite_4.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 20"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13030,
+            "item_type_id": 11,
+            "game_item_id": 405,
+            "name": "Tanzanite [5]",
+            "icon": "gem/tanzanite_5.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13031,
+            "item_type_id": 11,
+            "game_item_id": 406,
+            "name": "Tanzanite [6]",
+            "icon": "gem/tanzanite_6.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 1% +25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13032,
+            "item_type_id": 11,
+            "game_item_id": 407,
+            "name": "Tanzanite [7]",
+            "icon": "gem/tanzanite_7.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 2% +25"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13033,
+            "item_type_id": 11,
+            "game_item_id": 408,
+            "name": "Tanzanite [8]",
+            "icon": "gem/tanzanite_8.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 3% +30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13034,
+            "item_type_id": 11,
+            "game_item_id": 409,
+            "name": "Tanzanite [9]",
+            "icon": "gem/tanzanite_9.png",
+            "craft_item_type": "Tanzanite",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Critical 4% +30"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12956,
+            "item_type_id": 11,
+            "game_item_id": 331,
+            "name": "Topaz [1]",
+            "icon": "gem/topaz_1.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12965,
+            "item_type_id": 11,
+            "game_item_id": 340,
+            "name": "Topaz [10]",
+            "icon": "gem/topaz_10.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 8% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12957,
+            "item_type_id": 11,
+            "game_item_id": 332,
+            "name": "Topaz [2]",
+            "icon": "gem/topaz_2.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12958,
+            "item_type_id": 11,
+            "game_item_id": 333,
+            "name": "Topaz [3]",
+            "icon": "gem/topaz_3.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 6"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12959,
+            "item_type_id": 11,
+            "game_item_id": 334,
+            "name": "Topaz [4]",
+            "icon": "gem/topaz_4.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12960,
+            "item_type_id": 11,
+            "game_item_id": 335,
+            "name": "Topaz [5]",
+            "icon": "gem/topaz_5.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12961,
+            "item_type_id": 11,
+            "game_item_id": 336,
+            "name": "Topaz [6]",
+            "icon": "gem/topaz_6.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 3% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12962,
+            "item_type_id": 11,
+            "game_item_id": 337,
+            "name": "Topaz [7]",
+            "icon": "gem/topaz_7.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 5% +10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12963,
+            "item_type_id": 11,
+            "game_item_id": 338,
+            "name": "Topaz [8]",
+            "icon": "gem/topaz_8.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 6% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 12964,
+            "item_type_id": 11,
+            "game_item_id": 339,
+            "name": "Topaz [9]",
+            "icon": "gem/topaz_9.png",
+            "craft_item_type": "Topaz",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Intelligence 7% +12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13016,
+            "item_type_id": 11,
+            "game_item_id": 391,
+            "name": "Turquoise [1]",
+            "icon": "gem/turquoise_1.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 20"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13025,
+            "item_type_id": 11,
+            "game_item_id": 400,
+            "name": "Turquoise [10]",
+            "icon": "gem/turquoise_10.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 9% +120"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13017,
+            "item_type_id": 11,
+            "game_item_id": 392,
+            "name": "Turquoise [2]",
+            "icon": "gem/turquoise_2.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 40"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13018,
+            "item_type_id": 11,
+            "game_item_id": 393,
+            "name": "Turquoise [3]",
+            "icon": "gem/turquoise_3.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 60"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13019,
+            "item_type_id": 11,
+            "game_item_id": 394,
+            "name": "Turquoise [4]",
+            "icon": "gem/turquoise_4.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 80"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13020,
+            "item_type_id": 11,
+            "game_item_id": 395,
+            "name": "Turquoise [5]",
+            "icon": "gem/turquoise_5.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 100"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13021,
+            "item_type_id": 11,
+            "game_item_id": 396,
+            "name": "Turquoise [6]",
+            "icon": "gem/turquoise_6.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 3% +100"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13022,
+            "item_type_id": 11,
+            "game_item_id": 397,
+            "name": "Turquoise [7]",
+            "icon": "gem/turquoise_7.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 5% +100"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13023,
+            "item_type_id": 11,
+            "game_item_id": 398,
+            "name": "Turquoise [8]",
+            "icon": "gem/turquoise_8.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 6% +120"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13024,
+            "item_type_id": 11,
+            "game_item_id": 399,
+            "name": "Turquoise [9]",
+            "icon": "gem/turquoise_9.png",
+            "craft_item_type": "Turquoise",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "Max MP 7% +120"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13046,
+            "item_type_id": 11,
+            "game_item_id": 421,
+            "name": "Zircon [1]",
+            "icon": "gem/zircon_1.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 1"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13055,
+            "item_type_id": 11,
+            "game_item_id": 430,
+            "name": "Zircon [10]",
+            "icon": "gem/zircon_10.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 17"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13047,
+            "item_type_id": 11,
+            "game_item_id": 422,
+            "name": "Zircon [2]",
+            "icon": "gem/zircon_2.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 2"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13048,
+            "item_type_id": 11,
+            "game_item_id": 423,
+            "name": "Zircon [3]",
+            "icon": "gem/zircon_3.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 3"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13049,
+            "item_type_id": 11,
+            "game_item_id": 424,
+            "name": "Zircon [4]",
+            "icon": "gem/zircon_4.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 4"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13050,
+            "item_type_id": 11,
+            "game_item_id": 425,
+            "name": "Zircon [5]",
+            "icon": "gem/zircon_5.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 5"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13051,
+            "item_type_id": 11,
+            "game_item_id": 426,
+            "name": "Zircon [6]",
+            "icon": "gem/zircon_6.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 8"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13052,
+            "item_type_id": 11,
+            "game_item_id": 427,
+            "name": "Zircon [7]",
+            "icon": "gem/zircon_7.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 10"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13053,
+            "item_type_id": 11,
+            "game_item_id": 428,
+            "name": "Zircon [8]",
+            "icon": "gem/zircon_8.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 12"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        },
+        {
+            "id": 13054,
+            "item_type_id": 11,
+            "game_item_id": 429,
+            "name": "Zircon [9]",
+            "icon": "gem/zircon_9.png",
+            "craft_item_type": "Zircon",
+            "craft_skill_type": "Gem Cutting",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Slots": "Body, Weapon, Jewelery",
+                "Stats": [
+                    "HP Recovery Rate 14"
+                ],
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 11,
+                "name": "Gem",
+                "slug": "gem"
+            }
+        }
+    ],
+    "first_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "page": null,
+            "active": false
+        },
+        {
+            "url": "https://roseutils.com/api/game-items/equipment?page=1",
+            "label": "1",
+            "page": 1,
+            "active": true
+        },
+        {
+            "url": null,
+            "label": "Next &raquo;",
+            "page": null,
+            "active": false
+        }
+    ],
+    "next_page_url": null,
+    "path": "https://roseutils.com/api/game-items/equipment",
+    "per_page": 200,
+    "prev_page_url": null,
+    "to": 200,
+    "total": 200
+}

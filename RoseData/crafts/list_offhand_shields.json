@@ -1,0 +1,1485 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 11086,
+            "item_type_id": 9,
+            "game_item_id": 5,
+            "name": "Aspis",
+            "icon": "shield/aspis.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 75"
+                ],
+                "Defense": "205 - 107 - 15%",
+                "Stat Req": "Strength 68",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11100,
+            "item_type_id": 9,
+            "game_item_id": 19,
+            "name": "Aurum Plate Shield",
+            "icon": "shield/aurum_plate_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 255"
+                ],
+                "Defense": "835 - 457 - 15%",
+                "Stat Req": "Strength 289",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11134,
+            "item_type_id": 9,
+            "game_item_id": 67,
+            "name": "Basic Encyclopedia",
+            "icon": "shield/basic_encyclopedia.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "MP Recovery Rate 1",
+                    "Max MP 20"
+                ],
+                "Defense": "157 - 295 - 15%",
+                "Stat Req": "Intelligence 70",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11093,
+            "item_type_id": 9,
+            "game_item_id": 12,
+            "name": "Blood Shield",
+            "icon": "shield/blood_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 165"
+                ],
+                "Defense": "520 - 282 - 15%",
+                "Stat Req": "Strength 179",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11131,
+            "item_type_id": 9,
+            "game_item_id": 64,
+            "name": "Book of Charm",
+            "icon": "shield/book_of_charm.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Charm 5",
+                    "Max MP 5"
+                ],
+                "Defense": "82 - 160 - 15%",
+                "Stat Req": "Intelligence 40",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11130,
+            "item_type_id": 9,
+            "game_item_id": 63,
+            "name": "Book of Concentration",
+            "icon": "shield/book_of_concentration.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Concentration 5",
+                    "Max MP 5"
+                ],
+                "Defense": "57 - 115 - 15%",
+                "Stat Req": "Intelligence 30",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11085,
+            "item_type_id": 9,
+            "game_item_id": 4,
+            "name": "Buckler",
+            "icon": "shield/buckler.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 60"
+                ],
+                "Defense": "160 - 82 - 15%",
+                "Stat Req": "Strength 52",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11115,
+            "item_type_id": 9,
+            "game_item_id": 36,
+            "name": "Bunny Doll",
+            "icon": "shield/bunny_doll.png",
+            "craft_item_type": "Recreational",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Charm 16"
+                ],
+                "Defense": "1 - 1",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11111,
+            "item_type_id": 9,
+            "game_item_id": 32,
+            "name": "Choropy Doll",
+            "icon": "shield/choropy_doll.png",
+            "craft_item_type": "Recreational",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Charm 8"
+                ],
+                "Defense": "1 - 1",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11148,
+            "item_type_id": 9,
+            "game_item_id": 81,
+            "name": "Cornell's Diary",
+            "icon": "equipments/10_37_1557.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 105",
+                    "MP Recovery Rate 3"
+                ],
+                "Defense": "507 - 925 - 15%",
+                "Stat Req": "Intelligence 260",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11139,
+            "item_type_id": 9,
+            "game_item_id": 72,
+            "name": "Cubic Scepter",
+            "icon": "shield/cubic_scepter.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 45",
+                    "MP Recovery Rate 1"
+                ],
+                "Defense": "282 - 520 - 15%",
+                "Stat Req": "Intelligence 120",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11133,
+            "item_type_id": 9,
+            "game_item_id": 66,
+            "name": "Elven Anthology",
+            "icon": "shield/elven_anthology.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "MP Recovery Rate 1",
+                    "Max MP 15"
+                ],
+                "Defense": "132 - 250 - 15%",
+                "Stat Req": "Intelligence 60",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11142,
+            "item_type_id": 9,
+            "game_item_id": 75,
+            "name": "Elven Harp",
+            "icon": "shield/elven_harp.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 65",
+                    "MP Recovery Rate 2"
+                ],
+                "Defense": "357 - 655 - 15%",
+                "Stat Req": "Intelligence 150",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11145,
+            "item_type_id": 9,
+            "game_item_id": 78,
+            "name": "Eye of Storm",
+            "icon": "shield/eye_of_storm.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 85",
+                    "MP Recovery Rate 2"
+                ],
+                "Defense": "432 - 790 - 15%",
+                "Stat Req": "Intelligence 200",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11140,
+            "item_type_id": 9,
+            "game_item_id": 73,
+            "name": "Holy Scepter",
+            "icon": "shield/holy_scepter.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 55",
+                    "MP Recovery Rate 2"
+                ],
+                "Defense": "307 - 565 - 15%",
+                "Stat Req": "Intelligence 130",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11113,
+            "item_type_id": 9,
+            "game_item_id": 34,
+            "name": "HoneyBee Doll",
+            "icon": "shield/honeybee_doll.png",
+            "craft_item_type": "Recreational",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Charm 12"
+                ],
+                "Defense": "1 - 1",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11087,
+            "item_type_id": 9,
+            "game_item_id": 6,
+            "name": "Hoplon",
+            "icon": "shield/hoplon.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 90"
+                ],
+                "Defense": "250 - 132 - 15%",
+                "Stat Req": "Strength 84",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11099,
+            "item_type_id": 9,
+            "game_item_id": 18,
+            "name": "Jabberwock Shield",
+            "icon": "shield/jabberwock_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 240"
+                ],
+                "Defense": "790 - 432 - 15%",
+                "Stat Req": "Strength 273",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11110,
+            "item_type_id": 9,
+            "game_item_id": 31,
+            "name": "Jelly Bean Doll",
+            "icon": "shield/jelly_bean_doll.png",
+            "craft_item_type": "Recreational",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Charm 6"
+                ],
+                "Defense": "1 - 1",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11088,
+            "item_type_id": 9,
+            "game_item_id": 7,
+            "name": "Kite Shield",
+            "icon": "shield/kite_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 105"
+                ],
+                "Defense": "295 - 157 - 15%",
+                "Stat Req": "Strength 99",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11135,
+            "item_type_id": 9,
+            "game_item_id": 68,
+            "name": "Magic Mirror",
+            "icon": "shield/magic_mirror.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "MP Recovery Rate 1",
+                    "Max MP 25"
+                ],
+                "Defense": "182 - 340 - 15%",
+                "Stat Req": "Intelligence 80",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11149,
+            "item_type_id": 9,
+            "game_item_id": 82,
+            "name": "Magic Pearl",
+            "icon": "shield/magic_pearl.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 110",
+                    "MP Recovery Rate 3"
+                ],
+                "Defense": "532 - 970 - 15%",
+                "Stat Req": "Intelligence 280",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11137,
+            "item_type_id": 9,
+            "game_item_id": 70,
+            "name": "Mana Stone",
+            "icon": "shield/mana_stone.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "MP Recovery Rate 1",
+                    "Max MP 35"
+                ],
+                "Defense": "232 - 430 - 15%",
+                "Stat Req": "Intelligence 100",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11141,
+            "item_type_id": 9,
+            "game_item_id": 74,
+            "name": "Meteoric Scepter",
+            "icon": "shield/meteoric_scepter.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 60",
+                    "MP Recovery Rate 2"
+                ],
+                "Defense": "332 - 610 - 15%",
+                "Stat Req": "Intelligence 140",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11095,
+            "item_type_id": 9,
+            "game_item_id": 14,
+            "name": "Mighty Shield",
+            "icon": "shield/mighty_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 180"
+                ],
+                "Defense": "610 - 332 - 15%",
+                "Stat Req": "Strength 210",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11143,
+            "item_type_id": 9,
+            "game_item_id": 76,
+            "name": "Mr.Pop",
+            "icon": "equipments/10_57_1577.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 70",
+                    "MP Recovery Rate 2"
+                ],
+                "Defense": "382 - 700 - 15%",
+                "Stat Req": "Intelligence 165",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11144,
+            "item_type_id": 9,
+            "game_item_id": 77,
+            "name": "Mystic Tree Leaf",
+            "icon": "shield/mystic_tree_leaf.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 80",
+                    "MP Recovery Rate 2"
+                ],
+                "Defense": "407 - 745 - 15%",
+                "Stat Req": "Intelligence 180",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11132,
+            "item_type_id": 9,
+            "game_item_id": 65,
+            "name": "Mythical Flute",
+            "icon": "shield/mythical_flute.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "MP Recovery Rate 1",
+                    "Max MP 15"
+                ],
+                "Defense": "107 - 205 - 15%",
+                "Stat Req": "Intelligence 50",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11090,
+            "item_type_id": 9,
+            "game_item_id": 9,
+            "name": "Mythril Shield",
+            "icon": "shield/mythril_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 120"
+                ],
+                "Defense": "385 - 207 - 15%",
+                "Stat Req": "Strength 131",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11147,
+            "item_type_id": 9,
+            "game_item_id": 80,
+            "name": "Orb of Abyss",
+            "icon": "shield/orb_of_abyss.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 100",
+                    "MP Recovery Rate 3"
+                ],
+                "Defense": "482 - 880 - 15%",
+                "Stat Req": "Intelligence 240",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11146,
+            "item_type_id": 9,
+            "game_item_id": 79,
+            "name": "Orb of Rage",
+            "icon": "shield/orb_of_rage.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 90",
+                    "MP Recovery Rate 3"
+                ],
+                "Defense": "457 - 835 - 15%",
+                "Stat Req": "Intelligence 220",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11092,
+            "item_type_id": 9,
+            "game_item_id": 11,
+            "name": "Orc Shield",
+            "icon": "shield/orc_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 150"
+                ],
+                "Defense": "475 - 257 - 15%",
+                "Stat Req": "Strength 163",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11129,
+            "item_type_id": 9,
+            "game_item_id": 62,
+            "name": "Oriental Drum",
+            "icon": "shield/oriental_drum.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Magic Defense 30",
+                    "Max MP 5"
+                ],
+                "Defense": "32 - 70 - 15%",
+                "Stat Req": "Intelligence 20",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11091,
+            "item_type_id": 9,
+            "game_item_id": 10,
+            "name": "Plate Shield",
+            "icon": "shield/plate_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 135"
+                ],
+                "Defense": "430 - 232 - 15%",
+                "Stat Req": "Strength 147",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11150,
+            "item_type_id": 9,
+            "game_item_id": 83,
+            "name": "Prophet Sceptre",
+            "icon": "shield/prophet_sceptre.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 130",
+                    "MP Recovery Rate 3"
+                ],
+                "Defense": "557 - 1015 - 15%",
+                "Stat Req": "Intelligence 300",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11112,
+            "item_type_id": 9,
+            "game_item_id": 33,
+            "name": "Pumpkin Doll",
+            "icon": "shield/pumpkin_doll.png",
+            "craft_item_type": "Recreational",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Charm 10"
+                ],
+                "Defense": "1 - 1",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11094,
+            "item_type_id": 9,
+            "game_item_id": 13,
+            "name": "Righteous Shield",
+            "icon": "shield/righteous_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 165"
+                ],
+                "Defense": "565 - 307 - 15%",
+                "Stat Req": "Strenght 194",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11084,
+            "item_type_id": 9,
+            "game_item_id": 3,
+            "name": "Round Shield",
+            "icon": "shield/round_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Attack Power 5"
+                ],
+                "Defense": "115 - 57 - 15%",
+                "Stat Req": "Strength 36",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11138,
+            "item_type_id": 9,
+            "game_item_id": 71,
+            "name": "Rune Stone",
+            "icon": "shield/rune_stone.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max MP 40",
+                    "MP Recovery Rate 1"
+                ],
+                "Defense": "257 - 475 - 15%",
+                "Stat Req": "Intelligence 110",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11136,
+            "item_type_id": 9,
+            "game_item_id": 69,
+            "name": "Shadow Mirror",
+            "icon": "shield/shadow_mirror.png",
+            "craft_item_type": "Magic Tool",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "MP Recovery Rate 1",
+                    "Max MP 30"
+                ],
+                "Defense": "207 - 385 - 15%",
+                "Stat Req": "Intelligence 90",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11101,
+            "item_type_id": 9,
+            "game_item_id": 20,
+            "name": "Shimmering Shield",
+            "icon": "shield/shimmering_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 270"
+                ],
+                "Defense": "880 - 482 - 15%",
+                "Stat Req": "Strength 305",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11097,
+            "item_type_id": 9,
+            "game_item_id": 16,
+            "name": "Silver Hearts Shield",
+            "icon": "shield/silver_hearts_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 210"
+                ],
+                "Defense": "700 - 382 - 15%",
+                "Stat Req": "Strength 242",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11083,
+            "item_type_id": 9,
+            "game_item_id": 2,
+            "name": "Tarz",
+            "icon": "shield/tarz.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%    Max HP 5"
+                ],
+                "Defense": "70 - 32 - 15%",
+                "Stat Req": "Strength 20",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11089,
+            "item_type_id": 9,
+            "game_item_id": 8,
+            "name": "Tower Shield",
+            "icon": "shield/tower_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 105"
+                ],
+                "Defense": "340 - 182 - 15%",
+                "Stat Req": "Strength 115",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11098,
+            "item_type_id": 9,
+            "game_item_id": 17,
+            "name": "Vivor Shield",
+            "icon": "shield/vivor_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 225"
+                ],
+                "Defense": "745 - 407 - 15%",
+                "Stat Req": "Strength 257",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11082,
+            "item_type_id": 9,
+            "game_item_id": 1,
+            "name": "Wooden Shield",
+            "icon": "shield/wooden_shield.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%"
+                ],
+                "Defense": "3 - 2 - 15%",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        },
+        {
+            "id": 11096,
+            "item_type_id": 9,
+            "game_item_id": 15,
+            "name": "Zephyr Defender",
+            "icon": "shield/zephyr_defender.png",
+            "craft_item_type": "Shield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Attack Speed -10%",
+                    "Defense 195"
+                ],
+                "Defense": "655 - 357 - 15%",
+                "Stat Req": "Strength 226",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 9,
+                "name": "Shield",
+                "slug": "shield"
+            }
+        }
+    ],
+    "first_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "page": null,
+            "active": false
+        },
+        {
+            "url": "https://roseutils.com/api/game-items/equipment?page=1",
+            "label": "1",
+            "page": 1,
+            "active": true
+        },
+        {
+            "url": null,
+            "label": "Next &raquo;",
+            "page": null,
+            "active": false
+        }
+    ],
+    "next_page_url": null,
+    "path": "https://roseutils.com/api/game-items/equipment",
+    "per_page": 200,
+    "prev_page_url": null,
+    "to": 47,
+    "total": 47
+}

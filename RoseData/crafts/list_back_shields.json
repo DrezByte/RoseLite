@@ -1,0 +1,1944 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 6397,
+            "item_type_id": 6,
+            "game_item_id": 290,
+            "name": "100 ton Backpack",
+            "icon": "back/100_ton_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": "115",
+                "Stats": [
+                    "Inventory Capacity 2300",
+                    "Accuracy 40"
+                ],
+                "Defense": "203 - 159 - 74",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6354,
+            "item_type_id": 6,
+            "game_item_id": 227,
+            "name": "Angel Wing",
+            "icon": "back/angel_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": "70",
+                "Stats": [
+                    "Dodge Rate 26"
+                ],
+                "Defense": "76 - 175 - 58",
+                "Stat Req": "Muse",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6404,
+            "item_type_id": 6,
+            "game_item_id": 298,
+            "name": "Aurum Plate Backshield",
+            "icon": "back/aurum_plate_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "200",
+                "Stats": [
+                    "Max HP 850",
+                    "Defense 220"
+                ],
+                "Defense": "444 - 228 - 50",
+                "Stat Req": "Knight or Champion",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6381,
+            "item_type_id": 6,
+            "game_item_id": 263,
+            "name": "Blue Dragon Hunter Wings",
+            "icon": "back/blue_dragon_hunter_wings.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "80",
+                "Stats": [
+                    "MP Recovery Rate 4"
+                ],
+                "Defense": "86 - 199 - 66",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6366,
+            "item_type_id": 6,
+            "game_item_id": 247,
+            "name": "Buffalo Backshield",
+            "icon": "back/buffalo_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": "66",
+                "Stats": [
+                    "Max HP 190",
+                    "Defense 80"
+                ],
+                "Defense": "154 - 77 - 16",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6452,
+            "item_type_id": 6,
+            "game_item_id": 459,
+            "name": "Butterfly Wing",
+            "icon": "back/butterfly_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": "35",
+                "Stats": [
+                    "Dodge Rate 14"
+                ],
+                "Defense": "41 - 91 - 29",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6353,
+            "item_type_id": 6,
+            "game_item_id": 226,
+            "name": "Crow Wing",
+            "icon": "back/crow_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": "60",
+                "Stats": [
+                    "Dodge Rate 23"
+                ],
+                "Defense": "66 - 151 - 50",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6344,
+            "item_type_id": 6,
+            "game_item_id": 217,
+            "name": "Curious Backpack",
+            "icon": "back/curious_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "141",
+                "Stats": [
+                    "Inventory Capacity 2700",
+                    "Accuracy 49"
+                ],
+                "Defense": "247 - 194 - 91",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6335,
+            "item_type_id": 6,
+            "game_item_id": 206,
+            "name": "Cutie Bag",
+            "icon": "back/cutie_bag.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": "46",
+                "Stats": [
+                    "Inventory Capacity 550",
+                    "Accuracy 17"
+                ],
+                "Defense": "87 - 66 - 29",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6372,
+            "item_type_id": 6,
+            "game_item_id": 254,
+            "name": "Darka Khan Backshield",
+            "icon": "back/darka_khan_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "135",
+                "Stats": [
+                    "Max HP 490",
+                    "Defense 150"
+                ],
+                "Defense": "303 - 155 - 33",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6355,
+            "item_type_id": 6,
+            "game_item_id": 228,
+            "name": "Devil Wing",
+            "icon": "back/devil_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "76",
+                "Stats": [
+                    "Dodge Rate 28"
+                ],
+                "Defense": "82 - 189 - 63",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6374,
+            "item_type_id": 6,
+            "game_item_id": 256,
+            "name": "Elder Sikuku Backshield",
+            "icon": "back/elder_sikuku_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "164",
+                "Stats": [
+                    "Max HP 640",
+                    "Defense 180"
+                ],
+                "Defense": "366 - 187 - 41",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6341,
+            "item_type_id": 6,
+            "game_item_id": 214,
+            "name": "Electric Ghost Backpack",
+            "icon": "back/electric_ghost_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": "109",
+                "Stats": [
+                    "Inventory Capacity 1500",
+                    "Accuracy 38"
+                ],
+                "Defense": "193 - 151 - 70",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6361,
+            "item_type_id": 6,
+            "game_item_id": 242,
+            "name": "Endeavor Backshield",
+            "icon": "back/endeavor_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": "22",
+                "Stats": [
+                    "Max HP 50",
+                    "Defense 40"
+                ],
+                "Defense": "59 - 28 - 5",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6388,
+            "item_type_id": 6,
+            "game_item_id": 270,
+            "name": "Eudy Fairy Wing",
+            "icon": "back/eudy_fairy_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "180",
+                "Stats": [
+                    "Dodge Rate 62"
+                ],
+                "Defense": "187 - 439 - 150",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6438,
+            "item_type_id": 6,
+            "game_item_id": 445,
+            "name": "Fairy Wing",
+            "icon": "back/fairy_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": "15",
+                "Stats": [
+                    "Dodge Rate 8"
+                ],
+                "Defense": "20 - 43 - 12",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6338,
+            "item_type_id": 6,
+            "game_item_id": 211,
+            "name": "Ferrell Bag",
+            "icon": "back/ferrell_bag.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "86",
+                "Stats": [
+                    "Inventory Capacity 900",
+                    "Accuracy 31"
+                ],
+                "Defense": "154 - 120 - 55",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6383,
+            "item_type_id": 6,
+            "game_item_id": 265,
+            "name": "Frost Wyrm Wing",
+            "icon": "back/frost_wyrm_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": "125",
+                "Stats": [
+                    "Dodge Rate 45"
+                ],
+                "Defense": "132 - 307 - 104",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6387,
+            "item_type_id": 6,
+            "game_item_id": 269,
+            "name": "Gargoyle Wing",
+            "icon": "back/gargoyle_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "170",
+                "Stats": [
+                    "Dodge Rate 57"
+                ],
+                "Defense": "177 - 415 - 141",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6510,
+            "item_type_id": 6,
+            "game_item_id": 608,
+            "name": "Guard Backshield",
+            "icon": "back/guard_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": "42",
+                "Stats": [
+                    "Max HP 110",
+                    "Defense 60"
+                ],
+                "Defense": "102 - 50 - 10",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6386,
+            "item_type_id": 6,
+            "game_item_id": 268,
+            "name": "Hook Wing",
+            "icon": "back/hook_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "160",
+                "Stats": [
+                    "Dodge Rate 55"
+                ],
+                "Defense": "167 - 391 - 133",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6343,
+            "item_type_id": 6,
+            "game_item_id": 216,
+            "name": "Ice Spirit Backpack",
+            "icon": "back/ice_spirit_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "131",
+                "Stats": [
+                    "Inventory Capacity 2300",
+                    "Accuracy 47"
+                ],
+                "Defense": "230 - 180 - 85",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6376,
+            "item_type_id": 6,
+            "game_item_id": 258,
+            "name": "Ikaness Soldier Backshield",
+            "icon": "back/ikaness_soldier_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "194",
+                "Stats": [
+                    "Max HP 820",
+                    "Defense 210"
+                ],
+                "Defense": "431 - 221 - 48",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6347,
+            "item_type_id": 6,
+            "game_item_id": 220,
+            "name": "Ikaness Worker Backpack",
+            "icon": "back/ikaness_worker_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "193",
+                "Stats": [
+                    "Inventory Capacity 3700",
+                    "Accuracy 64"
+                ],
+                "Defense": "335 - 264 - 125",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6342,
+            "item_type_id": 6,
+            "game_item_id": 215,
+            "name": "Illusion Ghost Backpack",
+            "icon": "back/illusion_ghost_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": "121",
+                "Stats": [
+                    "Inventory Capacity 1900",
+                    "Accuracy 43"
+                ],
+                "Defense": "213 - 167 - 78",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6345,
+            "item_type_id": 6,
+            "game_item_id": 218,
+            "name": "Insane Shaman Backpack",
+            "icon": "back/insane_shaman_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "151",
+                "Stats": [
+                    "Inventory Capacity 3100",
+                    "Accuracy 53"
+                ],
+                "Defense": "264 - 207- 98",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6410,
+            "item_type_id": 6,
+            "game_item_id": 305,
+            "name": "Jackal Bandit Backshield",
+            "icon": "back/jackal_bandit_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "240",
+                "Stats": [
+                    "Max HP 900",
+                    "Defense 225"
+                ],
+                "Defense": "530 - 273 - 60",
+                "Stat Req": "Raider or Scout",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6332,
+            "item_type_id": 6,
+            "game_item_id": 202,
+            "name": "Leather Bag",
+            "icon": "back/leather_bag.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": "8",
+                "Stats": [
+                    "Inventory Capacity 300",
+                    "Accuracy 5"
+                ],
+                "Defense": "22 - 14 - 5",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6364,
+            "item_type_id": 6,
+            "game_item_id": 245,
+            "name": "Lion Backshield",
+            "icon": "back/lion_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": "50",
+                "Stats": [
+                    "Max HP 130",
+                    "Defense 70"
+                ],
+                "Defense": "120 - 59 - 12",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6459,
+            "item_type_id": 6,
+            "game_item_id": 466,
+            "name": "Little Angel Wing",
+            "icon": "back/little_angel_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": "45",
+                "Stats": [
+                    "Dodge Rate 17"
+                ],
+                "Defense": "51 - 115 - 37",
+                "Stat Req": "Muse",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6466,
+            "item_type_id": 6,
+            "game_item_id": 473,
+            "name": "Little Devil Wing",
+            "icon": "back/little_devil_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": "50",
+                "Stats": [
+                    "Dodge Rate 19"
+                ],
+                "Defense": "56 - 127 - 41",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6367,
+            "item_type_id": 6,
+            "game_item_id": 248,
+            "name": "Lizard Backshield",
+            "icon": "back/lizard_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": "74",
+                "Stats": [
+                    "Max HP 220",
+                    "Defense 90"
+                ],
+                "Defense": "171 - 86 - 18",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6339,
+            "item_type_id": 6,
+            "game_item_id": 212,
+            "name": "Magic Cubic",
+            "icon": "back/magic_cubic.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "100",
+                "Stats": [
+                    "Inventory Capacity 1100",
+                    "Accuracy 36"
+                ],
+                "Defense": "178 - 139 - 65",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6346,
+            "item_type_id": 6,
+            "game_item_id": 219,
+            "name": "Mammy Queen Backpack",
+            "icon": "back/mammy_queen_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "176",
+                "Stats": [
+                    "Inventory Capacity 3400",
+                    "Accuracy 61"
+                ],
+                "Defense": "306 - 241 - 114",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6407,
+            "item_type_id": 6,
+            "game_item_id": 301,
+            "name": "Mercenary Backpack",
+            "icon": "back/mercenary_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "200",
+                "Stats": [
+                    "Inventory Capacity 4000",
+                    "Accuracy 66"
+                ],
+                "Defense": "346 - 274 - 130",
+                "Stat Req": "Bourgeois/Artisan",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6379,
+            "item_type_id": 6,
+            "game_item_id": 261,
+            "name": "MiniBuffalo Backshield",
+            "icon": "back/minibuffalo_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": null,
+                "Stats": [
+                    "Max HP 10",
+                    "Defense 20"
+                ],
+                "Defense": "14 - 4 - 0",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6445,
+            "item_type_id": 6,
+            "game_item_id": 452,
+            "name": "Nymph Wing",
+            "icon": "back/nymph_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": "25",
+                "Stats": [
+                    "Dodge Rate 11"
+                ],
+                "Defense": "30 - 67 - 20",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6405,
+            "item_type_id": 6,
+            "game_item_id": 299,
+            "name": "Orlean Backshield",
+            "icon": "back/orlean_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "200",
+                "Stats": [
+                    "Max HP 850",
+                    "Defense 220"
+                ],
+                "Defense": "444 - 228 - 50",
+                "Stat Req": "Mage or Cleric",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6384,
+            "item_type_id": 6,
+            "game_item_id": 266,
+            "name": "Prophet Wing",
+            "icon": "back/prophet_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "135",
+                "Stats": [
+                    "Dodge Rate 47"
+                ],
+                "Defense": "142 - 331 - 112",
+                "Stat Req": "Muse",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6406,
+            "item_type_id": 6,
+            "game_item_id": 300,
+            "name": "Raptor Backshield",
+            "icon": "back/raptor_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "200",
+                "Stats": [
+                    "Max HP 850",
+                    "Defense 220"
+                ],
+                "Defense": "444 - 228 - 50",
+                "Stat Req": "Raider or Scout",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6380,
+            "item_type_id": 6,
+            "game_item_id": 262,
+            "name": "Red Dragon Hunter Wings",
+            "icon": "back/red_dragon_hunter_wings.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "80",
+                "Stats": [
+                    "HP Recovery Rate 4"
+                ],
+                "Defense": "86 - 199 - 66",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6408,
+            "item_type_id": 6,
+            "game_item_id": 303,
+            "name": "Royal Guardian Backshield",
+            "icon": "back/royal_guardian_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "240",
+                "Stats": [
+                    "Max HP 900",
+                    "Defense 225"
+                ],
+                "Defense": "530 - 273 - 60",
+                "Stat Req": "Knight or Champion",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6334,
+            "item_type_id": 6,
+            "game_item_id": 204,
+            "name": "Sakura Umbrella",
+            "icon": "back/sakura_umbrella.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": "28",
+                "Stats": [
+                    "Inventory Capacity 430",
+                    "Accuracy 11"
+                ],
+                "Defense": "56 - 41 - 18",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6411,
+            "item_type_id": 6,
+            "game_item_id": 306,
+            "name": "Serpent Trader Backpack",
+            "icon": "back/serpent_trader_backpack.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "240",
+                "Stats": [
+                    "Inventory Capacity 4200",
+                    "Accuracy 71"
+                ],
+                "Defense": "414 - 328 - 156",
+                "Stat Req": "Bourgeois/Artisan",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6382,
+            "item_type_id": 6,
+            "game_item_id": 264,
+            "name": "Shaman Ghost Wing",
+            "icon": "back/shaman_ghost_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": "110",
+                "Stats": [
+                    "Dodge Rate 39"
+                ],
+                "Defense": "117 - 271 - 91",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6373,
+            "item_type_id": 6,
+            "game_item_id": 255,
+            "name": "Sikuku Psychic Backshield",
+            "icon": "back/sikuku_psychic_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 7,
+            "stats": {
+                "Level": "153",
+                "Stats": [
+                    "Max HP 580",
+                    "Defense 170"
+                ],
+                "Defense": "342 - 175 - 38",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6336,
+            "item_type_id": 6,
+            "game_item_id": 208,
+            "name": "Street Bag",
+            "icon": "back/street_bag.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 3,
+            "stats": {
+                "Level": "62",
+                "Stats": [
+                    "Inventory Capacity 650",
+                    "Accuracy 23"
+                ],
+                "Defense": "114 - 87 - 40",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6409,
+            "item_type_id": 6,
+            "game_item_id": 304,
+            "name": "Sun Prophet Cape",
+            "icon": "back/sun_prophet_cape.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "240",
+                "Stats": [
+                    "Max HP 900",
+                    "Defense 225"
+                ],
+                "Defense": "530 - 273 - 60",
+                "Stat Req": "Mage or Cleric",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6371,
+            "item_type_id": 6,
+            "game_item_id": 253,
+            "name": "Sword Saint Backshield",
+            "icon": "back/sword_saint_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "126",
+                "Stats": [
+                    "Max HP 450",
+                    "Defense 140"
+                ],
+                "Defense": "284 - 145 - 31",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6337,
+            "item_type_id": 6,
+            "game_item_id": 210,
+            "name": "Tamiya Bag",
+            "icon": "back/tamiya_bag.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "78",
+                "Stats": [
+                    "Inventory Capacity 750",
+                    "Accuracy 28"
+                ],
+                "Defense": "141 - 109 - 50",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6368,
+            "item_type_id": 6,
+            "game_item_id": 249,
+            "name": "Tortoise Backshield",
+            "icon": "back/tortoise_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "88",
+                "Stats": [
+                    "Max HP 270",
+                    "Defense 110"
+                ],
+                "Defense": "202 - 102 - 22",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6504,
+            "item_type_id": 6,
+            "game_item_id": 602,
+            "name": "Training Backshield",
+            "icon": "back/training_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 2,
+            "stats": {
+                "Level": "32",
+                "Stats": [
+                    "Max HP 80",
+                    "Defense 50"
+                ],
+                "Defense": "81 - 39 - 8",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6375,
+            "item_type_id": 6,
+            "game_item_id": 257,
+            "name": "Turak Backshield",
+            "icon": "back/turak_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 8,
+            "stats": {
+                "Level": "180",
+                "Stats": [
+                    "Max HP 730",
+                    "Defense 200"
+                ],
+                "Defense": "400 - 205 - 45",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6360,
+            "item_type_id": 6,
+            "game_item_id": 241,
+            "name": "Turtle Backshield",
+            "icon": "back/turtle_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": "12",
+                "Stats": [
+                    "Max HP 30",
+                    "Defense 30"
+                ],
+                "Defense": "37 - 16 - 3",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6369,
+            "item_type_id": 6,
+            "game_item_id": 251,
+            "name": "Varus Backshield",
+            "icon": "back/varus_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": "109",
+                "Stats": [
+                    "Max HP 360",
+                    "Defense 130"
+                ],
+                "Defense": "247 - 126 - 27",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6370,
+            "item_type_id": 6,
+            "game_item_id": 252,
+            "name": "Warship Backshield",
+            "icon": "back/warship_backshield.png",
+            "craft_item_type": "Backshield",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 5,
+            "stats": {
+                "Level": "117",
+                "Stats": [
+                    "Max HP 400",
+                    "Defense 130"
+                ],
+                "Defense": "264 - 135 - 29",
+                "Stat Req": "Soldier or Hawker",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6584,
+            "item_type_id": 6,
+            "game_item_id": 819,
+            "name": "Wings of the Fallen Astarot",
+            "icon": "back/wings_of_the_fallen_astarot.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": {
+                "Level": "250",
+                "Stats": [
+                    "Attack Power 60",
+                    "Movement speed 90"
+                ],
+                "Defense": "228 - 535 - 280",
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(1) Attack Power 10%"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 18551,
+            "item_type_id": 6,
+            "game_item_id": 11120081,
+            "name": "Wings of the risen Phoenix",
+            "icon": "equipments/5_141_816.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": null,
+            "stats": {
+                "Level": "220",
+                "Stats": [
+                    "HP Recovery Rate 18",
+                    "MP Recovery Rate 15"
+                ],
+                "Defense": "228 - 535 - 183",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-15T18:38:44.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6585,
+            "item_type_id": 6,
+            "game_item_id": 820,
+            "name": "Wings of the Sun",
+            "icon": "back/wings_of_the_sun.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 9,
+            "stats": {
+                "Grade": "9",
+                "Level": "220",
+                "Stats": [
+                    "Magic Defence 600",
+                    "Defence 600",
+                    "Movement speed 90"
+                ],
+                "Defense": "228 - 535 - 185",
+                "Set Bonus": [],
+                "Set Stats": [
+                    "(1) Defense 10%",
+                    "(1) Magic defense 10%"
+                ]
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6333,
+            "item_type_id": 6,
+            "game_item_id": 203,
+            "name": "Wooden Chest",
+            "icon": "back/wooden_chest.png",
+            "craft_item_type": "Backpack",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 1,
+            "stats": {
+                "Level": "18",
+                "Stats": [
+                    "Inventory Capacity 370",
+                    "Accuracy 8"
+                ],
+                "Defense": "39 - 28 - 11",
+                "Stat Req": null,
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6482,
+            "item_type_id": 6,
+            "game_item_id": 517,
+            "name": "Worm Dragon Wing",
+            "icon": "back/worm_dragon_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 4,
+            "stats": {
+                "Level": "95",
+                "Stats": [
+                    "Dodge Rate 34"
+                ],
+                "Defense": "101 - 235 - 79",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        },
+        {
+            "id": 6385,
+            "item_type_id": 6,
+            "game_item_id": 267,
+            "name": "Xita Dragon Wing",
+            "icon": "back/xita_dragon_wing.png",
+            "craft_item_type": "Wings",
+            "craft_skill_type": "Advanced SubItem Craft",
+            "is_craftable": true,
+            "grade_id": 6,
+            "stats": {
+                "Level": "150",
+                "Stats": [
+                    "Dodge Rate 52"
+                ],
+                "Defense": "157 - 367 - 125",
+                "Stat Req": "All",
+                "Set Bonus": [],
+                "Set Stats": []
+            },
+            "in_shop": false,
+            "is_legacy": false,
+            "created_at": "2026-03-15T18:38:44.000000Z",
+            "updated_at": "2026-03-19T19:59:22.000000Z",
+            "type": {
+                "id": 6,
+                "name": "Back",
+                "slug": "back"
+            }
+        }
+    ],
+    "first_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://roseutils.com/api/game-items/equipment?page=1",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "page": null,
+            "active": false
+        },
+        {
+            "url": "https://roseutils.com/api/game-items/equipment?page=1",
+            "label": "1",
+            "page": 1,
+            "active": true
+        },
+        {
+            "url": null,
+            "label": "Next &raquo;",
+            "page": null,
+            "active": false
+        }
+    ],
+    "next_page_url": null,
+    "path": "https://roseutils.com/api/game-items/equipment",
+    "per_page": 200,
+    "prev_page_url": null,
+    "to": 62,
+    "total": 62
+}

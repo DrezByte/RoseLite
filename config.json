@@ -1,0 +1,15 @@
+{
+  "windowTitle": "ROSE Online (Early Access)",
+  "gameDir": "",
+  "loginServer": "connect.roseonlinegame.com",
+  "pollMs": 250,
+  "panelWidth": 400,
+  "youtubeChannels": [
+    "UC3Nu3v6xQwIK4E8k8pOxI1Q",
+    "UC1IF6rm0-_AxQgciflhlgjQ",
+    "UCduurg7Q6XP7YPLDTCOa8bA",
+    "UCgEIrrVLX4Fny08Uw8MzjyQ",
+    "UCB9ZADPvlKDvMAAKTfrhU-w"
+  ],
+  "roseutilsToken": "vZCOjCcW7u4XiCUCwfsqsEsSggSw5vklbCR7r6SdR3oWOAqe"
+}
