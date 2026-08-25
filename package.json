@@ -1,6 +1,6 @@
 {
   "name": "roselite",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Open-source client wrapper for ROSE Online — attaches a transparent plugin overlay to the game window (RuneLite-style, no client API needed)",
   "repository": {
     "type": "git",
