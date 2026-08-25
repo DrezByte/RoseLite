@@ -1,21 +1,27 @@
-// DPS meter, Driven by one data-source event:
+// DPS meter, driven by one semantic event:
 //   'damage' → { amount }
-// Frames are already filtered to damage WE dealt, so every one counts.
+// Events represent damage the player dealt, so every one counts.
 //
 // Two deliberate choices:
 //  - DPS is measured over ACTIVE COMBAT TIME, not wall clock — the same way WoW
 //    meters do it. Idle gaps longer than COMBAT_GAP don't count, so walking to the
 //    next pull doesn't sink your number.
 //  - Damage output only: no per-ability breakdown, no damage taken, no hit/crit
-//    counts. The frame carries crit and dead flags if that ever changes.
+//    counts.
 // Session save / past-sessions / CSV mirror the Loot section's flow on purpose.
 // ponytail: that flow is COPIED, not abstracted — loot aggregates timestamped
 // entries, this aggregates counters. Factor out only if a third section wants it.
 
+const { normalizeProgressPayload } = require('../src/progressstore.js');
 // DPS history belongs to the RoseLite account, shared across every ROSE
 // account launched from it.
 const STORE = 'roselite.dps';
-const saved = (() => { try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch { return {}; } })();
+const saved = (() => {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STORE)) || {};
+    return normalizeProgressPayload({ data: { dps: raw } }).data.dps;
+  } catch { return {}; }
+})();
 
 // A pull ends after this long with no damage. Details! uses ~5s.
 const COMBAT_GAP = 5000;
@@ -62,7 +68,7 @@ function activeMs(s, now) {
 // Damage per second over that window. null (→ '—') before any time has elapsed.
 const rate = (total, ms) => (ms > 0 ? total / (ms / 1000) : null);
 
-// Fold one damage frame into a session. Returns the session (mutated).
+// Fold one damage event into a session. Returns the session (mutated).
 function apply(s, d, now) {
   const amount = Math.max(0, Number(d.amount) || 0);
   if (!amount) return s;

@@ -8,6 +8,7 @@ const { pathToFileURL } = require('url');
 const { ipcRenderer, clipboard, shell, webFrame } = require('electron');
 const D = require('./data.js');   // RoseData: items, quests, recipes, guides, events
 const L = require('./logic.js');  // pure kings/gems logic, shared with the self-checks
+const { normalizeProgressPayload } = require('../src/progressstore.js');
 
 const esc = (str) => String(str).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 // Accent-insensitive search key: "epee" matches "Épée" and vice versa.
@@ -31,7 +32,6 @@ function readJson(key, fallback, valid = () => true) {
 function writeJson(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
-    if (typeof window.requestCloudSync === 'function') window.requestCloudSync(key);
     return true;
   } catch (err) { console.warn(`[storage] could not save ${key}:`, err.message || err); return false; }
 }
@@ -374,7 +374,7 @@ foldLegacyAccountStorage();
 const hideEmails = () => localStorage.getItem('roselite-hide-emails') === '1';
 // Owner-recognisable but shoulder-surf-safe: keep the first char of user + domain.
 const maskEmail = (e) => { const [u, d] = String(e).split('@'); return `${(u || '').slice(0, 1)}•••${d ? '@' + d.slice(0, 1) + '•••' : ''}`; };
-console.assert(maskEmail('drez@gmail.com') === 'd•••@g•••', 'maskEmail hides the rest');
+console.assert(maskEmail('player@example.test') === 'p•••@e•••', 'maskEmail hides the rest');
 // Big label for an account: its nickname, else the email (masked when hiding is on).
 const acctName = (email) => { const m = acctMeta()[email] || {}; return m.nick || (hideEmails() ? maskEmail(email) : email); };
 // Tiny sub-line under the name: the raw email — only when a nickname is the big
@@ -1010,15 +1010,16 @@ async function loadMarket(el, it) {
   if (!h || !h.length) { if (mk) mk.textContent = r.ok ? T().marketNA : T().marketErr; return; }
   const latest = h[h.length - 1];
   const when = latest.updated_at || latest.date;
-  if (mk) mk.innerHTML = fmtZ(Math.round(latest.min_price)) + (when ? `<span class="mk-upd">${MK().updated} ${fmtAgo(when)}</span>` : '');
-  mkActual.set(`${it.item_type_id}:${it.game_item_id}`, Math.round(latest.min_price));   // seed the market section's price cache
-  // Cheapest seller's shop location → copyable in-game map link. Coords are on
-  // Junon Polis (map 2). ponytail: map hard-coded; switch to a field if the API adds one.
-  const loc = el.querySelector('[data-loc]');
-  if (loc && latest.min_price_x != null && latest.min_price_y != null) {
-    wireCopy(loc, () => mapLink(2, latest.min_price_x, latest.min_price_y), '📍', T().copyLoc, T());
-    loc.hidden = false;
+  if (mk) {
+    mk.textContent = fmtZ(Math.round(latest.min_price));
+    if (when) {
+      const updated = document.createElement('span');
+      updated.className = 'mk-upd';
+      updated.textContent = `${MK().updated} ${fmtAgo(when)}`;
+      mk.appendChild(updated);
+    }
   }
+  mkActual.set(`${it.item_type_id}:${it.game_item_id}`, Math.round(latest.min_price));   // seed the market section's price cache
   // Same chart component as the market section's featured pane: y-ticks, dated
   // x-axis, hover crosshair. Exact per-day numbers stay in the spoiler below.
   const chart = el.querySelector('[data-chart]');
@@ -1033,40 +1034,6 @@ async function loadMarket(el, it) {
       .map((e) => `<span class="stat-k">${esc(e.date)}</span><span class="stat-v">${fmtZ(Math.round(e.min_price))}</span>`).join('');
     box.hidden = false;
   }
-}
-// In-game chat item link: [&<base64>] where the payload is
-// [0x07][3-byte LE (game_item_id<<5 | item_type_id)][4 zero bytes].
-// The trailing bytes carry a real item's instance data (durability/life/etc);
-// a plain reference link leaves them zero. Verified against known links:
-// Wooly Mammoth Effigy (12/1562) → [&B0zDAAAAAAA=], Knight Killer (8/917) → B6hy…,
-// Ether (12/63) → [&B+wHAAAAAAA=]. A stack link adds a 9th byte: the count sits at
-// bit 4 of byte 6 with bit 3 as its flag, i.e. (count << 4) | 8 written LE across
-// bytes 6-8 — verified on Ether 2× (0x28) and Bullet 3×/5× (0x38/0x58). Count 1 keeps
-// the plain 8-byte reference form.
-function itemLink(it, count) {
-  const v = ((it.game_item_id << 5) | it.item_type_id) >>> 0;
-  const bytes = [7, v & 0xff, (v >> 8) & 0xff, (v >> 16) & 0xff, 0, 0, 0, 0];
-  if (count > 1) {
-    const q = ((count << 4) | 8) >>> 0;
-    bytes[6] = q & 0xff; bytes[7] = (q >> 8) & 0xff; bytes.push((q >> 16) & 0xff);
-  }
-  return '[&' + btoa(String.fromCharCode(...bytes)) + ']';
-}
-// In-game map-location link: [&<base64>] of [0x03][map_id u32 LE][x f32 LE][y f32 LE].
-// The floats are ROSE world units = displayed coord × 100 (verified: Junon 5501:5501
-// → [&AwIAAAAlTwZJR1EGSQ==], floats 550130/550164). roseutils' min_price_x/y may be
-// stored either as display coord (~5501) or world units (~550130); the two ranges are
-// 100× apart, so scale up only the small form. ponytail: numeric heuristic, fix if
-// roseutils ever reports coords ≥ 20000 in display units.
-const worldCoord = (c) => (c < 20000 ? c * 100 : c);
-function mapLink(mapId, x, y) {
-  const dv = new DataView(new ArrayBuffer(13));
-  dv.setUint8(0, 3);
-  dv.setUint32(1, mapId, true);
-  dv.setFloat32(5, worldCoord(x), true);
-  dv.setFloat32(9, worldCoord(y), true);
-  let s = ''; for (const b of new Uint8Array(dv.buffer)) s += String.fromCharCode(b);
-  return '[&' + btoa(s) + ']';
 }
 
 // Collapsible list block for the item page's long tails (Used in · Dropped by):
@@ -1091,13 +1058,8 @@ function buildItemDetail(el, it) {
   const usedHtml = foldBlock(d.usedIn, used, (u) => itemRow(u));
   const drops = D.droppedBy(it.id);
   const dropHtml = foldBlock(d.droppedBy || STR.en.droppedBy, drops, mobRow);
-  const canLink = it.item_type_id != null && it.game_item_id != null;
   const star = `<button class="item-hero-copy" data-pin title="${d.pin}" aria-label="${d.pin}">${pinned.has(it.id) ? '★' : '☆'}</button>`;
-  const actions = `<div class="item-hero-actions">${star}` +
-    (canLink
-      ? `<button class="item-hero-copy" data-copy title="${d.copyLink}" aria-label="${d.copyLink}">🔗</button>` +
-        `<button class="item-hero-copy" data-loc title="${d.copyLoc}" aria-label="${d.copyLoc}" hidden>📍</button>` : '') +
-    `</div>`;
+  const actions = `<div class="item-hero-actions">${star}</div>`;
   const bottom = (mats || usedHtml || dropHtml) ? `<div class="item-bottom">${mats}${usedHtml}${dropHtml}</div>` : '';
   el.innerHTML =
     `<div class="item-hero">${D.itemImg(it, 'item-hero-icon')}<div class="item-hero-meta">` +
@@ -1105,7 +1067,6 @@ function buildItemDetail(el, it) {
     `<div class="item-page">` +
     `<div class="item-top">${stats || `<p class="section-note">${d.noStats}</p>`}${priceBlock(it, d)}</div>` +
     `${priceAside(it, d)}${bottom}</div>`;
-  wireCopy(el.querySelector('[data-copy]'), () => itemLink(it), '🔗', d.copyLink, d);
   const pinBtn = el.querySelector('[data-pin]');
   pinBtn.addEventListener('click', () => {
     if (pinned.has(it.id)) { pinned.delete(it.id); stampRemoved('roselite-items-unpinned', it.id); }
@@ -1790,13 +1751,8 @@ function paintGemOutput() {
       return `<li><div class="row row--static">${D.itemImg(it, 'row-icon')}` +
         `${name}<span class="qty">${r.count.toLocaleString()}</span></div></li>`; }).join('') +
     `</ul>`;
-  // List to paste to a vendor alt / clan mate: one in-game item link per line, count
-  // carried by the link itself. ponytail: no cap on count — a shopping list can ask for
-  // more than a stack holds; cap at 999 if the game renders those links wrong.
-  wireCopy(out.querySelector('[data-copy]'), () => raws.map((r) => {
-    const it = D.itemsById.get(r.id);
-    return it && it.game_item_id != null ? itemLink(it, r.count) : `${r.count}× ${r.name}`;
-  }).join('\n'), '🛒', G().copyList, T());
+  // Plain-text shopping list for a vendor alt or clan mate.
+  wireCopy(out.querySelector('[data-copy]'), () => raws.map((r) => `${r.count}× ${r.name}`).join('\n'), '🛒', G().copyList, T());
 }
 
 // Guides open onto a sub-menu (a tile grid like the home menu) of fixed
@@ -2113,13 +2069,12 @@ function renderTitleMap(container) {
   }));
 }
 
-// ── Progress mirror (renderer localStorage → main → cloud) ────────────────
-// The canonical portable copy lives in the main process and, once signed in,
-// the cloud. This flat allowlist is the only thing that crosses that boundary.
-// ROSE passwords, game paths and other machine-local state never enter it.
+// ── Progress mirror (renderer localStorage → durable main-process file) ───
+// This flat allowlist defines the portable local backup. ROSE passwords, game
+// paths, and other machine-local settings never enter it.
 function progressPayload() {
   const meta = acctMeta();
-  return {
+  return normalizeProgressPayload({
     accounts: accounts().map((email) => ({ email, nick: meta[email]?.nick || '', icon: meta[email]?.icon || '', addedAt: meta[email]?.addedAt || 0 })),
     data: {
       itemsPinned: readJson('roselite-items-pinned', [], Array.isArray),
@@ -2130,8 +2085,8 @@ function progressPayload() {
       questsUndone: readJson('roselite-quests-undone', {}, isRecord),
       gemTargets: readJson('roselite-gem-targets', [], Array.isArray),
       kings: readJson('roselite-kings', {}, isRecord),
-      // email -> deletion timestamp; makes a delete win over another device's
-      // stale copy on merge instead of being unioned back (see sync-server merge).
+      // email -> deletion timestamp; makes a delete survive merging an older
+      // exported copy instead of being unioned back.
       accountsDeleted: readJson('roselite-accounts-deleted', {}, isRecord),
       dungeonRuns: readJson('roselite-dungeon-runs', [], Array.isArray),
       dungeonMe: localStorage.getItem('roselite-dungeon-me') || '',
@@ -2140,13 +2095,14 @@ function progressPayload() {
       calendarNotes: readJson('roselite-cal-notes', {}, isRecord),
       shouts: readJson('roselite-shouts', [], Array.isArray),
     }
-  };
+  });
 }
 
-// Applies a server-merged envelope back into localStorage. Returns whether
+// Applies a normalized local envelope back into localStorage. Returns whether
 // anything actually changed, so the caller only reloads when it must.
 function restoreProgressEnvelope(envelope) {
-  const data = envelope.data || {};
+  envelope = normalizeProgressPayload(envelope);
+  const data = envelope.data;
   let changed = false;
   const setJsonIfChanged = (key, value) => {
     const next = JSON.stringify(value);
@@ -2158,8 +2114,8 @@ function restoreProgressEnvelope(envelope) {
     changed = true; localStorage.setItem(key, String(value));
   };
   setJsonIfChanged('roselite-items-pinned', data.itemsPinned || []);
-  // Tombstones arrive already server-merged — same pure-overwrite treatment as
-  // achievements below, not a second local merge pass.
+  // Tombstones arrive already normalized — use pure overwrite here rather than
+  // running a second merge pass.
   setJsonIfChanged('roselite-items-unpinned', data.itemsUnpinned || {});
   setJsonIfChanged('roselite-quests-done', data.questsDone || []);
   setJsonIfChanged('roselite-quests-undone', data.questsUndone || {});
@@ -2253,6 +2209,7 @@ function exportProgress() {
 // the same rule two devices used to meet under.
 async function importProgress(file, status) {
   try {
+    if (!file || file.size > 8 * 1024 * 1024) throw new Error('backup is too large');
     const envelope = JSON.parse(await file.text());
     if (!isRecord(envelope) || envelope.format !== BACKUP_FORMAT || !isRecord(envelope.data)) throw new Error('not a RoseLite backup');
     const { changed } = restoreProgressEnvelope(envelope);
@@ -2775,8 +2732,12 @@ function renderDungeons() {
 
 function renderDlGrid(grid) {
   const d = dl();
-  const byType = {};
-  for (const r of dlRuns) (byType[r.dungeon] ||= []).push(r);
+  const byType = Object.create(null);
+  const dungeonKeys = new Set(DUNGEONS.map((entry) => entry.key));
+  for (const r of dlRuns) {
+    const key = dungeonKeys.has(r.dungeon) ? r.dungeon : 'other';
+    (byType[key] ||= []).push(r);
+  }
   const keys = Object.keys(byType);
   if (!keys.length) { grid.innerHTML = `<div class="empty"><strong>${d.emptyTitle}</strong>${d.emptyBody}</div>`; return; }
   keys.sort((a, b) => Math.max(...byType[b].map((r) => r.at)) - Math.max(...byType[a].map((r) => r.at)));   // most recently played first
@@ -2785,7 +2746,7 @@ function renderDlGrid(grid) {
     const bestTime = Math.min(...runs.map((r) => r.seconds));
     const dpsList = runs.map(youDps).filter((n) => n > 0);
     const bestDps = dpsList.length ? Math.max(...dpsList) : 0;
-    return `<button class="dl-card" data-key="${key}">
+    return `<button class="dl-card" data-key="${esc(key)}">
         <span class="dl-logo">${dlLogo(key)}</span>
         <span class="dl-card-name">${esc(dlName(key))}</span>
         <span class="dl-card-stats">
@@ -2807,11 +2768,11 @@ function openDungeon(key) {
     host.innerHTML = runs.map((run) => dlRunHtml(run, d)).join('') || `<div class="empty"><strong>${d.emptyTitle}</strong></div>`;
     host.querySelectorAll('.dl-del').forEach((b) => b.addEventListener('click', (e) => {
       e.stopPropagation();
-      const i = dlRuns.findIndex((r) => r.id === +b.dataset.id);
+      const i = dlRuns.findIndex((r) => String(r.id) === b.dataset.id);
       if (i >= 0) { dlRuns.splice(i, 1); saveDlRuns(); openDungeon(key); }
     }));
     host.querySelectorAll('.dl-tbl tbody tr').forEach((tr) => tr.addEventListener('click', () => {
-      const run = runs.find((r) => r.id === +tr.dataset.run);
+      const run = runs.find((r) => String(r.id) === tr.dataset.run);
       run.me = tr.dataset.name; dlMe = tr.dataset.name;
       localStorage.setItem('roselite-dungeon-me', dlMe); saveDlRuns(); openDungeon(key);
     }));
@@ -2824,13 +2785,13 @@ function dlRunHtml(run, d) {
   const day = new Date(run.at).toLocaleDateString(lang, { day: '2-digit', month: 'short', year: 'numeric' });
   const head = `<tr><th>${c.name}</th><th>${c.cls}</th><th>${c.dps}</th><th>${c.dmgIn}</th><th>${c.dmgRcv}</th><th>${c.kills}</th><th>${c.deaths}</th><th>${c.healIn}</th><th>${c.reflect}</th><th>${c.block}</th></tr>`;
   const body = [...run.rows].sort((a, b) => b.dmgIn - a.dmgIn).map((r) =>
-    `<tr class="${you && r.name === you.name ? 'dl-you' : ''}" data-run="${run.id}" data-name="${esc(r.name)}">` +
+    `<tr class="${you && r.name === you.name ? 'dl-you' : ''}" data-run="${esc(run.id)}" data-name="${esc(r.name)}">` +
     `<td>${esc(r.name)}</td><td>${esc(r.cls)}</td><td>${nf(dlDps(r, run.seconds))}</td><td>${nf(r.dmgIn)}</td><td>${nf(r.dmgRcv)}</td>` +
     `<td>${r.kills}</td><td>${r.deaths}</td><td>${nf(r.healIn)}</td><td>${r.reflect}</td><td>${r.block}</td></tr>`).join('');
   return `<div class="dl-run">
       <div class="dl-run-head">
         <span>${day} · ${fmtDur(run.seconds)}</span>
-        <span>${yDps ? `<span class="dl-run-dps">${nf(yDps)} ${d.yourDps}</span> · ` : ''}<button class="dl-del" data-id="${run.id}" aria-label="delete">×</button></span>
+        <span>${yDps ? `<span class="dl-run-dps">${nf(yDps)} ${d.yourDps}</span> · ` : ''}<button class="dl-del" data-id="${esc(run.id)}" aria-label="delete">×</button></span>
       </div>
       <div style="overflow-x:auto"><table class="dl-tbl"><thead>${head}</thead><tbody>${body}</tbody></table></div>
     </div>`;
@@ -2895,12 +2856,38 @@ function renderExtensions() {
     body.querySelectorAll(`.mod-opt[data-p="${b.dataset.hd}"]`).forEach((r) => { r.hidden = !r.hidden; });
   }));
 }
+// README.html is third-party mod content. Keep a small formatting allowlist and
+// discard every executable/embed surface before it enters the Node-enabled page.
+const MOD_README_TAGS = new Set(['A', 'B', 'BLOCKQUOTE', 'BR', 'CODE', 'DIV', 'EM', 'H2', 'H3', 'H4', 'HR', 'LI', 'OL', 'P', 'PRE', 'SMALL', 'SPAN', 'STRONG', 'TABLE', 'TBODY', 'TD', 'TH', 'THEAD', 'TR', 'UL']);
+function sanitizeModReadme(raw) {
+  const template = document.createElement('template');
+  template.innerHTML = String(raw);
+  for (const el of [...template.content.querySelectorAll('*')]) {
+    if (!MOD_README_TAGS.has(el.tagName)) { el.remove(); continue; }
+    const href = el.tagName === 'A' ? el.getAttribute('href') : null;
+    for (const attribute of [...el.attributes]) el.removeAttribute(attribute.name);
+    if (href) {
+      try {
+        const url = new URL(href);
+        if (url.protocol === 'http:' || url.protocol === 'https:') {
+          el.setAttribute('href', url.href);
+          el.setAttribute('rel', 'noreferrer');
+        }
+      } catch {}
+    }
+  }
+  const walker = document.createTreeWalker(template.content, NodeFilter.SHOW_COMMENT);
+  const comments = [];
+  while (walker.nextNode()) comments.push(walker.currentNode);
+  comments.forEach((comment) => comment.remove());
+  return template.innerHTML;
+}
 // Row click → the mod's README.html (its guide) in the drill view; falls back
 // to the raw file list for a mod that ships without one.
 function openModGuide(m) {
   const readme = path.join(m.dir, 'README.html');
   const html = fs.existsSync(readme)
-    ? fs.readFileSync(readme, 'utf8')
+    ? sanitizeModReadme(fs.readFileSync(readme, 'utf8'))
     : `<ul>${m.files.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>`;
   drill(m.name, (el) => { el.innerHTML = `<div class="prose">${html}</div>`; });
 }
@@ -2957,7 +2944,7 @@ function renderLauncher() {
   list.innerHTML = accs.map((e) => {
     const icon = acctIcon(e);
     const av = icon
-      ? `<img class="acc-av" src="${esc(classIconSrc(icon))}" alt="" onerror="this.style.visibility='hidden'">`
+      ? `<img class="acc-av" src="${esc(classIconSrc(icon))}" alt="">`
       : `<span class="acc-av"></span>`;
     const needsPassword = !!(acctMeta()[e] || {}).needsPassword;
     const sub = needsPassword
@@ -2969,6 +2956,7 @@ function renderLauncher() {
       `<button class="acc-play" data-e="${esc(e)}">▶ ${d.play || 'Play'}</button>` +
       `<button class="acc-cog" data-e="${esc(e)}" aria-label="settings">${gear}</button></li>`;
   }).join('');
+  list.querySelectorAll('img.acc-av').forEach((img) => img.addEventListener('error', () => { img.style.visibility = 'hidden'; }, { once: true }));
   list.querySelectorAll('.acc-play').forEach((b) => b.addEventListener('click', () => launchAccount(b.dataset.e)));
   list.querySelectorAll('.acc-cog').forEach((b) => b.addEventListener('click', () => openAccountModal(b.dataset.e)));
   applyUpdGate();   // a full re-render (lang/theme) must respect an in-flight update
@@ -3068,7 +3056,7 @@ function removeAccount(email) {
 let editingEmail = null;
 let modalIcon = '';   // class icon chosen in the open modal
 const iconCell = (icon, none) => icon
-  ? `<button class="acc-icon${modalIcon === icon ? ' active' : ''}" data-icon="${esc(icon)}" title="${esc(icon)}"><img src="${esc(classIconSrc(icon))}" alt="${esc(icon)}" loading="lazy" onerror="this.parentNode.textContent='${esc(path.basename(icon))}'"></button>`
+  ? `<button class="acc-icon${modalIcon === icon ? ' active' : ''}" data-icon="${esc(icon)}" title="${esc(icon)}"><img src="${esc(classIconSrc(icon))}" alt="${esc(icon)}" loading="lazy"></button>`
   : `<button class="acc-icon${modalIcon === '' ? ' active' : ''}" data-icon="">${esc(none)}</button>`;
 function renderModalIcons() {
   const d = { ...STR.en.launcher, ...T().launcher };
@@ -3078,6 +3066,10 @@ function renderModalIcons() {
   if (modalIcon && !list.includes(modalIcon)) list.splice(1, 0, modalIcon);
   box.innerHTML = list.map((i) => iconCell(i, d.iconNone)).join('')
     + `<button class="acc-icon acc-icon--more" data-more title="${esc(d.moreIcons)}">＋</button>`;
+  box.querySelectorAll('.acc-icon img').forEach((img) => img.addEventListener('error', () => {
+    const button = img.closest('.acc-icon');
+    button.textContent = (button.dataset.icon || '').split('/').pop();
+  }, { once: true }));
   box.querySelectorAll('.acc-icon[data-icon]').forEach((b) => b.addEventListener('click', () => {
     modalIcon = b.dataset.icon; renderModalIcons();
   }));
@@ -3368,8 +3360,8 @@ function setLang(x) { if (!LANGS[x] || x === lang) return; lang = x; localStorag
 // Widget mount points, keyed by slot. 'widgets' (Kings) is the default; a plugin
 // passes another slot to render elsewhere (e.g. player-hud → 'character').
 const roots = { widgets: document.getElementById('widgets'), character: document.getElementById('char-widgets'), butin: document.getElementById('loot-widgets'), dps: document.getElementById('dps-widgets') };
-// Data-source events. Frames arrive from main.js as {type, ...};
-// plugins subscribe via api.on(type, cb). ponytail: a Map + a switchless
+// Semantic events arrive from main.js as {type, ...}; plugins subscribe via
+// api.on(type, cb). ponytail: a Map + a switchless
 // dispatch, no event-emitter dependency.
 const subs = new Map();
 ipcRenderer.on('gamedata', (_e, f) => (subs.get(f.type) || []).forEach((cb) => cb(f)));
@@ -3540,7 +3532,7 @@ const api = {
   market(itemTypeId, gameItemId) { return ipcRenderer.invoke('market', itemTypeId, gameItemId); },
 };
 api.on('spawn', onMonsterSpawn);   // Monster Tracker: alert on watched-mob spawns
-// Quest auto-tracking: a 'quest' frame with result 3 = removed from the journal.
+// Quest auto-tracking: a 'quest' event with result 3 = removed from the journal.
 // markQuestDone back-fills the chain and re-renders the list.
 api.on('quest', ({ result, questId }) => {
   if (result !== 3) return;
@@ -3590,8 +3582,8 @@ window.addEventListener('blur', () => { sentInteractive = false; });
 // session — and Chromium's own throttling never fires, because an always-on-top
 // overlay is never occluded. Measured on the fullscreen Bazaar: 15–23% of a CPU
 // core (50–65% across processes) with the ambient set running, 1–3% without. The
-// player is mid-fight; those are frames stolen from ROSE to animate lamps nobody
-// is watching.
+// player is mid-fight; that is rendering time taken from ROSE to animate lamps
+// nobody is watching.
 // Only `infinite` animations are paused — a pack reveal or a slot tumble is a
 // one-shot whose `animationend` a state machine is waiting on, and freezing one
 // mid-flight would hang it. ponytail: no marker class, the timing IS the tell.
@@ -3729,9 +3721,14 @@ ipcRenderer.send('game-dir', gameDir());   // launch() uses the persisted folder
 renderHome(); renderRail();   // home feed renders via goHome() below
 // Section bodies are populated by ensureSection() on first open.
 initShouts(); initLauncher(); initNotifLog(); updateChrome(); renderPlaytime();
-// Seed the main process's canonical copy of local progress — it survives a
-// localStorage wipe, and it is what an export writes from.
+// Merge local progress into the durable main-process mirror, then apply the
+// normalized result back. This restores data after a browser-store wipe and
+// cleans any malformed values left by an older build before they can persist.
 ipcRenderer.invoke('progress-sync-local', progressPayload())
+  .then((snapshot) => {
+    const { changed } = restoreProgressEnvelope(snapshot);
+    if (changed) reloadAfterProgressRestore();
+  })
   .catch((err) => console.warn('[progress] local sync failed:', err.message || err));
 const resumeSection = sessionStorage.getItem(PROGRESS_RESUME_SECTION);
 sessionStorage.removeItem(PROGRESS_RESUME_SECTION);

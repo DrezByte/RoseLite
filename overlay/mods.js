@@ -17,10 +17,62 @@ const BAK = '.roselite-bak';
 // theme mods live in a sibling tree at the game root (data/ui/…); their top
 // segment names that root directly, so no prefix.
 const ROOT_TREES = new Set(['data']);
-const gamePath = (gameDir, f) =>
-  ROOT_TREES.has(f.split(path.sep)[0].toLowerCase())
-    ? path.join(gameDir, f)
-    : path.join(gameDir, '3DDATA', f);
+function normalizeModFile(file) {
+  if (typeof file !== 'string' || !file || path.isAbsolute(file) || /^[A-Za-z]:/.test(file) || file.includes('\0')) return null;
+  const segments = file.split(/[\\/]+/);
+  if (!segments.length || segments.some((segment) => !segment || segment === '.' || segment === '..')) return null;
+  return segments.join(path.sep);
+}
+function containedPath(root, file) {
+  const normalized = normalizeModFile(file);
+  if (!normalized) throw new Error(`Unsafe mod path: ${String(file)}`);
+  const base = path.resolve(root);
+  const candidate = path.resolve(base, normalized);
+  const relative = path.relative(base, candidate);
+  if (!relative || relative === '..' || relative.startsWith(`..${path.sep}`) || path.isAbsolute(relative))
+    throw new Error(`Mod path escapes its target tree: ${file}`);
+  return candidate;
+}
+function gameLocation(gameDir, file) {
+  const normalized = normalizeModFile(file);
+  if (!normalized) throw new Error(`Unsafe mod path: ${String(file)}`);
+  const root = ROOT_TREES.has(normalized.split(path.sep)[0].toLowerCase()) ? gameDir : path.join(gameDir, '3DDATA');
+  return { normalized, root, target: containedPath(root, normalized) };
+}
+const gamePath = (gameDir, file) => gameLocation(gameDir, file).target;
+
+function checkedContainedPath(root, file) {
+  const candidate = containedPath(root, file);
+  const base = path.resolve(root);
+  let baseStat;
+  try { baseStat = fs.lstatSync(base); }
+  catch { throw new Error(`Mod target root does not exist: ${base}`); }
+  if (baseStat.isSymbolicLink()) throw new Error(`Mod path crosses a symbolic link: ${base}`);
+
+  const canonicalBase = fs.realpathSync.native(base);
+  let current = base;
+  for (const segment of path.relative(base, candidate).split(path.sep)) {
+    current = path.join(current, segment);
+    let stat;
+    try { stat = fs.lstatSync(current); }
+    catch (error) {
+      if (error && error.code === 'ENOENT') break;
+      throw error;
+    }
+    if (stat.isSymbolicLink()) throw new Error(`Mod path crosses a symbolic link: ${current}`);
+    const canonical = fs.realpathSync.native(current);
+    const relative = path.relative(canonicalBase, canonical);
+    if (relative === '..' || relative.startsWith(`..${path.sep}`) || path.isAbsolute(relative))
+      throw new Error(`Mod path escapes its target tree: ${file}`);
+  }
+  return candidate;
+}
+
+function ensureTargetRoot(root) {
+  fs.mkdirSync(root, { recursive: true });
+  const stat = fs.lstatSync(root);
+  if (stat.isSymbolicLink()) throw new Error(`Mod path crosses a symbolic link: ${root}`);
+}
 
 const sameFile = (a, b) => {
   try {
@@ -37,7 +89,8 @@ const NON_GAME = new Set(['readme.html', 'mod.json']);
 const modFiles = (dir) =>
   fs.readdirSync(dir, { recursive: true, withFileTypes: true })
     .filter((d) => d.isFile())
-    .map((d) => path.relative(dir, path.join(d.parentPath, d.name)))
+    .map((d) => normalizeModFile(path.relative(dir, path.join(d.parentPath, d.name))))
+    .filter(Boolean)
     .filter((f) => !f.split(path.sep).some((seg) => seg.startsWith('.')))
     .filter((f) => !NON_GAME.has(f.toLowerCase()) && !NON_GAME.has(path.basename(f).toLowerCase()));
 
@@ -76,16 +129,22 @@ function listMods(gameDir, modsDir = MODS_DIR) {
 
 function setEnabled(gameDir, mod, on) {
   for (const f of mod.files) {
-    const target = gamePath(gameDir, f);
+    const location = gameLocation(gameDir, f);
+    if (!on && !fs.existsSync(location.root)) continue;
+    ensureTargetRoot(location.root);
+    const target = checkedContainedPath(location.root, location.normalized);
+    const backup = checkedContainedPath(location.root, location.normalized + BAK);
     if (on) {
+      const source = checkedContainedPath(mod.dir, f);
       fs.mkdirSync(path.dirname(target), { recursive: true });
-      // ponytail: a half-enabled mod re-enabled will back up its own copy; harmless, self-heals on next disable+enable
-      if (fs.existsSync(target) && !fs.existsSync(target + BAK)) fs.renameSync(target, target + BAK);
-      fs.copyFileSync(path.join(mod.dir, f), target);
+      // A half-enabled mod re-enabled will back up its own copy; harmless, and
+      // the next disable+enable restores the expected state.
+      if (fs.existsSync(target) && !fs.existsSync(backup)) fs.renameSync(target, backup);
+      fs.copyFileSync(source, target);
     } else {
-      // ponytail: empty dirs are left behind on disable; the client ignores them
+      // Empty dirs are left behind on disable; the client ignores them.
       fs.rmSync(target, { force: true });
-      if (fs.existsSync(target + BAK)) fs.renameSync(target + BAK, target);
+      if (fs.existsSync(backup)) fs.renameSync(backup, target);
     }
   }
 }
@@ -141,6 +200,31 @@ if (require.main === module) {
   assert.strictEqual(fs.readFileSync(path.join(game, 'data', 'ui', 'skin.dds'), 'utf8'), 'THEME');
   assert.strictEqual(fs.existsSync(path.join(game, '3DDATA', 'data')), false);
   assert.strictEqual(listMods(game, mods).find((o) => o.name === 'Theme').enabled, true);
+
+  // A forged manifest/object cannot copy or delete outside the game/mod roots.
+  for (const unsafe of ['../../owned.txt', '..\\..\\owned.txt', path.resolve(root, 'owned.txt')]) {
+    assert.throws(() => setEnabled(game, { dir: path.join(mods, 'TestMod'), files: [unsafe] }, true), /Unsafe mod path|escapes/);
+  }
+  assert.strictEqual(fs.existsSync(path.join(root, 'owned.txt')), false);
+
+  // Existing links/junctions inside a destination tree must not redirect a
+  // seemingly contained mod file outside the game directory.
+  const outside = path.join(root, 'outside');
+  const linkedSource = path.join(mods, 'TestMod', 'LINK');
+  fs.mkdirSync(outside);
+  fs.mkdirSync(linkedSource);
+  fs.writeFileSync(path.join(linkedSource, 'owned.txt'), 'must-not-copy');
+  try {
+    fs.symlinkSync(outside, path.join(game, '3DDATA', 'LINK'), process.platform === 'win32' ? 'junction' : 'dir');
+    assert.throws(
+      () => setEnabled(game, { dir: path.join(mods, 'TestMod'), files: [path.join('LINK', 'owned.txt')] }, true),
+      /symbolic link/
+    );
+    assert.strictEqual(fs.existsSync(path.join(outside, 'owned.txt')), false);
+  } catch (error) {
+    // Some Windows runners forbid creating test links without Developer Mode.
+    if (!error || !['EPERM', 'EACCES'].includes(error.code)) throw error;
+  }
 
   fs.rmSync(root, { recursive: true, force: true });
   console.log('mods.js self-check OK');

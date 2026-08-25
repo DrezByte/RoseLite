@@ -8,8 +8,9 @@ No memory reading, no DLL injection, nothing that touches the client process:
 RoseLite is a transparent, click-through, always-on-top window that finds the
 game by plain window polling and follows it around.
 
-It is also **local-only** — no account, no sign-in, no server. Everything it
-tracks stays on your PC, and Settings exports it to a file you carry yourself.
+It is also **local-first** — no RoseLite account, sign-in, or progress server.
+Everything it tracks stays on your PC, and Settings exports it to a file you
+carry yourself. Market prices, news, and update checks require internet access.
 
 ## Download
 
@@ -31,7 +32,7 @@ title. A game patch occasionally renames the window; the current default is
 | | |
 |---|---|
 | **Rois** | Respawn tracker for 100 field bosses — tap on kill, get a countdown and a toast. Works with no game data feed at all. |
-| **Objets** | The full item catalog (~15k) — stats, NPC and live market price, price sparkline, in-game chat links, pins. |
+| **Objets** | The full item catalog (19k+) — stats, NPC and live market price, price sparkline, source links, pins. |
 | **Marché** | A price board over the community market snapshot: sorts, trending, watchlist, 7/30/90-day charts. |
 | **Quêtes** | Quest list, filters, chain view and done-toggles, with planet tags. |
 | **Recettes / Gems** | Recipes by craft skill, and a gem calculator that expands a target into a flat shopping list minus what you own. |
@@ -40,9 +41,9 @@ title. A game patch occasionally renames the window; the current default is
 | **Cris** | Saved shouts, copied to the clipboard in one click. |
 | **Extensions** | Mod manager for client-file mods: enable copies files in, disable restores the originals. |
 
-Sections that need a **live game-state feed** (Personnage, Butin, DPS,
-Monstres) stay disabled. RoseLite ships no data source of its own and reads
-nothing out of the client; they light up on their own once a source exists.
+Sections that need a **live game-state feed** (Tracker, Personnage, Butin, and
+DPS) stay disabled in the public build. RoseLite ships no live event source;
+those sections can use one later without changing their plugins.
 Plugins are written against the `api` object, never against where the data came
 from — so when an official client API ships, existing plugins keep working.
 
@@ -98,7 +99,7 @@ with no game running, on any OS. There is no test framework — modules carry
 runnable self-checks: `node overlay/data.js`, `node overlay/kings.test.js`,
 `node overlay/gems-calc.test.js`, `node overlay/mods.js`, `node src/feeds.js`,
 `node src/updater.js`, `node src/appupdater.js`, `node src/progressstore.test.js`,
-`node src/accountstore.js`, `node site/site.test.js`. Run the ones you touched.
+`node src/accountstore.js`, `node src/marketdata.js`, `node site/site.test.js`. Run the ones you touched.
 
 ## Writing a plugin
 
@@ -118,7 +119,7 @@ The API is deliberately tiny and grows only on need:
 |---|---|
 | `api.addWidget(html, slot?)` | add a widget (default slot, or `'character'`/`'butin'`), returns its element |
 | `api.every(ms, fn)` | repeating tick |
-| `api.on(type, cb)` | subscribe to data-source frames (`spawn`, `hp`, …) |
+| `api.on(type, cb)` | subscribe to semantic events (`spawn`, `hp`, …) |
 | `api.notify({ title, body?, tone?, sound?, onClick? })` | toast + optional named sound, logged in the header bell |
 | `api.sound(name)` / `api.soundSelect(cur, onChange)` | play a named alert / build a sound-picker `<select>` |
 
@@ -135,7 +136,7 @@ still delivering hover events, so widgets can opt into interactivity.
 
 `.github/workflows/release.yml` builds and publishes the Windows installer when
 a `v*.*.*` tag is pushed. It checks the tag against `package.json`, verifies the
-tracked `RoseData/` payload, runs every self-check, and uploads the NSIS
+tracked `RoseData/` payload, runs the release self-check gate, and uploads the NSIS
 installer, its blockmap and `latest.yml` as a GitHub Release — which is what
 installed copies read on their next launch. Never rename or omit `latest.yml`,
 and never move a published tag.

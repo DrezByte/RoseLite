@@ -1,0 +1,31 @@
+RoseLite bundled font notices
+=============================
+
+The WOFF2 files in this directory are separately licensed under the SIL Open
+Font License, Version 1.1. See OFL-1.1.txt in this directory for the complete
+license text.
+
+The currently bundled families and upstream copyright notices are:
+
+Barlow and Barlow Condensed
+Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
+
+Cinzel
+Copyright 2020 The Cinzel Project Authors (https://github.com/NDISCOVER/Cinzel)
+
+EB Garamond
+Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/EBGaramond12)
+
+Fredoka
+Copyright 2016 The Fredoka Project Authors (https://github.com/hafontia/Fredoka-One)
+
+JetBrains Mono
+Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+
+Manrope
+Copyright 2018 The Manrope Project Authors (https://github.com/sharanda/manrope)
+
+These notices were verified against the corresponding Google Fonts upstream
+OFL files on 2026-08-25. The repository did not retain exact upstream version
+or source-revision records for the already-bundled WOFF2 binaries; maintainers
+should preserve that information when replacing or regenerating a font.

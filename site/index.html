@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RoseLite — The ROSE Online companion</title>
-<meta name="description" content="A free, community-built desktop companion for ROSE Online with timers, item data, market tools, quest guides, and an overlay that stays beside your game.">
+<meta name="description" content="A free, community-built desktop companion for ROSE Online with offline catalogs, king timers, quest and crafting tools, plus an online market board.">
 <meta name="theme-color" content="#0d0920">
 <meta property="og:type" content="website">
 <meta property="og:title" content="RoseLite — The ROSE Online companion">
@@ -108,7 +108,7 @@
           Built for the ROSE Online community
         </div>
         <h1 style="font:600 clamp(42px,5.4vw,70px)/1.04 'Fredoka';margin:0 0 22px;letter-spacing:-0.015em">Adventure smarter in <span style="color:var(--accent-3)">ROSE&nbsp;Online</span>.</h1>
-        <p style="font:400 19px/1.6 'Manrope';color:rgba(255,255,255,0.7);max-width:34ch;margin:0 0 34px">The all-in-one desktop companion — item database, live market prices, drop tracking and quest guides, right beside your game.</p>
+        <p style="font:400 19px/1.6 'Manrope';color:rgba(255,255,255,0.7);max-width:36ch;margin:0 0 34px">A desktop companion with offline item and monster catalogs, quest and crafting tools, king timers, and an online market board — right beside your game.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px">
           <a href="https://github.com/DrezByte/RoseLite/releases/latest/download/RoseLite-Setup.exe" style="display:inline-flex;align-items:center;gap:10px;padding:15px 27px;border-radius:13px;background:linear-gradient(120deg,var(--accent),var(--accent-3));color:#fff;font:700 16px 'Manrope';box-shadow:0 12px 32px rgba(240,128,28,0.42);transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 18px 44px rgba(240,128,28,0.58);color:#fff">
             <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
@@ -130,30 +130,21 @@
   </div>
   
   <div data-float style="position:absolute;top:-24px;left:-34px;display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:15px;background:rgba(20,14,38,0.85);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.13);box-shadow:0 22px 54px rgba(0,0,0,0.5);animation:floaty2 6s ease-in-out infinite">
-    
-    <img src="assets/faust.png" alt="Faust Tome" style="width:42px;height:42px;border-radius:11px;flex:none;object-fit:cover;" />
-    
+    <span aria-hidden="true" style="width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-3));color:#fff;font:700 20px 'Fredoka';flex:none">K</span>
     <div>
-      <div style="font:700 10.5px 'JetBrains Mono';letter-spacing:.09em;color:var(--accent-3);text-transform:uppercase">Rare drop!</div>
-      <div style="font:600 14px 'Manrope';color:#fff;margin-top:2px">Faust</div>
-      
-      <div style="font:500 12px 'Manrope';color:rgba(140, 60, 174, 0.7);margin-top:4px"><b>48 000 000 zulies !</b></div>
+      <div style="font:700 10.5px 'JetBrains Mono';letter-spacing:.09em;color:var(--accent-3);text-transform:uppercase">Next king</div>
+      <div style="font:600 14px 'Manrope';color:#fff;margin-top:2px">Moon Child</div>
+      <div style="font:600 12px 'JetBrains Mono';color:var(--accent-2);margin-top:4px">12m 34s</div>
     </div>
   </div>
   
   <div data-float style="position:absolute;bottom:-22px;right:-28px;padding:14px 17px;border-radius:15px;background:rgba(20,14,38,0.85);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.13);box-shadow:0 22px 54px rgba(0,0,0,0.5);animation:floaty 6.6s ease-in-out infinite">
-    <div style="font:500 10px 'JetBrains Mono';letter-spacing:.07em;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:6px">Session · zulie / hr</div>
+    <div style="font:500 10px 'JetBrains Mono';letter-spacing:.07em;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:6px">Progress · local</div>
     <div style="display:flex;align-items:baseline;gap:8px">
-      <span style="font:700 23px 'Fredoka';color:#fff;line-height:1">64,240,731</span>
-      <span style="font:600 12px 'Manrope';color:var(--accent-2)">▲ 28%</span>
+      <span style="font:700 23px 'Fredoka';color:#fff;line-height:1">42 quests</span>
+      <span style="font:600 12px 'Manrope';color:var(--accent-2)">exportable</span>
     </div>
-    <div style="display:flex;align-items:flex-end;gap:3px;height:22px;margin-top:9px">
-      <span style="width:6px;height:40%;background:rgba(62,207,206,0.4);border-radius:2px"></span>
-      <span style="width:6px;height:62%;background:rgba(62,207,206,0.55);border-radius:2px"></span>
-      <span style="width:6px;height:48%;background:rgba(62,207,206,0.45);border-radius:2px"></span>
-      <span style="width:6px;height:80%;background:rgba(62,207,206,0.7);border-radius:2px"></span>
-      <span style="width:6px;height:100%;background:var(--accent-2);border-radius:2px"></span>
-    </div>
+    <div style="width:190px;height:5px;border-radius:99px;background:rgba(255,255,255,0.12);margin-top:12px;overflow:hidden"><span style="display:block;width:62%;height:100%;background:var(--accent-2);border-radius:inherit"></span></div>
   </div>
 </div>
     </div>
@@ -164,52 +155,52 @@
   <section id="features" data-screen-label="Features" style="position:relative;padding:clamp(80px,10vw,128px) clamp(20px,5vw,56px);background:#f7f4fb">
     <div style="max-width:1200px;margin:0 auto">
       <div style="max-width:660px;margin-bottom:56px">
-        <span style="display:inline-flex;align-items:center;gap:9px;font:700 12px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--accent)"><span style="width:22px;height:2px;background:var(--accent);border-radius:2px"></span>Everything in one overlay</span>
-        <h2 style="font:600 clamp(30px,4vw,47px)/1.08 'Fredoka';color:#1a1330;margin:14px 0 16px;letter-spacing:-0.015em">One companion for every kind of adventurer</h2>
-        <p style="font:400 18px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Whether you're chasing rare drops, flipping the market, or just need a nudge through a quest — there's a tool for it, and they all talk to each other.</p>
+        <span style="display:inline-flex;align-items:center;gap:9px;font:700 12px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--accent)"><span style="width:22px;height:2px;background:var(--accent);border-radius:2px"></span>Useful from the first launch</span>
+        <h2 style="font:600 clamp(30px,4vw,47px)/1.08 'Fredoka';color:#1a1330;margin:14px 0 16px;letter-spacing:-0.015em">Offline reference tools, organized beside the game</h2>
+        <p style="font:400 18px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Browse items and monsters, plan crafting, mark quest progress, time kings, and open related records without leaving the companion.</p>
       </div>
       <div class="features-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
 
         <div style="background:#fff;border:1px solid rgba(26,19,48,0.07);border-radius:18px;padding:30px 28px;box-shadow:0 1px 3px rgba(26,19,48,0.04);transition:transform .22s,box-shadow .22s,border-color .22s" style-hover="transform:translateY(-5px);box-shadow:0 22px 46px rgba(26,19,48,0.1);border-color:rgba(240,128,28,0.25)">
           <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(240,128,28,0.15),rgba(62,207,206,0.14));display:grid;place-items:center;color:var(--accent);margin-bottom:20px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path><path d="M3 12a9 3 0 0 0 18 0"></path></svg></div>
           <h3 style="font:600 20px 'Fredoka';color:#1a1330;margin:0 0 9px">Item Database</h3>
-          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Every weapon, gear set and material with full stats, refine tables and exactly where to farm it.</p>
+          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Search more than 19,000 items, inspect available stats, and follow links to NPC sources, recipes, and monsters that drop them.</p>
         </div>
 
         <div style="background:#fff;border:1px solid rgba(26,19,48,0.07);border-radius:18px;padding:30px 28px;box-shadow:0 1px 3px rgba(26,19,48,0.04);transition:transform .22s,box-shadow .22s,border-color .22s" style-hover="transform:translateY(-5px);box-shadow:0 22px 46px rgba(26,19,48,0.1);border-color:rgba(62,207,206,0.3)">
           <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(62,207,206,0.16),rgba(123,108,240,0.12));display:grid;place-items:center;color:var(--accent-2);margin-bottom:20px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.3 9 5.1"></path><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg></div>
-          <h3 style="font:600 20px 'Fredoka';color:#1a1330;margin:0 0 9px">Drop Tracker</h3>
-          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Log your grind in real time — kills, drops per hour, rare-drop alerts and total session value.</p>
+          <h3 style="font:600 20px 'Fredoka';color:#1a1330;margin:0 0 9px">King Respawn Timers</h3>
+          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Tap when one of 100 kings is defeated, then sort the offline countdown board by zone or next spawn.</p>
         </div>
 
         <div style="background:#fff;border:1px solid rgba(26,19,48,0.07);border-radius:18px;padding:30px 28px;box-shadow:0 1px 3px rgba(26,19,48,0.04);transition:transform .22s,box-shadow .22s,border-color .22s" style-hover="transform:translateY(-5px);box-shadow:0 22px 46px rgba(26,19,48,0.1);border-color:rgba(246,165,58,0.3)">
           <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(246,165,58,0.18),rgba(240,128,28,0.12));display:grid;place-items:center;color:var(--accent-3);margin-bottom:20px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.71.71-2.83 2.83"></path></svg></div>
-          <h3 style="font:600 20px 'Fredoka';color:#1a1330;margin:0 0 9px">Market &amp; Economy</h3>
-          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Live price history, buy/sell trends and profit margins across every trade channel.</p>
+          <h3 style="font:600 20px 'Fredoka';color:#1a1330;margin:0 0 9px">Market Board</h3>
+          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">When online, compare current listings, trending items, and 7-, 30-, or 90-day price history from the configured market service.</p>
         </div>
 
         <div style="background:#fff;border:1px solid rgba(26,19,48,0.07);border-radius:18px;padding:30px 28px;box-shadow:0 1px 3px rgba(26,19,48,0.04);transition:transform .22s,box-shadow .22s,border-color .22s" style-hover="transform:translateY(-5px);box-shadow:0 22px 46px rgba(26,19,48,0.1);border-color:rgba(240,128,28,0.25)">
           <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(240,128,28,0.15),rgba(62,207,206,0.14));display:grid;place-items:center;color:var(--accent);margin-bottom:20px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg></div>
-          <h3 style="font:600 20px 'Fredoka';color:#1a1330;margin:0 0 9px">Quest Helper</h3>
-          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Step-by-step quest chains with objectives, rewards and NPC locations pinned to the map.</p>
+          <h3 style="font:600 20px 'Fredoka';color:#1a1330;margin:0 0 9px">Quest Progress</h3>
+          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Browse quest chains, filter by level and planet, review objectives and rewards, and mark completed quests.</p>
         </div>
 
         <div style="background:#fff;border:1px solid rgba(26,19,48,0.07);border-radius:18px;padding:30px 28px;box-shadow:0 1px 3px rgba(26,19,48,0.04);transition:transform .22s,box-shadow .22s,border-color .22s" style-hover="transform:translateY(-5px);box-shadow:0 22px 46px rgba(26,19,48,0.1);border-color:rgba(62,207,206,0.3)">
           <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(62,207,206,0.16),rgba(123,108,240,0.12));display:grid;place-items:center;color:var(--accent-2);margin-bottom:20px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.1 5.55a2 2 0 0 0 1.8 0l3.65-1.83A1 1 0 0 1 21 4.62v12.76a1 1 0 0 1-.55.9l-4.55 2.27a2 2 0 0 1-1.8 0l-4.2-2.1a2 2 0 0 0-1.8 0l-3.65 1.83A1 1 0 0 1 3 19.38V6.62a1 1 0 0 1 .55-.9l4.55-2.27a2 2 0 0 1 1.8 0z"></path><path d="M15 5.76v15"></path><path d="M9 3.24v15"></path></svg></div>
-          <h3 style="font:600 20px 'Fredoka';color:#1a1330;margin:0 0 9px">Guides &amp; Builds</h3>
-          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Class builds, stat calculators and leveling routes from the community's best players.</p>
+          <h3 style="font:600 20px 'Fredoka';color:#1a1330;margin:0 0 9px">Crafting &amp; Gems</h3>
+          <p style="font:400 15px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">Browse recipes by craft skill and expand gem upgrades into a shopping list that accounts for lower ranks you own.</p>
         </div>
 
         <div style="background:linear-gradient(135deg,#1a1038,#241748);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:30px 28px;color:#fff;transition:transform .22s,box-shadow .22s" style-hover="transform:translateY(-5px);box-shadow:0 22px 46px rgba(26,19,48,0.24)">
           <div style="width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,0.08);display:grid;place-items:center;color:var(--accent-3);margin-bottom:20px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"></path></svg></div>
           <h3 style="font:600 20px 'Fredoka';color:#fff;margin:0 0 14px">…and so much more</h3>
           <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">DPS meter</span>
-            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Party finder</span>
-            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">World map</span>
-            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Boss timers</span>
-            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Skill planner</span>
-            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Refine simulator</span>
+            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Monster drops</span>
+            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Dungeon logs</span>
+            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Guides</span>
+            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Event calendar</span>
+            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Saved shouts</span>
+            <span style="padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.08);font:600 13px 'Manrope';color:rgba(255,255,255,0.82)">Mod manager</span>
           </div>
         </div>
 
@@ -223,7 +214,7 @@
       <div style="text-align:center;max-width:680px;margin:0 auto 46px">
         <span style="display:inline-flex;align-items:center;gap:9px;font:700 12px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--accent)"><span style="width:22px;height:2px;background:var(--accent);border-radius:2px"></span>Refined, not cluttered</span>
         <h2 style="font:600 clamp(28px,3.6vw,44px)/1.1 'Fredoka';color:#1a1330;margin:14px 0 16px;letter-spacing:-0.015em">Data-dense when you want it.<br>Out of the way when you don't.</h2>
-        <p style="font:400 18px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">A fast, native interface that feels right at home next to the game — dark, legible and built for long grinding sessions.</p>
+        <p style="font:400 18px/1.6 'Manrope';color:rgba(26,19,48,0.6);margin:0">A focused desktop interface that docks beside the game, collapses to an icon rail, or opens as a standalone window.</p>
       </div>
 
       <div class="app-window" style="border-radius:18px;overflow:hidden;background:#141026;border:1px solid rgba(26,19,48,0.08);box-shadow:0 50px 110px rgba(26,19,48,0.3)">
@@ -241,10 +232,10 @@
         </div>
         <div style="display:flex;align-items:center;gap:6px;padding:11px 16px;background:#171130;border-bottom:1px solid rgba(255,255,255,0.06)">
           <button onClick="{{ setItems }}" style="{{ tabStyleItems }}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path><path d="M3 12a9 3 0 0 0 18 0"></path></svg>Item Database</button>
-          <button onClick="{{ setDrops }}" style="{{ tabStyleDrops }}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>Drop Tracker</button>
+          <button onClick="{{ setDrops }}" style="{{ tabStyleDrops }}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>King Timers</button>
           <button onClick="{{ setMarket }}" style="{{ tabStyleMarket }}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path></svg>Market</button>
           <div style="flex:1"></div>
-          <div style="display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:8px;background:rgba(91,214,160,0.12);font:600 12px 'JetBrains Mono';color:#5bd6a0"><span style="width:7px;height:7px;border-radius:50%;background:#5bd6a0;box-shadow:0 0 8px #5bd6a0"></span>Connected · Auros Bay</div>
+          <div style="display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:8px;background:rgba(91,214,160,0.12);font:600 12px 'JetBrains Mono';color:#5bd6a0"><span style="width:7px;height:7px;border-radius:50%;background:#5bd6a0"></span>Progress saved locally</div>
         </div>
 
         <div style="padding:22px;min-height:452px;background:#141026">
@@ -252,7 +243,7 @@
           <sc-if value="{{ showItems }}" hint-placeholder-val="{{ true }}">
             <div style="display:grid;grid-template-columns:300px 1fr;gap:20px">
               <div>
-                <div style="display:flex;align-items:center;gap:9px;padding:11px 13px;border-radius:10px;background:#1d1738;border:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.4);font:500 13.5px 'Manrope';margin-bottom:14px"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>Search 5,214 items…</div>
+                <div style="display:flex;align-items:center;gap:9px;padding:11px 13px;border-radius:10px;background:#1d1738;border:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.4);font:500 13.5px 'Manrope';margin-bottom:14px"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>Search 19,000+ items…</div>
                 <div style="display:flex;flex-direction:column;gap:7px">
                   <div style="display:flex;align-items:center;gap:11px;padding:11px;border-radius:10px;background:rgba(246,165,58,0.09);border:1px solid rgba(246,165,58,0.35)"><span style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#f6a53a,#f0801c);flex:none"></span><div style="flex:1;min-width:0"><div style="font:600 13.5px 'Manrope';color:#fff">Katar of the Moon</div><div style="font:500 11px 'JetBrains Mono';color:#f6a53a">Legendary · Katar</div></div></div>
                   <div style="display:flex;align-items:center;gap:11px;padding:11px;border-radius:10px;background:#1a1436;border:1px solid transparent"><span style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#b06cf0,#7b6cf0);flex:none"></span><div style="flex:1;min-width:0"><div style="font:600 13.5px 'Manrope';color:rgba(255,255,255,0.85)">Astral Robe</div><div style="font:500 11px 'JetBrains Mono';color:#b06cf0">Epic · Robe</div></div></div>
@@ -274,8 +265,8 @@
                 </div>
                 <div style="font:600 11px 'JetBrains Mono';letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:11px">Drops from</div>
                 <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px">
-                  <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-radius:9px;background:#221a42"><span style="font:600 13.5px 'Manrope';color:rgba(255,255,255,0.9)">Moonlit Reaper</span><span style="display:flex;gap:16px;font:600 12.5px 'JetBrains Mono'"><span style="color:rgba(255,255,255,0.5)">Kenata Polluted</span><span style="color:#f6a53a">0.08%</span></span></div>
-                  <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-radius:9px;background:#221a42"><span style="font:600 13.5px 'Manrope';color:rgba(255,255,255,0.9)">Ancient Golem</span><span style="display:flex;gap:16px;font:600 12.5px 'JetBrains Mono'"><span style="color:rgba(255,255,255,0.5)">Forest of Wisdom</span><span style="color:#f6a53a">0.03%</span></span></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-radius:9px;background:#221a42"><span style="font:600 13.5px 'Manrope';color:rgba(255,255,255,0.9)">Moonlit Reaper</span><span style="display:flex;gap:16px;font:600 12.5px 'JetBrains Mono'"><span style="color:rgba(255,255,255,0.5)">Kenata Polluted</span><span style="color:#f6a53a">Lv. 145</span></span></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-radius:9px;background:#221a42"><span style="font:600 13.5px 'Manrope';color:rgba(255,255,255,0.9)">Ancient Golem</span><span style="display:flex;gap:16px;font:600 12.5px 'JetBrains Mono'"><span style="color:rgba(255,255,255,0.5)">Forest of Wisdom</span><span style="color:#f6a53a">Lv. 151</span></span></div>
                 </div>
                 <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-radius:11px;background:linear-gradient(120deg,rgba(240,128,28,0.12),rgba(62,207,206,0.1));border:1px solid rgba(255,255,255,0.07)"><span style="font:600 13px 'Manrope';color:rgba(255,255,255,0.7)">Avg. market price</span><span style="display:flex;align-items:baseline;gap:10px"><span style="font:700 20px 'JetBrains Mono';color:#fff">2.4M</span><span style="font:600 12px 'Manrope';color:#5bd6a0">▲ 6.1% / 7d</span></span></div>
               </div>
@@ -284,36 +275,21 @@
 
           <sc-if value="{{ showDrops }}" hint-placeholder-val="{{ false }}">
             <div style="display:grid;grid-template-columns:1fr 300px;gap:20px">
-              <div>
-                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
-                  <div style="padding:16px;border-radius:12px;background:#1a1436;border:1px solid rgba(255,255,255,0.06)"><div style="font:500 10.5px 'JetBrains Mono';color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:.05em">Kills</div><div style="font:700 26px 'Fredoka';color:#fff;margin-top:5px">1,284</div></div>
-                  <div style="padding:16px;border-radius:12px;background:#1a1436;border:1px solid rgba(255,255,255,0.06)"><div style="font:500 10.5px 'JetBrains Mono';color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:.05em">Session</div><div style="font:700 26px 'Fredoka';color:#fff;margin-top:5px">2h 14m</div></div>
-                  <div style="padding:16px;border-radius:12px;background:#1a1436;border:1px solid rgba(255,255,255,0.06)"><div style="font:500 10.5px 'JetBrains Mono';color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:.05em">Zulie / hr</div><div style="font:700 26px 'Fredoka';color:var(--accent-2);margin-top:5px">1,240</div></div>
-                </div>
-                <div style="border-radius:12px;background:#1a1436;border:1px solid rgba(255,255,255,0.06);overflow:hidden">
-                  <div style="display:grid;grid-template-columns:64px 1fr 70px 90px;gap:10px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.06);font:600 10.5px 'JetBrains Mono';letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,0.4)"><span>Time</span><span>Item</span><span>Qty</span><span style="text-align:right">Value</span></div>
-                  <div style="display:grid;grid-template-columns:64px 1fr 70px 90px;gap:10px;padding:12px 16px;align-items:center;border-bottom:1px solid rgba(255,255,255,0.04)"><span style="font:500 12px 'JetBrains Mono';color:rgba(255,255,255,0.45)">14:02</span><span style="font:600 13px 'Manrope';color:#f6a53a">Katar of the Moon +7</span><span style="font:500 12px 'JetBrains Mono';color:rgba(255,255,255,0.7)">1</span><span style="font:600 12.5px 'JetBrains Mono';color:#fff;text-align:right">2.4M</span></div>
-                  <div style="display:grid;grid-template-columns:64px 1fr 70px 90px;gap:10px;padding:12px 16px;align-items:center;border-bottom:1px solid rgba(255,255,255,0.04)"><span style="font:500 12px 'JetBrains Mono';color:rgba(255,255,255,0.45)">13:58</span><span style="font:600 13px 'Manrope';color:#b06cf0">Astral Robe</span><span style="font:500 12px 'JetBrains Mono';color:rgba(255,255,255,0.7)">1</span><span style="font:600 12.5px 'JetBrains Mono';color:#fff;text-align:right">1.2M</span></div>
-                  <div style="display:grid;grid-template-columns:64px 1fr 70px 90px;gap:10px;padding:12px 16px;align-items:center;border-bottom:1px solid rgba(255,255,255,0.04)"><span style="font:500 12px 'JetBrains Mono';color:rgba(255,255,255,0.45)">13:51</span><span style="font:600 13px 'Manrope';color:#5bd6a0">Ruby Ore</span><span style="font:500 12px 'JetBrains Mono';color:rgba(255,255,255,0.7)">14</span><span style="font:600 12.5px 'JetBrains Mono';color:#fff;text-align:right">308k</span></div>
-                  <div style="display:grid;grid-template-columns:64px 1fr 70px 90px;gap:10px;padding:12px 16px;align-items:center"><span style="font:500 12px 'JetBrains Mono';color:rgba(255,255,255,0.45)">13:44</span><span style="font:600 13px 'Manrope';color:rgba(255,255,255,0.85)">Zulie Purse</span><span style="font:500 12px 'JetBrains Mono';color:rgba(255,255,255,0.7)">37</span><span style="font:600 12.5px 'JetBrains Mono';color:#fff;text-align:right">92k</span></div>
-                </div>
+              <div style="border-radius:12px;background:#1a1436;border:1px solid rgba(255,255,255,0.06);overflow:hidden">
+                <div style="display:grid;grid-template-columns:1fr 130px 90px;gap:10px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.06);font:600 10.5px 'JetBrains Mono';letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,0.4)"><span>King</span><span>Zone</span><span style="text-align:right">Next spawn</span></div>
+                <div style="display:grid;grid-template-columns:1fr 130px 90px;gap:10px;padding:15px 16px;align-items:center;border-bottom:1px solid rgba(255,255,255,0.04)"><span style="font:600 14px 'Manrope';color:#f6a53a">Moon Child</span><span style="font:500 12px 'Manrope';color:rgba(255,255,255,0.55)">Luna</span><span style="font:700 13px 'JetBrains Mono';color:var(--accent-2);text-align:right">12:34</span></div>
+                <div style="display:grid;grid-template-columns:1fr 130px 90px;gap:10px;padding:15px 16px;align-items:center;border-bottom:1px solid rgba(255,255,255,0.04)"><span style="font:600 14px 'Manrope';color:#fff">Aqua King</span><span style="font:500 12px 'Manrope';color:rgba(255,255,255,0.55)">Junon</span><span style="font:700 13px 'JetBrains Mono';color:#fff;text-align:right">28:09</span></div>
+                <div style="display:grid;grid-template-columns:1fr 130px 90px;gap:10px;padding:15px 16px;align-items:center"><span style="font:600 14px 'Manrope';color:#fff">Behemoth King</span><span style="font:500 12px 'Manrope';color:rgba(255,255,255,0.55)">Eldeon</span><span style="font:700 13px 'JetBrains Mono';color:#fff;text-align:right">41:52</span></div>
               </div>
               <div style="display:flex;flex-direction:column;gap:14px">
                 <div style="padding:20px;border-radius:12px;background:linear-gradient(150deg,rgba(240,128,28,0.16),rgba(62,207,206,0.1));border:1px solid rgba(255,255,255,0.08)">
-                  <div style="font:500 11px 'JetBrains Mono';color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:.06em">Session value</div>
-                  <div style="font:700 34px 'Fredoka';color:#fff;margin-top:6px;line-height:1">4.1M</div>
-                  <div style="font:600 12.5px 'Manrope';color:#5bd6a0;margin-top:6px">▲ best run this week</div>
+                  <div style="font:500 11px 'JetBrains Mono';color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:.06em">Tracked kings</div>
+                  <div style="font:700 34px 'Fredoka';color:#fff;margin-top:6px;line-height:1">100</div>
+                  <div style="font:600 12.5px 'Manrope';color:#5bd6a0;margin-top:6px">Works offline</div>
                 </div>
                 <div style="padding:18px;border-radius:12px;background:#1a1436;border:1px solid rgba(255,255,255,0.06)">
-                  <div style="font:500 11px 'JetBrains Mono';color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px">Drops / hr</div>
-                  <div style="display:flex;align-items:flex-end;gap:6px;height:78px">
-                    <span style="flex:1;height:44%;background:rgba(62,207,206,0.4);border-radius:3px"></span>
-                    <span style="flex:1;height:60%;background:rgba(62,207,206,0.5);border-radius:3px"></span>
-                    <span style="flex:1;height:52%;background:rgba(62,207,206,0.45);border-radius:3px"></span>
-                    <span style="flex:1;height:78%;background:rgba(62,207,206,0.65);border-radius:3px"></span>
-                    <span style="flex:1;height:68%;background:rgba(62,207,206,0.55);border-radius:3px"></span>
-                    <span style="flex:1;height:100%;background:var(--accent-2);border-radius:3px"></span>
-                  </div>
+                  <div style="font:600 14px 'Manrope';color:#fff;margin-bottom:8px">Tap a king after a defeat</div>
+                  <div style="font:400 13px/1.55 'Manrope';color:rgba(255,255,255,0.55)">RoseLite starts its countdown and can notify you when the respawn window arrives.</div>
                 </div>
               </div>
             </div>
@@ -356,9 +332,9 @@
       <div>
         <span style="display:inline-flex;align-items:center;gap:9px;font:700 12px 'JetBrains Mono';letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)"><span style="width:22px;height:2px;background:var(--accent-2);border-radius:2px"></span>Community-built</span>
         <h2 style="font:600 clamp(28px,3.6vw,44px)/1.1 'Fredoka';color:#fff;margin:14px 0 18px;letter-spacing:-0.015em">Built by adventurers, for adventurers</h2>
-        <p style="font:400 18px/1.65 'Manrope';color:rgba(255,255,255,0.68);margin:0 0 30px">RoseLite is built alongside the ROSE community, in the open. It runs entirely on your own PC — no account, no sign-in, nothing to upload — and your timers, quests and notes are a file you can carry anywhere.</p>
+        <p style="font:400 18px/1.65 'Manrope';color:rgba(255,255,255,0.68);margin:0 0 30px">RoseLite is built in the open and requires no RoseLite account or sign-in. Progress stays on this PC, and Settings can export it to a file you carry yourself. Market prices, news and update checks require an internet connection; the bundled catalogs, guides, timers, and saved progress remain local.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px">
-          <a href="#features" style="display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;background:#fff;color:#1a1330;font:700 15px 'Manrope';transition:transform .2s" style-hover="transform:translateY(-2px);color:#1a1330">Explore the features</a>a>
+          <a href="#features" style="display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;background:#fff;color:#1a1330;font:700 15px 'Manrope';transition:transform .2s" style-hover="transform:translateY(-2px);color:#1a1330">Explore the features</a>
           <a href="https://discord.gg/roseonline" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);color:#fff;font:700 15px 'Manrope';transition:background .2s" style-hover="background:rgba(255,255,255,0.15);color:#fff"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>Join the Discord</a>
         </div>
       </div>
@@ -366,7 +342,7 @@
         <div style="padding:24px;border-radius:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09)"><div style="font:600 28px 'Fredoka';color:#fff;line-height:1">Local first</div><div style="font:500 13.5px 'Manrope';color:rgba(255,255,255,0.55);margin-top:8px">No account required</div></div>
         <div style="padding:24px;border-radius:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09)"><div style="font:600 28px 'Fredoka';color:var(--accent);line-height:1">19k+ items</div><div style="font:500 13.5px 'Manrope';color:rgba(255,255,255,0.55);margin-top:8px">Searchable game catalog</div></div>
         <div style="padding:24px;border-radius:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09)"><div style="font:600 28px 'Fredoka';color:var(--accent-2);line-height:1">Open source</div><div style="font:500 13.5px 'Manrope';color:rgba(255,255,255,0.55);margin-top:8px">Export your progress any time</div></div>
-        <div style="padding:24px;border-radius:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09)"><div style="font:600 28px 'Fredoka';color:var(--accent-3);line-height:1">Read only</div><div style="font:500 13.5px 'Manrope';color:rgba(255,255,255,0.55);margin-top:8px">No injection or memory reads</div></div>
+        <div style="padding:24px;border-radius:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09)"><div style="font:600 28px 'Fredoka';color:var(--accent-3);line-height:1">Player-led</div><div style="font:500 13.5px 'Manrope';color:rgba(255,255,255,0.55);margin-top:8px">You control timers and logs</div></div>
       </div>
     </div>
   </section>
@@ -399,7 +375,7 @@
     <div data-float style="position:absolute;top:-30%;left:50%;width:640px;height:640px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(240,128,28,0.3),transparent 62%);filter:blur(46px);animation:mist 20s ease-in-out infinite;pointer-events:none"></div>
     <div style="position:relative;z-index:2;max-width:660px;margin:0 auto">
       <h2 style="font:600 clamp(30px,4.4vw,50px)/1.08 'Fredoka';margin:0 0 16px;letter-spacing:-0.015em">Get RoseLite for Windows.</h2>
-      <p style="font:400 18px/1.6 'Manrope';color:rgba(255,255,255,0.7);margin:0 0 32px">Free, open source, and yours to keep. The installer always downloads the newest release, and RoseLite updates itself from then on.</p>
+      <p style="font:400 18px/1.6 'Manrope';color:rgba(255,255,255,0.7);margin:0 0 32px">Free and open source. The installer link always targets the newest GitHub release; RoseLite can check for later updates when you are online.</p>
       <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:22px">
         <a href="https://github.com/DrezByte/RoseLite/releases/latest/download/RoseLite-Setup.exe" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:13px;background:linear-gradient(120deg,var(--accent),var(--accent-3));color:#fff;font:700 16.5px 'Manrope';box-shadow:0 14px 36px rgba(240,128,28,0.28);transition:transform .2s,box-shadow .2s" style-hover="transform:translateY(-2px);box-shadow:0 18px 44px rgba(240,128,28,0.5);color:#fff"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>Download for Windows</a>
         <a href="https://discord.gg/roseonline" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:13px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);color:#fff;font:700 16.5px 'Manrope';transition:background .2s" style-hover="background:rgba(255,255,255,0.15);color:#fff"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>Join the Discord</a>
@@ -443,6 +419,8 @@
             <a href="#app" style="font:500 14.5px 'Manrope';color:rgba(255,255,255,0.62)" style-hover="color:#fff">Market</a>
             <a href="#features" style="font:500 14.5px 'Manrope';color:rgba(255,255,255,0.62)" style-hover="color:#fff">Features</a>
             <a href="#download" style="font:500 14.5px 'Manrope';color:rgba(255,255,255,0.62)" style-hover="color:#fff">Windows build</a>
+            <a href="https://github.com/DrezByte/RoseLite/blob/main/LICENSE" target="_blank" rel="noreferrer" style="font:500 14.5px 'Manrope';color:rgba(255,255,255,0.62)" style-hover="color:#fff">MIT license</a>
+            <a href="https://github.com/DrezByte/RoseLite/blob/main/NOTICE" target="_blank" rel="noreferrer" style="font:500 14.5px 'Manrope';color:rgba(255,255,255,0.62)" style-hover="color:#fff">Third-party notices</a>
           </div>
         </div>
       </div>
@@ -450,7 +428,7 @@
         <p style="font:400 12.5px/1.6 'Manrope';color:rgba(255,255,255,0.38);max-width:70ch;margin:0">{{ name }} is a fan-made, community-run project. It is not affiliated with, endorsed by, or sponsored by the creators, developers or publishers of ROSE Online. All game names, trademarks and artwork are the property of their respective owners.</p>
         <span style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap">
           <img src="assets/logo.webp" alt="" style="height:16px;width:auto;display:block;opacity:.28"/>
-          <span style="font:500 12.5px 'JetBrains Mono';color:rgba(255,255,255,0.3)">© 2026 {{ name }}</span>
+          <span style="font:500 12.5px 'JetBrains Mono';color:rgba(255,255,255,0.3)">© 2026 DrezByte</span>
         </span>
       </div>
     </div>
@@ -466,12 +444,12 @@ const THEMES = {
 };
 
 const FAQ = [
-  { q: 'How does RoseLite interact with the game?', a: 'RoseLite stays outside the game process. It never injects a DLL or reads client memory. Features are built on timers, window information, manual input and public game data.' },
-  { q: 'Do I need an account?', a: 'No. RoseLite has no sign-in at all. Your saved ROSE logins, timers, quests and notes live on your own PC, and Settings can export them to a file you carry to another machine yourself.' },
-  { q: 'Can I download it now?', a: 'Yes. The Download button gives you the latest Windows installer straight from the project\u2019s GitHub releases. After that RoseLite keeps itself up to date \u2014 it checks on launch and installs new versions in the background.' },
-  { q: 'Which platforms are supported?', a: 'Windows 10 and 11, because ROSE Online and the docked overlay workflow are Windows-first. The source builds on macOS for development, but there is no supported macOS release.' },
-  { q: 'Where does item and market data come from?', a: 'The item catalog is built from ROSE game data maintained with the project. Market views use the roseutils market service through RoseLite\u2019s main process.' },
-  { q: 'How can I follow development?', a: 'RoseLite is open source \u2014 the code, the releases and the issue tracker are all public on GitHub. You can also join the ROSE Online Discord community.' },
+  { q: 'How does RoseLite work beside the game?', a: 'RoseLite is a separate desktop companion. It can dock beside the game window, collapse to an icon rail, or run as a standalone window. Shipped tools use bundled reference data, timers, and information you enter.' },
+  { q: 'Do I need an account?', a: 'No. RoseLite has no sign-in. Your timers, quest status, pins, logs, and settings stay on your PC, and Settings can export supported progress to a file you move yourself.' },
+  { q: 'Does RoseLite need internet access?', a: 'Most catalogs, guides, timers, and saved progress work offline. Market prices, news, and update checks need an internet connection.' },
+  { q: 'Can I download it now?', a: 'Yes. The Download button uses the permanent latest-release link for the Windows installer on GitHub. Update checks also use GitHub when you are online.' },
+  { q: 'Which platforms are supported?', a: 'Windows 10 and 11 are supported. The source can be used for development on macOS, but there is no supported macOS release.' },
+  { q: 'How can I follow development?', a: 'RoseLite is open source: the code, releases, and issue tracker are public on GitHub. You can also join the ROSE Online Discord community.' },
 ];
 
 class Component extends DCLogic {

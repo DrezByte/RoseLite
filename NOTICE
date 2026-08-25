@@ -1,47 +1,68 @@
 # NOTICE
 
-RoseLite is an unofficial, fan-made companion for ROSE Online. It is **not
-affiliated with** Rednim Games or the ROSE Online team. "ROSE Online" and all related names, art, and assets are the property of
-their respective owners.
+RoseLite is an unofficial, fan-made companion for ROSE Online. It is not
+affiliated with, endorsed by, or sponsored by Rednim Games or the creators,
+developers, or publishers of ROSE Online. "ROSE Online" and related names,
+trademarks, art, and game assets remain the property of their respective
+owners.
 
-The MIT license in [LICENSE](LICENSE) covers **RoseLite's own source code**:
-`src/`, `overlay/` (excluding the bundled fonts below), `plugins/`, `site/`,
-and the project's build configuration. It does not — and cannot — grant rights
-to the third-party material listed here, which is redistributed for
-interoperability and player convenience only.
+The MIT License in `LICENSE` covers RoseLite-authored source code and build
+configuration only. A path being present in this repository does not by itself
+place its contents under MIT. In particular, the MIT grant explicitly excludes
+the game-derived, third-party, and separately licensed material identified
+below.
 
-## Game data — `RoseData/`, `overlay/content/`
+## ROSE Online data, text, and visual assets
 
-Item, NPC, quest, recipe, drop, and zone tables extracted from the ROSE Online
-client's own data files, plus icon art from the same source, plus guide and
-event text adapted from community and official ROSE Online guides. Copyright
-remains with Rednim Games and the respective authors. It is included so a fresh
-clone or install has a working catalog offline; it is not licensed for reuse
-elsewhere.
+The MIT License does not apply to:
 
-If you own this content and want it removed, open an issue and it will be
-taken out.
+- `RoseData/` — item, NPC, quest, recipe, drop, and zone data extracted from or
+  derived from ROSE Online data, together with game icon art;
+- `overlay/content/` — guide and event text adapted from official and community
+  ROSE Online material;
+- game-derived or third-party visual material under `overlay/assets/`, including
+  class art, guide images, `rose_online_legend_art_73.jpg`, and any ROSE Online
+  imagery or marks incorporated into RoseLite-branded artwork; or
+- `site/assets/` — the website's ROSE Online imagery, item art, logos, and other
+  bundled visual assets.
+
+Those materials are bundled so a fresh clone or install can provide useful
+offline reference tools. RoseLite does not license them for reuse. Copyright
+and trademark rights remain with Rednim Games and the respective artists and
+authors. Any RoseLite-authored layout or composition around third-party
+material does not change the rights in the underlying material.
+
+If you own any of this content and want it removed, open an issue in the public
+RoseLite repository.
 
 ## Community mods — `mods/`
 
-Client-file mods the mod manager can install. They stay the property of their
-authors:
+Bundled client-file mods remain the property of their authors and are not
+covered by RoseLite's MIT License:
 
 - **Visual Damage Effect (PVM)** and **Visual Damage Effect (PVP)** — by
-  **@Luckystriike** (ROSE Online forums). PVM embeds the font *Lovely Bubbles*
-  by hawtpixel; PVP embeds *Road Rage* by Youssef Habchi. Credits in each mod's
-  `README.html`.
-- **Larger Drops - Big** — by RoseLite. The meshes are generated from stock game
-  assets by scaling vertex positions only; the underlying assets remain Rednim
-  Games'.
+  **@Luckystriike** (ROSE Online forums). The PVM mod embeds *Lovely Bubbles*
+  by hawtpixel; the PVP mod embeds *Road Rage* by Youssef Habchi. See each
+  mod's `README.html` for its supplied credits.
+- **Larger Drops - Big** — assembled by RoseLite from stock game meshes by
+  scaling vertex positions. The underlying game assets remain the property of
+  their owner.
+
+No broader permission is asserted for these mods beyond the permissions their
+respective owners have granted.
 
 ## Bundled fonts — `overlay/assets/fonts/`
 
-Self-hosted subsets of *Barlow*, *Cinzel*, *EB Garamond*, *Fredoka*,
-*JetBrains Mono*, and *Manrope*, each under the SIL Open Font License 1.1.
-The OFL applies to the font files, not to the rest of the project.
+The Electron UI bundles these font families: **Barlow**, **Barlow Condensed**,
+**Cinzel**, **EB Garamond**, **Fredoka**, **JetBrains Mono**, and **Manrope**.
+The font files are separately licensed under the SIL Open Font License 1.1,
+not MIT. Their upstream copyright notices are recorded in
+`overlay/assets/fonts/FONT-NOTICES.txt`; the complete license text is in
+`overlay/assets/fonts/OFL-1.1.txt`. Those files must accompany redistributed
+font binaries.
 
 ## Runtime dependencies
 
-Electron, electron-updater, and koffi are used under their own licenses; see
-`node_modules/<package>/LICENSE` in an installed tree.
+Electron, electron-updater, koffi, and development/build dependencies are used
+under their own licenses. Their package metadata and license files in an
+installed dependency tree are authoritative for those copies.

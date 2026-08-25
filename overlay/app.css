@@ -47,26 +47,10 @@
     --text-body:  14px;
     --text-lg:    16px;
     --text-xl:    20px;
-    /* Two display steps ABOVE the five-step ramp, spent only inside the
-       Collection module (docs/tcg/DESIGN.md §7). The square and the stall are
-       hero surfaces — a sign you read from across the room is not body copy.
-         2xl — room and panel titles, mid-distance sign names
-         3xl — the hero sign, a marquee, a gilt name, a takeover numeral
-       There was a third (--text-4xl: 36px). 34 and 36 are 6% apart — the same
-       sub-threshold step this ramp exists to delete — so the two display steps
-       merged and every 36/38px in the market moved onto 3xl. */
+    /* One display step above the ramp for onboarding and other hero headings. */
     --text-2xl:   25px;
-    --text-3xl:   34px;
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
-    --ease-fall: cubic-bezier(0.32, 0.02, 0.26, 1);   /* gravity: eases in, settles soft (no bounce) — Reels tumble */
-    /* Collection rarities are semantic — spent only on cards and reveal feedback,
-       never on shell chrome. */
-    --card-common: oklch(78% .025 285);
-    --card-uncommon: oklch(76% .15 150);
-    --card-rare: oklch(74% .14 235);
-    --card-very-rare: oklch(74% .17 300);
-    --card-epic: oklch(80% .15 78);
-    --card-legendary: oklch(70% .2 32);
+    --ease-fall: cubic-bezier(0.32, 0.02, 0.26, 1);
 
     /* ── Lunar — the roseonline.link website palette: flat deep-purple surfaces,
        orange/teal/gold accents, sans + rounded fonts. The product's only skin. ── */

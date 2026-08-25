@@ -19,10 +19,12 @@ jobs:
 
     steps:
       - name: Check out tagged source
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
           cache: npm
@@ -40,15 +42,45 @@ jobs:
       - name: Verify tracked RoseData payload
         shell: pwsh
         run: |
+          $ErrorActionPreference = 'Stop'
           $required = @(
             'RoseData/list_items.json',
             'RoseData/list_npc.json',
             'RoseData/quests/quests.json',
-            'RoseData/crafts/all_recipes.json'
+            'RoseData/crafts/all_recipes.json',
+            'RoseData/drops.json',
+            'RoseData/zones.json'
           )
           foreach ($file in $required) {
-            if (!(Test-Path $file)) {
+            if (!(Test-Path -LiteralPath $file -PathType Leaf)) {
               throw "Required tracked data file is missing: $file"
+            }
+            if ((Get-Item -LiteralPath $file).Length -eq 0) {
+              throw "Required tracked data file is empty: $file"
+            }
+          }
+
+          $jsonFiles = @(Get-ChildItem -LiteralPath 'RoseData' -Recurse -File -Filter '*.json')
+          if ($jsonFiles.Count -eq 0) {
+            throw 'RoseData contains no JSON files'
+          }
+          foreach ($file in $jsonFiles) {
+            if ($file.Length -eq 0) {
+              throw "RoseData JSON file is empty: $($file.FullName)"
+            }
+            try {
+              $parsed = Get-Content -LiteralPath $file.FullName -Raw | ConvertFrom-Json
+            } catch {
+              throw "RoseData JSON file is invalid: $($file.FullName): $($_.Exception.Message)"
+            }
+            if ($null -eq $parsed) {
+              throw "RoseData JSON file contains no data: $($file.FullName)"
+            }
+            if ($parsed -is [array] -and $parsed.Count -eq 0) {
+              throw "RoseData JSON array is empty: $($file.FullName)"
+            }
+            if ($parsed -is [pscustomobject] -and $parsed.PSObject.Properties.Count -eq 0) {
+              throw "RoseData JSON object is empty: $($file.FullName)"
             }
           }
 
@@ -56,7 +88,10 @@ jobs:
         run: npm ci
 
       - name: Run release self-checks
+        shell: pwsh
         run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
           node overlay/data.js
           node overlay/mods.js
           node overlay/kings.test.js
@@ -67,6 +102,9 @@ jobs:
           node src/updater.js
           node src/appupdater.js
           node site/site.test.js
+
+      - name: Verify market response normalization
+        run: node src/marketdata.js
 
       - name: Build and publish stable GitHub Release
         env:

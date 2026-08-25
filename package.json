@@ -1,10 +1,16 @@
 {
   "name": "roselite",
   "version": "0.2.0",
-  "description": "Open-source client wrapper for ROSE Online \u2014 attaches a transparent plugin overlay to the game window (RuneLite-style, no client API needed)",
+  "description": "Open-source desktop companion and overlay for ROSE Online",
+  "license": "MIT",
+  "author": "DrezByte <72398600+DrezByte@users.noreply.github.com>",
+  "homepage": "https://rose-lite.vercel.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/DrezByte/RoseLite.git"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   },
   "main": "src/main.js",
   "scripts": {
@@ -19,7 +25,7 @@
     "koffi": "^2.9.0"
   },
   "devDependencies": {
-    "electron": "^35.0.0",
-    "electron-builder": "^25.0.0"
+    "electron": "^44.0.0",
+    "electron-builder": "^26.15.3"
   }
 }

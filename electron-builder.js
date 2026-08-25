@@ -1,9 +1,5 @@
-// Build config. Conditional, so it can't live as static JSON in package.json's
-// "build" field: a machine with a local data source (src/livesource.js, not part
-// of the repo) also bundles its native/ helpers, everything else ships the
-// overlay alone with the live sections disabled.
-const fs = require('fs'), nodePath = require('path');
-const local = fs.existsSync(nodePath.join(__dirname, 'src', 'livesource.js'));
+// Build config. Production artifacts are deliberately source-independent:
+// local-only live-source files and native helpers must never enter a package.
 // Tag CI publishes immediately; a local `npm run release` defaults to a draft
 // so an accidental manual invocation cannot ship before it has been reviewed.
 const releaseType = process.env.ROSELITE_RELEASE_TYPE === 'release' ? 'release' : 'draft';
@@ -14,15 +10,15 @@ module.exports = {
   // electron-updater reads this provider from resources/app-update.yml. A
   // published GitHub release must include the installer, blockmap and latest.yml.
   publish: [{ provider: 'github', owner: 'DrezByte', repo: 'RoseLite', releaseType }],
-  // Everything after `**/*` is weight the runtime never loads and the player
-  // downloads anyway: `_src` is the pre-cutout frame art (~7 MB), and docs/,
-  // site/ and the *.test.js self-checks add more. Nothing outside a comment
-  // references any of them.
-  files: ['**/*', '!scripts', '!**/_src', '!docs', '!site',
-    '!**/*.test.js', ...(local ? [] : ['!native'])],
-  // A native helper can't run from inside app.asar — unpack it to disk so it has
-  // a real path (app.asar.unpacked/native/...).
-  asarUnpack: local ? ['native/**'] : [],
+  // Runtime allowlist: ignored developer files and local audit material must
+  // never enter an installer merely because they exist in the working tree.
+  // electron-builder adds production dependencies from node_modules itself.
+  files: [
+    'package.json', 'config.json', 'LICENSE', 'NOTICE',
+    'RoseData/**/*', 'mods/**/*', 'overlay/**/*', 'plugins/**/*', 'sounds/**/*', 'src/**/*',
+    '!overlay/**/*.test.js', '!src/**/*.test.js', '!overlay/**/_src{,/**/*}',
+    '!src/livesource.js',
+  ],
   // One source of truth: build/icon.png (1024², transparent). electron-builder
   // generates the .ico and .icns from it.
   win: { target: 'nsis', icon: 'build/icon.png' },

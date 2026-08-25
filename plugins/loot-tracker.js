@@ -1,4 +1,4 @@
-// Loot + kill tracker, OSRS-style. Driven by two data-source events:
+// Loot + kill tracker, OSRS-style. Driven by two semantic events:
 //   'kill'  → { exp, gained, entityId, npcId }  — bumps that mob's kills
 //   'drop'  → { itemType, itemNumber, npcId }   — adds a loot icon to it
 // Layout: a SEARCH bar over the live Session card. Per-mob history is data only —
@@ -9,12 +9,18 @@
 // session opens read-only with a CSV Download. npcId 0 / unknown (a mob the
 // source never named) counts toward the Session log but gets no per-mob page.
 // Mobs, the live session, and saved sessions persist via localStorage.
-// Pure api.on subscriber — no data-source knowledge.
+// Pure api.on subscriber — independent of the event provider.
 const D = require('../overlay/data.js');
+const { normalizeProgressPayload } = require('../src/progressstore.js');
 // Loot/kill history belongs to the RoseLite account, shared across every ROSE
 // account launched from it — same key regardless of which one is active.
 const STORE = 'roselite.loot';
-const saved = (() => { try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch { return {}; } })();
+const saved = (() => {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STORE)) || {};
+    return normalizeProgressPayload({ data: { loot: raw } }).data.loot;
+  } catch { return {}; }
+})();
 
 // OSRS loot-card styling (rosewood tokens + a gold qty badge), injected once.
 if (!document.getElementById('loot-style')) {

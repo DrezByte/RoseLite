@@ -6,6 +6,7 @@ const { getBounds, isForeground, isMinimized = () => false } = require('./gamewi
 const { applyAccountSet } = require('./accountstore');
 const { createProgressStore } = require('./progressstore');
 const { startAppUpdater } = require('./appupdater');
+const { normalizeSnapshotResponse, normalizeHistoryResponse } = require('./marketdata');
 const config = require('../config.json');
 
 // Packaged builds get name+icon from electron-builder (productName / build/icon.*).
@@ -320,20 +321,23 @@ function createOverlay() {
     return p;
   };
   // {type}/{id} routes validate their two numeric args; return status 0 on bad input.
-  const itemRoute = (suffix, ttl) => (_e, type, num) => {
-    const t = parseInt(type, 10), n = parseInt(num, 10);
-    if (!Number.isFinite(t) || !Number.isFinite(n)) return Promise.resolve({ ok: false, status: 0, data: null });
-    return roseGet(`/api/market/prices/${t}/${n}/${suffix}`, ttl);
+  const itemRoute = (suffix, ttl, metric = 'min_price') => async (_e, type, num) => {
+    const t = Number(type), n = Number(num);
+    if (!Number.isInteger(t) || t < 0 || !Number.isInteger(n) || n < 0)
+      return { ok: false, status: 0, data: null };
+    return normalizeHistoryResponse(await roseGet(`/api/market/prices/${t}/${n}/${suffix}`, ttl), metric);
   };
 
   // Kept as 'market' so existing callers (overlay, loot-tracker) need no change.
   // History/quantity are daily series → 30-min cache; the snapshot 10 min; the
   // date list changes at most daily → 1 h.
   ipcMain.handle('market', itemRoute('history?is_selling=1', 30 * 60 * 1000));
-  ipcMain.handle('market-quantity', itemRoute('quantity-history', 30 * 60 * 1000));
+  ipcMain.handle('market-quantity', itemRoute('quantity-history', 30 * 60 * 1000, 'quantity'));
   // per_page unbounded: the whole market snapshot (~3.2k items) in one page — the
-  // Market section prices its board/trending/watchlist off this single fetch.
-  ipcMain.handle('market-prices', () => roseGet('/api/market/prices?per_page=10000', 10 * 60 * 1000));
+  // Market section prices its board/trending/watchlist off this single fetch. The
+  // response is schema-normalized before the privileged renderer sees it.
+  ipcMain.handle('market-prices', async () =>
+    normalizeSnapshotResponse(await roseGet('/api/market/prices?per_page=10000', 10 * 60 * 1000)));
   ipcMain.handle('market-dates', () => roseGet('/api/market/available-dates', 60 * 60 * 1000));
 
   // Home news feed: YouTube uploads via public RSS (config.youtubeChannels).
@@ -569,7 +573,7 @@ function showLauncher() {
 
 // Fullscreen tools remain usable when ROSE is closed. This is still a normal,
 // focusable standalone window, but renderer mode stays distinct from `game` so
-// playtime and Collection Zuly pause until game-window detection resumes.
+// playtime pauses until game-window detection resumes.
 function showStandalone() {
   placeToasts(null);
   endGameSession();

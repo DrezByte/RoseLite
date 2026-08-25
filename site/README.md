@@ -1,9 +1,9 @@
 # RoseLite website
 
-The public landing page, and the whole of this Vercel deployment. RoseLite is a
-local-only desktop app: there is no account, no API and no database behind this
-site any more — the sync service moved out with the card game (see
-`DrezByte/RoseTCG`).
+The public landing page and the whole of this Vercel deployment. It is a static
+site with no account system, database, environment variables, or serverless
+functions. RoseLite keeps player progress on the player's PC; only market data,
+news, downloads, and update checks use external services.
 
 ```text
 site/
