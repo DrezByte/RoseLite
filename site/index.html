@@ -79,7 +79,7 @@
   <nav class="site-nav" ref="{{ navRef }}" aria-label="Primary navigation" style="position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,5vw,56px);border-bottom:1px solid transparent;transition:background .3s,box-shadow .3s,border-color .3s">
     <a href="#top" style="display:flex;align-items:center;gap:11px;text-decoration:none">
       <img src="assets/logo.webp" alt="ROSE" style="height:36px;width:auto;display:block;filter:drop-shadow(0 3px 12px rgba(240,128,28,0.5))"/>
-      <span style="font:600 23px 'Fredoka',sans-serif;color:#fff;letter-spacing:-0.01em">{{ suffix }}</span>
+      <span style="font:600 23px 'Fredoka',sans-serif;color:#fff;letter-spacing:-0.01em">Lite</span>
     </a>
     <div class="nav-links" style="display:flex;align-items:center;gap:30px">
       <a href="#features" style="font:600 14.5px 'Manrope';color:rgba(255,255,255,0.72)" style-hover="color:#fff">Features</a>
@@ -224,7 +224,7 @@
         <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#1b1533;border-bottom:1px solid rgba(255,255,255,0.06)">
           <div style="display:flex;align-items:center;gap:10px">
             <img src="assets/logo.webp" alt="ROSE" style="height:21px;width:auto;display:block"/>
-            <span style="font:600 14px 'Fredoka';color:#fff">{{ suffix }}</span>
+            <span style="font:600 14px 'Fredoka';color:#fff">Lite</span>
             <span style="font:500 11px 'JetBrains Mono';color:rgba(255,255,255,0.35)">preview</span>
           </div>
           <div style="display:flex;gap:15px;color:rgba(255,255,255,0.32)">
@@ -394,7 +394,7 @@
         <div>
           <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
             <img src="assets/logo.webp" alt="ROSE" style="height:32px;width:auto;display:block"/>
-            <span style="font:600 21px 'Fredoka';color:#fff">{{ suffix }}</span>
+            <span style="font:600 21px 'Fredoka';color:#fff">Lite</span>
           </div>
           <p style="font:400 14.5px/1.6 'Manrope';color:rgba(255,255,255,0.5);max-width:34ch;margin:0">The free companion for ROSE&nbsp;Online. Made with care for players around the world.</p>
         </div>
@@ -428,7 +428,7 @@
         </div>
       </div>
       <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:26px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center">
-        <p style="font:400 12.5px/1.6 'Manrope';color:rgba(255,255,255,0.38);max-width:70ch;margin:0">{{ name }} is a fan-made, community-run project. It is not affiliated with, endorsed by, or sponsored by the creators, developers or publishers of ROSE Online. All game names, trademarks and artwork are the property of their respective owners.</p>
+        <p style="font:400 12.5px/1.6 'Manrope';color:rgba(255,255,255,0.38);max-width:70ch;margin:0">RoseLite is a fan-made, community-run project. It is not affiliated with, endorsed by, or sponsored by the creators, developers or publishers of ROSE Online. All game names, trademarks and artwork are the property of their respective owners.</p>
         <span style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap">
           <img src="assets/logo.webp" alt="" style="height:16px;width:auto;display:block;opacity:.28"/>
           <span style="font:500 12.5px 'JetBrains Mono';color:rgba(255,255,255,0.3)">© 2026 DrezByte</span>
@@ -439,7 +439,7 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;appTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Twilight&quot;,&quot;Aurora&quot;,&quot;Ember&quot;],&quot;default&quot;:&quot;Twilight&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;,&quot;label&quot;:&quot;Accent palette&quot;},&quot;appName&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;RoseLite&quot;,&quot;RoseBuddy&quot;],&quot;default&quot;:&quot;RoseLite&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Brand&quot;,&quot;label&quot;:&quot;App name&quot;},&quot;animate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;,&quot;label&quot;:&quot;Floating animation&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;appTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Twilight&quot;,&quot;Aurora&quot;,&quot;Ember&quot;],&quot;default&quot;:&quot;Twilight&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;,&quot;label&quot;:&quot;Accent palette&quot;},&quot;animate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;,&quot;label&quot;:&quot;Floating animation&quot;}}">
 const THEMES = {
   Twilight: { '--accent': '#f0801c', '--accent-2': '#3ecfce', '--accent-3': '#f6a53a' },
   Aurora:   { '--accent': '#2fc7c1', '--accent-2': '#7b6cf0', '--accent-3': '#f0801c' },
@@ -557,11 +557,7 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const name = this.props.appName || 'RoseLite';
-    const suffix = name.replace(/^rose/i, '') || name;
     return {
-      name,
-      suffix,
       rootRef: (el) => { this.rootEl = el; if (el) { this.applyTheme(); this.applyAnim(); } },
       navRef: (el) => { this.navEl = el; },
       showItems: this.state.tab === 'items',

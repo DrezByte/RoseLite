@@ -1019,6 +1019,13 @@ async function loadMarket(el, it) {
       mk.appendChild(updated);
     }
   }
+  // Cheapest seller's shop location -> copyable in-game map link. Coords are on
+  // Junon Polis (map 2). ponytail: map hard-coded; switch to a field if the API adds one.
+  const loc = el.querySelector('[data-loc]');
+  if (loc && latest.min_price_x != null && latest.min_price_y != null) {
+    wireCopy(loc, () => mapLink(2, latest.min_price_x, latest.min_price_y), '📍', T().copyLoc, T());
+    loc.hidden = false;
+  }
   mkActual.set(`${it.item_type_id}:${it.game_item_id}`, Math.round(latest.min_price));   // seed the market section's price cache
   // Same chart component as the market section's featured pane: y-ticks, dated
   // x-axis, hover crosshair. Exact per-day numbers stay in the spoiler below.
@@ -1034,6 +1041,42 @@ async function loadMarket(el, it) {
       .map((e) => `<span class="stat-k">${esc(e.date)}</span><span class="stat-v">${fmtZ(Math.round(e.min_price))}</span>`).join('');
     box.hidden = false;
   }
+}
+
+
+// In-game chat item link: [&<base64>] where the payload is
+// [0x07][3-byte LE (game_item_id<<5 | item_type_id)][4 zero bytes].
+// The trailing bytes carry a real item's instance data (durability/life/etc);
+// a plain reference link leaves them zero. Verified against known links:
+// Wooly Mammoth Effigy (12/1562) -> [&B0zDAAAAAAA=], Knight Killer (8/917) -> B6hy...,
+// Ether (12/63) -> [&B+wHAAAAAAA=]. A stack link adds a 9th byte: the count sits at
+// bit 4 of byte 6 with bit 3 as its flag, i.e. (count << 4) | 8 written LE across
+// bytes 6-8 - verified on Ether 2x (0x28) and Bullet 3x/5x (0x38/0x58). Count 1 keeps
+// the plain 8-byte reference form.
+function itemLink(it, count) {
+  const v = ((it.game_item_id << 5) | it.item_type_id) >>> 0;
+  const bytes = [7, v & 0xff, (v >> 8) & 0xff, (v >> 16) & 0xff, 0, 0, 0, 0];
+  if (count > 1) {
+    const q = ((count << 4) | 8) >>> 0;
+    bytes[6] = q & 0xff; bytes[7] = (q >> 8) & 0xff; bytes.push((q >> 16) & 0xff);
+  }
+  return '[&' + btoa(String.fromCharCode(...bytes)) + ']';
+}
+// In-game map-location link: [&<base64>] of [0x03][map_id u32 LE][x f32 LE][y f32 LE].
+// The floats are ROSE world units = displayed coord x 100 (verified: Junon 5501:5501
+// -> [&AwIAAAAlTwZJR1EGSQ==], floats 550130/550164). roseutils' min_price_x/y may be
+// stored either as display coord (~5501) or world units (~550130); the two ranges are
+// 100x apart, so scale up only the small form. ponytail: numeric heuristic, fix if
+// roseutils ever reports coords >= 20000 in display units.
+const worldCoord = (c) => (c < 20000 ? c * 100 : c);
+function mapLink(mapId, x, y) {
+  const dv = new DataView(new ArrayBuffer(13));
+  dv.setUint8(0, 3);
+  dv.setUint32(1, mapId, true);
+  dv.setFloat32(5, worldCoord(x), true);
+  dv.setFloat32(9, worldCoord(y), true);
+  let s = ''; for (const b of new Uint8Array(dv.buffer)) s += String.fromCharCode(b);
+  return '[&' + btoa(s) + ']';
 }
 
 // Collapsible list block for the item page's long tails (Used in · Dropped by):
@@ -1058,8 +1101,13 @@ function buildItemDetail(el, it) {
   const usedHtml = foldBlock(d.usedIn, used, (u) => itemRow(u));
   const drops = D.droppedBy(it.id);
   const dropHtml = foldBlock(d.droppedBy || STR.en.droppedBy, drops, mobRow);
+  const canLink = it.item_type_id != null && it.game_item_id != null;
   const star = `<button class="item-hero-copy" data-pin title="${d.pin}" aria-label="${d.pin}">${pinned.has(it.id) ? '★' : '☆'}</button>`;
-  const actions = `<div class="item-hero-actions">${star}</div>`;
+  const actions = `<div class="item-hero-actions">${star}` +
+    (canLink
+      ? `<button class="item-hero-copy" data-copy title="${d.copyLink}" aria-label="${d.copyLink}">🔗</button>` +
+        `<button class="item-hero-copy" data-loc title="${d.copyLoc}" aria-label="${d.copyLoc}" hidden>📍</button>` : '') +
+    `</div>`;
   const bottom = (mats || usedHtml || dropHtml) ? `<div class="item-bottom">${mats}${usedHtml}${dropHtml}</div>` : '';
   el.innerHTML =
     `<div class="item-hero">${D.itemImg(it, 'item-hero-icon')}<div class="item-hero-meta">` +
@@ -1067,6 +1115,7 @@ function buildItemDetail(el, it) {
     `<div class="item-page">` +
     `<div class="item-top">${stats || `<p class="section-note">${d.noStats}</p>`}${priceBlock(it, d)}</div>` +
     `${priceAside(it, d)}${bottom}</div>`;
+  wireCopy(el.querySelector('[data-copy]'), () => itemLink(it), '🔗', d.copyLink, d);
   const pinBtn = el.querySelector('[data-pin]');
   pinBtn.addEventListener('click', () => {
     if (pinned.has(it.id)) { pinned.delete(it.id); stampRemoved('roselite-items-unpinned', it.id); }
