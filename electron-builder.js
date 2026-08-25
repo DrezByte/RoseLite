@@ -28,6 +28,11 @@ module.exports = {
   win: { target: 'nsis', icon: 'build/icon.png' },
   mac: { target: 'dmg', icon: 'build/icon.png', category: 'public.app-category.games' },
   nsis: {
+    // No version in the filename, so
+    // github.com/DrezByte/RoseLite/releases/latest/download/RoseLite-Setup.exe is a
+    // permanent URL the website can hardcode. electron-updater doesn't care either
+    // way — it reads the real name out of latest.yml.
+    artifactName: 'RoseLite-Setup.exe',
     oneClick: false,
     allowToChangeInstallationDirectory: false,
     createDesktopShortcut: true,

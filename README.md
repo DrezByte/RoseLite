@@ -141,11 +141,18 @@ installed copies read on their next launch. Never rename or omit `latest.yml`,
 and never move a published tag.
 
 ```
-npm version patch --no-git-tag-version
-git commit -am "Release v<version>"
-git tag v<version>
-git push origin main v<version>
+npm run ship            # patch: 0.2.0 -> 0.2.1, commits, tags, pushes
 ```
+
+`ship` is `npm version patch && git push --follow-tags`. For a bigger bump run
+`npm version minor` (or `major`) yourself, then `git push --follow-tags`. Either
+way the tag push is what starts the build — ordinary commits and PRs on `main`
+never publish anything.
+
+The **website needs no release step**. Its download buttons point at
+`releases/latest/download/RoseLite-Setup.exe`, an alias GitHub always resolves to
+the newest release, and `nsis.artifactName` keeps the installer filename
+version-free so that URL never changes.
 
 Optional repository secrets `WINDOWS_CSC_LINK` and `WINDOWS_CSC_KEY_PASSWORD`
 sign the executable; unsigned builds work but trip Windows SmartScreen. As a

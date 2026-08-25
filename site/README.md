@@ -21,10 +21,12 @@ Serve the folder with anything static, e.g. from the repository root:
 npx serve site
 ```
 
-The download controls are intentionally disabled. `node site/site.test.js` fails
-if an `.exe`/`.msi` download link or a private GitHub URL is accidentally added.
-When the installer is ready, replace the disabled button in `index.html` with the
-final release URL and update `site.test.js` at the same time.
+**The site never needs updating when you release.** Both download buttons point
+at `releases/latest/download/RoseLite-Setup.exe` — GitHub resolves that alias to
+the newest release, and `nsis.artifactName` in `electron-builder.js` keeps the
+filename version-free so the URL stays valid forever. `node site/site.test.js`
+fails if that link is replaced with a pinned `releases/download/v…` URL, if the
+download is disabled again, or if "coming soon" copy creeps back in.
 
 ## Deploy with Vercel
 

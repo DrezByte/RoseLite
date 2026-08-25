@@ -1,7 +1,7 @@
 {
   "name": "roselite",
   "version": "0.2.0",
-  "description": "Open-source client wrapper for ROSE Online — attaches a transparent plugin overlay to the game window (RuneLite-style, no client API needed)",
+  "description": "Open-source client wrapper for ROSE Online \u2014 attaches a transparent plugin overlay to the game window (RuneLite-style, no client API needed)",
   "repository": {
     "type": "git",
     "url": "https://github.com/DrezByte/RoseLite.git"
@@ -11,7 +11,8 @@
     "start": "electron .",
     "dist": "electron-builder --win nsis --x64 --config electron-builder.js",
     "release": "electron-builder --win nsis --x64 --config electron-builder.js --publish always",
-    "dist:mac": "electron-builder --mac dmg --config electron-builder.js"
+    "dist:mac": "electron-builder --mac dmg --config electron-builder.js",
+    "ship": "npm version patch && git push --follow-tags"
   },
   "dependencies": {
     "electron-updater": "^6.8.9",
