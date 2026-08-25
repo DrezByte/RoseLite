@@ -36,6 +36,10 @@ let stopAppUpdater = () => {};
 // up + decrypts the password itself. File: { email: base64(ciphertext) }.
 // ponytail: one JSON file, no DB. If the OS keychain is unavailable (headless
 // Linux, no keyring) we skip storage and launch email-only — same as before.
+// ponytail: keychain only on Windows — trose.exe is Windows-only, so a stored
+// password can never be used elsewhere, and touching macOS Keychain from an
+// unsigned dev binary re-prompts for the login password every single time.
+const keychain = () => process.platform === 'win32' && safeStorage.isEncryptionAvailable();
 const pwFile = () => path.join(app.getPath('userData'), 'accounts.dat');
 const loadPw = () => { try { return JSON.parse(fs.readFileSync(pwFile(), 'utf8')); } catch { return {}; } };
 const savePw = (o) => { try { fs.writeFileSync(pwFile(), JSON.stringify(o)); } catch (e) { console.error('[accounts] save failed:', e.message); } };
@@ -179,7 +183,7 @@ function createOverlay() {
   // the real secret, so blank = "unchanged"). `oldEmail` renames: the entry moves,
   // carrying its ciphertext when the password itself isn't changed.
   ipcMain.on('account-set', (_e, msg = {}) => {
-    if (msg.password && !safeStorage.isEncryptionAvailable()) msg = { ...msg, password: '' };   // no keychain → don't store plaintext
+    if (msg.password && !keychain()) msg = { ...msg, password: '' };   // no keychain → don't store plaintext
     savePw(applyAccountSet(loadPw(), msg, (p) => safeStorage.encryptString(p).toString('base64')));
   });
   ipcMain.on('account-remove', (_e, email) => {
@@ -477,7 +481,7 @@ function doLaunch(email) {
   // Append the stored password if we have one (decrypted here, in main only).
   try {
     const enc = loadPw()[email];
-    if (enc && safeStorage.isEncryptionAvailable())
+    if (enc && keychain())
       args.push('--password', safeStorage.decryptString(Buffer.from(enc, 'base64')));
   } catch (e) { console.error('[accounts] decrypt failed:', e.message); }
   try {
