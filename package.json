@@ -15,9 +15,9 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win nsis --x64 --config electron-builder.js",
-    "release": "electron-builder --win nsis --x64 --config electron-builder.js --publish always",
-    "dist:mac": "electron-builder --mac dmg --config electron-builder.js",
+    "dist": "node node_modules/electron-builder/cli.js --win nsis --x64 --config electron-builder.js --publish never",
+    "release": "node node_modules/electron-builder/cli.js --win nsis --x64 --config electron-builder.js --publish always",
+    "dist:mac": "node node_modules/electron-builder/cli.js --mac dmg --config electron-builder.js",
     "ship": "npm version patch && git push --follow-tags"
   },
   "dependencies": {
