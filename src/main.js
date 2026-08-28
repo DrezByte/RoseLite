@@ -1,8 +1,8 @@
-const { app, BrowserWindow, screen, ipcMain, net, dialog, safeStorage, shell } = require('electron');
+const { app, BrowserWindow, screen, ipcMain, net, dialog, safeStorage, shell, Tray, Menu, nativeImage } = require('electron');
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
-const { getBounds, isForeground, isMinimized = () => false } = require('./gamewindow');
+const { getBounds, isForeground, isMinimized = () => false, isForegroundHandle } = require('./gamewindow');
 const { applyAccountSet } = require('./accountstore');
 const { createProgressStore } = require('./progressstore');
 const { startAppUpdater } = require('./appupdater');
@@ -15,9 +15,13 @@ const config = require('../config.json');
 app.setName('RoseLite');
 const APP_ICON = path.join(__dirname, '..', 'build', 'icon.png');
 
-let overlay;
+let overlay;     // the game overlay: click-through panel/rail, or the 'full' standalone window
+let launcher;    // the launcher (accounts + Play). Its own window so it stays reachable
+                 // while ROSE runs — multi-boxing launches every extra client from here.
+let tray;
+let quitting = false;   // true once the user really quits; until then closing the launcher hides it
 let toastWin;    // transparent click-through toast layer, glued to the game window's top-center
-let mode = null;   // 'launcher' | 'standalone' (fullscreen, no game) | 'game'
+let mode = null;   // overlay window only: 'standalone' (no game / fullscreen) | 'game'
 let gameDir = config.gameDir;   // overridable from the renderer's folder picker ('game-dir')
 // The client/updater binaries drop the .exe off Windows (the mac dev client ships
 // plain `trose`). ponytail: two names, no per-platform config knob.
@@ -43,6 +47,13 @@ const keychain = () => process.platform === 'win32' && safeStorage.isEncryptionA
 const pwFile = () => path.join(app.getPath('userData'), 'accounts.dat');
 const loadPw = () => { try { return JSON.parse(fs.readFileSync(pwFile(), 'utf8')); } catch { return {}; } };
 const savePw = (o) => { try { fs.writeFileSync(pwFile(), JSON.stringify(o)); } catch (e) { console.error('[accounts] save failed:', e.message); } };
+
+// Both windows render overlay/index.html (?view=launcher picks which half shows),
+// so anything either one displays — update progress, launch errors — goes to both.
+const wins = () => [launcher, overlay].filter((w) => w && !w.isDestroyed());
+const send = (ch, ...a) => wins().forEach((w) => w.webContents.send(ch, ...a));
+const winOf = (e) => BrowserWindow.fromWebContents(e.sender);
+const launcherFocused = () => !!launcher && !launcher.isDestroyed() && isForegroundHandle(launcher.getNativeWindowHandle());
 
 function createOverlay() {
   overlay = new BrowserWindow({
@@ -108,10 +119,10 @@ function createOverlay() {
     clearGhostCaption();
   });
 
-  ipcMain.on('interactive', (_e, on) => {
-    // launcher + fullscreen are fully interactive windows; the hover click-through
-    // toggle is only for the overlay layouts (docked / on-top / rail).
-    if (mode === 'launcher' || userLayout === 'full') return;
+  ipcMain.on('interactive', (e, on) => {
+    // The launcher window and the fullscreen panel are fully interactive windows;
+    // the hover click-through toggle is only for the overlay layouts.
+    if (winOf(e) !== overlay || userLayout === 'full') return;
     overlay.setIgnoreMouseEvents(!on, { forward: true });
   });
   // Notifications drop down over the game, not inside the panel (which docks
@@ -124,16 +135,16 @@ function createOverlay() {
   ipcMain.on('quit', () => app.quit());
   // Minimize to the taskbar — only meaningful for the launcher / fullscreen
   // standalone window (the overlay layouts skip the taskbar and can't restore).
-  ipcMain.on('minimize', () => overlay.minimize());
+  ipcMain.on('minimize', (e) => { const w = winOf(e); if (w) w.minimize(); });
   // Double-click the fullscreen header to fill the work area / restore (mac zooms
   // on title double-click natively; a transparent frameless window can't use
   // native maximize on Windows, so drive the bounds ourselves like the grips do).
-  let preMaxBounds = null;
-  ipcMain.on('toggle-maximize', () => {
-    if (userLayout !== 'full') return;
-    const work = screen.getDisplayMatching(overlay.getBounds()).workArea;
-    if (preMaxBounds) { overlay.setBounds(preMaxBounds); preMaxBounds = null; }
-    else { preMaxBounds = overlay.getBounds(); overlay.setBounds({ x: work.x, y: work.y, width: work.width, height: work.height }); }
+  ipcMain.on('toggle-maximize', (e) => {
+    const w = winOf(e);
+    if (!w || (w === overlay && userLayout !== 'full')) return;
+    const work = screen.getDisplayMatching(w.getBounds()).workArea;
+    if (w.preMaxBounds) { w.setBounds(w.preMaxBounds); w.preMaxBounds = null; }
+    else { w.preMaxBounds = w.getBounds(); w.setBounds({ x: work.x, y: work.y, width: work.width, height: work.height }); }
   });
   // In-panel layout override: 'rail' (icon column), 'panel' (docked/on-top panel),
   // 'full' (standalone window), or null = auto. Re-lay-out immediately.
@@ -144,9 +155,10 @@ function createOverlay() {
   // the mouse's screen position, each 'resize-move' recomputes bounds from the
   // absolute delta (screenX/Y are CSS px = DIP, same space as setBounds).
   let resizeDrag = null;
-  ipcMain.on('resize-start', (_e, { edges, x, y } = {}) => {
-    if (mode !== 'launcher' && userLayout !== 'full') return;   // overlay layouts stay fixed
-    resizeDrag = { edges: edges || [], x, y, start: overlay.getBounds() };
+  ipcMain.on('resize-start', (e, { edges, x, y } = {}) => {
+    const w = winOf(e);
+    if (!w || (w === overlay && userLayout !== 'full')) return;   // overlay layouts stay fixed
+    resizeDrag = { win: w, edges: edges || [], x, y, start: w.getBounds() };
   });
   ipcMain.on('resize-move', (_e, { x, y } = {}) => {
     if (!resizeDrag) return;
@@ -158,7 +170,7 @@ function createOverlay() {
     if (e.includes('bottom')) bh = Math.max(MINH, bh + dy);
     if (e.includes('left')) { const nw = Math.max(MINW, bw - dx); bx += bw - nw; bw = nw; }
     if (e.includes('top')) { const nh = Math.max(MINH, bh - dy); by += bh - nh; bh = nh; }
-    overlay.setBounds({ x: Math.round(bx), y: Math.round(by), width: Math.round(bw), height: Math.round(bh) });
+    resizeDrag.win.setBounds({ x: Math.round(bx), y: Math.round(by), width: Math.round(bw), height: Math.round(bh) });
   });
   ipcMain.on('resize-end', () => { resizeDrag = null; });
 
@@ -200,7 +212,7 @@ function createOverlay() {
   // on an unchanged placement so the fresh DOM would otherwise never learn it's
   // fullscreen — leaving side-panel layout in a fullscreen-sized window.
   overlay.webContents.on('did-finish-load', () => {
-    overlay.webContents.send('mode', mode || 'launcher');
+    overlay.webContents.send('mode', mode || 'standalone');
     if (placement) overlay.webContents.send('placement', placement);
     // The launcher reloads to re-namespace per-account stores; re-send the last
     // update event so a reload mid-update doesn't lose the Play-button gate.
@@ -226,8 +238,8 @@ function createOverlay() {
   // Folder pickers (Settings / launcher). 'pick-dir' opens the native directory
   // dialog; 'game-dir' carries the chosen game install so launch() uses it (the
   // renderer persists both to localStorage and re-sends game-dir on boot).
-  ipcMain.handle('pick-dir', async () => {
-    const r = await dialog.showOpenDialog(overlay, { properties: ['openDirectory'] });
+  ipcMain.handle('pick-dir', async (e) => {
+    const r = await dialog.showOpenDialog(winOf(e) || overlay, { properties: ['openDirectory'] });
     return r.canceled || !r.filePaths.length ? null : r.filePaths[0];
   });
   ipcMain.on('game-dir', (_e, p) => { if (typeof p === 'string' && p) gameDir = p; });
@@ -486,16 +498,16 @@ function doLaunch(email) {
   } catch (e) { console.error('[accounts] decrypt failed:', e.message); }
   try {
     const child = spawn(exe, args, { cwd: gameDir, detached: true, stdio: 'ignore' });
-    child.on('error', (err) => overlay && !overlay.isDestroyed() && overlay.webContents.send('launch-error', err.message));
+    child.on('error', (err) => send('launch-error', err.message));
     child.unref();
   } catch (err) {
-    if (overlay && !overlay.isDestroyed()) overlay.webContents.send('launch-error', err.message);
+    send('launch-error', err.message);
   }
 }
 
 function sendUpdate(evt) {
   lastUpdateEvent = evt;
-  if (overlay && !overlay.isDestroyed()) overlay.webContents.send('update-progress', evt);
+  send('update-progress', evt);
 }
 
 // Fire a launch that was queued behind a file check — or tell the launcher why
@@ -504,8 +516,7 @@ function drainPendingLaunch(ok) {
   if (!pendingLaunch) return;
   const email = pendingLaunch; pendingLaunch = null;
   if (!fs.existsSync(gameExe())) {
-    if (overlay && !overlay.isDestroyed())
-      overlay.webContents.send('launch-error', `trose${EXE} not found in ${gameDir || '(no folder set)'}`);
+    send('launch-error', `trose${EXE} not found in ${gameDir || '(no folder set)'}`);
   } else if (ok) doLaunch(email);
 }
 
@@ -539,6 +550,17 @@ function runGameUpdate(verify = false) {
   });
 }
 
+// The game window is gone. End the play session and drop back to the panel's
+// no-game state; the window itself just hides (the launcher is separate now).
+function leaveGame() {
+  if (mode !== 'game') return;
+  endGameSession();
+  mode = 'standalone';
+  overlay.webContents.send('mode', 'standalone');
+  setPlacement(null);   // renderer must forget stale placement before the next attach
+  runGameUpdate(false);   // back at the launcher: re-verify files, like the old launcher return did
+}
+
 function endGameSession(reason = 'game-closed') {
   if (mode !== 'game' || !progressStore) return;
   clearInterval(progressCheckpoint);
@@ -547,32 +569,54 @@ function endGameSession(reason = 'game-closed') {
   progressStore.flush();
 }
 
-// No game running → show the centered account launcher (add accounts, pick one,
-// launch the game). Sized to the launcher card and made click-interactive.
+// The launcher is a plain window that always exists: players multi-box, so Play
+// has to stay clickable while ROSE is already running. Same document as the
+// overlay — ?view=launcher tells the renderer to show the launcher half only.
+// ponytail: two renderers means two copies of the RoseData catalog in memory.
+// Make data.js build its item maps lazily (getters behind the same export names)
+// if that ever shows up as a problem.
+function createLauncher() {
+  const wa = screen.getPrimaryDisplay().workArea;
+  const w = 1040, h = 620;
+  launcher = new BrowserWindow({
+    show: false, icon: APP_ICON, frame: false, transparent: true, resizable: true,
+    width: w, height: h,
+    x: Math.round(wa.x + (wa.width - w) / 2), y: Math.round(wa.y + (wa.height - h) / 2),
+    webPreferences: { nodeIntegration: true, contextIsolation: false }
+  });
+  launcher.webContents.on('will-navigate', (event) => event.preventDefault());
+  launcher.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
+  launcher.loadFile(path.join(__dirname, '../overlay/index.html'), { query: { view: 'launcher' } });
+  launcher.once('ready-to-show', () => launcher.show());
+  launcher.webContents.on('did-finish-load', () => {
+    launcher.webContents.send('mode', 'launcher');
+    // The launcher reloads to re-namespace per-account stores; re-send the last
+    // update event so a reload mid-update doesn't lose the Play-button gate.
+    if (lastUpdateEvent) launcher.webContents.send('update-progress', lastUpdateEvent);
+  });
+  // Alt-F4 / window.close() parks it in the tray instead of killing the app —
+  // the header's X still quits outright ('quit' IPC), so nothing vanishes unasked.
+  launcher.on('close', (e) => { if (!quitting) { e.preventDefault(); launcher.hide(); } });
+}
+
 function showLauncher() {
-  placeToasts(null);   // no game window → no toast layer; toasts fall back into the panel
-  if (mode !== 'launcher') {
-    endGameSession();
-    mode = 'launcher';
-    setPlacement(null);   // renderer must forget stale fullscreen state before the next launcher open
-    overlay.setIgnoreMouseEvents(false);
-    // No game running → behave like a normal app window: drop out of the
-    // always-on-top overlay layer and show in the taskbar so it can be minimized.
-    overlay.setAlwaysOnTop(false);
-    overlay.setSkipTaskbar(false);
-    joinAllSpaces(overlay, false);
-    const wa = screen.getPrimaryDisplay().workArea;
-    const w = 1040, h = 620;
-    overlay.setBounds({ x: Math.round(wa.x + (wa.width - w) / 2), y: Math.round(wa.y + (wa.height - h) / 2), width: w, height: h });
-    overlay.webContents.send('mode', 'launcher');
-    // The update check is NOT triggered here: at boot this fires before the
-    // renderer has pushed the persisted gameDir ('game-dir' IPC), so the check
-    // would run against an empty folder and silently no-op. The renderer
-    // requests it ('update-run') on entering launcher mode instead — renderer
-    // IPC is ordered, so game-dir always lands first.
-  }
-  // Don't fight a user-minimized launcher (isVisible() is false while minimized).
-  if (!overlay.isVisible() && !overlay.isMinimized()) overlay.show();
+  if (!launcher || launcher.isDestroyed()) return;
+  if (launcher.isMinimized()) launcher.restore();
+  launcher.show();
+  launcher.focus();
+}
+
+// Tray: the launcher can end up buried under a fullscreen client and the overlay
+// skips the taskbar, so without this there'd be no way back on screen.
+function createTray() {
+  tray = new Tray(nativeImage.createFromPath(APP_ICON).resize({ width: 16, height: 16 }));
+  tray.setToolTip('RoseLite');
+  tray.setContextMenu(Menu.buildFromTemplate([
+    { label: 'Open RoseLite', click: showLauncher },
+    { type: 'separator' },
+    { label: 'Quit', click: () => app.quit() },
+  ]));
+  tray.on('click', showLauncher);
 }
 
 // Fullscreen tools remain usable when ROSE is closed. This is still a normal,
@@ -580,7 +624,7 @@ function showLauncher() {
 // playtime pauses until game-window detection resumes.
 function showStandalone() {
   placeToasts(null);
-  endGameSession();
+  leaveGame();
   const entering = mode !== 'standalone';
   mode = 'standalone';
   if (entering) overlay.webContents.send('mode', 'standalone');
@@ -599,15 +643,13 @@ function track() {
   if (!overlay || overlay.isDestroyed()) return;
   let g = getBounds(config.windowTitle);
   if (!g) {
-    // Minimized ≠ closed: the game is still running, so don't round-trip
-    // through the launcher (that reflag/resize left the rail stale on
-    // restore). Hide like the alt-tab path and wait for the window back.
-    if (mode === 'game' && userLayout !== 'full' && isMinimized(config.windowTitle)) {
-      placeToasts(null);
-      if (overlay.isVisible()) overlay.hide();
-      return;
-    }
-    return userLayout === 'full' ? showStandalone() : showLauncher();
+    if (userLayout === 'full') return showStandalone();
+    placeToasts(null);
+    // Minimized ≠ closed: the game is still running, so keep the play session
+    // and the panel state — just get out of sight until the window is back.
+    if (!isMinimized(config.windowTitle)) leaveGame();
+    if (overlay.isVisible()) overlay.hide();
+    return;
   }
   // Win32 gives physical pixels; Electron positions in DIPs.
   if (process.platform === 'win32') g = screen.screenToDipRect(overlay, g);
@@ -634,7 +676,10 @@ function track() {
   const work = screen.getDisplayMatching(g).workArea;
   // Toast layer: only while ROSE is the foreground app (same rule as the overlay —
   // an always-on-top toast must not float over whatever the player switched to).
-  const fg = isForeground(config.windowTitle);
+  // isForeground counts any window of ours as "still on the game" (so clicking
+  // the panel doesn't hide it) — but the launcher is one of ours now, and it's a
+  // normal window the player can work in. Treat it like any other app.
+  const fg = isForeground(config.windowTitle) && !launcherFocused();
   placeToasts(fg ? g : null);
 
   // Fullscreen: a centred, focusable, taskbar-visible standalone window. Positioned
@@ -716,10 +761,12 @@ app.whenReady().then(() => {
   progressStore.flush();
   // macOS dev only: the dock icon comes from the .icns in a packaged .app.
   if (process.platform === 'darwin' && !app.isPackaged) app.dock.setIcon(APP_ICON);
-  createOverlay(); createToastWin();
-  stopAppUpdater = startAppUpdater({ app, dialog, getWindow: () => overlay });
+  createOverlay(); createLauncher(); createToastWin(); createTray();
+  stopAppUpdater = startAppUpdater({ app, dialog, getWindow: () => launcher });
 });
+app.on('activate', showLauncher);   // macOS dock click
 app.on('before-quit', () => {
+  quitting = true;
   stopAppUpdater();
   clearInterval(progressCheckpoint);
   if (progressStore) {

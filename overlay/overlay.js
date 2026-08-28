@@ -7,6 +7,9 @@ const path = require('path');
 const { pathToFileURL } = require('url');
 const { ipcRenderer, clipboard, shell, webFrame } = require('electron');
 const D = require('./data.js');   // RoseData: items, quests, recipes, guides, events
+// Which half of this document this window is (main.js opens it twice): the
+// launcher window passes ?view=launcher, the game overlay passes nothing.
+const VIEW = new URLSearchParams(location.search).get('view');
 const L = require('./logic.js');  // pure kings/gems logic, shared with the self-checks
 const { normalizeProgressPayload } = require('../src/progressstore.js');
 
@@ -3767,19 +3770,26 @@ document.getElementById('hdr-ver').textContent = 'v' + require('../package.json'
 ipcRenderer.send('panel-width', panelWidth);
 ipcRenderer.send('game-dir', gameDir());   // launch() uses the persisted folder, if any
 
-renderHome(); renderRail();   // home feed renders via goHome() below
-// Section bodies are populated by ensureSection() on first open.
-initShouts(); initLauncher(); initNotifLog(); updateChrome(); renderPlaytime();
-// Merge local progress into the durable main-process mirror, then apply the
-// normalized result back. This restores data after a browser-store wipe and
-// cleans any malformed values left by an older build before they can persist.
-ipcRenderer.invoke('progress-sync-local', progressPayload())
-  .then((snapshot) => {
-    const { changed } = restoreProgressEnvelope(snapshot);
-    if (changed) reloadAfterProgressRestore();
-  })
-  .catch((err) => console.warn('[progress] local sync failed:', err.message || err));
-const resumeSection = sessionStorage.getItem(PROGRESS_RESUME_SECTION);
-sessionStorage.removeItem(PROGRESS_RESUME_SECTION);
-if (resumeSection && SECTION_IDS.includes(resumeSection)) openSection(resumeSection);
-else goHome();   // recettes renders lazily on first open (see openSection)
+initLauncher(); initNotifLog(); updateChrome(); renderPlaytime();
+// Panel-only boot. The launcher window keeps #panel hidden for its whole life,
+// and the progress sync in particular must run in exactly one window: both
+// share this origin's localStorage, so two of them would double-start the play
+// session and race each other's writes.
+if (VIEW !== 'launcher') {
+  renderHome(); renderRail();   // home feed renders via goHome() below
+  // Section bodies are populated by ensureSection() on first open.
+  initShouts();
+  // Merge local progress into the durable main-process mirror, then apply the
+  // normalized result back. This restores data after a browser-store wipe and
+  // cleans any malformed values left by an older build before they can persist.
+  ipcRenderer.invoke('progress-sync-local', progressPayload())
+    .then((snapshot) => {
+      const { changed } = restoreProgressEnvelope(snapshot);
+      if (changed) reloadAfterProgressRestore();
+    })
+    .catch((err) => console.warn('[progress] local sync failed:', err.message || err));
+  const resumeSection = sessionStorage.getItem(PROGRESS_RESUME_SECTION);
+  sessionStorage.removeItem(PROGRESS_RESUME_SECTION);
+  if (resumeSection && SECTION_IDS.includes(resumeSection)) openSection(resumeSection);
+  else goHome();   // recettes renders lazily on first open (see openSection)
+}
