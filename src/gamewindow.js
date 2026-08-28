@@ -103,6 +103,57 @@ if (process.env.ROSELITE_FAKEWIN) {
     if (pidOf(fg) === process.pid) return true; // our own overlay windows
     return addr(pick(title)) === addr(fg);
   };
+  // ── The Windows attach path: ownership + win-event tracking ───────────────
+  // main branches on this: everywhere else has no ownership primitive, so it
+  // falls back to the topmost band + poll.
+  module.exports.ownerAttach = true;
+  // HWNDs are pointer-sized integers; shipped Electron is x64-only, so passing
+  // them as uint64 dodges koffi pointer round-trips.
+  const GWLP_HWNDPARENT = -8;
+  const SetWindowLongPtrW = user32.func('uint64 SetWindowLongPtrW(uint64 hwnd, int idx, uint64 val)');
+  const bufHwnd = (buf) => (buf && buf.length
+    ? (buf.length >= 8 ? buf.readBigUInt64LE(0) : BigInt(buf.readUInt32LE(0))) : null);
+
+  // Make the tracked client the OWNER of our window. Not SetParent — nothing
+  // touches the client's window tree; the single write is on OUR window. The OS
+  // then keeps us above the game, sinks us with it behind other apps, and hides
+  // us while it's minimized — replacing the topmost band + raise dance in main.
+  // Re-asserting the same owner is a harmless word-write, so callers may call
+  // this every tick; returns the owner's address (string) so main can detect a
+  // multi-box switch, or null when no client is tracked.
+  module.exports.attachOwner = (buf) => {
+    const h = bufHwnd(buf);
+    if (!h || !tracked) return null;
+    SetWindowLongPtrW(h, GWLP_HWNDPARENT, BigInt(tracked));
+    return tracked;
+  };
+  // Detach before the owner window can die (game closed) or when the overlay
+  // becomes a standalone window — a dangling owner is undefined-behavior land.
+  module.exports.detachOwner = (buf) => {
+    const h = bufHwnd(buf);
+    if (h) SetWindowLongPtrW(h, GWLP_HWNDPARENT, 0n);
+  };
+
+  // Event-driven tracking. SetWinEventHook in OUTOFCONTEXT mode (flags=0) is
+  // the no-injection variant — the OS posts events to our thread and Chromium's
+  // message pump delivers them; it's the same channel screen readers use.
+  // onChange fires for anything that could move/hide/replace a client window;
+  // main coalesces and re-runs track(). Hooks live for the process lifetime.
+  const WinEventProc = koffi.proto('void WinEventProc(void* hook, uint32 event, void* hwnd, int32 obj, int32 child, uint32 tid, uint32 time)');
+  const SetWinEventHook = user32.func('void* SetWinEventHook(uint32 min, uint32 max, void* mod, WinEventProc* cb, uint32 pid, uint32 tid, uint32 flags)');
+  let eventCb = null;   // module-held: a GC'd registered callback = native crash
+  module.exports.watchEvents = (onChange) => {
+    if (eventCb) return;
+    eventCb = koffi.register((_h, event, hwnd, obj) => {
+      if (obj !== 0) return;   // OBJID_WINDOW only — skips cursor/caret spam
+      // LOCATIONCHANGE storms during any drag; only the tracked client's counts.
+      if (event === 0x800B && addr(hwnd) !== tracked) return;
+      onChange(event);
+    }, koffi.pointer(WinEventProc));
+    // FOREGROUND · MINIMIZESTART/END · DESTROY+SHOW · LOCATIONCHANGE
+    [[0x0003, 0x0003], [0x0016, 0x0017], [0x8001, 0x8002], [0x800B, 0x800B]]
+      .forEach(([lo, hi]) => SetWinEventHook(lo, hi, null, eventCb, 0, 0, 0));
+  };
 } else if (process.platform === 'darwin') {
   // Real tracking on macOS via the Quartz window list, so the overlay can be
   // tested locally against the native trose client. CGWindowListCopyWindowInfo
@@ -152,6 +203,13 @@ function windows(opt) {
   module.exports.getBounds = () => ({ x: 100, y: 100, width: 1280, height: 720 });
   module.exports.isForeground = () => true;
 }
+
+// Owner attach is real-Windows only; everywhere else (fakewin, mac, Linux)
+// these are inert (and ownerAttach undefined = falsy) so main can call them
+// unconditionally.
+module.exports.attachOwner ||= () => null;
+module.exports.detachOwner ||= () => {};
+module.exports.watchEvents ||= () => {};
 
 // ── Self-check: `node src/gamewindow.js` ────────────────────────────────────
 if (require.main === module) {

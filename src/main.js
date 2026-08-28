@@ -2,7 +2,8 @@ const { app, BrowserWindow, screen, ipcMain, net, dialog, safeStorage, shell, Tr
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
-const { getBounds, isForeground, isMinimized = () => false, isForegroundHandle } = require('./gamewindow');
+const { getBounds, isForeground, isMinimized = () => false, isForegroundHandle,
+        attachOwner, detachOwner, watchEvents, ownerAttach: OWNER_ATTACH = false } = require('./gamewindow');
 const { applyAccountSet } = require('./accountstore');
 const { createProgressStore } = require('./progressstore');
 const { startAppUpdater } = require('./appupdater');
@@ -23,6 +24,12 @@ let quitting = false;   // true once the user really quits; until then closing t
 let toastWin;    // transparent click-through toast layer, glued to the game window's top-center
 let mode = null;   // overlay window only: 'standalone' (no game / fullscreen) | 'game'
 let gameDir = config.gameDir;   // overridable from the renderer's folder picker ('game-dir')
+// OWNER_ATTACH (real Windows, exported by gamewindow.js): the game window OWNS
+// the overlay window, so the OS keeps us above it / sinks us with it, and
+// win-event hooks drive track() instead of the fast poll. Elsewhere (mac dev,
+// fakewin, Linux) there is no ownership primitive, so the topmost-band + poll
+// branches below are that fallback attach, not dead code.
+let ownedTo = null;   // owner address the overlay is currently attached to
 // The client/updater binaries drop the .exe off Windows (the mac dev client ships
 // plain `trose`). ponytail: two names, no per-platform config knob.
 const EXE = process.platform === 'win32' ? '.exe' : '';
@@ -376,7 +383,18 @@ function createOverlay() {
     if (overlay && !overlay.isDestroyed()) overlay.webContents.send('gamedata', f);
   });
 
-  setInterval(track, config.pollMs || 250);
+  if (OWNER_ATTACH) {
+    // Win-events drive track(); the interval drops to a slow fallback for
+    // the one thing hooks can't promise — noticing a client window we weren't
+    // yet hooked to (hooks are global, so SHOW usually catches it first).
+    let queued = false;
+    watchEvents(() => {
+      if (queued) return;
+      queued = true;   // coalesce event storms (a drag fires LOCATIONCHANGE per frame)
+      setTimeout(() => { queued = false; track(); }, 30);
+    });
+    setInterval(track, 2000);
+  } else setInterval(track, config.pollMs || 250);
 }
 
 // The toast layer: a transparent, click-through window over the game's top-center.
@@ -449,13 +467,18 @@ const joinAllSpaces = (win, on) => {
 function overlayFlags(full) {
   joinAllSpaces(overlay, !full);
   if (full) {
+    // A standalone window must not vanish with the game's minimize — un-own it.
+    if (OWNER_ATTACH) { detachOwner(overlay.getNativeWindowHandle()); ownedTo = null; }
     overlay.setIgnoreMouseEvents(false);
     overlay.setAlwaysOnTop(false);
     overlay.setSkipTaskbar(false);
     overlay.setResizable(true);
   } else {
     overlay.setIgnoreMouseEvents(true, { forward: true });
-    overlay.setAlwaysOnTop(true, 'screen-saver');
+    // Owner mode: z-order comes from ownership, not the topmost band — a non-topmost
+    // owned window rides above its owner and sinks with it behind other apps.
+    if (OWNER_ATTACH) overlay.setAlwaysOnTop(false);
+    else overlay.setAlwaysOnTop(true, 'screen-saver');
     overlay.setSkipTaskbar(true);
     overlay.setResizable(false);
   }
@@ -554,6 +577,12 @@ function runGameUpdate(verify = false) {
 // no-game state; the window itself just hides (the launcher is separate now).
 function leaveGame() {
   if (mode !== 'game') return;
+  // Un-own before the (possibly already dead) game window becomes a dangling
+  // owner handle. Safe if the client already closed: the write is on our window.
+  if (OWNER_ATTACH && overlay && !overlay.isDestroyed()) {
+    detachOwner(overlay.getNativeWindowHandle());
+    ownedTo = null;
+  }
   endGameSession();
   mode = 'standalone';
   overlay.webContents.send('mode', 'standalone');
@@ -671,7 +700,8 @@ function track() {
     // The game keeps re-asserting foreground/topmost for a second or two after
     // its window first appears, so a single raise on this tick loses. Re-raise
     // on a short schedule, guarded so we only fire while it's still foreground.
-    [300, 900, 1800, 3000].forEach((ms) => setTimeout(() => {
+    // (Owner mode needs none of this: owned windows outrank the owner by OS rule.)
+    if (!OWNER_ATTACH) [300, 900, 1800, 3000].forEach((ms) => setTimeout(() => {
       if (mode === 'game' && userLayout !== 'full' && isForeground(config.windowTitle)) raiseOverlay();
     }, ms));
   }
@@ -697,9 +727,19 @@ function track() {
     return;
   }
 
+  // Owner mode: own the overlay to the tracked client every pass — re-asserting the same
+  // owner is a no-op word-write, and it self-heals a multi-box switch (a new
+  // tracked client hands back a new address).
+  if (OWNER_ATTACH) {
+    const owner = attachOwner(overlay.getNativeWindowHandle());
+    if (owner !== ownedTo) { ownedTo = owner; overlay.moveTop(); }   // z updates on next window op
+  }
+
   // On top of ROSE only: when the player switches to another app, get out of its
   // way (setAlwaysOnTop 'screen-saver' would otherwise float above everything).
-  if (!fg) {
+  // Owner mode skips the hide: a non-topmost owned window sinks behind the
+  // foreground app together with the game, by OS rule.
+  if (!fg && !OWNER_ATTACH) {
     if (overlay.isVisible()) overlay.hide();
     return;
   }
@@ -754,7 +794,8 @@ function track() {
   // Keep us above the game on every tick (it re-asserts topmost during load
   // and on alt-tab back). We only get here while the game is foreground, so
   // this can't yank the overlay over another app. Click-through, so invisible.
-  raiseOverlay();
+  // Owner mode: the OS keeps us above the owner; no raise needed.
+  if (!OWNER_ATTACH) raiseOverlay();
 }
 
 // One instance: launching RoseLite while it's already running (tray) must
