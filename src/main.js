@@ -587,7 +587,9 @@ function createLauncher() {
   launcher.webContents.on('will-navigate', (event) => event.preventDefault());
   launcher.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
   launcher.loadFile(path.join(__dirname, '../overlay/index.html'), { query: { view: 'launcher' } });
-  launcher.once('ready-to-show', () => launcher.show());
+  // Not ready-to-show: it fires unreliably for transparent frameless windows on
+  // Windows, which left the app booting straight to the tray with no window.
+  launcher.webContents.once('did-finish-load', () => launcher.show());
   launcher.webContents.on('did-finish-load', () => {
     launcher.webContents.send('mode', 'launcher');
     // The launcher reloads to re-namespace per-account stores; re-send the last
@@ -754,6 +756,11 @@ function track() {
   // this can't yank the overlay over another app. Click-through, so invisible.
   raiseOverlay();
 }
+
+// One instance: launching RoseLite while it's already running (tray) must
+// surface the existing launcher, not boot a second app against the same userData.
+if (!app.requestSingleInstanceLock()) app.quit();
+else app.on('second-instance', showLauncher);
 
 app.whenReady().then(() => {
   progressStore = createProgressStore({ file: path.join(app.getPath('userData'), 'progress-v2.json') });

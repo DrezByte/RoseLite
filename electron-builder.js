@@ -15,6 +15,7 @@ module.exports = {
   // electron-builder adds production dependencies from node_modules itself.
   files: [
     'package.json', 'config.json', 'LICENSE', 'NOTICE',
+    'build/icon.png',   // the tray loads it at runtime — without this the installed app shows a blank tray icon
     'RoseData/**/*', 'mods/**/*', 'overlay/**/*', 'plugins/**/*', 'sounds/**/*', 'src/**/*',
     '!overlay/**/*.test.js', '!src/**/*.test.js', '!overlay/**/_src{,/**/*}',
     '!src/livesource.js',
