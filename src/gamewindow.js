@@ -103,7 +103,10 @@ if (process.env.ROSELITE_FAKEWIN) {
     if (pidOf(fg) === process.pid) return true; // our own overlay windows
     return addr(pick(title)) === addr(fg);
   };
-  // ── Prototype A+B (ROSELITE_OWNERATTACH=1 in main) ────────────────────────
+  // ── The Windows attach path: ownership + win-event tracking ───────────────
+  // main branches on this: everywhere else has no ownership primitive, so it
+  // falls back to the topmost band + poll.
+  module.exports.ownerAttach = true;
   // HWNDs are pointer-sized integers; shipped Electron is x64-only, so passing
   // them as uint64 dodges koffi pointer round-trips.
   const GWLP_HWNDPARENT = -8;
@@ -111,7 +114,7 @@ if (process.env.ROSELITE_FAKEWIN) {
   const bufHwnd = (buf) => (buf && buf.length
     ? (buf.length >= 8 ? buf.readBigUInt64LE(0) : BigInt(buf.readUInt32LE(0))) : null);
 
-  // A: make the tracked client the OWNER of our window. Not SetParent — nothing
+  // Make the tracked client the OWNER of our window. Not SetParent — nothing
   // touches the client's window tree; the single write is on OUR window. The OS
   // then keeps us above the game, sinks us with it behind other apps, and hides
   // us while it's minimized — replacing the topmost band + raise dance in main.
@@ -131,7 +134,7 @@ if (process.env.ROSELITE_FAKEWIN) {
     if (h) SetWindowLongPtrW(h, GWLP_HWNDPARENT, 0n);
   };
 
-  // B: event-driven tracking. SetWinEventHook in OUTOFCONTEXT mode (flags=0) is
+  // Event-driven tracking. SetWinEventHook in OUTOFCONTEXT mode (flags=0) is
   // the no-injection variant — the OS posts events to our thread and Chromium's
   // message pump delivers them; it's the same channel screen readers use.
   // onChange fires for anything that could move/hide/replace a client window;
@@ -201,8 +204,9 @@ function windows(opt) {
   module.exports.isForeground = () => true;
 }
 
-// Prototype A+B is real-Windows only; everywhere else (fakewin, mac, Linux)
-// these are inert so main can call them unconditionally.
+// Owner attach is real-Windows only; everywhere else (fakewin, mac, Linux)
+// these are inert (and ownerAttach undefined = falsy) so main can call them
+// unconditionally.
 module.exports.attachOwner ||= () => null;
 module.exports.detachOwner ||= () => {};
 module.exports.watchEvents ||= () => {};

@@ -3,7 +3,7 @@ const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const { getBounds, isForeground, isMinimized = () => false, isForegroundHandle,
-        attachOwner, detachOwner, watchEvents } = require('./gamewindow');
+        attachOwner, detachOwner, watchEvents, ownerAttach: OWNER_ATTACH = false } = require('./gamewindow');
 const { applyAccountSet } = require('./accountstore');
 const { createProgressStore } = require('./progressstore');
 const { startAppUpdater } = require('./appupdater');
@@ -24,11 +24,11 @@ let quitting = false;   // true once the user really quits; until then closing t
 let toastWin;    // transparent click-through toast layer, glued to the game window's top-center
 let mode = null;   // overlay window only: 'standalone' (no game / fullscreen) | 'game'
 let gameDir = config.gameDir;   // overridable from the renderer's folder picker ('game-dir')
-// Prototype A+B (see gamewindow.js): the game window OWNS the overlay window,
-// so the OS keeps us above it / sinks us with it (A), and win-event hooks drive
-// track() instead of the fast poll (B). Off by default until proven on Windows.
-const OWNER_ATTACH = process.platform === 'win32' && !process.env.ROSELITE_FAKEWIN
-  && process.env.ROSELITE_OWNERATTACH === '1';
+// OWNER_ATTACH (real Windows, exported by gamewindow.js): the game window OWNS
+// the overlay window, so the OS keeps us above it / sinks us with it, and
+// win-event hooks drive track() instead of the fast poll. Elsewhere (mac dev,
+// fakewin, Linux) there is no ownership primitive, so the topmost-band + poll
+// branches below are that fallback attach, not dead code.
 let ownedTo = null;   // owner address the overlay is currently attached to
 // The client/updater binaries drop the .exe off Windows (the mac dev client ships
 // plain `trose`). ponytail: two names, no per-platform config knob.
@@ -384,7 +384,7 @@ function createOverlay() {
   });
 
   if (OWNER_ATTACH) {
-    // B: win-events drive track(); the interval drops to a slow fallback for
+    // Win-events drive track(); the interval drops to a slow fallback for
     // the one thing hooks can't promise — noticing a client window we weren't
     // yet hooked to (hooks are global, so SHOW usually catches it first).
     let queued = false;
@@ -475,7 +475,7 @@ function overlayFlags(full) {
     overlay.setResizable(true);
   } else {
     overlay.setIgnoreMouseEvents(true, { forward: true });
-    // A: z-order comes from ownership, not the topmost band — a non-topmost
+    // Owner mode: z-order comes from ownership, not the topmost band — a non-topmost
     // owned window rides above its owner and sinks with it behind other apps.
     if (OWNER_ATTACH) overlay.setAlwaysOnTop(false);
     else overlay.setAlwaysOnTop(true, 'screen-saver');
@@ -727,7 +727,7 @@ function track() {
     return;
   }
 
-  // A: own the overlay to the tracked client every pass — re-asserting the same
+  // Owner mode: own the overlay to the tracked client every pass — re-asserting the same
   // owner is a no-op word-write, and it self-heals a multi-box switch (a new
   // tracked client hands back a new address).
   if (OWNER_ATTACH) {
