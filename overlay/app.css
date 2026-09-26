@@ -250,8 +250,8 @@
     box-shadow: inset 2px 0 0 -1px var(--frame-ring), -4px 0 16px rgba(0,0,0,.45);
     scrollbar-width: none; z-index: 1;   /* covers #rail-tab while open */
     /* Idle: the icon column sits fully off the right edge; only #rail-tab shows.
-       Clicking the tab adds .open (overlay.js). Click, not hover — players kept
-       popping it by sweeping the cursor past the game's right edge. */
+       Clicking the tab, or resting on it briefly, adds .open (overlay.js) — no
+       instant hover: players kept popping it by sweeping past the game's edge. */
     transition: transform 180ms var(--ease), visibility 0s 180ms;
     transform: translateX(100%); visibility: hidden;
   }

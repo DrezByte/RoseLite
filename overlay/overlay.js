@@ -3660,14 +3660,18 @@ window.addEventListener('focus', () => setAmbient(false));
 // animations that missed the sweep; catch them as they start rather than polling.
 document.addEventListener('animationstart', () => { if (ambientPaused) setAmbient(true); }, true);
 if (!document.hasFocus()) setAmbient(true);   // launched behind the game window
-// Collapsed rail rests as a logo tab and opens on click, never on hover — players
-// kept popping it by sweeping the cursor past the game's right edge. It tucks
-// away once the pointer leaves it (off the window edge, or into the click-through
-// tooltip gutter) or the game takes focus back.
+// Collapsed rail rests as a logo tab and opens on click, or on hover after a short
+// dwell — an instant hover popped it whenever players swept the cursor past the
+// game's right edge. It tucks away once the pointer leaves it (off the window edge,
+// or into the click-through tooltip gutter) or the game takes focus back.
 const railTab = document.getElementById('rail-tab');
 const railSet = (on) => { rail.classList.toggle('open', on); railTab.setAttribute('aria-expanded', on); };
 const railClose = () => railSet(false);
 railTab.addEventListener('click', (e) => { railSet(true); if (e.detail === 0) rail.querySelector('button')?.focus(); });   // keyboard: land inside the rail
+// ponytail: 250ms dwell is a feel knob — raise it if sweeps still pop the rail, lower if it feels sluggish.
+let railDwell;
+railTab.addEventListener('mouseenter', () => { railDwell = setTimeout(() => railSet(true), 250); });
+railTab.addEventListener('mouseleave', () => clearTimeout(railDwell));
 rail.addEventListener('mouseleave', railClose);
 rail.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); railClose(); railTab.focus(); } });
 document.addEventListener('mousemove', (e) => { if (!e.target.closest('#rail, #rail-tab')) railClose(); });
