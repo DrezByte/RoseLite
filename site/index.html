@@ -64,7 +64,6 @@
     .nav-links>a:last-child{padding:9px 13px!important}
     .hero-layout{padding-inline:20px!important;gap:48px!important}
     .hero-layout h1{font-size:clamp(36px,12vw,48px)!important}
-    .hero-visual>[data-float]:not(:first-child){display:none!important}
     .features-grid,.footer-grid{grid-template-columns:minmax(0,1fr)!important}
     .community-facts{grid-template-columns:minmax(0,1fr)!important}
   }
@@ -128,26 +127,12 @@
 
       <div class="hero-visual" style="position:relative">
   <div data-float style="position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);box-shadow:0 44px 96px rgba(0,0,0,0.55),0 0 0 1px rgba(255,255,255,0.04);animation:floaty 7.5s ease-in-out infinite">
-    <img src="assets/rose-hero.jpg" alt="ROSE Online adventurers" style="display:block;width:100%;height:auto"/>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,9,32,0.6),transparent 42%)"></div>
-  </div>
-  
-  <div data-float style="position:absolute;top:-24px;left:-34px;display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:15px;background:rgba(20,14,38,0.85);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.13);box-shadow:0 22px 54px rgba(0,0,0,0.5);animation:floaty2 6s ease-in-out infinite">
-    <span aria-hidden="true" style="width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-3));color:#fff;font:700 20px 'Fredoka';flex:none">K</span>
-    <div>
-      <div style="font:700 10.5px 'JetBrains Mono';letter-spacing:.09em;color:var(--accent-3);text-transform:uppercase">Next king</div>
-      <div style="font:600 14px 'Manrope';color:#fff;margin-top:2px">Grunter King</div>
-      <div style="font:600 12px 'JetBrains Mono';color:var(--accent-2);margin-top:4px">12m 34s</div>
-    </div>
-  </div>
-  
-  <div data-float style="position:absolute;bottom:-22px;right:-28px;padding:14px 17px;border-radius:15px;background:rgba(20,14,38,0.85);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.13);box-shadow:0 22px 54px rgba(0,0,0,0.5);animation:floaty 6.6s ease-in-out infinite">
-    <div style="font:500 10px 'JetBrains Mono';letter-spacing:.07em;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:6px">Lattice · market</div>
-    <div style="display:flex;align-items:baseline;gap:8px">
-      <span style="font:700 23px 'Fredoka';color:#fff;line-height:1">18.4M</span>
-      <span style="font:600 12px 'Manrope';color:#5bd6a0">▲ 4.2% / 7d</span>
-    </div>
-    <svg viewBox="0 0 190 22" width="190" height="22" fill="none" aria-hidden="true" style="display:block;margin-top:10px;overflow:visible"><polyline points="0,17 24,15 48,18 72,11 96,13 120,7 144,9 168,4 190,2" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+    <video ref="{{ videoRef }}" src="assets/RoseLite_Showreel_30s.mp4" poster="assets/rose-hero.jpg" aria-label="RoseLite trailer" autoPlay="{{ trailerAutoplay }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0d0920"></video>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,9,32,0.6),transparent 42%);pointer-events:none"></div>
+    <button type="button" onClick="{{ watchTrailer }}" style="position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 7px;border-radius:999px;border:1px solid rgba(255,255,255,0.16);background:rgba(20,14,38,0.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;font:700 14px 'Manrope',sans-serif;cursor:pointer;transition:background .2s,transform .2s" style-hover="background:rgba(20,14,38,0.94);transform:translateY(-1px)">
+      <span aria-hidden="true" style="width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-3))"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M7 4.5v15l13-7.5z"></path></svg></span>
+      Watch the trailer
+    </button>
   </div>
 </div>
     </div>
@@ -542,6 +527,26 @@ class Component extends DCLogic {
     requestAnimationFrame(step);
   }
 
+  // The hero loop plays muted; the button restarts it fullscreen with sound and
+  // controls, and leaving fullscreen puts it back to the silent loop.
+  watchTrailer = () => {
+    const v = this.videoEl;
+    if (!v) return;
+    v.muted = false;
+    v.controls = true;
+    v.currentTime = 0;
+    v.play()?.catch(() => {});
+    const fs = v.requestFullscreen || v.webkitEnterFullscreen; // iPhone only has the latter
+    if (fs) Promise.resolve(fs.call(v)).catch(() => {});
+  };
+
+  exitTrailer = () => {
+    const v = this.videoEl;
+    if (!v || document.fullscreenElement) return;
+    v.muted = true;
+    v.controls = false;
+  };
+
   tabStyle(t) {
     const active = this.state.tab === t;
     return {
@@ -560,6 +565,14 @@ class Component extends DCLogic {
     return {
       rootRef: (el) => { this.rootEl = el; if (el) { this.applyTheme(); this.applyAnim(); } },
       navRef: (el) => { this.navEl = el; },
+      videoRef: (el) => {
+        this.videoEl = el;
+        if (!el) return;
+        el.addEventListener('fullscreenchange', this.exitTrailer);
+        el.addEventListener('webkitendfullscreen', this.exitTrailer);
+      },
+      trailerAutoplay: !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      watchTrailer: this.watchTrailer,
       showItems: this.state.tab === 'items',
       showDrops: this.state.tab === 'drops',
       showMarket: this.state.tab === 'market',

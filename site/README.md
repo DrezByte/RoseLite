@@ -10,7 +10,7 @@ site/
 ├── index.html       # landing page markup, styles, copy, and interactions
 ├── support.js       # runtime exported with the Claude-designed page
 ├── site.test.js     # the checks below
-└── assets/          # images used by the landing page
+└── assets/          # images and the hero trailer used by the landing page
 ```
 
 ## Work on the website
