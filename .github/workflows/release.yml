@@ -160,5 +160,9 @@ jobs:
           if ($releaseExists) {
             gh release upload $env:RELEASE_TAG @assets --clobber --repo DrezByte/RoseLite
           } else {
-            gh release create $env:RELEASE_TAG @assets --verify-tag --latest --generate-notes --title "RoseLite $env:RELEASE_TAG" --repo DrezByte/RoseLite
+            # Hand-written patch notes (release-notes/<tag>.md) go above the generated changelog link.
+            $notesFile = "release-notes/$env:RELEASE_TAG.md"
+            $notes = @()
+            if (Test-Path -LiteralPath $notesFile -PathType Leaf) { $notes = @('--notes-file', $notesFile) }
+            gh release create $env:RELEASE_TAG @assets @notes --verify-tag --latest --generate-notes --title "RoseLite $env:RELEASE_TAG" --repo DrezByte/RoseLite
           }
