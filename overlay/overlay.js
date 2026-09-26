@@ -5,7 +5,8 @@
 const fs = require('fs');
 const path = require('path');
 const { pathToFileURL } = require('url');
-const { ipcRenderer, clipboard, shell, webFrame } = require('electron');
+const { ipcRenderer, shell, webFrame } = require('electron');
+const copyText = (t) => ipcRenderer.send('clipboard', t);   // main owns the clipboard (not exposed to renderers)
 const D = require('./data.js');   // RoseData: items, quests, recipes, guides, events
 // Which half of this document this window is (main.js opens it twice): the
 // launcher window passes ?view=launcher, the game overlay passes nothing.
@@ -46,13 +47,10 @@ const STR = {
     quests: 'Quests', materials: 'Materials',
     strongVs: 'Strong against', weakVs: 'Weak against', active: 'Active', next: 'Next',
     search: 'Search…', usedIn: 'Used in', droppedBy: 'Dropped by', markDone: 'Mark completed', markTodo: 'Mark to do', questCompleted: 'Quest completed',
-    achUnlocked: 'Achievement unlocked',
-    achSecretUnlocked: 'Secret unlocked',
-    achClaimHint: 'Reward ready to claim',
     ofMatches: 'of', refineSearch: 'refine search', noStats: 'No extra stats.', craftable: 'Craftable',
     npcPrice: 'NPC Price', marketPrice: 'Market Price', history: 'Price history', marketNA: 'Not on market', marketErr: 'Unavailable',
     copyLink: 'Copy item link', copyLoc: 'Copy shop location', copied: 'Copied!', pin: 'Pin item', pinned: 'Pinned',
-    roseAccount: 'Market data (roseutils)', connectRose: 'Connect roseutils', connected: 'Connected ✓',
+    connectRose: 'Connect roseutils',
     fType: 'Type', fPlanet: 'Planet', fJob: 'Class', fLevel: 'Level', fCraftable: 'Craftable only', fTags: 'Tags', fStat: 'Stat bonus', filters: 'Filters', hideCompleted: 'Hide completed',
     language: 'Language', titleMap: 'Title screen', titleMapNA: 'rose.toml not found — set the ROSE AppData folder below.', skipCutscene: 'Skip planet cutscenes',
     accent: 'Accent color', bgColor: 'Background color', font: 'Font', uiScale: 'Interface size',
@@ -68,7 +66,7 @@ const STR = {
     kingsNote: 'Tap a king when you kill it — the timer counts down to its respawn.', kingUp: 'is up!', kingsSearch: 'Filter kings…', kingsZone: 'By zone', kingsNext: 'Next spawn',
     kingRunning: 'respawning', kingArm: 'not timed', kingAction: 'Activate when killed', kingRestart: 'Restart timer', kingReset: 'Reset timer', kingArmed: 'Respawn timer started', kingCleared: 'Respawn timer cleared',
     monsterHelp: 'Toggle a monster to be alerted when it spawns near you.', monsterSpawn: 'Spawned nearby',
-    spawnAlerts: 'Spawn alerts', mobDrops: 'Drops', mobNoDrops: 'No known drops.', fRank: 'Rank',
+    mobDrops: 'Drops', mobNoDrops: 'No known drops.', fRank: 'Rank',
     liveOffTitle: 'Live data needed', liveOffBody: 'This section needs a live game-state source. RoseLite ships without one, so it stays empty for now.',
     alerts: 'Alerts', alertsEmpty: 'No alerts yet.', alertsClear: 'Clear', soundLbl: 'Alert sound',
     soundCustom: 'Custom', soundFolder: 'Custom sounds folder', openLbl: 'Open', storageErr: 'Could not save on this device. Check available disk space and try again.',
@@ -79,7 +77,7 @@ const STR = {
     group: { suivi: 'Tracking', reference: 'Reference', extras: 'Extras' },
     dl: { logTitle: 'Log a run', dungeon: 'Dungeon', duration: 'Duration', paste: 'Paste the scoreboard rows (one player per line)…', save: 'Save run',
       pickYou: 'Tap your row to mark it as yours', youAre: 'You', emptyTitle: 'No runs logged yet', emptyBody: 'Log a dungeon run above to start tracking your DPS and clear times.',
-      badPaste: 'Couldn’t read any player rows — check the paste.', runs: 'runs', best: 'best', yourDps: 'your DPS', avgDps: 'avg DPS', logged: 'logged',
+      badPaste: 'Couldn’t read any player rows — check the paste.', runs: 'runs', best: 'best', yourDps: 'your DPS', logged: 'logged',
       cols: { name: 'Name', cls: 'Class', deaths: 'D', kills: 'K', dmgIn: 'Dmg', dmgRcv: 'Taken', healIn: 'Heal', healRcv: 'HealRcv', reflect: 'Refl', block: 'Blk', dps: 'DPS' } },
     months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
   },
@@ -88,13 +86,10 @@ const STR = {
     quests: 'Quêtes', materials: 'Matériaux',
     strongVs: 'Fort contre', weakVs: 'Faible contre', active: 'En cours', next: 'Prochain',
     search: 'Rechercher…', usedIn: 'Utilisé dans', droppedBy: 'Lâché par', markDone: 'Marquer terminée', markTodo: 'Marquer à faire', questCompleted: 'Quête terminée',
-    achUnlocked: 'Succès débloqué',
-    achSecretUnlocked: 'Secret débloqué',
-    achClaimHint: 'Récompense à récupérer',
     ofMatches: 'sur', refineSearch: 'affinez la recherche', noStats: 'Aucune statistique.', craftable: 'Fabricable',
     npcPrice: 'Prix PNJ', marketPrice: 'Prix du marché', history: 'Historique des prix', marketNA: 'Pas sur le marché', marketErr: 'Indisponible',
     copyLink: 'Copier le lien', copyLoc: 'Copier l\'emplacement', copied: 'Copié !', pin: 'Épingler', pinned: 'Épinglés',
-    roseAccount: 'Données de marché (roseutils)', connectRose: 'Se connecter à roseutils', connected: 'Connecté ✓',
+    connectRose: 'Se connecter à roseutils',
     fType: 'Type', fPlanet: 'Planète', fJob: 'Classe', fLevel: 'Niveau', fCraftable: 'Fabricables', fTags: 'Tags', fStat: 'Bonus de stat', filters: 'Filtres', hideCompleted: 'Masquer les terminées',
     language: 'Langue', titleMap: 'Écran-titre', titleMapNA: 'rose.toml introuvable — définissez le dossier ROSE AppData ci-dessous.', skipCutscene: 'Passer les cinématiques de planète',
     accent: 'Couleur d\'accent', bgColor: 'Couleur de fond', font: 'Police', uiScale: 'Taille de l\'interface',
@@ -110,7 +105,7 @@ const STR = {
     kingsNote: 'Tape un roi quand tu le tues — le compte à rebours démarre.', kingUp: 'est up !', kingsSearch: 'Filtrer les rois…', kingsZone: 'Par zone', kingsNext: 'Prochain spawn',
     kingRunning: 'réapparition', kingArm: 'non chronométré', kingAction: 'Activer après l’élimination', kingRestart: 'Redémarrer le timer', kingReset: 'Réinitialiser le timer', kingArmed: 'Timer de réapparition lancé', kingCleared: 'Timer de réapparition effacé',
     monsterHelp: 'Activez un monstre pour être alerté quand il apparaît près de vous.', monsterSpawn: 'Apparu à proximité',
-    spawnAlerts: 'Alertes de spawn', mobDrops: 'Butin', mobNoDrops: 'Aucun butin connu.', fRank: 'Rang',
+    mobDrops: 'Butin', mobNoDrops: 'Aucun butin connu.', fRank: 'Rang',
     liveOffTitle: 'Données live requises', liveOffBody: "Cette section a besoin d'une source de données de jeu en direct. RoseLite n'en fournit pas, elle reste donc vide pour le moment.",
     alerts: 'Alertes', alertsEmpty: 'Aucune alerte pour l’instant.', alertsClear: 'Effacer', soundLbl: 'Son des alertes',
     soundCustom: 'Perso', soundFolder: 'Dossier des sons perso', openLbl: 'Ouvrir', storageErr: 'Enregistrement impossible sur cet appareil. Vérifiez l’espace disque disponible et réessayez.',
@@ -121,7 +116,7 @@ const STR = {
     group: { suivi: 'Suivi', reference: 'Références', extras: 'Extras' },
     dl: { logTitle: 'Enregistrer un run', dungeon: 'Donjon', duration: 'Durée', paste: 'Collez les lignes du tableau (un joueur par ligne)…', save: 'Enregistrer',
       pickYou: 'Touchez votre ligne pour vous identifier', youAre: 'Vous', emptyTitle: 'Aucun run enregistré', emptyBody: 'Enregistrez un run de donjon ci-dessus pour suivre votre DPS et vos temps.',
-      badPaste: 'Impossible de lire les lignes — vérifiez le collage.', runs: 'runs', best: 'record', yourDps: 'votre DPS', avgDps: 'DPS moyen', logged: 'le',
+      badPaste: 'Impossible de lire les lignes — vérifiez le collage.', runs: 'runs', best: 'record', yourDps: 'votre DPS', logged: 'le',
       cols: { name: 'Nom', cls: 'Classe', deaths: 'M', kills: 'K', dmgIn: 'Dgts', dmgRcv: 'Reçus', healIn: 'Soin', healRcv: 'SoinR', reflect: 'Refl', block: 'Blk', dps: 'DPS' } },
     months: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.']
   },
@@ -134,7 +129,7 @@ const STR = {
     ofMatches: 'de', refineSearch: 'refine a busca', noStats: 'Sem atributos extras.', craftable: 'Fabricável',
     npcPrice: 'Preço NPC', marketPrice: 'Preço de mercado', history: 'Histórico de preços', marketNA: 'Fora do mercado', marketErr: 'Indisponível',
     copyLink: 'Copiar link do item', copyLoc: 'Copiar local da loja', copied: 'Copiado!', pin: 'Fixar item', pinned: 'Fixados',
-    roseAccount: 'Dados de mercado (roseutils)', connectRose: 'Conectar roseutils', connected: 'Conectado ✓',
+    connectRose: 'Conectar roseutils',
     fType: 'Tipo', fPlanet: 'Planeta', fJob: 'Classe', fLevel: 'Nível', fCraftable: 'Só fabricáveis', fTags: 'Tags', hideCompleted: 'Ocultar concluídas',
     language: 'Idioma',
     panelWidth: 'Largura do painel', refresh: 'Atualização',
@@ -158,7 +153,7 @@ const STR = {
     ofMatches: 'sa', refineSearch: 'pinuhin ang paghahanap', noStats: 'Walang karagdagang stats.', craftable: 'Puwedeng gawin',
     npcPrice: 'Presyo ng NPC', marketPrice: 'Presyo sa market', history: 'Kasaysayan ng presyo', marketNA: 'Wala sa market', marketErr: 'Hindi available',
     copyLink: 'Kopyahin ang link ng item', copyLoc: 'Kopyahin ang lokasyon ng tindahan', copied: 'Nakopya!', pin: 'I-pin ang item', pinned: 'Naka-pin',
-    roseAccount: 'Data ng market (roseutils)', connectRose: 'Kumonekta sa roseutils', connected: 'Nakakonekta ✓',
+    connectRose: 'Kumonekta sa roseutils',
     fType: 'Uri', fPlanet: 'Planeta', fJob: 'Klase', fLevel: 'Level', fCraftable: 'Puwedeng gawin lang', fTags: 'Mga tag', hideCompleted: 'Itago ang tapos na',
     language: 'Wika',
     panelWidth: 'Lapad ng panel', refresh: 'Pag-refresh',
@@ -182,7 +177,7 @@ const STR = {
     ofMatches: 'จาก', refineSearch: 'ปรับการค้นหา', noStats: 'ไม่มีค่าสถานะเพิ่มเติม', craftable: 'คราฟต์ได้',
     npcPrice: 'ราคา NPC', marketPrice: 'ราคาตลาด', history: 'ประวัติราคา', marketNA: 'ไม่มีในตลาด', marketErr: 'ไม่พร้อมใช้งาน',
     copyLink: 'คัดลอกลิงก์ไอเทม', copyLoc: 'คัดลอกตำแหน่งร้าน', copied: 'คัดลอกแล้ว!', pin: 'ปักหมุดไอเทม', pinned: 'ปักหมุดแล้ว',
-    roseAccount: 'ข้อมูลตลาด (roseutils)', connectRose: 'เชื่อมต่อ roseutils', connected: 'เชื่อมต่อแล้ว ✓',
+    connectRose: 'เชื่อมต่อ roseutils',
     fType: 'ประเภท', fPlanet: 'ดาว', fJob: 'คลาส', fLevel: 'เลเวล', fCraftable: 'เฉพาะที่คราฟต์ได้', fTags: 'แท็ก', hideCompleted: 'ซ่อนที่เสร็จแล้ว',
     language: 'ภาษา',
     panelWidth: 'ความกว้างแผง', refresh: 'รีเฟรช',
@@ -206,7 +201,7 @@ const STR = {
     ofMatches: '/', refineSearch: '検索を絞り込む', noStats: '追加ステータスなし', craftable: '製作可能',
     npcPrice: 'NPC価格', marketPrice: '市場価格', history: '価格履歴', marketNA: '市場になし', marketErr: '利用不可',
     copyLink: 'アイテムリンクをコピー', copyLoc: '店舗の場所をコピー', copied: 'コピーしました！', pin: 'アイテムをピン', pinned: 'ピン留め',
-    roseAccount: '市場データ (roseutils)', connectRose: 'roseutilsに接続', connected: '接続済み ✓',
+    connectRose: 'roseutilsに接続',
     fType: 'タイプ', fPlanet: '惑星', fJob: 'クラス', fLevel: 'レベル', fCraftable: '製作可能のみ', fTags: 'タグ', hideCompleted: '完了を隠す',
     language: '言語',
     panelWidth: 'パネル幅', refresh: '更新間隔',
@@ -407,10 +402,13 @@ function gameIcons() {
 // ── Settings state (panel width + color) — persisted, applied on boot ───────
 const CFG = require('../config.json');
 // Live game state needs a data source, which this build ships without — main
-// reports that (sendSync, resolved before first paint) and the three sections
+// reports that (sendSync, resolved before first paint) and the sections
 // fed by it render disabled instead of empty/waiting.
 const LIVE = ipcRenderer.sendSync('is-live');
 const LIVE_SECTIONS = new Set(['personnage', 'butin', 'dps', 'tracker']);
+// Class + aria for a nav button: dimmed when its section is live-gated. Still
+// clickable — the section explains why it is empty.
+const navAttrs = (cls, id) => !LIVE && LIVE_SECTIONS.has(id) ? `class="${cls} ${cls}--off" aria-disabled="true"` : `class="${cls}"`;
 let panelWidth = +localStorage.getItem('roselite-panel-width') || CFG.panelWidth || 260;
 // User-configurable folders (picked via native dialog, persisted). Default to
 // config.json / the standard AppData path. gameDir is also pushed to main so
@@ -638,13 +636,20 @@ document.getElementById('back-btn').addEventListener('click', () => {
   if (detail && !detail.hidden) { resetDetail(v); backDest.textContent = T().back; backTitle.textContent = secLabel(current); detailReopen = null; }
   else { goHome(); }
 });
+// Esc = Back. Popovers and the <dialog> claim their own Esc first (preventDefault /
+// cancel); a text field that still holds text keeps Esc for itself.
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape' || e.defaultPrevented || backbar.hidden || document.querySelector('dialog[open]')) return;
+  if (e.target.closest('textarea, input:not([type]), input[type=text], input[type=search], input[type=number]')?.value) return;
+  document.getElementById('back-btn').click();
+});
 
 // ── Renderers ──────────────────────────────────────────────────────────────
 function renderHome() {
   // title, not just the label: the fullscreen sidebar collapses to icons only,
   // where display:none takes the label out of the a11y tree too.
   const tile = (id) =>
-    `<button class="tile${!LIVE && LIVE_SECTIONS.has(id) ? ' tile--off' : ''}" data-id="${id}" title="${esc(secLabel(id))}">${ICONS[id]}<span class="tile-label">${secLabel(id)}</span></button>`;
+    `<button ${navAttrs('tile', id)} data-id="${id}" title="${esc(secLabel(id))}">${ICONS[id]}<span class="tile-label">${secLabel(id)}</span></button>`;
   homeEl.innerHTML =
     `<div class="home-groups">${SECTION_GROUPS.map((g) =>
       `<section class="home-group"><h2 class="home-group-title">${esc(T().group[g.key])}</h2>` +
@@ -804,7 +809,7 @@ function renderRail() {
     `<button class="rail-icon rail-toggle" data-expand data-tip="${esc(T().home)}" aria-label="${esc(T().home)}">${expandGlyph}</button>` +
     `<span class="rail-sep"></span>` +
     SECTION_IDS.filter((id) => id !== 'parametres').map((id) =>
-      `<button class="rail-icon${!LIVE && LIVE_SECTIONS.has(id) ? ' rail-icon--off' : ''}" data-id="${id}" data-tip="${esc(secLabel(id))}" aria-label="${esc(secLabel(id))}">${ICONS[id]}</button>`).join('') +
+      `<button ${navAttrs('rail-icon', id)} data-id="${id}" data-tip="${esc(secLabel(id))}" aria-label="${esc(secLabel(id))}">${ICONS[id]}</button>`).join('') +
     `<span class="rail-sep"></span>` +
     `<button class="rail-icon" data-id="parametres" data-tip="${esc(secLabel('parametres'))}" aria-label="${esc(secLabel('parametres'))}">${ICONS.parametres}</button>`;
   const expand = (id) => { ipcRenderer.send('set-layout', 'panel'); id ? openSection(id) : goHome(); };
@@ -1133,7 +1138,7 @@ function buildItemDetail(el, it) {
 function wireCopy(btn, getLink, icon, title, d) {
   if (!btn) return;
   btn.addEventListener('click', () => {
-    clipboard.writeText(getLink());
+    copyText(getLink());
     btn.textContent = '✓'; btn.title = d.copied;
     setTimeout(() => { btn.textContent = icon; btn.title = title; }, 1200);
   });
@@ -2958,7 +2963,7 @@ function renderShouts() {
      </li>`).join('');
   list.querySelectorAll('.shout-copy').forEach((b) => b.addEventListener('click', () => {
     const p = b.querySelector('.shout-preview'), prev = p.textContent;
-    const sh = shouts[+b.dataset.i]; clipboard.writeText((sh.channel || '') + sh.text);
+    const sh = shouts[+b.dataset.i]; copyText((sh.channel || '') + sh.text);
     p.textContent = T().copied; p.classList.add('copied');
     setTimeout(() => { p.textContent = prev; p.classList.remove('copied'); }, 1200);
   }));
@@ -3391,6 +3396,7 @@ function updateChrome() {
   document.getElementById('collapse-btn').setAttribute('aria-label', tips.collapse);
   document.getElementById('quit-btn').title = tips.quit;
   document.getElementById('quit-btn').setAttribute('aria-label', tips.quit);
+  document.getElementById('rail-tab').setAttribute('aria-label', tips.navShow);
   fullBtn.title = curPlacement === 'full' ? tips.dock : tips.fullscreen;
   fullBtn.setAttribute('aria-label', fullBtn.title);
   document.getElementById('shout-name').placeholder = d.shoutName;
@@ -3654,7 +3660,19 @@ window.addEventListener('focus', () => setAmbient(false));
 // animations that missed the sweep; catch them as they start rather than polling.
 document.addEventListener('animationstart', () => { if (ambientPaused) setAmbient(true); }, true);
 if (!document.hasFocus()) setAmbient(true);   // launched behind the game window
-for (const el of [panel, rail]) {
+// Collapsed rail rests as a logo tab and opens on click, never on hover — players
+// kept popping it by sweeping the cursor past the game's right edge. It tucks
+// away once the pointer leaves it (off the window edge, or into the click-through
+// tooltip gutter) or the game takes focus back.
+const railTab = document.getElementById('rail-tab');
+const railSet = (on) => { rail.classList.toggle('open', on); railTab.setAttribute('aria-expanded', on); };
+const railClose = () => railSet(false);
+railTab.addEventListener('click', (e) => { railSet(true); if (e.detail === 0) rail.querySelector('button')?.focus(); });   // keyboard: land inside the rail
+rail.addEventListener('mouseleave', railClose);
+rail.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); railClose(); railTab.focus(); } });
+document.addEventListener('mousemove', (e) => { if (!e.target.closest('#rail, #rail-tab')) railClose(); });
+window.addEventListener('blur', railClose);
+for (const el of [panel, rail, railTab]) {
   el.addEventListener('mousemove', () => sendInteractive(true));
   el.addEventListener('mouseleave', () => sendInteractive(false));
 }
@@ -3676,8 +3694,9 @@ ipcRenderer.on('placement', (_e, p) => {
   panel.hidden = p === 'rail';
   document.body.classList.toggle('fullscreen', p === 'full');
   recettesReady = false;   // its filters render folded or open depending on the layout — rebuild on next open
+  railClose();   // re-entering the rail layout starts at the tab
   // Animate the incoming surface (CSS .pop) — the window itself just snapped.
-  const surf = p === 'rail' ? rail : panel;
+  const surf = p === 'rail' ? railTab : panel;
   surf.classList.remove('pop'); void surf.offsetWidth; surf.classList.add('pop');
   fullBtn.innerHTML = p === 'full' ? DOCK_SVG : FULL_SVG;
   fullBtn.title = p === 'full' ? (T().tips || STR.en.tips).dock : (T().tips || STR.en.tips).fullscreen;

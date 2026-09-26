@@ -98,8 +98,12 @@
   }
 
 
-  /* Selected-tile breathing glow (DESIGN §7). */
-  @keyframes rlglow { 0%,100% { box-shadow: 0 0 0 1px rgba(240,128,28,.55), 0 0 16px rgba(240,128,28,.30); } 50% { box-shadow: 0 0 0 1px rgba(240,128,28,.95), 0 0 26px rgba(240,128,28,.55); } }
+  /* Blanket reduced-motion (DESIGN §7): a blanket, not an allowlist, so anything
+     animated later is covered by default. JS-driven motion substitutes in code. */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 1ms !important; scroll-behavior: auto !important; }
+  }
 
   html, body {
     margin: 0; height: 100%;
@@ -209,10 +213,9 @@
     text-transform: none; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   /* Selection reuses the docked --tile-sel vocabulary (One-Hue Rule: ember
      alone) rather than inventing a sidebar-only signal — and a tint + ember
-     glyph, never a colored side stripe. The breathing glow stays off: it reads
-     as a beacon on a 70px tile, as a flicker on a 34px row. */
+     glyph, never a colored side stripe. */
   body.fullscreen .menu .tile--active { background: var(--tile-sel); border-color: var(--tile-sel-border);
-    color: var(--bright); animation: none; }
+    color: var(--bright); }
   body.fullscreen .menu .tile--active svg { color: var(--ember); }
   /* Collapsed: icons only. Labels and group titles leave the a11y tree with
      display:none, so the tiles' title attribute becomes their accessible name
@@ -245,15 +248,28 @@
     border: 1px solid var(--hairline-strong); border-right: none;
     border-radius: var(--r-panel) 0 0 var(--r-panel);
     box-shadow: inset 2px 0 0 -1px var(--frame-ring), -4px 0 16px rgba(0,0,0,.45);
-    scrollbar-width: none;
-    /* Idle: slide the icon column off the right edge, leaving only a thin tab
-       (the rounded left border + shadow) so the collapsed rail is barely there.
-       Hovering the tab slides the icons back in. Hover works even while the
-       window is click-through (main.js forwards mouse-move). */
-    transition: transform 180ms var(--ease);
-    transform: translateX(calc(100% - 7px));
+    scrollbar-width: none; z-index: 1;   /* covers #rail-tab while open */
+    /* Idle: the icon column sits fully off the right edge; only #rail-tab shows.
+       Clicking the tab adds .open (overlay.js). Click, not hover — players kept
+       popping it by sweeping the cursor past the game's right edge. */
+    transition: transform 180ms var(--ease), visibility 0s 180ms;
+    transform: translateX(100%); visibility: hidden;
   }
-  #rail:hover { transform: translateX(0); }
+  #rail.open { transform: translateX(0); visibility: visible; transition-delay: 0s; }
+  /* The collapsed rail's resting state: a small logo tab on the game's edge. */
+  #rail-tab {
+    position: fixed; top: 0; right: 0; width: 42px; height: 34px; padding: 0 0 0 3px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--rosewood);
+    border: 1px solid var(--hairline-strong); border-right: none;
+    border-radius: var(--r-panel) 0 0 var(--r-panel);
+    box-shadow: -4px 0 16px rgba(0,0,0,.45);
+    cursor: pointer; transition: border-color 150ms var(--ease);
+  }
+  #rail-tab img { width: 26px; height: auto; display: block; }
+  #rail-tab:hover { border-color: var(--ember); }
+  #rail-tab:focus-visible { outline: none; border-color: var(--ember); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ember) 40%, transparent); }
+  #rail[hidden] ~ #rail-tab { display: none; }   /* rail placement only */
   #rail::-webkit-scrollbar { width: 0; }
   /* Placement switches (rail ↔ panel ↔ fullscreen): main.js snaps the window
      bounds in one move and the incoming surface animates in here — GPU-composited
@@ -478,8 +494,7 @@
   /* `anywhere` so a single long word (PERSONNAGE, ÉVÉNEMENTS) can break rather
      than set the column's min-content floor — the other half of the fix above. */
   .tile-label { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; text-align: center; line-height: 1.15; text-wrap: balance; overflow-wrap: anywhere; }
-  .tile--active { background: var(--tile-sel); border-color: var(--tile-sel-border); color: var(--bright);
-    animation: rlglow 2.7s ease-in-out infinite; }
+  .tile--active { background: var(--tile-sel); border-color: var(--tile-sel-border); color: var(--bright); }
   .tile--active svg { color: var(--bright); }
   /* Guide-section tiles carry a section image faded into the tile, like the hero
      header art: a cover image on a pseudo behind the icon/label, dimmed over the

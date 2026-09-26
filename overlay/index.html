@@ -116,9 +116,10 @@
 
   <!-- Collapsed icon rail: shown on-top when the game leaves no room to dock the
        panel (main.js 'placement' = 'rail'). Clicking an icon expands to the full
-       panel. Populated by renderRail(). -->
+       panel. Populated by renderRail(). Idles as #rail-tab; clicking it opens the rail. -->
   <nav id="rail" hidden></nav>
   <div id="rail-tip" hidden></div>
+  <button id="rail-tab" aria-controls="rail" aria-expanded="false"><img src="assets/roselite-logo-ui.png" alt=""></button>
 
   <!-- Home launcher: shown when no game is running (main.js 'mode'). Pick a saved
        account and launch ROSE; each account has its own per-account save. -->

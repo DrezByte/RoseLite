@@ -1,4 +1,4 @@
-const { app, BrowserWindow, screen, ipcMain, net, dialog, safeStorage, shell, Tray, Menu, nativeImage } = require('electron');
+const { app, BrowserWindow, screen, ipcMain, net, dialog, safeStorage, shell, clipboard, Tray, Menu, nativeImage } = require('electron');
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
@@ -140,6 +140,8 @@ function createOverlay() {
     else e.sender.send('toast-panel', t);
   });
   ipcMain.on('quit', () => app.quit());
+  // Electron no longer exposes `clipboard` to renderers — every copy button lands here.
+  ipcMain.on('clipboard', (_e, t) => { if (typeof t === 'string') clipboard.writeText(t); });
   // Minimize to the taskbar — only meaningful for the launcher / fullscreen
   // standalone window (the overlay layouts skip the taskbar and can't restore).
   ipcMain.on('minimize', (e) => { const w = winOf(e); if (w) w.minimize(); });
